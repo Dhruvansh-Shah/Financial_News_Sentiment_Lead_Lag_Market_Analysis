@@ -1,0 +1,23 @@
+# Notebook 01 - Data Collection
+kaggle
+yfinance
+pandas
+pyarrow
+python-dotenv
+
+# Notebook 02 - Sentiment Analysis
+torch==2.3.1
+transformers==4.40.2
+pysentiment2
+tqdm
+
+# Notebook 03 - Granger Causality & Lead-Lag
+numpy
+statsmodels
+seaborn
+matplotlib
+
+# Notebook 04 - Network & Signals
+networkx
+python-louvain
+plotly
