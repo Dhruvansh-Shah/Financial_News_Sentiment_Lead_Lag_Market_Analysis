@@ -1,9 +1,9 @@
-# Ignore Python files and local notebook data during Vercel deployment
+# Ignore Python files and root-level datasets during Vercel deployment
 requirements.txt
 *.py
 *.ipynb
-data/
-outputs/
+/data/
+/outputs/
 specs/
 .claude/
 .specify/
@@ -11,3 +11,5 @@ Sample_Report.pdf
 Template_PPT.pptx
 presentation.pptx
 venv/
+!frontend/public/data/**
+!frontend/public/outputs/**
