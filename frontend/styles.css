@@ -2347,9 +2347,67 @@ body {
   }
 
   /* 11. Tables & Matrices */
+  .table-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quant-table {
+    width: 100% !important;
+    font-size: 0.68rem;
+    table-layout: fixed;
+  }
+
   .quant-table th, .quant-table td {
-    padding: 0.45rem 0.55rem;
-    font-size: 0.7rem;
+    padding: 0.45rem 0.25rem !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Hide the 5th column (STATISTICAL ACTION) on mobile to fit the first 4 columns perfectly */
+  .quant-table th:nth-child(5), .quant-table td:nth-child(5) {
+    display: none !important;
+  }
+
+  .quant-table th:nth-child(1), .quant-table td:nth-child(1) { width: 30%; }
+  .quant-table th:nth-child(2), .quant-table td:nth-child(2) { width: 30%; }
+  .quant-table th:nth-child(3), .quant-table td:nth-child(3) { width: 22%; }
+  .quant-table th:nth-child(4), .quant-table td:nth-child(4) { width: 18%; text-align: right; }
+
+  /* Charts Container Fix */
+  .chart-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chart-container canvas {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Heatmap Matrix Adaptation */
+  .heatmap-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .heatmap-grid {
+    min-width: 0 !important;
+    width: 100% !important;
+    grid-template-columns: 32px repeat(10, 1fr) !important;
+    gap: 1.5px !important;
+    font-size: 0.58rem !important;
+  }
+
+  .heatmap-cell {
+    height: 26px !important;
+    font-size: 0.55rem !important;
   }
 
   .nlp-stats-grid, .sim-result-grid {
@@ -2362,6 +2420,13 @@ body {
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .pipeline-step {
+    min-width: 0 !important;
+    width: 100% !important;
   }
 
   .pipeline-arrow {
@@ -2416,6 +2481,28 @@ body {
     flex-direction: column;
     gap: 0.35rem;
   }
+}
+
+/* Global Zero Horizontal Scroll Lock */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+.main-container, .terminal-header, .app-navbar, .card, .glass-panel, .card-body {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+p, span, div, strong, h1, h2, h3, h4, h5, h6 {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 
