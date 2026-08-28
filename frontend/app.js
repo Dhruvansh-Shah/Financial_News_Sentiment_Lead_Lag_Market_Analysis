@@ -1400,8 +1400,8 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
         const eq2 = document.getElementById('eq-granger');
         const eq3 = document.getElementById('eq-centrality');
 
-        if (eq1) katex.render('L(i, j) = \\mathrm{corr}\\big(S_i(t), R_j(t+\\tau)\\big) - \\mathrm{corr}\\big(S_i(t+\\tau), R_j(t)\\big), \\quad \\tau \\in [-10, 10]', eq1, { displayMode: true });
-        if (eq2) katex.render('R_j(t) = \\sum_{k=1}^p \\alpha_k R_j(t-k) + \\sum_{k=1}^p \\beta_k S_i(t-k) + \\epsilon_t, \\quad H_0: \\beta_1 = \\dots = \\beta_p = 0', eq2, { displayMode: true });
+        if (eq1) katex.render('L(i, j) = \\mathrm{corr}\\big(S_i(t), R_j(t+\\tau)\\big) - \\mathrm{corr}\\big(S_i(t+\\tau), R_j(t)\\big)', eq1, { displayMode: true });
+        if (eq2) katex.render('R_j(t) = \\sum_{k=1}^p \\alpha_k R_j(t-k) + \\sum_{k=1}^p \\beta_k S_i(t-k) + \\epsilon_t', eq2, { displayMode: true });
         if (eq3) katex.render('x_v = \\frac{1}{\\lambda} \\sum_{t \\in M(v)} A_{v, t} x_t', eq3, { displayMode: true });
       } else {
         setTimeout(tryKaTeX, 200);

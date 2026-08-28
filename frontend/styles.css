@@ -1176,9 +1176,24 @@ body {
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
   padding: 0.75rem 1rem;
-  overflow-x: auto;
+  overflow-x: hidden;
   margin-bottom: 0.4rem;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+}
+
+.math-eq .katex-display {
+  margin: 0.25rem 0 !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.math-eq .katex {
+  font-size: 1.02em;
 }
 
 .math-desc {
@@ -2470,7 +2485,23 @@ body {
     justify-content: center;
   }
 
-  /* 15. Footer */
+  /* 15. KaTeX Math Responsive Scaling */
+  .math-eq {
+    padding: 0.55rem 0.35rem !important;
+    overflow-x: hidden !important;
+  }
+
+  .math-eq .katex-display {
+    margin: 0.15rem 0 !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .math-eq .katex {
+    font-size: 0.78em !important;
+  }
+
+  /* 16. Footer */
   .app-footer {
     padding: 1rem 0.75rem;
     margin-top: 2rem;
