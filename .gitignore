@@ -1,6 +1,15 @@
-data/
-outputs/
+/data/
+/outputs/
 .env
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+.DS_Store
+venv/
+.vscode/
+~$*.docx
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
