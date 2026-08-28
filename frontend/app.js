@@ -707,6 +707,70 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
       isPanning = false;
     });
 
+    // Touch interactions for mobile phones and tablets
+    let lastTouchDist = null;
+
+    canvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const touchX = (touch.clientX - rect.left - camera.x) / camera.zoom;
+        const touchY = (touch.clientY - rect.top - camera.y) / camera.zoom;
+
+        const hit = graphNodes.find(n => {
+          const dx = n.x - touchX;
+          const dy = n.y - touchY;
+          return Math.sqrt(dx * dx + dy * dy) <= n.radius * 1.35; // touch-friendly hit radius
+        });
+
+        if (hit) {
+          draggedNode = hit;
+          selectedNode = hit;
+          window.selectTicker(hit.id);
+          e.preventDefault(); // prevent screen scroll while dragging node
+        } else {
+          isPanning = true;
+          startPan = { x: touch.clientX - camera.x, y: touch.clientY - camera.y };
+        }
+      } else if (e.touches.length === 2) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        lastTouchDist = Math.sqrt(dx * dx + dy * dy);
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchmove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        if (draggedNode) {
+          draggedNode.x = (touch.clientX - rect.left - camera.x) / camera.zoom;
+          draggedNode.y = (touch.clientY - rect.top - camera.y) / camera.zoom;
+          draggedNode.vx = 0;
+          draggedNode.vy = 0;
+          e.preventDefault();
+        } else if (isPanning) {
+          camera.x = touch.clientX - startPan.x;
+          camera.y = touch.clientY - startPan.y;
+        }
+      } else if (e.touches.length === 2 && lastTouchDist) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const newDist = Math.sqrt(dx * dx + dy * dy);
+        const zoomDelta = newDist / lastTouchDist;
+        camera.zoom = Math.max(0.4, Math.min(2.5, camera.zoom * zoomDelta));
+        lastTouchDist = newDist;
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchend', () => {
+      draggedNode = null;
+      isPanning = false;
+      lastTouchDist = null;
+    });
+
     // Only zoom if Ctrl/Cmd is held, otherwise allow normal page scrolling
     canvas.addEventListener('wheel', (e) => {
       if (e.ctrlKey || e.metaKey) {
