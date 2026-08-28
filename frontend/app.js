@@ -718,11 +718,18 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
   }
 
   function startGraphSimulation(canvas, ctx) {
+    if (animFrameId) {
+      cancelAnimationFrame(animFrameId);
+      animFrameId = null;
+    }
+
+    let lastWidth = 0;
+    let lastHeight = 0;
+
     function tick() {
-      animFrameId = requestAnimationFrame(tick);
-      
       const container = document.getElementById('canvas-container');
       if (!container || !canvas || activeTab !== 'tab-network') {
+        animFrameId = requestAnimationFrame(tick);
         return;
       }
 
@@ -730,7 +737,10 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
       const height = container.clientHeight > 100 ? container.clientHeight : 540;
       const dpr = window.devicePixelRatio || 1;
 
-      if (canvas.width !== Math.round(width * dpr) || canvas.height !== Math.round(height * dpr)) {
+      // Only resize canvas backing buffer when dimensions actually change
+      if (lastWidth !== width || lastHeight !== height) {
+        lastWidth = width;
+        lastHeight = height;
         canvas.width = Math.round(width * dpr);
         canvas.height = Math.round(height * dpr);
       }
@@ -738,20 +748,20 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
       const centerX = width / 2;
       const centerY = height / 2;
 
-      // Physics update
+      // Physics update (Fixed step)
       if (!isPhysicsFrozen) {
-        // Node-to-node repulsion (spacious)
-        for (let i = 0; i < graphNodes.length; i++) {
-          for (let j = i + 1; j < graphNodes.length; j++) {
-            const n1 = graphNodes[i];
+        // Node-to-node repulsion
+        const len = graphNodes.length;
+        for (let i = 0; i < len; i++) {
+          const n1 = graphNodes[i];
+          for (let j = i + 1; j < len; j++) {
             const n2 = graphNodes[j];
-            let dx = n2.x - n1.x;
-            let dy = n2.y - n1.y;
-            let dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 1) dist = 1;
-            const minDist = 280;
-            if (dist < minDist) {
-              const force = (minDist - dist) / dist * 0.12;
+            const dx = n2.x - n1.x;
+            const dy = n2.y - n1.y;
+            const distSq = dx * dx + dy * dy;
+            if (distSq < 78400 && distSq > 0.01) { // 280^2 = 78400
+              const dist = Math.sqrt(distSq);
+              const force = ((280 - dist) / dist) * 0.12;
               const fx = (dx / dist) * force * 10;
               const fy = (dy / dist) * force * 10;
               n1.vx -= fx;
@@ -762,34 +772,34 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
           }
         }
 
-        // Edge springs (spacious)
-        graphEdges.forEach(edge => {
-          if (edge.weight < edgeThreshold) return;
+        // Edge springs
+        for (let i = 0; i < graphEdges.length; i++) {
+          const edge = graphEdges[i];
+          if (edge.weight < edgeThreshold) continue;
           const n1 = edge.source;
           const n2 = edge.target;
-          let dx = n2.x - n1.x;
-          let dy = n2.y - n1.y;
-          let dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 1) dist = 1;
-          const targetDist = 220;
-          const force = (dist - targetDist) * 0.002 * Math.min(1, edge.weight * 2);
+          const dx = n2.x - n1.x;
+          const dy = n2.y - n1.y;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+          const force = (dist - 220) * 0.002 * Math.min(1, edge.weight * 2);
           const fx = (dx / dist) * force * 8;
           const fy = (dy / dist) * force * 8;
           n1.vx += fx;
           n1.vy += fy;
           n2.vx -= fx;
           n2.vy -= fy;
-        });
+        }
 
-        // Center pull, damping, and hard position clamping
-        graphNodes.forEach(node => {
-          if (node === draggedNode) return;
+        // Center pull, velocity clamping, and damping
+        for (let i = 0; i < len; i++) {
+          const node = graphNodes[i];
+          if (node === draggedNode) continue;
           node.vx += (centerX - node.x) * 0.0012;
           node.vy += (centerY - node.y) * 0.0012;
 
-          // Clamp velocity
-          const speed = Math.sqrt(node.vx * node.vx + node.vy * node.vy);
-          if (speed > 3.5) {
+          const speedSq = node.vx * node.vx + node.vy * node.vy;
+          if (speedSq > 12.25) { // 3.5^2
+            const speed = Math.sqrt(speedSq);
             node.vx = (node.vx / speed) * 3.5;
             node.vy = (node.vy / speed) * 3.5;
           }
@@ -799,25 +809,26 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
           node.x += node.vx;
           node.y += node.vy;
 
-          // Hard bounding box inside canvas
+          // Keep in bounds
           node.x = Math.max(node.radius + 35, Math.min(width - node.radius - 35, node.x));
           node.y = Math.max(node.radius + 35, Math.min(height - node.radius - 35, node.y));
-        });
+        }
       }
 
-      // Render
+      // Render Frame
       ctx.save();
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, width, height);
 
-      // Apply camera
+      // Camera transform
       ctx.translate(camera.x, camera.y);
       ctx.scale(camera.zoom, camera.zoom);
 
-      // Draw Edges
-      graphEdges.forEach((edge, idx) => {
-        if (edge.weight < edgeThreshold) return;
-        if (roleFilter !== 'all' && edge.source.cluster !== roleFilter && edge.target.cluster !== roleFilter) return;
+      // 1. Draw Edges
+      for (let i = 0; i < graphEdges.length; i++) {
+        const edge = graphEdges[i];
+        if (edge.weight < edgeThreshold) continue;
+        if (roleFilter !== 'all' && edge.source.cluster !== roleFilter && edge.target.cluster !== roleFilter) continue;
 
         const isHighlighted = (selectedNode && (edge.source === selectedNode || edge.target === selectedNode)) ||
                               (hoveredNode && (edge.source === hoveredNode || edge.target === hoveredNode));
@@ -829,27 +840,27 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
         ctx.lineWidth = isHighlighted ? Math.max(2, edge.weight * 5) : Math.max(1, edge.weight * 3.5);
         ctx.stroke();
 
-        // Direction arrow
-        const midX = (edge.source.x + edge.target.x) / 2;
-        const midY = (edge.source.y + edge.target.y) / 2;
+        // Direction arrow (fast geometric vertices, zero context matrix changes)
+        const midX = (edge.source.x + edge.target.x) * 0.5;
+        const midY = (edge.source.y + edge.target.y) * 0.5;
         const angle = Math.atan2(edge.target.y - edge.source.y, edge.target.x - edge.source.x);
-        ctx.save();
-        ctx.translate(midX, midY);
-        ctx.rotate(angle);
+        const cos = Math.cos(angle);
+        const sin = Math.sin(angle);
+
         ctx.fillStyle = isHighlighted ? '#00f0ff' : 'rgba(56, 189, 248, 0.6)';
         ctx.beginPath();
-        ctx.moveTo(6, 0);
-        ctx.lineTo(-4, -4);
-        ctx.lineTo(-4, 4);
+        ctx.moveTo(midX + cos * 6, midY + sin * 6);
+        ctx.lineTo(midX - cos * 4 - sin * 4, midY - sin * 4 + cos * 4);
+        ctx.lineTo(midX - cos * 4 + sin * 4, midY - sin * 4 - cos * 4);
         ctx.closePath();
         ctx.fill();
-        ctx.restore();
-      });
+      }
 
-      // Draw Flow Particles
-      particles.forEach(p => {
+      // 2. Draw Flow Particles
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
         const edge = graphEdges[p.edgeIndex];
-        if (!edge || edge.weight < edgeThreshold) return;
+        if (!edge || edge.weight < edgeThreshold) continue;
 
         p.progress += p.speed;
         if (p.progress > 1) p.progress = 0;
@@ -857,63 +868,69 @@ import pipelineDataRaw from './public/data/pipeline_data.json';
         const px = edge.source.x + (edge.target.x - edge.source.x) * p.progress;
         const py = edge.source.y + (edge.target.y - edge.source.y) * p.progress;
 
+        // Glow halo
         ctx.beginPath();
-        ctx.arc(px, py, 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = '#ffffff';
-        ctx.shadowColor = '#00f0ff';
-        ctx.shadowBlur = 8;
+        ctx.arc(px, py, 4, 0, 6.283185);
+        ctx.fillStyle = 'rgba(0, 240, 255, 0.35)';
         ctx.fill();
-        ctx.shadowBlur = 0;
-      });
 
-      // Draw Nodes
-      graphNodes.forEach(node => {
-        if (roleFilter !== 'all' && node.cluster !== roleFilter) return;
+        // Center dot
+        ctx.beginPath();
+        ctx.arc(px, py, 2, 0, 6.283185);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+      }
+
+      // 3. Draw Nodes
+      for (let i = 0; i < graphNodes.length; i++) {
+        const node = graphNodes[i];
+        if (roleFilter !== 'all' && node.cluster !== roleFilter) continue;
 
         const isSelected = selectedNode === node;
         const isHovered = hoveredNode === node;
 
-        // Glow ring
+        // Glow ring (native alpha, zero software blur)
         if (isSelected || isHovered) {
           ctx.beginPath();
-          ctx.arc(node.x, node.y, node.radius + 8, 0, Math.PI * 2);
+          ctx.arc(node.x, node.y, node.radius + 8, 0, 6.283185);
+          ctx.fillStyle = node.glowColor;
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, node.radius + 6, 0, 6.283185);
           ctx.strokeStyle = node.color;
-          ctx.lineWidth = 2;
-          ctx.shadowColor = node.color;
-          ctx.shadowBlur = 16;
+          ctx.lineWidth = 1.5;
           ctx.stroke();
-          ctx.shadowBlur = 0;
         }
 
-        // Main node circle
+        // Main node body
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.radius, 0, 6.283185);
         ctx.fillStyle = node.cluster === 'leader' ? '#0d223a' : '#2b1b0e';
         ctx.fill();
         ctx.lineWidth = isSelected ? 3 : 2;
         ctx.strokeStyle = node.color;
         ctx.stroke();
 
-        // Ticker label
+        // Ticker symbol
         ctx.fillStyle = '#ffffff';
         ctx.font = `bold ${Math.max(10, Math.round(node.radius * 0.65))}px 'JetBrains Mono', monospace`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(node.id, node.x, node.y - (node.radius > 24 ? 4 : 0));
 
-        // Subtext role
+        // Subtext role badge
         if (node.radius > 24) {
           ctx.fillStyle = node.color;
           ctx.font = `600 ${Math.round(node.radius * 0.32)}px 'Inter', sans-serif`;
           ctx.fillText(node.cluster.toUpperCase(), node.x, node.y + node.radius * 0.45);
         }
-      });
+      }
 
       ctx.restore();
       animFrameId = requestAnimationFrame(tick);
     }
 
-    if (animFrameId) cancelAnimationFrame(animFrameId);
     animFrameId = requestAnimationFrame(tick);
   }
 
