@@ -1,6 +1,29 @@
-# Financial News Sentiment Lead-Lag Market Analysis
+# Financial News Sentiment Lead-Lag Market Analysis & Alpha Terminal
 
-A 4-notebook pipeline that combines NLP sentiment analysis with Granger causality testing and network graph visualisation to discover which stocks lead or follow others in the market based on financial news.
+A high-performance quantitative research platform and 4-tier pipeline combining FinBERT NLP sentiment analysis, Granger causality testing, and graph theory to discover predictive lead-lag relationships across US equity markets.
+
+---
+
+## ⚡ Quant Alpha Terminal (Web Application)
+
+An interactive, dark-mode Bloomberg-style quantitative terminal built for recruiters, researchers, and portfolio managers to inspect live lead-lag signals, force-directed network topology, Granger econometrics, and run interactive alpha shock simulations.
+
+### Quick Start (Launch in 5 seconds):
+```bash
+# Option 1: Zero-dependency Python server
+python3 serve.py
+
+# Option 2: Vite development server
+npm run dev
+
+# Option 3: Build production bundle
+npm run build
+```
+Open **http://localhost:8080** (or http://localhost:3000) in your browser.
+
+### One-Click Cloud Deployment:
+- **Vercel**: Deploy directly with `vercel` (uses included [vercel.json](file:///Users/dhruvansh/Documents/Claude/Projects/Lead%20Lag-2/vercel.json))
+- **Netlify**: Deploy with `netlify deploy --prod` (uses included [netlify.toml](file:///Users/dhruvansh/Documents/Claude/Projects/Lead%20Lag-2/netlify.toml))
 
 ---
 

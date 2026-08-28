@@ -1,0 +1,22 @@
+{
+  "name": "financial-news-sentiment-lead-lag-market-analysis",
+  "version": "1.0.0",
+  "description": "Financial News Sentiment Lead-Lag Market Analysis & Quantitative Alpha Platform",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "export-data": "python3 scripts/export_data.py",
+    "serve": "python3 serve.py"
+  },
+  "keywords": [
+    "quantitative-finance",
+    "lead-lag",
+    "finbert",
+    "granger-causality",
+    "sentiment-analysis",
+    "graph-theory"
+  ],
+  "author": "Dhruvansh Shah",
+  "license": "MIT"
+}

@@ -1,5 +1,5 @@
-data/
-outputs/
+/data/
+/outputs/
 .env
 __pycache__/
 *.pyc
@@ -8,3 +8,10 @@ __pycache__/
 venv/
 .vscode/
 ~$*.docx
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+
+

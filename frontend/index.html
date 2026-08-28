@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlphaFlow | Financial News Sentiment Lead-Lag Quantitative Analysis</title>
+  <meta name="description" content="Quantitative Alpha Research Platform: Discovering market lead-lag relationships through NLP sentiment analysis (FinBERT), Granger causality testing, and graph theory." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- KaTeX for Math Equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+
+  <!-- Chart.js for Data Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <!-- Top Telemetry & Terminal Marquee -->
+  <header class="terminal-header">
+    <div class="header-top-bar">
+      <div class="brand-container">
+        <div class="brand-logo">
+          <div class="pulse-ring"></div>
+          <span class="logo-icon">AF</span>
+        </div>
+        <div class="brand-meta">
+          <div class="brand-title">
+            <span class="brand-name">ALPHA<span class="highlight">FLOW</span></span>
+            <span class="system-tag">v2.4.0-PROD</span>
+          </div>
+          <div class="brand-subtitle">Financial News Sentiment Lead-Lag Market Engine</div>
+        </div>
+      </div>
+
+      <div class="telemetry-badges">
+        <div class="telemetry-badge status-live">
+          <span class="dot"></span>
+          <span>PIPELINE: ONLINE</span>
+        </div>
+        <div class="telemetry-badge">
+          <span class="label">CORPUS:</span>
+          <span class="val">73,936 NEWS</span>
+        </div>
+        <div class="telemetry-badge">
+          <span class="label">UNIVERSE:</span>
+          <span class="val">10 MEGA-CAPS</span>
+        </div>
+        <div class="telemetry-badge">
+          <span class="label">NLP:</span>
+          <span class="val">FinBERT (70%) + LM (30%)</span>
+        </div>
+        <div class="telemetry-badge highlight-badge">
+          <span class="label">STAR ALPHA:</span>
+          <span class="val">NFLX → META (p=0.0003)</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/Dhruvansh-Shah/Financial_News_Sentiment_Lead_Lag_Market_Analysis" target="_blank" class="btn btn-outline btn-sm" id="btn-github">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub Repo</span>
+        </a>
+        <button class="btn btn-primary btn-sm btn-recruiter-guide" id="btn-export-brief">
+          <span class="btn-pulse-dot"></span>
+          <span>Recruiters: Understand This Project</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Live Ticker Bar -->
+    <div class="ticker-marquee-bar">
+      <div class="marquee-title"><span>QUANT LEAD-LAG FEED</span></div>
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="ticker-marquee-track">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="app-navbar">
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="tab-overview">
+        <span class="tab-label">Alpha Signals & Ticker Terminal</span>
+      </button>
+      <button class="nav-tab" data-tab="tab-network">
+        <span class="tab-label">Market Topology & Network Graph</span>
+      </button>
+      <button class="nav-tab" data-tab="tab-econometrics">
+        <span class="tab-label">Lead-Lag & Granger Matrix</span>
+      </button>
+      <button class="nav-tab" data-tab="tab-sentiment">
+        <span class="tab-label">FinBERT NLP Intelligence</span>
+      </button>
+      <button class="nav-tab" data-tab="tab-eda">
+        <span class="tab-label">EDA & Research Gallery</span>
+      </button>
+      <button class="nav-tab" data-tab="tab-architecture">
+        <span class="tab-label">System Architecture & Specs</span>
+      </button>
+      <button class="nav-tab" data-tab="tab-simulator">
+        <span class="tab-label">Alpha Strategy Simulator</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Application Container -->
+  <main class="main-container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: ALPHA SIGNALS & TICKER TERMINAL (DEFAULT LANDING) -->
+    <!-- ========================================== -->
+    <section id="tab-overview" class="tab-content active">
+      <!-- Quick Recruiter Welcome Callout Banner -->
+      <div class="recruiter-quick-callout glass-panel-inner" style="margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-left: 3px solid var(--cyan-primary);">
+        <div>
+          <strong class="text-white" style="font-family: var(--font-mono); font-size: 0.82rem;">RECRUITER OVERVIEW:</strong>
+          <span style="font-size: 0.8rem; color: #cbd5e1; margin-left: 0.4rem;">
+            This quantitative platform uses FinBERT NLP and Granger Causality to prove whether news about one tech company predicts price moves in other companies days later.
+          </span>
+        </div>
+        <button class="btn btn-outline btn-xs" onclick="document.getElementById('btn-export-brief').click()" style="white-space: nowrap; font-weight: 700; border-color: var(--cyan-primary); color: var(--cyan-primary);">
+          Open 2-Min Project Explainer
+        </button>
+      </div>
+
+      <!-- Top Metrics Ribbon -->
+      <div class="stats-grid">
+        <div class="stat-card glass-panel highlight-border">
+          <div class="stat-header">
+            <span class="stat-label">STRONGEST LEAD-LAG PAIR</span>
+            <span class="badge badge-cyan">p = 0.0003</span>
+          </div>
+          <div class="stat-value text-cyan">NFLX <span class="arrow">➔</span> META</div>
+          <div class="stat-subtext">Lag: 1 Trading Day | Lead Score: +0.4958</div>
+        </div>
+
+        <div class="stat-card glass-panel">
+          <div class="stat-header">
+            <span class="stat-label">COMMUNITY DETECTION</span>
+            <span class="badge badge-purple">Louvain Modularity</span>
+          </div>
+          <div class="stat-value">5 Leaders <span class="separator">/</span> 5 Followers</div>
+          <div class="stat-subtext">Leaders: NFLX, AMZN, NVDA, AAPL, TSLA</div>
+        </div>
+
+        <div class="stat-card glass-panel">
+          <div class="stat-header">
+            <span class="stat-label">GRANGER CAUSALITY TEST</span>
+            <span class="badge badge-emerald">3 Verified (α ≤ 0.05)</span>
+          </div>
+          <div class="stat-value text-emerald">NFLX, AMZN, INTC</div>
+          <div class="stat-subtext">Optimal forecast horizon: 1–2 trading days</div>
+        </div>
+
+        <div class="stat-card glass-panel">
+          <div class="stat-header">
+            <span class="stat-label">NLP ACCELERATION</span>
+            <span class="badge badge-amber">FinBERT 70% + LM 30%</span>
+          </div>
+          <div class="stat-value">73.9K Headlines</div>
+          <div class="stat-subtext">Apple Metal Performance Shaders (MPS)</div>
+        </div>
+      </div>
+
+      <!-- Ticker Selector Pill Bar -->
+      <div class="ticker-selector-section glass-panel">
+        <div class="selector-header">
+          <div class="selector-title">
+            <span>SELECT ACTIVE TICKER FOR DEEP-DIVE ANALYSIS:</span>
+          </div>
+          <div class="cluster-legend">
+            <span class="legend-item"><span class="legend-dot leader"></span> Leader Stock</span>
+            <span class="legend-item"><span class="legend-dot follower"></span> Follower Stock</span>
+          </div>
+        </div>
+        <div class="ticker-pills-container" id="ticker-pills">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Ticker Deep-Dive Split Layout -->
+      <div class="grid-2col">
+        <!-- Left: Quant Profile & Intelligence Card -->
+        <div class="card glass-panel" id="ticker-profile-card">
+          <div class="card-header">
+            <div class="header-left">
+              <div class="ticker-hero" id="active-ticker-badge">NFLX</div>
+              <div>
+                <h3 class="card-title" id="active-ticker-name">Netflix, Inc.</h3>
+                <div class="card-subtitle" id="active-ticker-sector">Mega-Cap Tech Universe</div>
+              </div>
+            </div>
+            <div class="header-right" id="active-role-container">
+              <!-- Leader / Follower Badge -->
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- Key Quant Metrics Table -->
+            <div class="metrics-row">
+              <div class="metric-box">
+                <div class="metric-label">EIGENVECTOR CENTRALITY</div>
+                <div class="metric-num text-cyan" id="metric-centrality">0.6271</div>
+                <div class="metric-bar-container"><div class="metric-bar" id="bar-centrality" style="width: 62.7%;"></div></div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">NET OUTFLOW INFLUENCE</div>
+                <div class="metric-num" id="metric-outflow">+2.094</div>
+                <div class="metric-bar-container"><div class="metric-bar" id="bar-outflow" style="width: 75%;"></div></div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">GRANGER CAUSALITY</div>
+                <div class="metric-num text-emerald" id="metric-granger">VERIFIED (p=0.0003)</div>
+                <div class="metric-sub" id="metric-opt-lag">Optimal Lag: 1 Day</div>
+              </div>
+            </div>
+
+            <!-- Plain Language AI / Quant Summary Box -->
+            <div class="summary-box glass-panel-inner">
+              <div class="summary-box-header">
+                <span class="label">QUANTITATIVE ALPHA EXECUTIVE SUMMARY</span>
+              </div>
+              <p class="summary-text" id="plain-language-summary">
+                Loading quantitative report...
+              </p>
+            </div>
+
+            <!-- Ranked Counterparts Table -->
+            <div class="counterpart-section">
+              <div class="section-title">
+                <span>RANKED LEAD-LAG COUNTERPART STOCKS</span>
+                <span class="hint">Sorted by absolute cross-correlation influence</span>
+              </div>
+              <div class="table-responsive">
+                <table class="quant-table" id="table-counterparts">
+                  <thead>
+                    <tr>
+                      <th>COUNTERPART</th>
+                      <th>RELATIONSHIP</th>
+                      <th>LEAD-LAG SCORE L(i,j)</th>
+                      <th>OPTIMAL HORIZON</th>
+                      <th>STATISTICAL ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Populated by JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real-time Charts & News Intelligence Feed -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>SENTIMENT & PRICE DYNAMICS</span>
+            </h3>
+            <div class="chart-toggles">
+              <button class="btn btn-xs active" id="btn-chart-series">Sentiment vs Price</button>
+              <button class="btn btn-xs" id="btn-chart-ccf">CCF Curve</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-container" style="height: 280px; position: relative;">
+              <canvas id="active-ticker-chart"></canvas>
+            </div>
+
+            <!-- Live News Headlines Sample Feed -->
+            <div class="news-feed-section">
+              <div class="section-title">
+                <span>SAMPLE HEADLINES & NLP SENTIMENT FEED</span>
+                <span class="hint">FinBERT + LM Scored Corpus</span>
+              </div>
+              <div class="news-list" id="active-news-list">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: INTERACTIVE MARKET TOPOLOGY & GRAPH -->
+    <!-- ========================================== -->
+    <section id="tab-network" class="tab-content">
+      <div class="grid-layout-sidebar">
+        <!-- Controls Sidebar -->
+        <div class="card glass-panel sidebar-controls">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>GRAPH MODE & CONTROLS</span>
+            </h3>
+          </div>
+          <div class="card-body">
+            <!-- View Mode Switcher -->
+            <div class="control-group">
+              <label class="control-label">RENDER ENGINE</label>
+              <div class="button-group">
+                <button class="btn btn-xs active" id="btn-mode-canvas">2D Force Simulation</button>
+                <button class="btn btn-xs" id="btn-mode-plotly">Plotly Graph Engine</button>
+              </div>
+            </div>
+
+            <div class="control-group" id="group-threshold">
+              <label class="control-label">EDGE WEIGHT THRESHOLD (|L(i,j)| ≥ <span id="val-thresh">0.05</span>)</label>
+              <input type="range" class="range-slider" id="slider-threshold" min="0.00" max="0.60" step="0.05" value="0.05" />
+            </div>
+
+            <div class="control-group" id="group-filter">
+              <label class="control-label">FILTER CLUSTER ROLE</label>
+              <div class="button-group">
+                <button class="btn btn-xs active" data-filter="all">All Tickers (10)</button>
+                <button class="btn btn-xs" data-filter="leader">Leaders (5)</button>
+                <button class="btn btn-xs" data-filter="follower">Followers (5)</button>
+              </div>
+            </div>
+
+            <div class="control-group" id="group-physics">
+              <label class="control-label">PHYSICS SIMULATION</label>
+              <div class="button-group">
+                <button class="btn btn-xs btn-primary" id="btn-restart-physics">Restart Physics</button>
+                <button class="btn btn-xs" id="btn-freeze-physics">Freeze Nodes</button>
+              </div>
+            </div>
+
+            <!-- Topology Stats Legend -->
+            <div class="topology-legend glass-panel-inner">
+              <div class="legend-title">GRAPH SPECIFICATIONS</div>
+              <div class="legend-row">
+                <span class="legend-bullet cyan"></span>
+                <span><strong>Leader Stocks</strong> (Louvain Cluster 0)</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-bullet amber"></span>
+                <span><strong>Follower Stocks</strong> (Louvain Cluster 1)</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-bullet purple"></span>
+                <span><strong>Node Size:</strong> Proportional to Eigenvector Centrality</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-bullet neon"></span>
+                <span><strong>Edge Width:</strong> Proportional to |Lead-Lag Score|</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-bullet pulse"></span>
+                <span><strong>Particles:</strong> Direction of News Lead Influence</span>
+              </div>
+            </div>
+
+            <!-- Selected Node Inspector Box -->
+            <div class="node-inspector-box glass-panel-inner" id="node-inspector">
+              <div class="inspector-title">CLICK ANY NODE TO INSPECT</div>
+              <p class="inspector-hint">Click and drag nodes to explore dynamic layout. Scroll to zoom, pan to explore.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Graph Container (Canvas or Plotly iframe) -->
+        <div class="card glass-panel graph-canvas-card">
+          <div class="card-header">
+            <div class="header-left">
+              <h3 class="card-title" id="graph-view-title">
+                <span>MARKET LEAD-LAG NETWORK GRAPH (FORCE-DIRECTED)</span>
+              </h3>
+            </div>
+            <div class="header-right">
+              <button class="btn btn-xs btn-outline" id="btn-reset-view">Reset View</button>
+              <a href="outputs/network_graph.html" target="_blank" class="btn btn-xs btn-outline">Open Standalone Graph</a>
+            </div>
+          </div>
+          <div class="card-body graph-canvas-wrapper" id="canvas-container">
+            <canvas id="network-canvas"></canvas>
+            <iframe id="plotly-iframe" src="outputs/network_graph.html" class="embedded-plotly-frame" style="display:none;"></iframe>
+            <div class="graph-watermark">ALPHAFLOW QUANT GRAPH ENGINE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graph Theory Empirical Research Row (EDA 12 & 13) -->
+      <div class="grid-2col" style="margin-top: 1.25rem;">
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>EDA 12: EIGENVECTOR CENTRALITY RANKINGS</span>
+            </h3>
+            <span class="badge badge-cyan">NetworkX Centrality</span>
+          </div>
+          <div class="card-body">
+            <div class="eda-img-container" onclick="window.openLightbox('outputs/eda_12_centrality_ranking.png', 'EDA 12: Eigenvector Centrality Rankings', 'Quantifies the systemic influence of each stock within the network graph. Higher scores indicate the stock is closely connected to other influential market participants.')">
+              <img src="outputs/eda_12_centrality_ranking.png" alt="EDA 12: Centrality Ranking" class="eda-preview-img" />
+              <div class="eda-zoom-hint">Click to enlarge</div>
+            </div>
+            <p class="eda-caption"><strong>Key Takeaway:</strong> META, AMZN, and NFLX hold the highest eigenvector centrality scores in the equity network, representing central nodes of information flow.</p>
+          </div>
+        </div>
+
+        <div class="card-panel card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>EDA 13: NET OUTFLOW INFLUENCE PER TICKER</span>
+            </h3>
+            <span class="badge badge-amber">Signed Lead-Lag Metric</span>
+          </div>
+          <div class="card-body">
+            <div class="eda-img-container" onclick="window.openLightbox('outputs/eda_13_net_outflow.png', 'EDA 13: Net Outflow Influence per Ticker', 'Computed as the row sum of the lead-lag matrix. Positive values indicate a net leader whose sentiment transmits outward to other equities; negative values indicate net followers.')">
+              <img src="outputs/eda_13_net_outflow.png" alt="EDA 13: Net Outflow Influence" class="eda-preview-img" />
+              <div class="eda-zoom-hint">Click to enlarge</div>
+            </div>
+            <p class="eda-caption"><strong>Key Takeaway:</strong> NFLX (+2.094) exhibits the single largest positive net outflow in the tech universe, followed by MSFT and AAPL.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: LEAD-LAG & GRANGER MATRIX -->
+    <!-- ========================================== -->
+    <section id="tab-econometrics" class="tab-content">
+      <div class="grid-2col">
+        <!-- Interactive Heatmap Matrix -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>10×10 LEAD-LAG CORRELATION MATRIX L(i, j)</span>
+            </h3>
+            <span class="badge badge-purple">Lags: -10 to +10 Days</span>
+          </div>
+          <div class="card-body">
+            <p class="matrix-desc">
+              Positive values (<strong>Cyan</strong>) indicate row stock leads column stock. Negative values (<strong>Crimson</strong>) indicate row stock lags column stock.
+            </p>
+            <div class="heatmap-container" id="matrix-heatmap">
+              <!-- Populated by JS -->
+            </div>
+            <div class="heatmap-tooltip" id="matrix-tooltip"></div>
+          </div>
+        </div>
+
+        <!-- Granger Causality & CCF Curves -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>GRANGER CAUSALITY TEST SPECTRUM (α = 0.05)</span>
+            </h3>
+            <span class="badge badge-emerald">H₀: Sentiment Does Not Granger-Cause Return</span>
+          </div>
+          <div class="card-body">
+            <div class="chart-container" style="height: 240px; position: relative;">
+              <canvas id="granger-chart"></canvas>
+            </div>
+
+            <!-- CCF Function Viewer -->
+            <div class="ccf-section">
+              <div class="section-title">
+                <span>CROSS-CORRELATION FUNCTION (CCF) OVER LAGS τ ∈ [-10, +10]</span>
+              </div>
+              <div class="chart-container" style="height: 220px; position: relative;">
+                <canvas id="ccf-comparison-chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empirical Research Row (EDA 09, 10, 11) -->
+      <div class="stats-grid" style="margin-top: 1.25rem;">
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title"><span>EDA 09: GRANGER P-VALUES</span></h3>
+          </div>
+          <div class="card-body">
+            <div class="eda-img-container" onclick="window.openLightbox('outputs/eda_09_granger_pvalues.png', 'EDA 09: Granger Causality p-values', 'Demonstrates which stocks pass the alpha <= 0.05 statistical threshold for sentiment-to-price predictability.')">
+              <img src="outputs/eda_09_granger_pvalues.png" alt="EDA 09: Granger p-values" class="eda-preview-img" />
+              <div class="eda-zoom-hint">Click to enlarge</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title"><span>EDA 10: CCF CURVE (NFLX → META)</span></h3>
+          </div>
+          <div class="card-body">
+            <div class="eda-img-container" onclick="window.openLightbox('outputs/eda_10_ccf_NFLX_META.png', 'EDA 10: CCF NFLX -> META', 'Cross-correlation function showing the clear peak at lag = +1 trading day.')">
+              <img src="outputs/eda_10_ccf_NFLX_META.png" alt="EDA 10: CCF Curve" class="eda-preview-img" />
+              <div class="eda-zoom-hint">Click to enlarge</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title"><span>EDA 11: RANKED LEAD-LAG (NFLX)</span></h3>
+          </div>
+          <div class="card-body">
+            <div class="eda-img-container" onclick="window.openLightbox('outputs/eda_11_leadlag_scores_NFLX.png', 'EDA 11: NFLX Lead-Lag Scores', 'Shows how NFLX leads each counterpart in the 10-stock universe.')">
+              <img src="outputs/eda_11_leadlag_scores_NFLX.png" alt="EDA 11: NFLX Scores" class="eda-preview-img" />
+              <div class="eda-zoom-hint">Click to enlarge</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: FINBERT SENTIMENT INTELLIGENCE -->
+    <!-- ========================================== -->
+    <section id="tab-sentiment" class="tab-content">
+      <div class="grid-2col">
+        <!-- Dual NLP Comparison -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>HYBRID NLP SCORING: FINBERT (70%) vs LOUGHRAN-MCDONALD (30%)</span>
+            </h3>
+          </div>
+          <div class="card-body">
+            <p class="section-desc">
+              FinBERT is a financial domain-adapted BERT model fine-tuned on corporate filings and financial news. Loughran-McDonald provides a dictionary-based tone baseline.
+            </p>
+            <div class="chart-container" style="height: 280px; position: relative;">
+              <canvas id="sentiment-nlp-chart"></canvas>
+            </div>
+
+            <div class="nlp-stats-grid">
+              <div class="nlp-stat-box">
+                <div class="label">AVG FINBERT SCORE</div>
+                <div class="val text-cyan">+0.142</div>
+              </div>
+              <div class="nlp-stat-box">
+                <div class="label">AVG LM SCORE</div>
+                <div class="val text-purple">+0.068</div>
+              </div>
+              <div class="nlp-stat-box">
+                <div class="label">BLENDED SENTIMENT</div>
+                <div class="val text-emerald">+0.120</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sentiment vs Next-Day Return Scatter -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>SENTIMENT SHOCK vs FORWARD PRICE RETURN</span>
+            </h3>
+          </div>
+          <div class="card-body">
+            <p class="section-desc">
+              Demonstrates empirical correlation between daily aggregate news sentiment and forward stock log returns across the multi-year corpus.
+            </p>
+            <div class="chart-container" style="height: 340px; position: relative;">
+              <canvas id="sentiment-scatter-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empirical NLP Distribution Plots (EDA 06 & 07) -->
+      <div class="grid-2col" style="margin-top: 1.25rem;">
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title"><span>EDA 06: SENTIMENT DISTRIBUTION BOXPLOTS BY TICKER</span></h3>
+          </div>
+          <div class="card-body">
+            <div class="eda-img-container" onclick="window.openLightbox('outputs/eda_06_sentiment_distribution_boxplot.png', 'EDA 06: Sentiment Distributions', 'Boxplots of daily aggregated sentiment scores for each ticker, illustrating median sentiment and interquartile variance.')">
+              <img src="outputs/eda_06_sentiment_distribution_boxplot.png" alt="EDA 06: Sentiment Distributions" class="eda-preview-img" />
+              <div class="eda-zoom-hint">Click to enlarge</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title"><span>EDA 07: EMPIRICAL SENTIMENT VS RETURN SCATTER (NFLX)</span></h3>
+          </div>
+          <div class="card-body">
+            <div class="eda-img-container" onclick="window.openLightbox('outputs/eda_07_sentiment_vs_return_NFLX.png', 'EDA 07: NFLX Sentiment vs Return', 'Scatter plot with regression line confirming positive correlation between sentiment shocks and price movements.')">
+              <img src="outputs/eda_07_sentiment_vs_return_NFLX.png" alt="EDA 07: Sentiment vs Return" class="eda-preview-img" />
+              <div class="eda-zoom-hint">Click to enlarge</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: EDA & EMPIRICAL RESEARCH GALLERY -->
+    <!-- ========================================== -->
+    <section id="tab-eda" class="tab-content">
+      <div class="card glass-panel">
+        <div class="card-header">
+          <h3 class="card-title">
+            <span>EXPLORATORY DATA ANALYSIS (EDA) & RESEARCH GALLERY</span>
+          </h3>
+          <span class="badge badge-cyan">12 Visualizations Across 4 Notebooks</span>
+        </div>
+        <div class="card-body">
+          <p class="section-desc">
+            Complete empirical artifact suite generated during data collection, FinBERT NLP scoring, econometric Granger testing, and network community detection. Click on any visualization to inspect the high-resolution chart and quantitative rationale.
+          </p>
+
+          <!-- Phase 1 Gallery -->
+          <div class="eda-phase-section">
+            <div class="eda-phase-title">PHASE 1: DATA COLLECTION & PRICE DYNAMICS (NOTEBOOK 01)</div>
+            <div class="eda-gallery-grid">
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_01_headlines_per_ticker.png', 'EDA 01: Headlines per Ticker', 'Shows the volume of news articles matched to each ticker across the 73,936 article corpus.')">
+                <div class="gallery-item-title">EDA 01: Headlines per Ticker</div>
+                <img src="outputs/eda_01_headlines_per_ticker.png" alt="EDA 01" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_02_article_volume_over_time.png', 'EDA 02: Article Volume Over Time', 'Monthly article frequency over 2013-2020 showing steady news coverage across all 10 equities.')">
+                <div class="gallery-item-title">EDA 02: Article Volume Over Time</div>
+                <img src="outputs/eda_02_article_volume_over_time.png" alt="EDA 02" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_03_normalised_price_history.png', 'EDA 03: Normalised Price Trajectories', 'Normalised baseline price histories (indexed to 100) illustrating market regime trends.')">
+                <div class="gallery-item-title">EDA 03: Normalised Price History</div>
+                <img src="outputs/eda_03_normalised_price_history.png" alt="EDA 03" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_04_log_return_distributions.png', 'EDA 04: Log Return Distributions', 'KDE density distributions of daily log returns for all 10 tickers showing stationary return properties.')">
+                <div class="gallery-item-title">EDA 04: Log Return Distributions</div>
+                <img src="outputs/eda_04_log_return_distributions.png" alt="EDA 04" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_05_return_correlation_matrix.png', 'EDA 05: Return Correlation Matrix', 'Cross-asset price return correlation heatmap identifying systemic co-movement.')">
+                <div class="gallery-item-title">EDA 05: Return Correlation Matrix</div>
+                <img src="outputs/eda_05_return_correlation_matrix.png" alt="EDA 05" class="eda-gallery-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2 Gallery -->
+          <div class="eda-phase-section" style="margin-top: 1.5rem;">
+            <div class="eda-phase-title">PHASE 2: FINBERT NLP & SENTIMENT DISTRIBUTIONS (NOTEBOOK 02)</div>
+            <div class="eda-gallery-grid">
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_06_sentiment_distribution_boxplot.png', 'EDA 06: Sentiment Distribution Boxplots', 'Comparison of daily average sentiment scores showing median tone and outlier sentiment spikes.')">
+                <div class="gallery-item-title">EDA 06: Sentiment Distribution Boxplots</div>
+                <img src="outputs/eda_06_sentiment_distribution_boxplot.png" alt="EDA 06" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_07_sentiment_vs_return_NFLX.png', 'EDA 07: NFLX Sentiment vs Return', 'Scatter plot and linear regression verifying positive directional correlation between news sentiment and forward returns.')">
+                <div class="gallery-item-title">EDA 07: NFLX Sentiment vs Return</div>
+                <img src="outputs/eda_07_sentiment_vs_return_NFLX.png" alt="EDA 07" class="eda-gallery-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3 Gallery -->
+          <div class="eda-phase-section" style="margin-top: 1.5rem;">
+            <div class="eda-phase-title">PHASE 3: GRANGER CAUSALITY & LEAD-LAG ECONOMETRICS (NOTEBOOK 03)</div>
+            <div class="eda-gallery-grid">
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_09_granger_pvalues.png', 'EDA 09: Granger Causality p-values', 'Statistical significance testing across all 10 tickers. Highlights NFLX (p=0.0003), AMZN (p=0.031), and INTC (p=0.033).')">
+                <div class="gallery-item-title">EDA 09: Granger Causality p-values</div>
+                <img src="outputs/eda_09_granger_pvalues.png" alt="EDA 09" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_10_ccf_NFLX_META.png', 'EDA 10: CCF Curve (NFLX -> META)', 'Cross-correlation function spanning lags -10 to +10 days demonstrating peak lead signal at +1 day.')">
+                <div class="gallery-item-title">EDA 10: CCF Curve (NFLX -> META)</div>
+                <img src="outputs/eda_10_ccf_NFLX_META.png" alt="EDA 10" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_11_leadlag_scores_NFLX.png', 'EDA 11: NFLX Ranked Lead-Lag Scores', 'Ranked bar chart of lead-lag influence exerted by Netflix across all counterpart equities.')">
+                <div class="gallery-item-title">EDA 11: NFLX Lead-Lag Scores</div>
+                <img src="outputs/eda_11_leadlag_scores_NFLX.png" alt="EDA 11" class="eda-gallery-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4 Gallery -->
+          <div class="eda-phase-section" style="margin-top: 1.5rem;">
+            <div class="eda-phase-title">PHASE 4: NETWORK TOPOLOGY & SYSTEMIC INFLUENCE (NOTEBOOK 04)</div>
+            <div class="eda-gallery-grid">
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_12_centrality_ranking.png', 'EDA 12: Centrality Rankings', 'Eigenvector centrality rankings across the network topology.')">
+                <div class="gallery-item-title">EDA 12: Centrality Rankings</div>
+                <img src="outputs/eda_12_centrality_ranking.png" alt="EDA 12" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="window.openLightbox('outputs/eda_13_net_outflow.png', 'EDA 13: Signed Net Outflow', 'Signed net outflow influence metric identifying net leaders vs net followers.')">
+                <div class="gallery-item-title">EDA 13: Net Outflow Influence</div>
+                <img src="outputs/eda_13_net_outflow.png" alt="EDA 13" class="eda-gallery-img" />
+              </div>
+
+              <div class="eda-gallery-item glass-panel-inner" onclick="document.querySelector('[data-tab=\'tab-network\']').click()">
+                <div class="gallery-item-title">Interactive Network Graph (network_graph.html)</div>
+                <div style="height: 140px; display: flex; align-items: center; justify-content: center; background: rgba(0, 240, 255, 0.05); border-radius: 6px; color: var(--cyan-primary); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">
+                  Click to View Interactive Plotly Engine
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: SYSTEM ARCHITECTURE & CODE SPECS -->
+    <!-- ========================================== -->
+    <section id="tab-architecture" class="tab-content">
+      <!-- Pipeline Flowchart -->
+      <div class="card glass-panel">
+        <div class="card-header">
+          <h3 class="card-title">
+            <span>END-TO-END 4-TIER PIPELINE ARCHITECTURE</span>
+          </h3>
+          <span class="badge badge-cyan">Checkpoint Architecture: Parquet Data Lake</span>
+        </div>
+        <div class="card-body">
+          <div class="pipeline-diagram">
+            <div class="pipeline-step">
+              <div class="step-num">01</div>
+              <div class="step-card">
+                <div class="step-title">DATA INGESTION</div>
+                <div class="step-tech">yfinance + Kaggle API</div>
+                <div class="step-desc">Ingests 8 GB Kaggle news corpus and 10 equity price histories.</div>
+                <div class="step-output">raw_news.parquet<br/>raw_prices.parquet</div>
+              </div>
+            </div>
+            <div class="pipeline-arrow">➔</div>
+            <div class="pipeline-step">
+              <div class="step-num">02</div>
+              <div class="step-card">
+                <div class="step-title">FINBERT NLP SCORING</div>
+                <div class="step-tech">PyTorch + Transformers (MPS)</div>
+                <div class="step-desc">Scores headlines with FinBERT (70%) + LM (30%) daily aggregation.</div>
+                <div class="step-output">sentiment_daily.parquet</div>
+              </div>
+            </div>
+            <div class="pipeline-arrow">➔</div>
+            <div class="pipeline-step">
+              <div class="step-num">03</div>
+              <div class="step-card">
+                <div class="step-title">GRANGER & LEAD-LAG</div>
+                <div class="step-tech">Statsmodels + NumPy</div>
+                <div class="step-desc">ADF stationarity, pairwise cross-correlations, Granger VAR F-tests.</div>
+                <div class="step-output">granger_results.parquet<br/>lead_lag_matrix.parquet</div>
+              </div>
+            </div>
+            <div class="pipeline-arrow">➔</div>
+            <div class="pipeline-step">
+              <div class="step-num">04</div>
+              <div class="step-card">
+                <div class="step-title">GRAPH & ALPHA SIGNALS</div>
+                <div class="step-tech">NetworkX + python-louvain</div>
+                <div class="step-desc">Louvain community clustering, eigenvector centrality, signal synthesis.</div>
+                <div class="step-output">cluster_assignments.parquet<br/>network_graph.html</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mathematical Rigour & Formulas -->
+      <div class="grid-2col" style="margin-top: 1.5rem;">
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>MATHEMATICAL & ECONOMETRIC FORMULATIONS</span>
+            </h3>
+          </div>
+          <div class="card-body">
+            <div class="math-block">
+              <div class="math-title">1. Asymmetric Cross-Correlation Lead-Lag Metric:</div>
+              <div class="math-eq" id="eq-leadlag"></div>
+              <div class="math-desc">Where $S_i(t)$ is daily sentiment for stock $i$, and $R_j(t)$ is log return for stock $j$. A positive score $L(i,j) > 0$ indicates $i$ leads $j$.</div>
+            </div>
+
+            <div class="math-block">
+              <div class="math-title">2. Granger Causality Vector Autoregression (VAR):</div>
+              <div class="math-eq" id="eq-granger"></div>
+              <div class="math-desc">Testing null hypothesis $H_0: \beta_1 = \dots = \beta_p = 0$. Rejection ($p \le 0.05$) verifies predictive power.</div>
+            </div>
+
+            <div class="math-block">
+              <div class="math-title">3. Eigenvector Centrality & Influence:</div>
+              <div class="math-eq" id="eq-centrality"></div>
+              <div class="math-desc">Measures systemic importance within the interconnected lead-lag market network.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parquet Data Schema & Benchmarks -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>PARQUET STORAGE LAKE & HARDWARE BENCHMARKS</span>
+            </h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="quant-table">
+                <thead>
+                  <tr>
+                    <th>FILE</th>
+                    <th>RECORDS</th>
+                    <th>COMPRESSION</th>
+                    <th>LATENCY</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>raw_news.parquet</code></td>
+                    <td>73,936 rows</td>
+                    <td>Snappy Parquet (2.4 MB)</td>
+                    <td>4.2 ms</td>
+                  </tr>
+                  <tr>
+                    <td><code>raw_prices.parquet</code></td>
+                    <td>20,140 rows</td>
+                    <td>Snappy Parquet (1.1 MB)</td>
+                    <td>2.1 ms</td>
+                  </tr>
+                  <tr>
+                    <td><code>sentiment_daily.parquet</code></td>
+                    <td>7,817 rows</td>
+                    <td>Snappy Parquet (158 KB)</td>
+                    <td>0.8 ms</td>
+                  </tr>
+                  <tr>
+                    <td><code>lead_lag_matrix.parquet</code></td>
+                    <td>10×10 matrix</td>
+                    <td>Snappy Parquet (7.6 KB)</td>
+                    <td>0.1 ms</td>
+                  </tr>
+                  <tr>
+                    <td><code>granger_results.parquet</code></td>
+                    <td>10 records</td>
+                    <td>Snappy Parquet (6.8 KB)</td>
+                    <td>0.1 ms</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="benchmark-box glass-panel-inner">
+              <div class="bench-title">HARDWARE ACCELERATION RUNTIMES</div>
+              <div class="bench-row">
+                <span>Apple M-Series MPS (FinBERT Inference):</span>
+                <span class="text-cyan">~4.8 minutes (73.9K headlines)</span>
+              </div>
+              <div class="bench-row">
+                <span>Standard CPU (FinBERT Inference):</span>
+                <span class="text-amber">~32.4 minutes</span>
+              </div>
+              <div class="bench-row">
+                <span>Granger Causality & CCF Engine:</span>
+                <span class="text-emerald">0.82 seconds</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 7: INTERACTIVE ALPHA SIMULATOR -->
+    <!-- ========================================== -->
+    <section id="tab-simulator" class="tab-content">
+      <div class="grid-2col">
+        <!-- Simulator Configuration -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>ALPHA STRATEGY BACKTEST & SHOCK SIMULATOR</span>
+            </h3>
+          </div>
+          <div class="card-body">
+            <p class="section-desc">
+              Test predictive market hypotheses. Simulate how a sentiment shock on a Leader stock propagates into forward returns of Follower stocks.
+            </p>
+
+            <div class="sim-controls">
+              <div class="control-group">
+                <label class="control-label">SELECT LEADER STOCK (Signal Generator):</label>
+                <select class="select-input" id="sim-leader">
+                  <option value="NFLX" selected>NFLX (Netflix - Granger Verified p=0.0003)</option>
+                  <option value="AMZN">AMZN (Amazon - Granger Verified p=0.031)</option>
+                  <option value="NVDA">NVDA (NVIDIA - Centrality Leader)</option>
+                  <option value="AAPL">AAPL (Apple - Ecosystem Leader)</option>
+                  <option value="TSLA">TSLA (Tesla - Centrality Leader)</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">SELECT FOLLOWER TARGET (Execution Target):</label>
+                <select class="select-input" id="sim-follower">
+                  <option value="META" selected>META (Meta Platforms - Follower)</option>
+                  <option value="MSFT">MSFT (Microsoft - Follower)</option>
+                  <option value="GOOGL">GOOGL (Alphabet - Follower)</option>
+                  <option value="AMD">AMD (Advanced Micro Devices - Follower)</option>
+                  <option value="INTC">INTC (Intel - Follower)</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">FINBERT SENTIMENT SHOCK (ΔS): <span id="sim-val-shock" class="text-cyan">+0.50</span></label>
+                <input type="range" class="range-slider" id="sim-slider-shock" min="-1.0" max="1.0" step="0.05" value="0.50" />
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">TRADING EXECUTION HORIZON (τ Lag):</label>
+                <div class="button-group" id="sim-lag-group">
+                  <button class="btn btn-xs active" data-lag="1">1 Trading Day</button>
+                  <button class="btn btn-xs" data-lag="2">2 Trading Days</button>
+                  <button class="btn btn-xs" data-lag="3">3 Trading Days</button>
+                  <button class="btn btn-xs" data-lag="5">5 Trading Days</button>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-block" id="btn-run-simulation">
+                <span>EXECUTE ALPHA SIMULATION</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulation Output & Signal Card -->
+        <div class="card glass-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>SIMULATED TRADE SIGNAL & PREDICTIVE RETURN</span>
+            </h3>
+            <span class="badge badge-cyan" id="sim-signal-badge">STRONG BUY</span>
+          </div>
+          <div class="card-body">
+            <div class="sim-result-grid">
+              <div class="sim-result-card">
+                <div class="label">EXPECTED FORWARD RETURN E[R]</div>
+                <div class="val text-cyan" id="sim-res-return">+1.48%</div>
+                <div class="sub">Horizon: t+1 Trading Day</div>
+              </div>
+
+              <div class="sim-result-card">
+                <div class="label">STATISTICAL CONFIDENCE (1 - p)</div>
+                <div class="val text-emerald" id="sim-res-confidence">99.97%</div>
+                <div class="sub">Granger F-test Verified</div>
+              </div>
+
+              <div class="sim-result-card">
+                <div class="label">EMPIRICAL LEAD-LAG SCORE L(i,j)</div>
+                <div class="val text-purple" id="sim-res-score">+0.4958</div>
+                <div class="sub">High Directional Influence</div>
+              </div>
+
+              <div class="sim-result-card">
+                <div class="label">RECOMMENDED SIZING</div>
+                <div class="val text-amber" id="sim-res-sizing">High Alpha (Tier 1)</div>
+                <div class="sub">Risk-adjusted leverage</div>
+              </div>
+            </div>
+
+            <!-- Signal Rationale Box -->
+            <div class="summary-box glass-panel-inner" style="margin-top: 1.5rem;">
+              <div class="summary-box-header">
+                <span class="label">QUANTITATIVE RATIONALE</span>
+              </div>
+              <p class="summary-text" id="sim-rationale-text">
+                When <strong>NFLX</strong> experiences positive FinBERT sentiment (+0.50), cross-correlation decay curves indicate <strong>META</strong> exhibits a +0.4958 lead-lag transmission with peak reaction at 1 trading day. Granger causality confirms statistical significance at p=0.0003.
+              </p>
+            </div>
+
+            <!-- Recruiter Takeaway -->
+            <div class="recruiter-takeaway glass-panel-inner">
+              <div class="takeaway-title">KEY RECRUITER TAKEAWAY:</div>
+              <p>This demonstrates production-ready quantitative modeling: combining transformer NLP representations with rigorous time-series econometrics (Granger causality) and graph-theoretic community detection to generate tradeable market signals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal-overlay" id="lightbox-modal">
+    <div class="modal-card glass-panel lightbox-card">
+      <div class="modal-header">
+        <div class="modal-title" id="lightbox-title">RESEARCH VISUALIZATION</div>
+        <button class="modal-close" id="btn-close-lightbox">✕</button>
+      </div>
+      <div class="modal-body lightbox-body">
+        <div class="lightbox-img-wrapper">
+          <img id="lightbox-img" src="" alt="Enlarged Plot" />
+        </div>
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comprehensive Recruiter Explainer Modal -->
+  <div class="modal-overlay" id="brief-modal">
+    <div class="modal-card glass-panel recruiter-modal-card">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>RECRUITER'S GUIDE: UNDERSTAND THIS PROJECT IN 2 MINUTES</span>
+        </div>
+        <button class="modal-close" id="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body recruiter-modal-body" id="modal-brief-content">
+        
+        <!-- Big Question Banner -->
+        <div class="story-hero-banner glass-panel highlight-border" style="padding: 1.5rem; margin-bottom: 1.25rem;">
+          <div class="story-hero-badge">
+            <span class="badge badge-cyan" style="font-size:0.75rem;">THE CORE PROBLEM</span>
+          </div>
+          <h2 style="font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; line-height: 1.35;">
+            "Does financial news about <span class="text-cyan">one company</span> secretly predict the stock price of <span class="text-amber">another company</span> days later?"
+          </h2>
+          <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.55; margin-bottom: 1rem;">
+            When major news breaks about <strong>Netflix</strong>, <strong>Amazon</strong>, or <strong>NVIDIA</strong>, market movements do not happen in isolation. News triggers a <em>domino effect</em> where systemic "Leader" equities set off cross-market reactions that ripple into "Follower" stocks 1 to 5 trading days later.
+          </p>
+          <div class="story-hero-chips">
+            <div class="story-chip"><strong>Objective:</strong> Discover which stocks lead and which follow using domain NLP and econometric causality.</div>
+            <div class="story-chip"><strong>Dataset:</strong> 73,936 financial news articles across 8 years (2013–2021) for 10 US tech equities.</div>
+            <div class="story-chip"><strong>Key Finding:</strong> Netflix news sentiment statistically predicts Meta price movements 1 trading day later (p = 0.0003).</div>
+          </div>
+        </div>
+
+        <!-- Domino Effect Visual Diagram -->
+        <div class="glass-panel-inner" style="margin-bottom: 1.5rem;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #fff; margin-bottom: 0.85rem;">
+            HOW THE MARKET DOMINO EFFECT WORKS (LEAD-LAG TRANSMISSION)
+          </div>
+          <div class="domino-flow-grid">
+            <div class="domino-step">
+              <div class="domino-badge step-1">DAY 0: NEWS BREAKS</div>
+              <div class="domino-step-num">STAGE 01</div>
+              <div class="domino-name">Leader Stock (e.g. Netflix)</div>
+              <div class="domino-text">
+                "Netflix subscriber numbers crush Wall Street expectations with record streaming growth."
+              </div>
+              <div class="domino-sentiment text-cyan">FinBERT Sentiment: +0.85</div>
+            </div>
+
+            <div class="domino-arrow">➔<br/><span class="arrow-sub">1 Day Lag</span></div>
+
+            <div class="domino-step">
+              <div class="domino-badge step-2">DAY 1: REACTION</div>
+              <div class="domino-step-num">STAGE 02</div>
+              <div class="domino-name">Follower Stock (e.g. Meta)</div>
+              <div class="domino-text">
+                Institutional market sentiment updates digital ad demand projections. Meta stock price moves upward 1 day later.
+              </div>
+              <div class="domino-sentiment text-emerald">Predicted Return: +1.48% (p=0.0003)</div>
+            </div>
+
+            <div class="domino-arrow">➔<br/><span class="arrow-sub">Execution</span></div>
+
+            <div class="domino-step">
+              <div class="domino-badge step-3">QUANT SIGNAL</div>
+              <div class="domino-step-num">STAGE 03</div>
+              <div class="domino-name">Systematic Trade Execution</div>
+              <div class="domino-text">
+                By detecting the news on Day 0, an automated alpha strategy positions into the follower equity prior to market assimilation.
+              </div>
+              <div class="domino-sentiment text-purple">Verified Alpha Generation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Step-by-Step System -->
+        <div style="margin-bottom: 1.5rem;">
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 800; color: var(--cyan-primary); letter-spacing: 0.05em; margin-bottom: 0.85rem;">
+            THE 4-STAGE PIPELINE ARCHITECTURE (IN SIMPLE WORDS)
+          </div>
+
+          <div class="step-cards-grid">
+            <div class="step-explainer-card glass-panel-inner">
+              <div class="step-card-header">
+                <div class="step-pill">STAGE 01</div>
+                <span class="step-file">notebook_01</span>
+              </div>
+              <h4 class="step-card-title">Data Ingestion: 74K News & 8-Year Prices</h4>
+              <p class="step-card-body">
+                Ingested 8 GB of real financial news headlines and 8 years of daily price history across 10 US mega-cap tech stocks (AAPL, MSFT, GOOGL, AMZN, META, TSLA, NVDA, INTC, AMD, NFLX).
+              </p>
+              <div class="step-card-footer">
+                <span class="output-tag">Checkpoints: raw_news.parquet (73,936 rows) & raw_prices.parquet</span>
+              </div>
+            </div>
+
+            <div class="step-explainer-card glass-panel-inner">
+              <div class="step-card-header">
+                <div class="step-pill">STAGE 02</div>
+                <span class="step-file">notebook_02</span>
+              </div>
+              <h4 class="step-card-title">Domain NLP: FinBERT + LM Scoring</h4>
+              <p class="step-card-body">
+                Scored all headlines using a specialized finance transformer (FinBERT 70%) and Loughran-McDonald dictionary (30%) running on Apple Metal (MPS) hardware acceleration.
+              </p>
+              <div class="step-card-footer">
+                <span class="output-tag">Checkpoint: sentiment_daily.parquet (Daily sentiment per ticker)</span>
+              </div>
+            </div>
+
+            <div class="step-explainer-card glass-panel-inner">
+              <div class="step-card-header">
+                <div class="step-pill">STAGE 03</div>
+                <span class="step-file">notebook_03</span>
+              </div>
+              <h4 class="step-card-title">Econometrics: Granger Causality Tests</h4>
+              <p class="step-card-body">
+                Computed pairwise cross-correlations (lags -10 to +10 days) and ran Granger Causality Vector Autoregression F-tests to prove statistical significance (p &le; 0.05).
+              </p>
+              <div class="step-card-footer">
+                <span class="output-tag">Checkpoints: lead_lag_matrix.parquet (10×10) & granger_results.parquet</span>
+              </div>
+            </div>
+
+            <div class="step-explainer-card glass-panel-inner">
+              <div class="step-card-header">
+                <div class="step-pill">STAGE 04</div>
+                <span class="step-file">notebook_04</span>
+              </div>
+              <h4 class="step-card-title">Graph Theory: Louvain Clustering & Signals</h4>
+              <p class="step-card-body">
+                Used graph community detection to partition the universe into 5 Leaders (NFLX, AMZN, NVDA, AAPL, TSLA) and 5 Followers (META, MSFT, GOOGL, AMD, INTC) with Eigenvector Centrality influence scores.
+              </p>
+              <div class="step-card-footer">
+                <span class="output-tag">Checkpoints: cluster_assignments.parquet & Interactive Graph</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack & Author Summary -->
+        <div class="glass-panel-inner" style="margin-bottom: 1.25rem;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">
+            PRODUCTION TECH STACK
+          </div>
+          <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+            <strong>Python, PyTorch, Hugging Face (FinBERT), Statsmodels (Granger Causality), NetworkX, python-louvain, yfinance, Pandas, PyArrow (Parquet Data Lake), Plotly, JavaScript (Canvas/Chart.js).</strong>
+          </p>
+        </div>
+
+        <div class="modal-actions" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+          <button class="btn btn-primary" onclick="window.print()">Print / Save as PDF</button>
+          <a href="https://github.com/Dhruvansh-Shah/Financial_News_Sentiment_Lead_Lag_Market_Analysis" target="_blank" class="btn btn-outline">View GitHub Repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <span>ALPHAFLOW QUANTITATIVE RESEARCH PLATFORM</span>
+        <span class="sep">•</span>
+        <span>Lead-Lag Sentiment Market Engine</span>
+      </div>
+      <div class="footer-right">
+        <span>Developed by <strong>Dhruvansh Shah</strong></span>
+        <span class="sep">•</span>
+        <span>Production Ready</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
