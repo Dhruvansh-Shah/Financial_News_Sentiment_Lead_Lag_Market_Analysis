@@ -102,7 +102,21 @@
 
         // Resize graph canvas or charts if switching tabs
         if (targetId === 'tab-network') {
-          resizeGraphCanvas();
+          setTimeout(() => {
+            resizeGraphCanvas();
+            const container = document.getElementById('canvas-container');
+            const width = container && container.clientWidth > 100 ? container.clientWidth : 800;
+            const height = container && container.clientHeight > 100 ? container.clientHeight : 540;
+            if (graphNodes && graphNodes.length > 0) {
+              graphNodes.forEach((n, idx) => {
+                const angle = (idx / graphNodes.length) * Math.PI * 2;
+                n.x = width / 2 + Math.cos(angle) * 180;
+                n.y = height / 2 + Math.sin(angle) * 180;
+                n.vx = 0;
+                n.vy = 0;
+              });
+            }
+          }, 40);
         }
       });
     });
@@ -686,13 +700,35 @@
   function startGraphSimulation(canvas, ctx) {
     function tick() {
       const container = document.getElementById('canvas-container');
-      const width = container.clientWidth || 800;
-      const height = container.clientHeight || 540;
+      if (!container || !canvas) {
+        animFrameId = requestAnimationFrame(tick);
+        return;
+      }
+
+      const width = container.clientWidth > 100 ? container.clientWidth : 800;
+      const height = container.clientHeight > 100 ? container.clientHeight : 540;
+      const dpr = window.devicePixelRatio || 1;
+
+      if (canvas.width !== Math.round(width * dpr) || canvas.height !== Math.round(height * dpr)) {
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+      }
 
       // Physics update
       if (!isPhysicsFrozen) {
         const centerX = width / 2;
         const centerY = height / 2;
+
+        // Auto-reposition if off-screen or uninitialized
+        if (graphNodes.length > 0 && (graphNodes[0].x <= 20 || isNaN(graphNodes[0].x) || graphNodes[0].x > width + 500)) {
+          graphNodes.forEach((n, idx) => {
+            const angle = (idx / graphNodes.length) * Math.PI * 2;
+            n.x = centerX + Math.cos(angle) * 180;
+            n.y = centerY + Math.sin(angle) * 180;
+            n.vx = 0;
+            n.vy = 0;
+          });
+        }
 
         // Node repulsion
         for (let i = 0; i < graphNodes.length; i++) {
@@ -742,6 +778,7 @@
 
       // Render
       ctx.save();
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, width, height);
 
       // Apply camera
