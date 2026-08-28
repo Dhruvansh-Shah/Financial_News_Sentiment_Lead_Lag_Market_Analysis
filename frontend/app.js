@@ -107,11 +107,14 @@
             const container = document.getElementById('canvas-container');
             const width = container && container.clientWidth > 100 ? container.clientWidth : 800;
             const height = container && container.clientHeight > 100 ? container.clientHeight : 540;
+            const radius = Math.min(width, height) * 0.38;
+            camera = { x: 0, y: 0, zoom: 1 };
             if (graphNodes && graphNodes.length > 0) {
               graphNodes.forEach((n, idx) => {
                 const angle = (idx / graphNodes.length) * Math.PI * 2;
-                n.x = width / 2 + Math.cos(angle) * 180;
-                n.y = height / 2 + Math.sin(angle) * 180;
+                const r = idx % 2 === 0 ? radius : radius * 0.75;
+                n.x = width / 2 + Math.cos(angle) * r;
+                n.y = height / 2 + Math.sin(angle) * r;
                 n.vx = 0;
                 n.vy = 0;
               });
@@ -634,10 +637,38 @@
       });
     }
 
+    const btnZoomIn = document.getElementById('btn-zoom-in');
+    if (btnZoomIn) {
+      btnZoomIn.addEventListener('click', () => {
+        camera.zoom = Math.min(2.5, camera.zoom * 1.2);
+      });
+    }
+
+    const btnZoomOut = document.getElementById('btn-zoom-out');
+    if (btnZoomOut) {
+      btnZoomOut.addEventListener('click', () => {
+        camera.zoom = Math.max(0.4, camera.zoom * 0.8);
+      });
+    }
+
     const btnResetView = document.getElementById('btn-reset-view');
     if (btnResetView) {
       btnResetView.addEventListener('click', () => {
         camera = { x: 0, y: 0, zoom: 1 };
+        const container = document.getElementById('canvas-container');
+        const width = container && container.clientWidth > 100 ? container.clientWidth : 800;
+        const height = container && container.clientHeight > 100 ? container.clientHeight : 540;
+        const radius = Math.min(width, height) * 0.38;
+        if (graphNodes && graphNodes.length > 0) {
+          graphNodes.forEach((n, idx) => {
+            const angle = (idx / graphNodes.length) * Math.PI * 2;
+            const r = idx % 2 === 0 ? radius : radius * 0.75;
+            n.x = width / 2 + Math.cos(angle) * r;
+            n.y = height / 2 + Math.sin(angle) * r;
+            n.vx = 0;
+            n.vy = 0;
+          });
+        }
       });
     }
 
@@ -690,10 +721,13 @@
       isPanning = false;
     });
 
+    // Only zoom if Ctrl/Cmd is held, otherwise allow normal page scrolling
     canvas.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      const zoomFactor = e.deltaY < 0 ? 1.08 : 0.92;
-      camera.zoom = Math.max(0.4, Math.min(2.5, camera.zoom * zoomFactor));
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        const zoomFactor = e.deltaY < 0 ? 1.08 : 0.92;
+        camera.zoom = Math.max(0.4, Math.min(2.5, camera.zoom * zoomFactor));
+      }
     }, { passive: false });
   }
 
@@ -720,7 +754,7 @@
 
       // Physics update
       if (!isPhysicsFrozen) {
-        // Node-to-node repulsion (bounded)
+        // Node-to-node repulsion (spacious)
         for (let i = 0; i < graphNodes.length; i++) {
           for (let j = i + 1; j < graphNodes.length; j++) {
             const n1 = graphNodes[i];
@@ -729,11 +763,11 @@
             let dy = n2.y - n1.y;
             let dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < 1) dist = 1;
-            const minDist = 180;
+            const minDist = 280;
             if (dist < minDist) {
-              const force = (minDist - dist) / dist * 0.15;
-              const fx = (dx / dist) * force * 15;
-              const fy = (dy / dist) * force * 15;
+              const force = (minDist - dist) / dist * 0.12;
+              const fx = (dx / dist) * force * 10;
+              const fy = (dy / dist) * force * 10;
               n1.vx -= fx;
               n1.vy -= fy;
               n2.vx += fx;
@@ -742,7 +776,7 @@
           }
         }
 
-        // Edge springs (bounded)
+        // Edge springs (spacious)
         graphEdges.forEach(edge => {
           if (edge.weight < edgeThreshold) return;
           const n1 = edge.source;
@@ -751,10 +785,10 @@
           let dy = n2.y - n1.y;
           let dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 1) dist = 1;
-          const targetDist = 160;
-          const force = (dist - targetDist) * 0.003 * Math.min(1, edge.weight * 2);
-          const fx = (dx / dist) * force * 10;
-          const fy = (dy / dist) * force * 10;
+          const targetDist = 220;
+          const force = (dist - targetDist) * 0.002 * Math.min(1, edge.weight * 2);
+          const fx = (dx / dist) * force * 8;
+          const fy = (dy / dist) * force * 8;
           n1.vx += fx;
           n1.vy += fy;
           n2.vx -= fx;
@@ -764,24 +798,24 @@
         // Center pull, damping, and hard position clamping
         graphNodes.forEach(node => {
           if (node === draggedNode) return;
-          node.vx += (centerX - node.x) * 0.005;
-          node.vy += (centerY - node.y) * 0.005;
+          node.vx += (centerX - node.x) * 0.0012;
+          node.vy += (centerY - node.y) * 0.0012;
 
           // Clamp velocity
           const speed = Math.sqrt(node.vx * node.vx + node.vy * node.vy);
-          if (speed > 4.0) {
-            node.vx = (node.vx / speed) * 4.0;
-            node.vy = (node.vy / speed) * 4.0;
+          if (speed > 3.5) {
+            node.vx = (node.vx / speed) * 3.5;
+            node.vy = (node.vy / speed) * 3.5;
           }
 
-          node.vx *= 0.85;
-          node.vy *= 0.85;
+          node.vx *= 0.88;
+          node.vy *= 0.88;
           node.x += node.vx;
           node.y += node.vy;
 
           // Hard bounding box inside canvas
-          node.x = Math.max(node.radius + 30, Math.min(width - node.radius - 30, node.x));
-          node.y = Math.max(node.radius + 30, Math.min(height - node.radius - 30, node.y));
+          node.x = Math.max(node.radius + 35, Math.min(width - node.radius - 35, node.x));
+          node.y = Math.max(node.radius + 35, Math.min(height - node.radius - 35, node.y));
         });
       }
 
