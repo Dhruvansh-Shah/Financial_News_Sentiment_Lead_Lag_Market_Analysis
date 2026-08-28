@@ -1507,9 +1507,39 @@ body {
 }
 
 .recruiter-quick-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
   padding: 0.85rem 1.25rem;
-  border-radius: 6px;
-  background: rgba(0, 240, 255, 0.04);
+  border-radius: 8px;
+  background: var(--bg-glass-inner);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--cyan-primary);
+  margin-bottom: 1.25rem;
+}
+
+.callout-text-group {
+  flex: 1;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.callout-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-right: 0.4rem;
+}
+
+.callout-btn {
+  white-space: nowrap;
+  font-weight: 700;
+  border-color: var(--cyan-primary);
+  color: var(--cyan-primary);
+  flex-shrink: 0;
 }
 
 .modal-actions {
@@ -2007,132 +2037,243 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Header & Navigation */
+  /* 1. Header Top Bar */
   .header-top-bar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0.65rem 0.85rem;
-    gap: 0.75rem;
-  }
-
-  .brand-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    width: 100%;
-  }
-
-  .telemetry-badges {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 0.35rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    width: 100%;
-  }
-  .telemetry-badges::-webkit-scrollbar { display: none; }
-
-  .header-actions {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 0.5rem 0.75rem;
     gap: 0.5rem;
   }
 
-  .btn-recruiter-guide {
-    width: 100%;
-    justify-content: center;
-    font-size: 0.75rem;
-    padding: 0.45rem 0.65rem;
+  .brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
+  .brand-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+  }
+
+  .brand-name {
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .system-tag {
+    font-size: 0.58rem;
+    padding: 0px 4px;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  #btn-github {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  #btn-github span {
+    display: none; /* Icon only on mobile */
+  }
+
+  .btn-recruiter-guide {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+
+  /* 2. Telemetry Ribbon (Sleek horizontal swipe strip) */
+  .telemetry-badges {
+    order: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.35rem;
+    padding: 0.3rem 0;
+    margin-top: 0.15rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .telemetry-badges::-webkit-scrollbar { display: none; }
+
+  .telemetry-badge {
+    flex-shrink: 0;
+    padding: 0.2rem 0.45rem;
+    font-size: 0.64rem;
+    border-radius: 4px;
+    background: rgba(9, 15, 28, 0.8);
+  }
+
+  /* 3. Live Marquee Bar */
+  .ticker-marquee-bar {
+    height: 24px;
+    font-size: 0.65rem;
+  }
+
+  .marquee-title {
+    padding: 0 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  /* 4. Sticky Navigation Tabs */
   .app-navbar {
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.4rem;
     position: sticky;
     top: 0;
     z-index: 99;
+    background: rgba(11, 17, 30, 0.95);
+    backdrop-filter: blur(12px);
   }
 
   .nav-tabs {
-    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 0.25rem;
-    padding-bottom: 0.2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.15rem;
   }
+  .nav-tabs::-webkit-scrollbar { display: none; }
 
   .nav-tab {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.74rem;
     flex-shrink: 0;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    border-radius: 6px;
   }
 
-  /* Main Container & Layout */
+  /* 5. Main Container */
   .main-container {
     padding: 0.75rem 0.5rem;
   }
 
+  /* 6. Recruiter Overview Callout Banner */
+  .recruiter-quick-callout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+    padding: 0.75rem 0.85rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .callout-text-group {
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .callout-title {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.75rem;
+  }
+
+  .callout-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.72rem;
+  }
+
+  /* 7. Stats Ribbon */
   .stats-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
   }
 
-  .grid-2col {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
+  .stat-card {
+    padding: 0.75rem 0.85rem;
   }
 
-  .grid-layout-sidebar {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
+  .stat-value {
+    font-size: 1.2rem;
   }
 
-  /* Ticker Selector */
+  /* 8. Ticker Selector Horizontal Swipe */
   .ticker-selector-section {
-    padding: 0.85rem;
+    padding: 0.75rem 0.85rem;
+    margin-bottom: 0.85rem;
   }
 
   .selector-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.4rem;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .selector-title {
+    font-size: 0.72rem;
   }
 
   .cluster-legend {
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    display: flex;
+    gap: 0.65rem;
+    font-size: 0.68rem;
   }
 
   .ticker-pills-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.35rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.4rem;
+    padding-bottom: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .ticker-pills-container::-webkit-scrollbar { display: none; }
 
   .ticker-pill {
-    padding: 0.4rem 0.25rem;
-    flex-direction: column;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.2rem;
+    gap: 0.4rem;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    min-height: 38px;
   }
 
   .ticker-pill .pill-symbol {
-    font-size: 0.78rem;
+    font-size: 0.84rem;
+    font-weight: 700;
   }
 
   .ticker-pill .pill-badge {
-    font-size: 0.58rem;
-    padding: 1px 3px;
+    font-size: 0.6rem;
+    padding: 1px 4px;
   }
 
   .ticker-pill .pill-granger {
-    display: none;
+    font-size: 0.7rem;
   }
 
-  /* Card Headers */
+  /* 9. Card Layouts & Metrics */
   .card-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.65rem;
-    padding: 0.85rem 1rem;
+    gap: 0.5rem;
+    padding: 0.75rem 0.85rem;
   }
 
   .card-header .header-right {
@@ -2147,16 +2288,27 @@ body {
     min-width: 70px;
     text-align: center;
     justify-content: center;
+    font-size: 0.68rem;
+    padding: 0.35rem 0.5rem;
   }
 
   .card-body {
-    padding: 0.85rem;
+    padding: 0.75rem 0.85rem;
   }
 
-  /* Profile & Metrics */
   .metrics-row {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .metric-box {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .metric-num {
+    font-size: 1.1rem;
   }
 
   .ticker-hero {
@@ -2164,9 +2316,19 @@ body {
     padding: 0.2rem 0.5rem;
   }
 
-  /* Network Graph Card */
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .grid-layout-sidebar {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  /* 10. Network Graph Card on Phone */
   .graph-canvas-wrapper {
-    height: 380px;
+    height: 360px;
   }
 
   .graph-canvas-card {
@@ -2175,27 +2337,31 @@ body {
 
   .button-group {
     flex-wrap: wrap;
+    gap: 0.35rem;
   }
 
   .button-group .btn {
     flex: 1;
+    font-size: 0.68rem;
+    padding: 0.35rem 0.5rem;
   }
 
-  /* NLP & Sim Grid */
-  .nlp-stats-grid {
+  /* 11. Tables & Matrices */
+  .quant-table th, .quant-table td {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.7rem;
+  }
+
+  .nlp-stats-grid, .sim-result-grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 
-  .sim-result-grid {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  /* Architecture & Pipeline */
+  /* 12. Pipeline Architecture */
   .pipeline-diagram {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.5rem;
   }
 
   .pipeline-arrow {
@@ -2204,13 +2370,13 @@ body {
     padding: 0.25rem 0;
   }
 
-  /* EDA Gallery */
+  /* 13. EDA Gallery */
   .eda-gallery-grid {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 
-  /* Modals */
+  /* 14. Modals & Lightbox */
   .modal-overlay {
     padding: 0.5rem;
   }
@@ -2222,23 +2388,24 @@ body {
   }
 
   .modal-header {
-    padding: 1rem;
+    padding: 0.85rem 1rem;
   }
 
   .modal-body, .recruiter-modal-body, .lightbox-body {
-    padding: 1rem;
+    padding: 0.85rem 1rem;
   }
 
   .modal-actions {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.45rem;
   }
 
   .modal-actions .btn {
     width: 100%;
+    justify-content: center;
   }
 
-  /* Footer */
+  /* 15. Footer */
   .app-footer {
     padding: 1rem 0.75rem;
     margin-top: 2rem;
@@ -2248,37 +2415,6 @@ body {
   .footer-content {
     flex-direction: column;
     gap: 0.35rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 13px;
-  }
-
-  .brand-name {
-    font-size: 1rem;
-  }
-
-  .brand-subtitle {
-    display: none;
-  }
-
-  .stat-value {
-    font-size: 1.15rem;
-  }
-
-  .ticker-pills-container {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.25rem;
-  }
-
-  .ticker-pill {
-    padding: 0.35rem 0.15rem;
-  }
-
-  .graph-canvas-wrapper {
-    height: 340px;
   }
 }
 
