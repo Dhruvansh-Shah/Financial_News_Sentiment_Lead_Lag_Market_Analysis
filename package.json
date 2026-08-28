@@ -4,10 +4,10 @@
   "description": "Financial News Sentiment Lead-Lag Market Analysis & Quantitative Alpha Platform",
   "scripts": {
     "dev": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend run build",
+    "build": "cd frontend && npm install && npm run build",
     "preview": "npm --prefix frontend run preview",
     "export-data": "python3 scripts/export_data.py",
-    "serve": "python3 serve.py"
+    "serve": "python3 local_server.py"
   },
   "keywords": [
     "quantitative-finance",

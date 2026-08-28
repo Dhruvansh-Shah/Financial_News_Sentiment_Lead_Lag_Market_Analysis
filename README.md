@@ -11,7 +11,7 @@ An interactive, dark-mode Bloomberg-style quantitative terminal built for recrui
 ### Quick Start (Launch in 5 seconds):
 ```bash
 # Option 1: Zero-dependency Python server
-python3 serve.py
+python3 local_server.py
 
 # Option 2: Vite development server
 npm run dev
