@@ -4,11 +4,13 @@
  * Author: Dhruvansh Shah
  */
 
+import pipelineDataRaw from './public/data/pipeline_data.json';
+
 (function () {
   'use strict';
 
   // --- STATE ---
-  let pipelineData = null;
+  let pipelineData = pipelineDataRaw;
   let activeTicker = 'NFLX';
   let activeTab = 'tab-overview';
   let activeChartType = 'series';
@@ -47,32 +49,16 @@
   };
 
   // --- INITIALIZATION ---
-  document.addEventListener('DOMContentLoaded', async () => {
+  document.addEventListener('DOMContentLoaded', () => {
     setupTabNavigation();
     setupModal();
     setupSimulatorEvents();
     renderMathFormulas();
 
-    try {
-      await loadPipelineData();
-    } catch (err) {
-      console.warn('Could not load pipeline_data.json via fetch, using bundled dataset:', err);
-    }
-
     if (pipelineData) {
       initApp();
     }
   });
-
-  async function loadPipelineData() {
-    try {
-      const res = await fetch('data/pipeline_data.json');
-      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-      pipelineData = await res.json();
-    } catch (e) {
-      console.error('Fetch error:', e);
-    }
-  }
 
   function initApp() {
     populateMarquee();

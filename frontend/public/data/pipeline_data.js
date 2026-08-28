@@ -1,0 +1,18450 @@
+window.EMBEDDED_PIPELINE_DATA = {
+  "metadata": {
+    "title": "Financial News Sentiment Lead-Lag Market Analysis",
+    "author": "Dhruvansh Shah",
+    "tickers": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "GOOGL",
+      "INTC",
+      "META",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "TSLA"
+    ],
+    "date_range": "2013-01-02 to 2020-12-30",
+    "total_articles": 73936,
+    "total_price_ticks": 20140,
+    "generated_at": "2026-08-28T17:00:34.088642"
+  },
+  "clusters": [
+    {
+      "ticker": "AAPL",
+      "cluster": "leader",
+      "centrality_score": 0.141552
+    },
+    {
+      "ticker": "AMD",
+      "cluster": "follower",
+      "centrality_score": 0.231299
+    },
+    {
+      "ticker": "AMZN",
+      "cluster": "leader",
+      "centrality_score": 0.674996
+    },
+    {
+      "ticker": "GOOGL",
+      "cluster": "follower",
+      "centrality_score": 0.61444
+    },
+    {
+      "ticker": "INTC",
+      "cluster": "follower",
+      "centrality_score": 0.16456
+    },
+    {
+      "ticker": "META",
+      "cluster": "follower",
+      "centrality_score": 1.0
+    },
+    {
+      "ticker": "MSFT",
+      "cluster": "follower",
+      "centrality_score": 0.358635
+    },
+    {
+      "ticker": "NFLX",
+      "cluster": "leader",
+      "centrality_score": 0.627123
+    },
+    {
+      "ticker": "NVDA",
+      "cluster": "leader",
+      "centrality_score": 0.0
+    },
+    {
+      "ticker": "TSLA",
+      "cluster": "leader",
+      "centrality_score": 0.314409
+    }
+  ],
+  "granger": [
+    {
+      "ticker": "AAPL",
+      "granger_verified": false,
+      "optimal_lag": 1,
+      "min_p_value": 0.064632,
+      "p_values": {
+        "lag_1": 0.064632,
+        "lag_2": 0.196473,
+        "lag_3": 0.383761,
+        "lag_4": 0.121183,
+        "lag_5": 0.229619
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "AMD",
+      "granger_verified": false,
+      "optimal_lag": 5,
+      "min_p_value": 0.410975,
+      "p_values": {
+        "lag_1": 0.838848,
+        "lag_2": 0.576571,
+        "lag_3": 0.515693,
+        "lag_4": 0.66421,
+        "lag_5": 0.410975
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "AMZN",
+      "granger_verified": true,
+      "optimal_lag": 2,
+      "min_p_value": 0.031245,
+      "p_values": {
+        "lag_1": 0.032289,
+        "lag_2": 0.031245,
+        "lag_3": 0.066545,
+        "lag_4": 0.10429,
+        "lag_5": 0.109469
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "GOOGL",
+      "granger_verified": false,
+      "optimal_lag": 3,
+      "min_p_value": 0.176371,
+      "p_values": {
+        "lag_1": 0.245444,
+        "lag_2": 0.469395,
+        "lag_3": 0.176371,
+        "lag_4": 0.220832,
+        "lag_5": 0.317112
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "INTC",
+      "granger_verified": true,
+      "optimal_lag": 1,
+      "min_p_value": 0.0326,
+      "p_values": {
+        "lag_1": 0.0326,
+        "lag_2": 0.149763,
+        "lag_3": 0.09506,
+        "lag_4": 0.070596,
+        "lag_5": 0.11049
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "META",
+      "granger_verified": false,
+      "optimal_lag": 1,
+      "min_p_value": 0.332349,
+      "p_values": {
+        "lag_1": 0.332349,
+        "lag_2": 0.447109,
+        "lag_3": 0.626472,
+        "lag_4": 0.710234,
+        "lag_5": 0.803015
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "MSFT",
+      "granger_verified": false,
+      "optimal_lag": 1,
+      "min_p_value": 0.690621,
+      "p_values": {
+        "lag_1": 0.690621,
+        "lag_2": 0.736684,
+        "lag_3": 0.869403,
+        "lag_4": 0.907689,
+        "lag_5": 0.944443
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "NFLX",
+      "granger_verified": true,
+      "optimal_lag": 1,
+      "min_p_value": 0.00034,
+      "p_values": {
+        "lag_1": 0.00034,
+        "lag_2": 0.001234,
+        "lag_3": 0.003569,
+        "lag_4": 0.006285,
+        "lag_5": 0.010111
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "NVDA",
+      "granger_verified": false,
+      "optimal_lag": 3,
+      "min_p_value": 0.101252,
+      "p_values": {
+        "lag_1": 0.114066,
+        "lag_2": 0.153916,
+        "lag_3": 0.101252,
+        "lag_4": 0.154404,
+        "lag_5": 0.251358
+      },
+      "skip_reason": null
+    },
+    {
+      "ticker": "TSLA",
+      "granger_verified": false,
+      "optimal_lag": 1,
+      "min_p_value": 0.292161,
+      "p_values": {
+        "lag_1": 0.292161,
+        "lag_2": 0.418382,
+        "lag_3": 0.647747,
+        "lag_4": 0.730438,
+        "lag_5": 0.819754
+      },
+      "skip_reason": null
+    }
+  ],
+  "lead_lag_matrix": {
+    "AAPL": {
+      "AAPL": 0.0,
+      "AMD": -0.026757,
+      "AMZN": -0.22555,
+      "GOOGL": -0.395246,
+      "INTC": -0.014473,
+      "META": -0.294267,
+      "MSFT": 0.243061,
+      "NFLX": 0.495801,
+      "NVDA": -0.252529,
+      "TSLA": -0.268008
+    },
+    "AMD": {
+      "AAPL": 0.026757,
+      "AMD": 0.0,
+      "AMZN": -0.218753,
+      "GOOGL": 0.096427,
+      "INTC": -0.391939,
+      "META": -0.869871,
+      "MSFT": -0.168834,
+      "NFLX": 0.036048,
+      "NVDA": 0.254781,
+      "TSLA": -0.281239
+    },
+    "AMZN": {
+      "AAPL": 0.22555,
+      "AMD": 0.218753,
+      "AMZN": 0.0,
+      "GOOGL": 0.21509,
+      "INTC": -0.023832,
+      "META": -0.833757,
+      "MSFT": 0.067661,
+      "NFLX": 0.701911,
+      "NVDA": -0.45552,
+      "TSLA": 0.309392
+    },
+    "GOOGL": {
+      "AAPL": 0.395246,
+      "AMD": -0.096427,
+      "AMZN": -0.21509,
+      "GOOGL": 0.0,
+      "INTC": 0.66484,
+      "META": 0.309062,
+      "MSFT": 0.768562,
+      "NFLX": 0.312903,
+      "NVDA": -0.043405,
+      "TSLA": 0.422282
+    },
+    "INTC": {
+      "AAPL": 0.014473,
+      "AMD": 0.391939,
+      "AMZN": 0.023832,
+      "GOOGL": -0.66484,
+      "INTC": 0.0,
+      "META": -0.424447,
+      "MSFT": 0.114674,
+      "NFLX": 0.261965,
+      "NVDA": 0.197423,
+      "TSLA": -0.164084
+    },
+    "META": {
+      "AAPL": 0.294267,
+      "AMD": 0.869871,
+      "AMZN": 0.833757,
+      "GOOGL": -0.309062,
+      "INTC": 0.424447,
+      "META": 0.0,
+      "MSFT": 0.507876,
+      "NFLX": 0.321787,
+      "NVDA": 0.162801,
+      "TSLA": -0.135089
+    },
+    "MSFT": {
+      "AAPL": -0.243061,
+      "AMD": 0.168834,
+      "AMZN": -0.067661,
+      "GOOGL": -0.768562,
+      "INTC": -0.114674,
+      "META": -0.507876,
+      "MSFT": 0.0,
+      "NFLX": -0.188462,
+      "NVDA": -0.200021,
+      "TSLA": -0.282682
+    },
+    "NFLX": {
+      "AAPL": -0.495801,
+      "AMD": -0.036048,
+      "AMZN": -0.701911,
+      "GOOGL": -0.312903,
+      "INTC": -0.261965,
+      "META": -0.321787,
+      "MSFT": 0.188462,
+      "NFLX": 0.0,
+      "NVDA": -0.335339,
+      "TSLA": -0.524564
+    },
+    "NVDA": {
+      "AAPL": 0.252529,
+      "AMD": -0.254781,
+      "AMZN": 0.45552,
+      "GOOGL": 0.043405,
+      "INTC": -0.197423,
+      "META": -0.162801,
+      "MSFT": 0.200021,
+      "NFLX": 0.335339,
+      "NVDA": 0.0,
+      "TSLA": -0.184859
+    },
+    "TSLA": {
+      "AAPL": 0.268008,
+      "AMD": 0.281239,
+      "AMZN": -0.309392,
+      "GOOGL": -0.422282,
+      "INTC": 0.164084,
+      "META": 0.135089,
+      "MSFT": 0.282682,
+      "NFLX": 0.524564,
+      "NVDA": 0.184859,
+      "TSLA": 0.0
+    }
+  },
+  "net_outflows": {
+    "AAPL": 0.737969,
+    "AMD": 1.516623,
+    "AMZN": -0.425249,
+    "GOOGL": -2.517973,
+    "INTC": 0.249064,
+    "META": -2.970654,
+    "MSFT": 2.204166,
+    "NFLX": 2.801857,
+    "NVDA": -0.48695,
+    "TSLA": -1.108851
+  },
+  "graph_edges": [
+    {
+      "source": "AAPL",
+      "target": "AMZN",
+      "weight": 0.22555,
+      "raw_score": 0.22555,
+      "leader": "AAPL",
+      "follower": "AMZN"
+    },
+    {
+      "source": "AAPL",
+      "target": "GOOGL",
+      "weight": 0.395246,
+      "raw_score": 0.395246,
+      "leader": "AAPL",
+      "follower": "GOOGL"
+    },
+    {
+      "source": "AAPL",
+      "target": "META",
+      "weight": 0.294267,
+      "raw_score": 0.294267,
+      "leader": "AAPL",
+      "follower": "META"
+    },
+    {
+      "source": "MSFT",
+      "target": "AAPL",
+      "weight": 0.243061,
+      "raw_score": -0.243061,
+      "leader": "MSFT",
+      "follower": "AAPL"
+    },
+    {
+      "source": "NFLX",
+      "target": "AAPL",
+      "weight": 0.495801,
+      "raw_score": -0.495801,
+      "leader": "NFLX",
+      "follower": "AAPL"
+    },
+    {
+      "source": "AAPL",
+      "target": "NVDA",
+      "weight": 0.252529,
+      "raw_score": 0.252529,
+      "leader": "AAPL",
+      "follower": "NVDA"
+    },
+    {
+      "source": "AAPL",
+      "target": "TSLA",
+      "weight": 0.268008,
+      "raw_score": 0.268008,
+      "leader": "AAPL",
+      "follower": "TSLA"
+    },
+    {
+      "source": "AMD",
+      "target": "AMZN",
+      "weight": 0.218753,
+      "raw_score": 0.218753,
+      "leader": "AMD",
+      "follower": "AMZN"
+    },
+    {
+      "source": "GOOGL",
+      "target": "AMD",
+      "weight": 0.096427,
+      "raw_score": -0.096427,
+      "leader": "GOOGL",
+      "follower": "AMD"
+    },
+    {
+      "source": "AMD",
+      "target": "INTC",
+      "weight": 0.391939,
+      "raw_score": 0.391939,
+      "leader": "AMD",
+      "follower": "INTC"
+    },
+    {
+      "source": "AMD",
+      "target": "META",
+      "weight": 0.869871,
+      "raw_score": 0.869871,
+      "leader": "AMD",
+      "follower": "META"
+    },
+    {
+      "source": "AMD",
+      "target": "MSFT",
+      "weight": 0.168834,
+      "raw_score": 0.168834,
+      "leader": "AMD",
+      "follower": "MSFT"
+    },
+    {
+      "source": "NVDA",
+      "target": "AMD",
+      "weight": 0.254781,
+      "raw_score": -0.254781,
+      "leader": "NVDA",
+      "follower": "AMD"
+    },
+    {
+      "source": "AMD",
+      "target": "TSLA",
+      "weight": 0.281239,
+      "raw_score": 0.281239,
+      "leader": "AMD",
+      "follower": "TSLA"
+    },
+    {
+      "source": "GOOGL",
+      "target": "AMZN",
+      "weight": 0.21509,
+      "raw_score": -0.21509,
+      "leader": "GOOGL",
+      "follower": "AMZN"
+    },
+    {
+      "source": "AMZN",
+      "target": "META",
+      "weight": 0.833757,
+      "raw_score": 0.833757,
+      "leader": "AMZN",
+      "follower": "META"
+    },
+    {
+      "source": "MSFT",
+      "target": "AMZN",
+      "weight": 0.067661,
+      "raw_score": -0.067661,
+      "leader": "MSFT",
+      "follower": "AMZN"
+    },
+    {
+      "source": "NFLX",
+      "target": "AMZN",
+      "weight": 0.701911,
+      "raw_score": -0.701911,
+      "leader": "NFLX",
+      "follower": "AMZN"
+    },
+    {
+      "source": "AMZN",
+      "target": "NVDA",
+      "weight": 0.45552,
+      "raw_score": 0.45552,
+      "leader": "AMZN",
+      "follower": "NVDA"
+    },
+    {
+      "source": "TSLA",
+      "target": "AMZN",
+      "weight": 0.309392,
+      "raw_score": -0.309392,
+      "leader": "TSLA",
+      "follower": "AMZN"
+    },
+    {
+      "source": "INTC",
+      "target": "GOOGL",
+      "weight": 0.66484,
+      "raw_score": -0.66484,
+      "leader": "INTC",
+      "follower": "GOOGL"
+    },
+    {
+      "source": "META",
+      "target": "GOOGL",
+      "weight": 0.309062,
+      "raw_score": -0.309062,
+      "leader": "META",
+      "follower": "GOOGL"
+    },
+    {
+      "source": "MSFT",
+      "target": "GOOGL",
+      "weight": 0.768562,
+      "raw_score": -0.768562,
+      "leader": "MSFT",
+      "follower": "GOOGL"
+    },
+    {
+      "source": "NFLX",
+      "target": "GOOGL",
+      "weight": 0.312903,
+      "raw_score": -0.312903,
+      "leader": "NFLX",
+      "follower": "GOOGL"
+    },
+    {
+      "source": "TSLA",
+      "target": "GOOGL",
+      "weight": 0.422282,
+      "raw_score": -0.422282,
+      "leader": "TSLA",
+      "follower": "GOOGL"
+    },
+    {
+      "source": "INTC",
+      "target": "META",
+      "weight": 0.424447,
+      "raw_score": 0.424447,
+      "leader": "INTC",
+      "follower": "META"
+    },
+    {
+      "source": "MSFT",
+      "target": "INTC",
+      "weight": 0.114674,
+      "raw_score": -0.114674,
+      "leader": "MSFT",
+      "follower": "INTC"
+    },
+    {
+      "source": "NFLX",
+      "target": "INTC",
+      "weight": 0.261965,
+      "raw_score": -0.261965,
+      "leader": "NFLX",
+      "follower": "INTC"
+    },
+    {
+      "source": "NVDA",
+      "target": "INTC",
+      "weight": 0.197423,
+      "raw_score": -0.197423,
+      "leader": "NVDA",
+      "follower": "INTC"
+    },
+    {
+      "source": "INTC",
+      "target": "TSLA",
+      "weight": 0.164084,
+      "raw_score": 0.164084,
+      "leader": "INTC",
+      "follower": "TSLA"
+    },
+    {
+      "source": "MSFT",
+      "target": "META",
+      "weight": 0.507876,
+      "raw_score": -0.507876,
+      "leader": "MSFT",
+      "follower": "META"
+    },
+    {
+      "source": "NFLX",
+      "target": "META",
+      "weight": 0.321787,
+      "raw_score": -0.321787,
+      "leader": "NFLX",
+      "follower": "META"
+    },
+    {
+      "source": "NVDA",
+      "target": "META",
+      "weight": 0.162801,
+      "raw_score": -0.162801,
+      "leader": "NVDA",
+      "follower": "META"
+    },
+    {
+      "source": "META",
+      "target": "TSLA",
+      "weight": 0.135089,
+      "raw_score": 0.135089,
+      "leader": "META",
+      "follower": "TSLA"
+    },
+    {
+      "source": "MSFT",
+      "target": "NFLX",
+      "weight": 0.188462,
+      "raw_score": 0.188462,
+      "leader": "MSFT",
+      "follower": "NFLX"
+    },
+    {
+      "source": "MSFT",
+      "target": "NVDA",
+      "weight": 0.200021,
+      "raw_score": 0.200021,
+      "leader": "MSFT",
+      "follower": "NVDA"
+    },
+    {
+      "source": "MSFT",
+      "target": "TSLA",
+      "weight": 0.282682,
+      "raw_score": 0.282682,
+      "leader": "MSFT",
+      "follower": "TSLA"
+    },
+    {
+      "source": "NFLX",
+      "target": "NVDA",
+      "weight": 0.335339,
+      "raw_score": 0.335339,
+      "leader": "NFLX",
+      "follower": "NVDA"
+    },
+    {
+      "source": "NFLX",
+      "target": "TSLA",
+      "weight": 0.524564,
+      "raw_score": 0.524564,
+      "leader": "NFLX",
+      "follower": "TSLA"
+    },
+    {
+      "source": "NVDA",
+      "target": "TSLA",
+      "weight": 0.184859,
+      "raw_score": 0.184859,
+      "leader": "NVDA",
+      "follower": "TSLA"
+    }
+  ],
+  "sentiment_by_ticker": {
+    "AAPL": {
+      "total_articles": 10822,
+      "avg_sentiment": -0.077047,
+      "avg_finbert": -0.107599,
+      "avg_lm": -0.005759,
+      "recent_series": [
+        {
+          "date": "2019-10-16",
+          "sentiment": -0.045455,
+          "finbert": -0.05481,
+          "lm": -0.023629,
+          "articles": 33
+        },
+        {
+          "date": "2019-10-17",
+          "sentiment": 0.103273,
+          "finbert": 0.149631,
+          "lm": -0.004895,
+          "articles": 33
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.035139,
+          "finbert": -0.048108,
+          "lm": -0.004878,
+          "articles": 41
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": -0.114105,
+          "finbert": -0.154601,
+          "lm": -0.019615,
+          "articles": 35
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": 0.036705,
+          "finbert": 0.053745,
+          "lm": -0.003056,
+          "articles": 40
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": 0.023305,
+          "finbert": 0.038721,
+          "lm": -0.012668,
+          "articles": 38
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": -0.064648,
+          "finbert": -0.088333,
+          "lm": -0.009384,
+          "articles": 31
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": 0.094258,
+          "finbert": 0.133252,
+          "lm": 0.003271,
+          "articles": 41
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.087435,
+          "finbert": 0.129961,
+          "lm": -0.011793,
+          "articles": 79
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.088337,
+          "finbert": -0.118619,
+          "lm": -0.01768,
+          "articles": 43
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": 0.034398,
+          "finbert": 0.048571,
+          "lm": 0.001329,
+          "articles": 57
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": -0.22475,
+          "finbert": -0.31695,
+          "lm": -0.009615,
+          "articles": 39
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": 0.084649,
+          "finbert": 0.115142,
+          "lm": 0.013498,
+          "articles": 59
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": -0.065739,
+          "finbert": -0.091464,
+          "lm": -0.005715,
+          "articles": 45
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.035923,
+          "finbert": -0.045243,
+          "lm": -0.014176,
+          "articles": 29
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": -0.045794,
+          "finbert": -0.062087,
+          "lm": -0.007777,
+          "articles": 37
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.047762,
+          "finbert": -0.069413,
+          "lm": 0.002755,
+          "articles": 33
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": -0.076362,
+          "finbert": -0.099835,
+          "lm": -0.021592,
+          "articles": 19
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.144234,
+          "finbert": -0.203965,
+          "lm": -0.004864,
+          "articles": 42
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.029534,
+          "finbert": 0.043269,
+          "lm": -0.002515,
+          "articles": 42
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": 0.015589,
+          "finbert": 0.030418,
+          "lm": -0.019012,
+          "articles": 45
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": -0.042865,
+          "finbert": -0.062217,
+          "lm": 0.002289,
+          "articles": 37
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.026937,
+          "finbert": -0.038355,
+          "lm": -0.000292,
+          "articles": 38
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": -0.007427,
+          "finbert": -0.008026,
+          "lm": -0.006028,
+          "articles": 47
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": -0.082448,
+          "finbert": -0.114536,
+          "lm": -0.007576,
+          "articles": 37
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": -0.11314,
+          "finbert": -0.163325,
+          "lm": 0.00396,
+          "articles": 44
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": -0.166926,
+          "finbert": -0.231361,
+          "lm": -0.016578,
+          "articles": 34
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": -0.038335,
+          "finbert": -0.060396,
+          "lm": 0.013141,
+          "articles": 26
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": 0.111909,
+          "finbert": 0.155604,
+          "lm": 0.009955,
+          "articles": 44
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": 0.019576,
+          "finbert": 0.034189,
+          "lm": -0.01452,
+          "articles": 22
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": -0.110489,
+          "finbert": -0.154624,
+          "lm": -0.007507,
+          "articles": 22
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": -0.134333,
+          "finbert": -0.191905,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.042473,
+          "finbert": -0.0591,
+          "lm": -0.003676,
+          "articles": 34
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": -0.018392,
+          "finbert": -0.022403,
+          "lm": -0.009032,
+          "articles": 37
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.303247,
+          "finbert": -0.426283,
+          "lm": -0.016163,
+          "articles": 35
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": 0.066141,
+          "finbert": 0.094487,
+          "lm": 0.0,
+          "articles": 22
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": -0.1289,
+          "finbert": -0.183352,
+          "lm": -0.001847,
+          "articles": 35
+        },
+        {
+          "date": "2019-12-06",
+          "sentiment": 0.034384,
+          "finbert": 0.048903,
+          "lm": 0.000505,
+          "articles": 18
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.111798,
+          "finbert": -0.158945,
+          "lm": -0.001789,
+          "articles": 43
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": -0.286963,
+          "finbert": -0.393091,
+          "lm": -0.039332,
+          "articles": 41
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": 0.075639,
+          "finbert": 0.111529,
+          "lm": -0.008105,
+          "articles": 50
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": -0.209569,
+          "finbert": -0.300766,
+          "lm": 0.003226,
+          "articles": 31
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": 0.123019,
+          "finbert": 0.173431,
+          "lm": 0.005392,
+          "articles": 34
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": 0.032689,
+          "finbert": 0.043896,
+          "lm": 0.00654,
+          "articles": 46
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": 0.146453,
+          "finbert": 0.211082,
+          "lm": -0.004348,
+          "articles": 23
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": 0.038365,
+          "finbert": 0.056468,
+          "lm": -0.003875,
+          "articles": 34
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": -0.002132,
+          "finbert": 0.001002,
+          "lm": -0.009444,
+          "articles": 25
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": -0.081657,
+          "finbert": -0.112379,
+          "lm": -0.009973,
+          "articles": 34
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": 0.074261,
+          "finbert": 0.106908,
+          "lm": -0.001915,
+          "articles": 46
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": 0.066501,
+          "finbert": 0.095002,
+          "lm": 0.0,
+          "articles": 19
+        },
+        {
+          "date": "2019-12-25",
+          "sentiment": 0.01,
+          "finbert": 0.0,
+          "lm": 0.033333,
+          "articles": 3
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": 0.03677,
+          "finbert": 0.052529,
+          "lm": 0.0,
+          "articles": 18
+        },
+        {
+          "date": "2019-12-27",
+          "sentiment": 0.025243,
+          "finbert": 0.036061,
+          "lm": 0.0,
+          "articles": 23
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.07198,
+          "finbert": -0.100845,
+          "lm": -0.00463,
+          "articles": 27
+        },
+        {
+          "date": "2019-12-31",
+          "sentiment": 0.076468,
+          "finbert": 0.10924,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-01-01",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": 0.104103,
+          "finbert": 0.148521,
+          "lm": 0.000463,
+          "articles": 24
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": -0.029531,
+          "finbert": -0.033994,
+          "lm": -0.019118,
+          "articles": 17
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.115935,
+          "finbert": -0.162901,
+          "lm": -0.006349,
+          "articles": 35
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": 0.004208,
+          "finbert": 0.002008,
+          "lm": 0.009341,
+          "articles": 26
+        },
+        {
+          "date": "2020-01-08",
+          "sentiment": -0.040293,
+          "finbert": -0.055681,
+          "lm": -0.004386,
+          "articles": 19
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": 0.084636,
+          "finbert": 0.118222,
+          "lm": 0.00627,
+          "articles": 29
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": 0.095778,
+          "finbert": 0.137225,
+          "lm": -0.000933,
+          "articles": 41
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.121858,
+          "finbert": 0.18197,
+          "lm": -0.018405,
+          "articles": 37
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.107359,
+          "finbert": -0.149167,
+          "lm": -0.009809,
+          "articles": 38
+        },
+        {
+          "date": "2020-01-15",
+          "sentiment": 0.019773,
+          "finbert": 0.027426,
+          "lm": 0.001916,
+          "articles": 29
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.148058,
+          "finbert": 0.21473,
+          "lm": -0.007509,
+          "articles": 39
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": 0.025559,
+          "finbert": 0.034201,
+          "lm": 0.005392,
+          "articles": 34
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": 0.096032,
+          "finbert": 0.142958,
+          "lm": -0.013462,
+          "articles": 28
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": -0.010753,
+          "finbert": -0.01275,
+          "lm": -0.006094,
+          "articles": 45
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": -0.185147,
+          "finbert": -0.258666,
+          "lm": -0.013603,
+          "articles": 31
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": -0.115811,
+          "finbert": -0.15797,
+          "lm": -0.017443,
+          "articles": 34
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": -0.010533,
+          "finbert": -0.010122,
+          "lm": -0.01149,
+          "articles": 42
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": -0.15173,
+          "finbert": -0.216557,
+          "lm": -0.000466,
+          "articles": 30
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": 0.016134,
+          "finbert": 0.027025,
+          "lm": -0.00928,
+          "articles": 42
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": 0.007571,
+          "finbert": 0.016441,
+          "lm": -0.013126,
+          "articles": 63
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.138054,
+          "finbert": -0.19743,
+          "lm": 0.00049,
+          "articles": 53
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": -0.054096,
+          "finbert": -0.072335,
+          "lm": -0.011538,
+          "articles": 26
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": -0.131785,
+          "finbert": -0.186054,
+          "lm": -0.005157,
+          "articles": 48
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": -0.002359,
+          "finbert": -0.001504,
+          "lm": -0.004354,
+          "articles": 46
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": -0.119968,
+          "finbert": -0.171685,
+          "lm": 0.000705,
+          "articles": 53
+        },
+        {
+          "date": "2020-02-06",
+          "sentiment": -0.243146,
+          "finbert": -0.348817,
+          "lm": 0.003419,
+          "articles": 26
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": -0.157431,
+          "finbert": -0.221519,
+          "lm": -0.007894,
+          "articles": 27
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": -0.13648,
+          "finbert": -0.194045,
+          "lm": -0.002161,
+          "articles": 79
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": 0.081564,
+          "finbert": 0.118285,
+          "lm": -0.004117,
+          "articles": 56
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.083501,
+          "finbert": -0.112016,
+          "lm": -0.016966,
+          "articles": 41
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.018106,
+          "finbert": 0.034855,
+          "lm": -0.020975,
+          "articles": 36
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": -0.077795,
+          "finbert": -0.111136,
+          "lm": 0.0,
+          "articles": 30
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": -0.393956,
+          "finbert": -0.558054,
+          "lm": -0.011061,
+          "articles": 17
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": -0.303707,
+          "finbert": -0.426259,
+          "lm": -0.017754,
+          "articles": 124
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": 0.101029,
+          "finbert": 0.154268,
+          "lm": -0.023196,
+          "articles": 59
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": -0.183935,
+          "finbert": -0.261985,
+          "lm": -0.001818,
+          "articles": 50
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": -0.369591,
+          "finbert": -0.516355,
+          "lm": -0.027143,
+          "articles": 35
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": -0.229833,
+          "finbert": -0.329368,
+          "lm": 0.002413,
+          "articles": 68
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": -0.122211,
+          "finbert": -0.173648,
+          "lm": -0.002193,
+          "articles": 38
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": -0.084169,
+          "finbert": -0.117787,
+          "lm": -0.005726,
+          "articles": 33
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.317592,
+          "finbert": -0.452817,
+          "lm": -0.002067,
+          "articles": 43
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": -0.134136,
+          "finbert": -0.184261,
+          "lm": -0.017177,
+          "articles": 35
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.201053,
+          "finbert": -0.282593,
+          "lm": -0.010793,
+          "articles": 51
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.244555,
+          "finbert": -0.339212,
+          "lm": -0.023688,
+          "articles": 32
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": -0.080572,
+          "finbert": -0.112846,
+          "lm": -0.005268,
+          "articles": 29
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.325007,
+          "finbert": -0.456568,
+          "lm": -0.01803,
+          "articles": 30
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.221263,
+          "finbert": -0.30987,
+          "lm": -0.014511,
+          "articles": 41
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": -0.222003,
+          "finbert": -0.315361,
+          "lm": -0.004167,
+          "articles": 40
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.234387,
+          "finbert": -0.329538,
+          "lm": -0.012367,
+          "articles": 37
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.202723,
+          "finbert": -0.286332,
+          "lm": -0.007636,
+          "articles": 25
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.078043,
+          "finbert": -0.11149,
+          "lm": 0.0,
+          "articles": 47
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.169986,
+          "finbert": -0.236967,
+          "lm": -0.013698,
+          "articles": 33
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.348124,
+          "finbert": -0.486702,
+          "lm": -0.024777,
+          "articles": 76
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.298985,
+          "finbert": -0.424875,
+          "lm": -0.00524,
+          "articles": 29
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": -0.193795,
+          "finbert": -0.271434,
+          "lm": -0.012637,
+          "articles": 33
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": -0.048236,
+          "finbert": -0.059359,
+          "lm": -0.022281,
+          "articles": 21
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": -0.17164,
+          "finbert": -0.24332,
+          "lm": -0.004386,
+          "articles": 19
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.072174,
+          "finbert": -0.110949,
+          "lm": 0.018301,
+          "articles": 17
+        },
+        {
+          "date": "2020-03-24",
+          "sentiment": -0.125798,
+          "finbert": -0.183112,
+          "lm": 0.007937,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": -0.076446,
+          "finbert": -0.106828,
+          "lm": -0.005556,
+          "articles": 15
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": -0.007801,
+          "finbert": -0.008889,
+          "lm": -0.005263,
+          "articles": 19
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": -0.058498,
+          "finbert": -0.084419,
+          "lm": 0.001984,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": -0.062519,
+          "finbert": -0.089313,
+          "lm": 0.0,
+          "articles": 10
+        },
+        {
+          "date": "2020-03-31",
+          "sentiment": -0.197861,
+          "finbert": -0.271265,
+          "lm": -0.026585,
+          "articles": 9
+        }
+      ]
+    },
+    "AMD": {
+      "total_articles": 418,
+      "avg_sentiment": -0.063461,
+      "avg_finbert": -0.087193,
+      "avg_lm": -0.008087,
+      "recent_series": [
+        {
+          "date": "2019-01-30",
+          "sentiment": 0.676415,
+          "finbert": 0.92345,
+          "lm": 0.1,
+          "articles": 1
+        },
+        {
+          "date": "2019-01-31",
+          "sentiment": -0.623052,
+          "finbert": -0.890074,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-02-05",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-02-21",
+          "sentiment": -0.613833,
+          "finbert": -0.938129,
+          "lm": 0.142857,
+          "articles": 1
+        },
+        {
+          "date": "2019-03-15",
+          "sentiment": 0.63509,
+          "finbert": 0.907271,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-04-03",
+          "sentiment": 0.507737,
+          "finbert": 0.725339,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-04-10",
+          "sentiment": 0.14637,
+          "finbert": 0.2091,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-04-17",
+          "sentiment": 0.498126,
+          "finbert": 0.711609,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-04-25",
+          "sentiment": -0.704828,
+          "finbert": -0.964041,
+          "lm": -0.1,
+          "articles": 1
+        },
+        {
+          "date": "2019-05-20",
+          "sentiment": -0.674602,
+          "finbert": -0.963717,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-05-28",
+          "sentiment": -0.617751,
+          "finbert": -0.882501,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-06-03",
+          "sentiment": 0.318438,
+          "finbert": 0.454912,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-06-06",
+          "sentiment": -0.388126,
+          "finbert": -0.515505,
+          "lm": -0.090909,
+          "articles": 4
+        },
+        {
+          "date": "2019-06-10",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-06-14",
+          "sentiment": -0.677728,
+          "finbert": -0.954789,
+          "lm": -0.03125,
+          "articles": 4
+        },
+        {
+          "date": "2019-06-17",
+          "sentiment": 0.383609,
+          "finbert": 0.548013,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-06-21",
+          "sentiment": -0.673911,
+          "finbert": -0.96273,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-06-26",
+          "sentiment": 0.398404,
+          "finbert": 0.569149,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-06-27",
+          "sentiment": 0.60523,
+          "finbert": 0.864614,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-06-28",
+          "sentiment": 0.481278,
+          "finbert": 0.687539,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-07-01",
+          "sentiment": 0.340181,
+          "finbert": 0.485973,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-07-05",
+          "sentiment": -0.680596,
+          "finbert": -0.962076,
+          "lm": -0.02381,
+          "articles": 3
+        },
+        {
+          "date": "2019-07-09",
+          "sentiment": -0.694711,
+          "finbert": -0.959477,
+          "lm": -0.076923,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-16",
+          "sentiment": 0.2935,
+          "finbert": 0.419286,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-07-17",
+          "sentiment": -0.637393,
+          "finbert": -0.910562,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-07-18",
+          "sentiment": -0.473336,
+          "finbert": -0.676194,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-22",
+          "sentiment": 0.649082,
+          "finbert": 0.92726,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-07-24",
+          "sentiment": 0.651561,
+          "finbert": 0.930801,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-25",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-29",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-07-31",
+          "sentiment": -0.706133,
+          "finbert": -0.961142,
+          "lm": -0.111111,
+          "articles": 1
+        },
+        {
+          "date": "2019-08-05",
+          "sentiment": -0.673807,
+          "finbert": -0.962582,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-08-06",
+          "sentiment": 0.091163,
+          "finbert": 0.130233,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-08-07",
+          "sentiment": 0.443828,
+          "finbert": 0.634041,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-08-08",
+          "sentiment": 0.598569,
+          "finbert": 0.847162,
+          "lm": 0.018519,
+          "articles": 9
+        },
+        {
+          "date": "2019-08-12",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-08-19",
+          "sentiment": 0.613609,
+          "finbert": 0.857104,
+          "lm": 0.045455,
+          "articles": 2
+        },
+        {
+          "date": "2019-08-20",
+          "sentiment": -0.502891,
+          "finbert": -0.718415,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-08-26",
+          "sentiment": 0.084993,
+          "finbert": 0.121418,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-08-28",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-08-29",
+          "sentiment": 0.581982,
+          "finbert": 0.831403,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-03",
+          "sentiment": -0.674419,
+          "finbert": -0.963455,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-05",
+          "sentiment": 0.32119,
+          "finbert": 0.458843,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-09-06",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-10",
+          "sentiment": -0.677886,
+          "finbert": -0.968408,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-09-12",
+          "sentiment": 0.553611,
+          "finbert": 0.790872,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-09-13",
+          "sentiment": -0.021429,
+          "finbert": 0.0,
+          "lm": -0.071429,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-17",
+          "sentiment": -0.031667,
+          "finbert": 0.0,
+          "lm": -0.105556,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-18",
+          "sentiment": -0.03,
+          "finbert": 0.0,
+          "lm": -0.1,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-20",
+          "sentiment": 0.608558,
+          "finbert": 0.869369,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-09-24",
+          "sentiment": 0.651056,
+          "finbert": 0.906271,
+          "lm": 0.055556,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-25",
+          "sentiment": -0.66757,
+          "finbert": -0.953671,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-09-26",
+          "sentiment": -0.310096,
+          "finbert": -0.46978,
+          "lm": 0.0625,
+          "articles": 4
+        },
+        {
+          "date": "2019-09-27",
+          "sentiment": 0.528193,
+          "finbert": 0.733133,
+          "lm": 0.05,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-02",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-10-04",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-10-08",
+          "sentiment": 0.615386,
+          "finbert": 0.855313,
+          "lm": 0.055556,
+          "articles": 4
+        },
+        {
+          "date": "2019-10-09",
+          "sentiment": 0.436884,
+          "finbert": 0.624119,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-11",
+          "sentiment": 0.577997,
+          "finbert": 0.838697,
+          "lm": -0.030303,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-14",
+          "sentiment": -0.332659,
+          "finbert": -0.475226,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-10-17",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.665637,
+          "finbert": -0.950909,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": 0.221711,
+          "finbert": 0.31673,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": -0.671677,
+          "finbert": -0.959539,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": -0.042628,
+          "finbert": -0.060897,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.63211,
+          "finbert": -0.934761,
+          "lm": 0.074074,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": -0.041209,
+          "finbert": -0.058871,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": -0.31354,
+          "finbert": -0.447914,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": 0.606057,
+          "finbert": 0.865796,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.486021,
+          "finbert": -0.694316,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.701575,
+          "finbert": -0.961956,
+          "lm": -0.094017,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": -0.050062,
+          "finbert": -0.071517,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": 0.25887,
+          "finbert": 0.369814,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": 0.569204,
+          "finbert": 0.813148,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": -0.644296,
+          "finbert": -0.920422,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": -0.002481,
+          "finbert": -0.003544,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": 0.309432,
+          "finbert": 0.442045,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.230629,
+          "finbert": -0.320541,
+          "lm": -0.020833,
+          "articles": 3
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": 0.649195,
+          "finbert": 0.927421,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": 0.508929,
+          "finbert": 0.727041,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": 0.142913,
+          "finbert": 0.204161,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": 0.540558,
+          "finbert": 0.772225,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": 0.649889,
+          "finbert": 0.928412,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": -0.288112,
+          "finbert": -0.411589,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.398105,
+          "finbert": -0.568722,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": -0.517199,
+          "finbert": -0.738856,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.36694,
+          "finbert": 0.5242,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": 0.507628,
+          "finbert": 0.725182,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": 0.479757,
+          "finbert": 0.685367,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": 0.525668,
+          "finbert": 0.77511,
+          "lm": -0.056364,
+          "articles": 5
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": -0.692898,
+          "finbert": -0.95414,
+          "lm": -0.083333,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": 0.092369,
+          "finbert": 0.13642,
+          "lm": -0.010417,
+          "articles": 8
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.649065,
+          "finbert": 0.927236,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": 0.293078,
+          "finbert": 0.394873,
+          "lm": 0.055556,
+          "articles": 4
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": 0.325597,
+          "finbert": 0.465138,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": -0.080381,
+          "finbert": -0.103841,
+          "lm": -0.025641,
+          "articles": 6
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": 0.136074,
+          "finbert": 0.194392,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.331408,
+          "finbert": -0.47344,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": 0.578295,
+          "finbert": 0.796915,
+          "lm": 0.068182,
+          "articles": 4
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.444272,
+          "finbert": -0.634674,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.392592,
+          "finbert": -0.518963,
+          "lm": -0.097727,
+          "articles": 4
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.480354,
+          "finbert": -0.68622,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": 0.666651,
+          "finbert": 0.913397,
+          "lm": 0.090909,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": -0.676092,
+          "finbert": -0.965846,
+          "lm": 0.0,
+          "articles": 1
+        }
+      ]
+    },
+    "AMZN": {
+      "total_articles": 13189,
+      "avg_sentiment": -0.039825,
+      "avg_finbert": -0.054267,
+      "avg_lm": -0.006128,
+      "recent_series": [
+        {
+          "date": "2019-10-17",
+          "sentiment": 0.004878,
+          "finbert": 0.012788,
+          "lm": -0.013578,
+          "articles": 52
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.120611,
+          "finbert": -0.164131,
+          "lm": -0.019066,
+          "articles": 44
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": 0.020053,
+          "finbert": 0.028495,
+          "lm": 0.000355,
+          "articles": 74
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": 0.015096,
+          "finbert": 0.023146,
+          "lm": -0.003687,
+          "articles": 67
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": 0.021577,
+          "finbert": 0.034555,
+          "lm": -0.008706,
+          "articles": 79
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": -0.062086,
+          "finbert": -0.087461,
+          "lm": -0.002879,
+          "articles": 75
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": 0.05377,
+          "finbert": 0.083609,
+          "lm": -0.015856,
+          "articles": 67
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.091889,
+          "finbert": 0.132654,
+          "lm": -0.003229,
+          "articles": 102
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.004617,
+          "finbert": -0.005904,
+          "lm": -0.001614,
+          "articles": 77
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": -0.010396,
+          "finbert": -0.010959,
+          "lm": -0.009083,
+          "articles": 46
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": -0.025943,
+          "finbert": -0.029175,
+          "lm": -0.018403,
+          "articles": 32
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": 0.006486,
+          "finbert": 0.009753,
+          "lm": -0.001136,
+          "articles": 44
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": -0.00983,
+          "finbert": -0.015347,
+          "lm": 0.003043,
+          "articles": 46
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.017886,
+          "finbert": -0.019396,
+          "lm": -0.014363,
+          "articles": 41
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": -0.050163,
+          "finbert": -0.070974,
+          "lm": -0.001603,
+          "articles": 48
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.004366,
+          "finbert": -0.002999,
+          "lm": -0.007554,
+          "articles": 58
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": 0.032527,
+          "finbert": 0.051304,
+          "lm": -0.011285,
+          "articles": 54
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.049681,
+          "finbert": -0.069996,
+          "lm": -0.002278,
+          "articles": 92
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.018109,
+          "finbert": 0.026884,
+          "lm": -0.002367,
+          "articles": 52
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": -0.017397,
+          "finbert": -0.019609,
+          "lm": -0.012237,
+          "articles": 61
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": 0.000162,
+          "finbert": 0.002023,
+          "lm": -0.004181,
+          "articles": 52
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.091986,
+          "finbert": -0.12157,
+          "lm": -0.022957,
+          "articles": 59
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": -0.059819,
+          "finbert": -0.084027,
+          "lm": -0.003333,
+          "articles": 60
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": -0.033955,
+          "finbert": -0.042999,
+          "lm": -0.012853,
+          "articles": 52
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": -7.6e-05,
+          "finbert": -0.000108,
+          "lm": 0.0,
+          "articles": 34
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": -0.057321,
+          "finbert": -0.078222,
+          "lm": -0.008552,
+          "articles": 47
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": -0.083141,
+          "finbert": -0.119603,
+          "lm": 0.001938,
+          "articles": 43
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": -0.033281,
+          "finbert": -0.043138,
+          "lm": -0.01028,
+          "articles": 79
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": -0.031883,
+          "finbert": -0.040806,
+          "lm": -0.011063,
+          "articles": 42
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": -0.037022,
+          "finbert": -0.054114,
+          "lm": 0.002857,
+          "articles": 35
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": -0.232392,
+          "finbert": -0.334131,
+          "lm": 0.005,
+          "articles": 20
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.073187,
+          "finbert": -0.100066,
+          "lm": -0.01047,
+          "articles": 52
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": -0.010768,
+          "finbert": -0.013662,
+          "lm": -0.004015,
+          "articles": 78
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.051612,
+          "finbert": -0.071748,
+          "lm": -0.004629,
+          "articles": 57
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": -0.032205,
+          "finbert": -0.044525,
+          "lm": -0.003459,
+          "articles": 53
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": -0.069158,
+          "finbert": -0.093675,
+          "lm": -0.011952,
+          "articles": 32
+        },
+        {
+          "date": "2019-12-06",
+          "sentiment": -0.052182,
+          "finbert": -0.0719,
+          "lm": -0.006173,
+          "articles": 36
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.150519,
+          "finbert": -0.207643,
+          "lm": -0.017228,
+          "articles": 63
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": -0.067283,
+          "finbert": -0.090512,
+          "lm": -0.013083,
+          "articles": 50
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": -0.042311,
+          "finbert": -0.058984,
+          "lm": -0.003407,
+          "articles": 53
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": -0.117098,
+          "finbert": -0.163523,
+          "lm": -0.008772,
+          "articles": 38
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": -0.021475,
+          "finbert": -0.029339,
+          "lm": -0.003125,
+          "articles": 32
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": -0.036604,
+          "finbert": -0.057079,
+          "lm": 0.011171,
+          "articles": 46
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": -0.122064,
+          "finbert": -0.174515,
+          "lm": 0.000321,
+          "articles": 45
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": 0.02381,
+          "finbert": 0.034174,
+          "lm": -0.000371,
+          "articles": 49
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": -0.04508,
+          "finbert": -0.0644,
+          "lm": 0.0,
+          "articles": 43
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": -0.050213,
+          "finbert": -0.06919,
+          "lm": -0.005932,
+          "articles": 36
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": 0.009939,
+          "finbert": 0.013674,
+          "lm": 0.001224,
+          "articles": 59
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": 0.076416,
+          "finbert": 0.109166,
+          "lm": 0.0,
+          "articles": 19
+        },
+        {
+          "date": "2019-12-25",
+          "sentiment": 0.439553,
+          "finbert": 0.621439,
+          "lm": 0.015152,
+          "articles": 6
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": 0.223098,
+          "finbert": 0.316425,
+          "lm": 0.005337,
+          "articles": 29
+        },
+        {
+          "date": "2019-12-27",
+          "sentiment": 0.055313,
+          "finbert": 0.07936,
+          "lm": -0.000795,
+          "articles": 43
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.048776,
+          "finbert": -0.066863,
+          "lm": -0.006574,
+          "articles": 30
+        },
+        {
+          "date": "2019-12-31",
+          "sentiment": 0.050121,
+          "finbert": 0.073225,
+          "lm": -0.003788,
+          "articles": 22
+        },
+        {
+          "date": "2020-01-01",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": -0.037403,
+          "finbert": -0.047418,
+          "lm": -0.014035,
+          "articles": 27
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": 0.028363,
+          "finbert": 0.04399,
+          "lm": -0.0081,
+          "articles": 27
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.013217,
+          "finbert": -0.013445,
+          "lm": -0.012685,
+          "articles": 52
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": -0.009616,
+          "finbert": -0.016009,
+          "lm": 0.005303,
+          "articles": 36
+        },
+        {
+          "date": "2020-01-08",
+          "sentiment": -0.004068,
+          "finbert": -0.008128,
+          "lm": 0.005405,
+          "articles": 37
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": -0.023495,
+          "finbert": -0.029716,
+          "lm": -0.008981,
+          "articles": 46
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": -0.016152,
+          "finbert": -0.01927,
+          "lm": -0.008877,
+          "articles": 33
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": -0.07108,
+          "finbert": -0.093726,
+          "lm": -0.018241,
+          "articles": 59
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.097861,
+          "finbert": -0.133586,
+          "lm": -0.014502,
+          "articles": 71
+        },
+        {
+          "date": "2020-01-15",
+          "sentiment": 0.033731,
+          "finbert": 0.056227,
+          "lm": -0.01876,
+          "articles": 42
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.014666,
+          "finbert": 0.02509,
+          "lm": -0.009656,
+          "articles": 57
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": -0.036626,
+          "finbert": -0.046786,
+          "lm": -0.012921,
+          "articles": 36
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": -0.004387,
+          "finbert": -0.006266,
+          "lm": 0.0,
+          "articles": 31
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": 0.032348,
+          "finbert": 0.047913,
+          "lm": -0.003971,
+          "articles": 29
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": -0.146521,
+          "finbert": -0.205445,
+          "lm": -0.009032,
+          "articles": 52
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": -0.093061,
+          "finbert": -0.131229,
+          "lm": -0.004003,
+          "articles": 61
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": -0.038093,
+          "finbert": -0.053157,
+          "lm": -0.002942,
+          "articles": 46
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": -0.189443,
+          "finbert": -0.267749,
+          "lm": -0.006728,
+          "articles": 57
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": -0.013848,
+          "finbert": -0.021281,
+          "lm": 0.003497,
+          "articles": 26
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": -0.107637,
+          "finbert": -0.146928,
+          "lm": -0.015957,
+          "articles": 45
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": 0.059515,
+          "finbert": 0.084751,
+          "lm": 0.000631,
+          "articles": 44
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": -0.195918,
+          "finbert": -0.280861,
+          "lm": 0.002283,
+          "articles": 67
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": -0.012901,
+          "finbert": -0.01974,
+          "lm": 0.003058,
+          "articles": 54
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": 0.00098,
+          "finbert": 0.008791,
+          "lm": -0.017244,
+          "articles": 44
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": -0.023226,
+          "finbert": -0.033422,
+          "lm": 0.000565,
+          "articles": 42
+        },
+        {
+          "date": "2020-02-06",
+          "sentiment": -0.072043,
+          "finbert": -0.098454,
+          "lm": -0.010417,
+          "articles": 48
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": -0.145101,
+          "finbert": -0.211112,
+          "lm": 0.008926,
+          "articles": 26
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": -0.110852,
+          "finbert": -0.159526,
+          "lm": 0.002721,
+          "articles": 51
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": 0.007965,
+          "finbert": 0.019683,
+          "lm": -0.019377,
+          "articles": 58
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.072807,
+          "finbert": -0.095045,
+          "lm": -0.020917,
+          "articles": 44
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.016362,
+          "finbert": 0.031358,
+          "lm": -0.018627,
+          "articles": 59
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": 0.000122,
+          "finbert": 0.005487,
+          "lm": -0.012396,
+          "articles": 42
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": -0.060371,
+          "finbert": -0.090411,
+          "lm": 0.009722,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": -0.027004,
+          "finbert": -0.03583,
+          "lm": -0.006408,
+          "articles": 48
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": 0.114547,
+          "finbert": 0.164764,
+          "lm": -0.002625,
+          "articles": 39
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": -0.051008,
+          "finbert": -0.071544,
+          "lm": -0.00309,
+          "articles": 46
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": -0.211628,
+          "finbert": -0.293313,
+          "lm": -0.021032,
+          "articles": 40
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": 0.028349,
+          "finbert": 0.038828,
+          "lm": 0.003896,
+          "articles": 55
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": -0.076509,
+          "finbert": -0.102373,
+          "lm": -0.016162,
+          "articles": 39
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": -0.007492,
+          "finbert": -0.01007,
+          "lm": -0.001478,
+          "articles": 29
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.171153,
+          "finbert": -0.246736,
+          "lm": 0.005208,
+          "articles": 32
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": -0.158789,
+          "finbert": -0.220688,
+          "lm": -0.01436,
+          "articles": 38
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.160504,
+          "finbert": -0.227703,
+          "lm": -0.003708,
+          "articles": 50
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.138789,
+          "finbert": -0.19662,
+          "lm": -0.00385,
+          "articles": 56
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": -0.129903,
+          "finbert": -0.18248,
+          "lm": -0.007222,
+          "articles": 45
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.240103,
+          "finbert": -0.342132,
+          "lm": -0.002034,
+          "articles": 56
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.203894,
+          "finbert": -0.28556,
+          "lm": -0.013339,
+          "articles": 51
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": -0.084156,
+          "finbert": -0.117583,
+          "lm": -0.006159,
+          "articles": 57
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.009249,
+          "finbert": -0.009962,
+          "lm": -0.007585,
+          "articles": 45
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.20126,
+          "finbert": -0.286744,
+          "lm": -0.001796,
+          "articles": 36
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.079767,
+          "finbert": -0.113413,
+          "lm": -0.001261,
+          "articles": 56
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.227098,
+          "finbert": -0.32099,
+          "lm": -0.008018,
+          "articles": 43
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.329145,
+          "finbert": -0.464493,
+          "lm": -0.013333,
+          "articles": 66
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.099483,
+          "finbert": -0.14321,
+          "lm": 0.002546,
+          "articles": 36
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": -0.243868,
+          "finbert": -0.342805,
+          "lm": -0.013015,
+          "articles": 35
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": -0.109947,
+          "finbert": -0.153239,
+          "lm": -0.008931,
+          "articles": 69
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": -0.09876,
+          "finbert": -0.138369,
+          "lm": -0.006339,
+          "articles": 39
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.260343,
+          "finbert": -0.366819,
+          "lm": -0.011898,
+          "articles": 51
+        },
+        {
+          "date": "2020-03-24",
+          "sentiment": -0.143059,
+          "finbert": -0.200194,
+          "lm": -0.009743,
+          "articles": 31
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": -0.154134,
+          "finbert": -0.216568,
+          "lm": -0.008454,
+          "articles": 23
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": 0.070793,
+          "finbert": 0.101133,
+          "lm": 0.0,
+          "articles": 15
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": -0.123774,
+          "finbert": -0.175172,
+          "lm": -0.003846,
+          "articles": 26
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": -0.096142,
+          "finbert": -0.137817,
+          "lm": 0.001099,
+          "articles": 21
+        },
+        {
+          "date": "2020-03-31",
+          "sentiment": -0.044391,
+          "finbert": -0.06091,
+          "lm": -0.005848,
+          "articles": 19
+        },
+        {
+          "date": "2020-04-01",
+          "sentiment": -0.412584,
+          "finbert": -0.589405,
+          "lm": 0.0,
+          "articles": 1
+        }
+      ]
+    },
+    "GOOGL": {
+      "total_articles": 11087,
+      "avg_sentiment": -0.073382,
+      "avg_finbert": -0.100821,
+      "avg_lm": -0.009357,
+      "recent_series": [
+        {
+          "date": "2019-10-16",
+          "sentiment": -0.098499,
+          "finbert": -0.134311,
+          "lm": -0.014937,
+          "articles": 47
+        },
+        {
+          "date": "2019-10-17",
+          "sentiment": -0.002673,
+          "finbert": -0.000571,
+          "lm": -0.007576,
+          "articles": 36
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.031827,
+          "finbert": -0.04174,
+          "lm": -0.008696,
+          "articles": 23
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": -0.068502,
+          "finbert": -0.096888,
+          "lm": -0.002268,
+          "articles": 49
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": -0.016324,
+          "finbert": -0.024474,
+          "lm": 0.002692,
+          "articles": 40
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": 0.028837,
+          "finbert": 0.047177,
+          "lm": -0.013956,
+          "articles": 36
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": 0.063703,
+          "finbert": 0.090403,
+          "lm": 0.001404,
+          "articles": 37
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": 0.051374,
+          "finbert": 0.070937,
+          "lm": 0.005729,
+          "articles": 32
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.113647,
+          "finbert": 0.165319,
+          "lm": -0.00692,
+          "articles": 66
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.125903,
+          "finbert": -0.177704,
+          "lm": -0.005034,
+          "articles": 51
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": -0.071364,
+          "finbert": -0.096747,
+          "lm": -0.012137,
+          "articles": 41
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": 0.008894,
+          "finbert": 0.018175,
+          "lm": -0.012761,
+          "articles": 38
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": 0.01453,
+          "finbert": 0.022831,
+          "lm": -0.00484,
+          "articles": 36
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": -0.019927,
+          "finbert": -0.03213,
+          "lm": 0.008547,
+          "articles": 44
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.054233,
+          "finbert": -0.073225,
+          "lm": -0.009919,
+          "articles": 38
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": -0.10559,
+          "finbert": -0.15278,
+          "lm": 0.004521,
+          "articles": 41
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.05755,
+          "finbert": -0.076956,
+          "lm": -0.01227,
+          "articles": 51
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": 0.057884,
+          "finbert": 0.083996,
+          "lm": -0.003043,
+          "articles": 31
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.025458,
+          "finbert": -0.035013,
+          "lm": -0.003161,
+          "articles": 54
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.096553,
+          "finbert": 0.139543,
+          "lm": -0.003756,
+          "articles": 32
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": -0.069953,
+          "finbert": -0.094112,
+          "lm": -0.01358,
+          "articles": 45
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": -0.031968,
+          "finbert": -0.040649,
+          "lm": -0.011712,
+          "articles": 45
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.038322,
+          "finbert": -0.052125,
+          "lm": -0.006115,
+          "articles": 51
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": -0.023313,
+          "finbert": -0.031202,
+          "lm": -0.004907,
+          "articles": 44
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": -0.016499,
+          "finbert": -0.016103,
+          "lm": -0.017424,
+          "articles": 39
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": 0.023841,
+          "finbert": 0.039373,
+          "lm": -0.012401,
+          "articles": 28
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": -0.07373,
+          "finbert": -0.101876,
+          "lm": -0.008056,
+          "articles": 40
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": -0.112548,
+          "finbert": -0.159296,
+          "lm": -0.00347,
+          "articles": 31
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": -0.147659,
+          "finbert": -0.208395,
+          "lm": -0.005944,
+          "articles": 45
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": 0.021636,
+          "finbert": 0.035603,
+          "lm": -0.010953,
+          "articles": 40
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": 0.099235,
+          "finbert": 0.14004,
+          "lm": 0.004023,
+          "articles": 29
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": -0.050455,
+          "finbert": -0.072079,
+          "lm": 0.0,
+          "articles": 16
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.093291,
+          "finbert": -0.126718,
+          "lm": -0.015294,
+          "articles": 27
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": -0.088947,
+          "finbert": -0.122318,
+          "lm": -0.01108,
+          "articles": 49
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.083692,
+          "finbert": -0.115497,
+          "lm": -0.009479,
+          "articles": 52
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": -0.008482,
+          "finbert": -0.008626,
+          "lm": -0.008148,
+          "articles": 75
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": -0.126753,
+          "finbert": -0.179409,
+          "lm": -0.003889,
+          "articles": 40
+        },
+        {
+          "date": "2019-12-06",
+          "sentiment": -0.0406,
+          "finbert": -0.052936,
+          "lm": -0.011818,
+          "articles": 28
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.059566,
+          "finbert": -0.083221,
+          "lm": -0.004373,
+          "articles": 43
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": -0.057282,
+          "finbert": -0.077435,
+          "lm": -0.010258,
+          "articles": 58
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": -0.044285,
+          "finbert": -0.057001,
+          "lm": -0.014614,
+          "articles": 58
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": -0.108758,
+          "finbert": -0.15337,
+          "lm": -0.004662,
+          "articles": 36
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": -0.03309,
+          "finbert": -0.043172,
+          "lm": -0.009567,
+          "articles": 37
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": -0.0509,
+          "finbert": -0.071194,
+          "lm": -0.003546,
+          "articles": 47
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": -0.045724,
+          "finbert": -0.061916,
+          "lm": -0.007945,
+          "articles": 36
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": 0.037979,
+          "finbert": 0.052899,
+          "lm": 0.003165,
+          "articles": 43
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": -0.104642,
+          "finbert": -0.142374,
+          "lm": -0.0166,
+          "articles": 34
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": 0.027998,
+          "finbert": 0.039897,
+          "lm": 0.000234,
+          "articles": 47
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": -0.043135,
+          "finbert": -0.065748,
+          "lm": 0.009629,
+          "articles": 53
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 15
+        },
+        {
+          "date": "2019-12-25",
+          "sentiment": 0.0275,
+          "finbert": 0.0,
+          "lm": 0.091667,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": -0.009624,
+          "finbert": -0.013748,
+          "lm": 0.0,
+          "articles": 25
+        },
+        {
+          "date": "2019-12-27",
+          "sentiment": 0.073158,
+          "finbert": 0.113033,
+          "lm": -0.019884,
+          "articles": 29
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.014395,
+          "finbert": -0.017831,
+          "lm": -0.006376,
+          "articles": 44
+        },
+        {
+          "date": "2019-12-31",
+          "sentiment": -0.005024,
+          "finbert": -0.002357,
+          "lm": -0.011248,
+          "articles": 29
+        },
+        {
+          "date": "2020-01-01",
+          "sentiment": 0.269667,
+          "finbert": 0.391732,
+          "lm": -0.015152,
+          "articles": 6
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": 0.002323,
+          "finbert": 0.006878,
+          "lm": -0.008304,
+          "articles": 26
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": -0.048507,
+          "finbert": -0.069296,
+          "lm": 0.0,
+          "articles": 24
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.000794,
+          "finbert": -0.001994,
+          "lm": 0.002007,
+          "articles": 37
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": 0.041729,
+          "finbert": 0.058222,
+          "lm": 0.003247,
+          "articles": 28
+        },
+        {
+          "date": "2020-01-08",
+          "sentiment": -0.01225,
+          "finbert": -0.014362,
+          "lm": -0.007323,
+          "articles": 35
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": -0.006649,
+          "finbert": -0.010581,
+          "lm": 0.002525,
+          "articles": 36
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": 0.090581,
+          "finbert": 0.129029,
+          "lm": 0.000868,
+          "articles": 32
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.033935,
+          "finbert": 0.049818,
+          "lm": -0.003125,
+          "articles": 40
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.031183,
+          "finbert": -0.044441,
+          "lm": -0.000246,
+          "articles": 37
+        },
+        {
+          "date": "2020-01-15",
+          "sentiment": 0.004816,
+          "finbert": 0.013626,
+          "lm": -0.015741,
+          "articles": 27
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.038741,
+          "finbert": 0.055417,
+          "lm": -0.000168,
+          "articles": 45
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": 0.137175,
+          "finbert": 0.19581,
+          "lm": 0.000362,
+          "articles": 46
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": -0.178292,
+          "finbert": -0.246902,
+          "lm": -0.0182,
+          "articles": 36
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": 0.091032,
+          "finbert": 0.128103,
+          "lm": 0.004532,
+          "articles": 36
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": -0.109699,
+          "finbert": -0.153074,
+          "lm": -0.008489,
+          "articles": 45
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": -0.038497,
+          "finbert": -0.05176,
+          "lm": -0.007551,
+          "articles": 40
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": -0.054916,
+          "finbert": -0.077096,
+          "lm": -0.003163,
+          "articles": 38
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": -0.102805,
+          "finbert": -0.143413,
+          "lm": -0.008054,
+          "articles": 52
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": 0.073347,
+          "finbert": 0.103087,
+          "lm": 0.003953,
+          "articles": 23
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": -0.129573,
+          "finbert": -0.181067,
+          "lm": -0.00942,
+          "articles": 45
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.109789,
+          "finbert": -0.154005,
+          "lm": -0.006619,
+          "articles": 38
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": -0.068751,
+          "finbert": -0.098303,
+          "lm": 0.000203,
+          "articles": 41
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": 0.015356,
+          "finbert": 0.021801,
+          "lm": 0.000317,
+          "articles": 63
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": -0.00721,
+          "finbert": -0.006026,
+          "lm": -0.009972,
+          "articles": 69
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": -0.040646,
+          "finbert": -0.053835,
+          "lm": -0.009873,
+          "articles": 42
+        },
+        {
+          "date": "2020-02-06",
+          "sentiment": 0.040018,
+          "finbert": 0.059098,
+          "lm": -0.004505,
+          "articles": 37
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": -0.085249,
+          "finbert": -0.116907,
+          "lm": -0.01138,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": -0.018736,
+          "finbert": -0.02245,
+          "lm": -0.010071,
+          "articles": 46
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": -0.003124,
+          "finbert": 0.00308,
+          "lm": -0.0176,
+          "articles": 45
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.042146,
+          "finbert": -0.045077,
+          "lm": -0.035307,
+          "articles": 34
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.09273,
+          "finbert": 0.136265,
+          "lm": -0.008854,
+          "articles": 49
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": -0.100913,
+          "finbert": -0.142875,
+          "lm": -0.003003,
+          "articles": 37
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": -0.017365,
+          "finbert": -0.031279,
+          "lm": 0.015101,
+          "articles": 23
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": -0.084947,
+          "finbert": -0.121352,
+          "lm": 0.0,
+          "articles": 30
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": 0.02776,
+          "finbert": 0.040648,
+          "lm": -0.002311,
+          "articles": 40
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": -0.115165,
+          "finbert": -0.16068,
+          "lm": -0.008962,
+          "articles": 43
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": -0.137114,
+          "finbert": -0.18897,
+          "lm": -0.016117,
+          "articles": 34
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": 0.008767,
+          "finbert": 0.010267,
+          "lm": 0.005265,
+          "articles": 63
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": -0.087714,
+          "finbert": -0.123094,
+          "lm": -0.00516,
+          "articles": 37
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": 0.16859,
+          "finbert": 0.237106,
+          "lm": 0.008718,
+          "articles": 34
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.151528,
+          "finbert": -0.212305,
+          "lm": -0.009714,
+          "articles": 25
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": -0.034617,
+          "finbert": -0.046369,
+          "lm": -0.007197,
+          "articles": 30
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.103134,
+          "finbert": -0.144871,
+          "lm": -0.005745,
+          "articles": 65
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.153958,
+          "finbert": -0.21604,
+          "lm": -0.009101,
+          "articles": 45
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": -0.060261,
+          "finbert": -0.080162,
+          "lm": -0.013826,
+          "articles": 36
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.232888,
+          "finbert": -0.329977,
+          "lm": -0.006349,
+          "articles": 49
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.175729,
+          "finbert": -0.249589,
+          "lm": -0.003391,
+          "articles": 52
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": -0.173007,
+          "finbert": -0.247293,
+          "lm": 0.000327,
+          "articles": 34
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.138397,
+          "finbert": -0.191093,
+          "lm": -0.015439,
+          "articles": 53
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.147206,
+          "finbert": -0.211548,
+          "lm": 0.002924,
+          "articles": 38
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.036347,
+          "finbert": -0.050251,
+          "lm": -0.003904,
+          "articles": 43
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.188804,
+          "finbert": -0.266081,
+          "lm": -0.00849,
+          "articles": 55
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.106054,
+          "finbert": -0.147923,
+          "lm": -0.008362,
+          "articles": 55
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.052001,
+          "finbert": -0.071725,
+          "lm": -0.005978,
+          "articles": 46
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": -0.050251,
+          "finbert": -0.067323,
+          "lm": -0.010417,
+          "articles": 32
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": -0.079834,
+          "finbert": -0.109323,
+          "lm": -0.011027,
+          "articles": 42
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": -0.13634,
+          "finbert": -0.193324,
+          "lm": -0.003378,
+          "articles": 37
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.119216,
+          "finbert": -0.165028,
+          "lm": -0.012324,
+          "articles": 36
+        },
+        {
+          "date": "2020-03-24",
+          "sentiment": -0.086984,
+          "finbert": -0.124262,
+          "lm": 0.0,
+          "articles": 22
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": -0.136962,
+          "finbert": -0.193516,
+          "lm": -0.005,
+          "articles": 20
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": 0.024564,
+          "finbert": 0.036877,
+          "lm": -0.004167,
+          "articles": 24
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": -0.116368,
+          "finbert": -0.16624,
+          "lm": 0.0,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": -0.107004,
+          "finbert": -0.154847,
+          "lm": 0.00463,
+          "articles": 18
+        },
+        {
+          "date": "2020-03-31",
+          "sentiment": -0.046482,
+          "finbert": -0.059444,
+          "lm": -0.016239,
+          "articles": 13
+        }
+      ]
+    },
+    "INTC": {
+      "total_articles": 1624,
+      "avg_sentiment": -0.074049,
+      "avg_finbert": -0.10256,
+      "avg_lm": -0.007522,
+      "recent_series": [
+        {
+          "date": "2019-10-02",
+          "sentiment": -0.011111,
+          "finbert": 0.0,
+          "lm": -0.037037,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-03",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-04",
+          "sentiment": -0.090177,
+          "finbert": -0.121682,
+          "lm": -0.016667,
+          "articles": 6
+        },
+        {
+          "date": "2019-10-07",
+          "sentiment": 0.109534,
+          "finbert": 0.1626,
+          "lm": -0.014286,
+          "articles": 7
+        },
+        {
+          "date": "2019-10-08",
+          "sentiment": -0.238832,
+          "finbert": -0.335145,
+          "lm": -0.014103,
+          "articles": 13
+        },
+        {
+          "date": "2019-10-09",
+          "sentiment": 0.043482,
+          "finbert": 0.062117,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-10",
+          "sentiment": 0.141229,
+          "finbert": 0.201756,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-11",
+          "sentiment": 0.433498,
+          "finbert": 0.629023,
+          "lm": -0.022727,
+          "articles": 4
+        },
+        {
+          "date": "2019-10-14",
+          "sentiment": -0.132263,
+          "finbert": -0.188948,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-10-15",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-16",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-10-17",
+          "sentiment": 0.664129,
+          "finbert": 0.948756,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.377049,
+          "finbert": -0.532518,
+          "lm": -0.014286,
+          "articles": 7
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": 0.001326,
+          "finbert": -0.0047,
+          "lm": 0.015385,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": -0.677993,
+          "finbert": -0.950195,
+          "lm": -0.042857,
+          "articles": 7
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": -0.336533,
+          "finbert": -0.46998,
+          "lm": -0.025155,
+          "articles": 13
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": 0.274691,
+          "finbert": 0.38448,
+          "lm": 0.018519,
+          "articles": 12
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": 0.358977,
+          "finbert": 0.503168,
+          "lm": 0.022531,
+          "articles": 18
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.339825,
+          "finbert": 0.488904,
+          "lm": -0.008025,
+          "articles": 9
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.41641,
+          "finbert": -0.626618,
+          "lm": 0.074074,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": -0.219446,
+          "finbert": -0.313494,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": -0.088846,
+          "finbert": -0.117399,
+          "lm": -0.022222,
+          "articles": 9
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.220755,
+          "finbert": -0.315365,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": 0.16568,
+          "finbert": 0.236685,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.271754,
+          "finbert": -0.398934,
+          "lm": 0.025,
+          "articles": 4
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.427018,
+          "finbert": -0.598514,
+          "lm": -0.026862,
+          "articles": 7
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.191185,
+          "finbert": 0.273122,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": -0.118038,
+          "finbert": -0.156937,
+          "lm": -0.027273,
+          "articles": 7
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": 0.369441,
+          "finbert": 0.541165,
+          "lm": -0.03125,
+          "articles": 4
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.006818,
+          "finbert": 0.0,
+          "lm": -0.022727,
+          "articles": 4
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": -0.286409,
+          "finbert": -0.409155,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": 0.658418,
+          "finbert": 0.940598,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": -0.616146,
+          "finbert": -0.880208,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": -0.271845,
+          "finbert": -0.372766,
+          "lm": -0.036364,
+          "articles": 10
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": 0.105032,
+          "finbert": 0.144552,
+          "lm": 0.012821,
+          "articles": 6
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": -0.264692,
+          "finbert": -0.378132,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.260729,
+          "finbert": -0.358185,
+          "lm": -0.033333,
+          "articles": 5
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": -0.128059,
+          "finbert": -0.182942,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.208977,
+          "finbert": -0.298539,
+          "lm": 0.0,
+          "articles": 11
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": -0.124111,
+          "finbert": -0.177302,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.0025,
+          "finbert": 0.0,
+          "lm": -0.008333,
+          "articles": 10
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": 0.413023,
+          "finbert": 0.590033,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": 0.006298,
+          "finbert": 0.008997,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": 0.432431,
+          "finbert": 0.617758,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": 0.117735,
+          "finbert": 0.177813,
+          "lm": -0.022447,
+          "articles": 9
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": 0.147334,
+          "finbert": 0.189432,
+          "lm": 0.049107,
+          "articles": 4
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": 0.186356,
+          "finbert": 0.244794,
+          "lm": 0.05,
+          "articles": 4
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": 0.649889,
+          "finbert": 0.928412,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": -0.330525,
+          "finbert": -0.454321,
+          "lm": -0.041667,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.551465,
+          "finbert": -0.777093,
+          "lm": -0.025,
+          "articles": 5
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": -0.375546,
+          "finbert": -0.536495,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.005474,
+          "finbert": 0.003868,
+          "lm": -0.027273,
+          "articles": 10
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": -0.185054,
+          "finbert": -0.256709,
+          "lm": -0.017857,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": 0.242551,
+          "finbert": 0.346502,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": 0.123191,
+          "finbert": 0.175987,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.331832,
+          "finbert": 0.474045,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": 0.089821,
+          "finbert": 0.140221,
+          "lm": -0.027778,
+          "articles": 9
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": -0.209198,
+          "finbert": -0.298854,
+          "lm": 0.0,
+          "articles": 11
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": 0.330239,
+          "finbert": 0.47177,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": 0.088403,
+          "finbert": 0.130259,
+          "lm": -0.009259,
+          "articles": 12
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": -0.124286,
+          "finbert": -0.168374,
+          "lm": -0.021414,
+          "articles": 20
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": 0.011111,
+          "finbert": 0.0,
+          "lm": 0.037037,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": -0.342704,
+          "finbert": -0.47172,
+          "lm": -0.041667,
+          "articles": 6
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": 0.459902,
+          "finbert": 0.628431,
+          "lm": 0.066667,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.145255,
+          "finbert": -0.188604,
+          "lm": -0.044107,
+          "articles": 13
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": 0.550761,
+          "finbert": 0.786801,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": -0.037652,
+          "finbert": -0.053788,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": 0.311683,
+          "finbert": 0.432274,
+          "lm": 0.030303,
+          "articles": 6
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": -0.357119,
+          "finbert": -0.51017,
+          "lm": 0.0,
+          "articles": 9
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.440677,
+          "finbert": -0.629539,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.185447,
+          "finbert": 0.264925,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": -0.10529,
+          "finbert": -0.156366,
+          "lm": 0.013889,
+          "articles": 8
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": -0.344323,
+          "finbert": -0.470461,
+          "lm": -0.05,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": -0.285323,
+          "finbert": -0.386175,
+          "lm": -0.05,
+          "articles": 5
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": 0.159177,
+          "finbert": 0.227396,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": 0.309913,
+          "finbert": 0.442733,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": -0.089283,
+          "finbert": -0.127547,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.459667,
+          "finbert": -0.65337,
+          "lm": -0.007692,
+          "articles": 13
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": 0.04322,
+          "finbert": 0.046437,
+          "lm": 0.035714,
+          "articles": 7
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.246618,
+          "finbert": -0.352311,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": 0.286992,
+          "finbert": 0.390508,
+          "lm": 0.045455,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.079708,
+          "finbert": -0.113869,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.521812,
+          "finbert": -0.745445,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": -0.03,
+          "finbert": 0.0,
+          "lm": -0.1,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.308064,
+          "finbert": -0.41915,
+          "lm": -0.048864,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.311674,
+          "finbert": -0.431856,
+          "lm": -0.03125,
+          "articles": 4
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.561102,
+          "finbert": -0.801575,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.042857,
+          "finbert": 0.0,
+          "lm": -0.142857,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.076853,
+          "finbert": -0.104689,
+          "lm": -0.011905,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.503587,
+          "finbert": -0.709886,
+          "lm": -0.022222,
+          "articles": 5
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": 0.098436,
+          "finbert": 0.147765,
+          "lm": -0.016667,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": 0.317903,
+          "finbert": 0.454148,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": -0.014229,
+          "finbert": -0.010123,
+          "lm": -0.02381,
+          "articles": 3
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.225156,
+          "finbert": -0.321651,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": 0.666651,
+          "finbert": 0.913397,
+          "lm": 0.090909,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": -0.451024,
+          "finbert": -0.644321,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-03-31",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        }
+      ]
+    },
+    "META": {
+      "total_articles": 23090,
+      "avg_sentiment": -0.149589,
+      "avg_finbert": -0.20959,
+      "avg_lm": -0.009588,
+      "recent_series": [
+        {
+          "date": "2019-10-17",
+          "sentiment": -0.141819,
+          "finbert": -0.198152,
+          "lm": -0.010376,
+          "articles": 95
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.160931,
+          "finbert": -0.224855,
+          "lm": -0.011774,
+          "articles": 85
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": -0.13886,
+          "finbert": -0.194815,
+          "lm": -0.008299,
+          "articles": 140
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": -0.121522,
+          "finbert": -0.172121,
+          "lm": -0.003456,
+          "articles": 109
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": -0.154827,
+          "finbert": -0.214336,
+          "lm": -0.015973,
+          "articles": 104
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": -0.104324,
+          "finbert": -0.145519,
+          "lm": -0.008203,
+          "articles": 97
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": -0.082086,
+          "finbert": -0.112007,
+          "lm": -0.012272,
+          "articles": 57
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": -0.048536,
+          "finbert": -0.067336,
+          "lm": -0.004669,
+          "articles": 157
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.159383,
+          "finbert": -0.225531,
+          "lm": -0.005038,
+          "articles": 107
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": -0.164739,
+          "finbert": -0.228494,
+          "lm": -0.015977,
+          "articles": 115
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": -0.188423,
+          "finbert": -0.260688,
+          "lm": -0.019805,
+          "articles": 119
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": -0.069804,
+          "finbert": -0.099947,
+          "lm": 0.000531,
+          "articles": 79
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": -0.12944,
+          "finbert": -0.181161,
+          "lm": -0.008757,
+          "articles": 147
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.089873,
+          "finbert": -0.12348,
+          "lm": -0.011455,
+          "articles": 90
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": -0.141334,
+          "finbert": -0.199067,
+          "lm": -0.006624,
+          "articles": 98
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.174389,
+          "finbert": -0.243798,
+          "lm": -0.012435,
+          "articles": 89
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": -0.094126,
+          "finbert": -0.129374,
+          "lm": -0.011882,
+          "articles": 88
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.101924,
+          "finbert": -0.141869,
+          "lm": -0.008719,
+          "articles": 163
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": -0.059177,
+          "finbert": -0.083498,
+          "lm": -0.002427,
+          "articles": 89
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": -0.148003,
+          "finbert": -0.206766,
+          "lm": -0.010888,
+          "articles": 101
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": -0.087682,
+          "finbert": -0.120886,
+          "lm": -0.010207,
+          "articles": 98
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.087092,
+          "finbert": -0.120599,
+          "lm": -0.008908,
+          "articles": 90
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": -0.107749,
+          "finbert": -0.152429,
+          "lm": -0.003496,
+          "articles": 163
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": -0.106849,
+          "finbert": -0.149829,
+          "lm": -0.006565,
+          "articles": 89
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": -0.067542,
+          "finbert": -0.093911,
+          "lm": -0.006017,
+          "articles": 86
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": -0.066548,
+          "finbert": -0.092818,
+          "lm": -0.00525,
+          "articles": 69
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": -0.167382,
+          "finbert": -0.235539,
+          "lm": -0.008349,
+          "articles": 82
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": -0.099339,
+          "finbert": -0.14035,
+          "lm": -0.003646,
+          "articles": 118
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": -0.101027,
+          "finbert": -0.144047,
+          "lm": -0.000648,
+          "articles": 84
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": -0.01035,
+          "finbert": -0.014372,
+          "lm": -0.000965,
+          "articles": 95
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": -0.171566,
+          "finbert": -0.246855,
+          "lm": 0.004109,
+          "articles": 39
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.137667,
+          "finbert": -0.192594,
+          "lm": -0.009505,
+          "articles": 66
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": -0.146157,
+          "finbert": -0.202012,
+          "lm": -0.015828,
+          "articles": 135
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.089162,
+          "finbert": -0.124384,
+          "lm": -0.006978,
+          "articles": 77
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": -0.082926,
+          "finbert": -0.117196,
+          "lm": -0.002964,
+          "articles": 96
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": -0.167615,
+          "finbert": -0.235273,
+          "lm": -0.009747,
+          "articles": 109
+        },
+        {
+          "date": "2019-12-06",
+          "sentiment": -0.17045,
+          "finbert": -0.239939,
+          "lm": -0.008311,
+          "articles": 72
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.077964,
+          "finbert": -0.109849,
+          "lm": -0.003564,
+          "articles": 127
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": -0.146277,
+          "finbert": -0.204422,
+          "lm": -0.010606,
+          "articles": 91
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": -0.074297,
+          "finbert": -0.101495,
+          "lm": -0.010835,
+          "articles": 82
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": -0.107561,
+          "finbert": -0.152089,
+          "lm": -0.003664,
+          "articles": 104
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": -0.093077,
+          "finbert": -0.131989,
+          "lm": -0.002282,
+          "articles": 80
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": -0.098588,
+          "finbert": -0.138616,
+          "lm": -0.005189,
+          "articles": 108
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": -0.074355,
+          "finbert": -0.100517,
+          "lm": -0.01331,
+          "articles": 83
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": -0.066444,
+          "finbert": -0.093806,
+          "lm": -0.002599,
+          "articles": 86
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": -0.123406,
+          "finbert": -0.17124,
+          "lm": -0.011793,
+          "articles": 99
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": -0.107851,
+          "finbert": -0.152626,
+          "lm": -0.003377,
+          "articles": 104
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": -0.107363,
+          "finbert": -0.153001,
+          "lm": -0.000873,
+          "articles": 141
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": -0.10794,
+          "finbert": -0.150268,
+          "lm": -0.009177,
+          "articles": 58
+        },
+        {
+          "date": "2019-12-25",
+          "sentiment": -0.135065,
+          "finbert": -0.200093,
+          "lm": 0.016667,
+          "articles": 11
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": -0.087236,
+          "finbert": -0.122611,
+          "lm": -0.004696,
+          "articles": 43
+        },
+        {
+          "date": "2019-12-27",
+          "sentiment": -0.165491,
+          "finbert": -0.228941,
+          "lm": -0.017441,
+          "articles": 61
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.121922,
+          "finbert": -0.170286,
+          "lm": -0.009072,
+          "articles": 115
+        },
+        {
+          "date": "2019-12-31",
+          "sentiment": -0.098715,
+          "finbert": -0.137152,
+          "lm": -0.009031,
+          "articles": 61
+        },
+        {
+          "date": "2020-01-01",
+          "sentiment": -0.171386,
+          "finbert": -0.244837,
+          "lm": 0.0,
+          "articles": 11
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": -0.1477,
+          "finbert": -0.208383,
+          "lm": -0.006104,
+          "articles": 73
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": -0.060908,
+          "finbert": -0.085929,
+          "lm": -0.002525,
+          "articles": 52
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.084589,
+          "finbert": -0.119325,
+          "lm": -0.003539,
+          "articles": 134
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": -0.107371,
+          "finbert": -0.148897,
+          "lm": -0.010478,
+          "articles": 99
+        },
+        {
+          "date": "2020-01-08",
+          "sentiment": -0.092292,
+          "finbert": -0.129257,
+          "lm": -0.006039,
+          "articles": 97
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": -0.112003,
+          "finbert": -0.154882,
+          "lm": -0.01195,
+          "articles": 84
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": -0.031832,
+          "finbert": -0.043123,
+          "lm": -0.005488,
+          "articles": 105
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": -0.040263,
+          "finbert": -0.053861,
+          "lm": -0.008535,
+          "articles": 133
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.083945,
+          "finbert": -0.117311,
+          "lm": -0.006092,
+          "articles": 100
+        },
+        {
+          "date": "2020-01-15",
+          "sentiment": -0.099726,
+          "finbert": -0.144045,
+          "lm": 0.003686,
+          "articles": 74
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": -0.075875,
+          "finbert": -0.104411,
+          "lm": -0.009292,
+          "articles": 80
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": -0.138991,
+          "finbert": -0.198131,
+          "lm": -0.000996,
+          "articles": 94
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": -0.106606,
+          "finbert": -0.15051,
+          "lm": -0.004164,
+          "articles": 96
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": -0.083927,
+          "finbert": -0.115321,
+          "lm": -0.010674,
+          "articles": 94
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": -0.118192,
+          "finbert": -0.166066,
+          "lm": -0.006486,
+          "articles": 108
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": -0.103022,
+          "finbert": -0.143285,
+          "lm": -0.009075,
+          "articles": 98
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": -0.088647,
+          "finbert": -0.12393,
+          "lm": -0.006322,
+          "articles": 116
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": -0.075071,
+          "finbert": -0.105356,
+          "lm": -0.004405,
+          "articles": 170
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": -0.129126,
+          "finbert": -0.180825,
+          "lm": -0.008496,
+          "articles": 95
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": -0.112371,
+          "finbert": -0.157114,
+          "lm": -0.007972,
+          "articles": 118
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.117867,
+          "finbert": -0.162037,
+          "lm": -0.014803,
+          "articles": 125
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": -0.077746,
+          "finbert": -0.112012,
+          "lm": 0.002206,
+          "articles": 96
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": -0.092896,
+          "finbert": -0.130909,
+          "lm": -0.004198,
+          "articles": 196
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": -0.164786,
+          "finbert": -0.230735,
+          "lm": -0.010905,
+          "articles": 99
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": -0.101022,
+          "finbert": -0.141091,
+          "lm": -0.007525,
+          "articles": 93
+        },
+        {
+          "date": "2020-02-06",
+          "sentiment": -0.098148,
+          "finbert": -0.137826,
+          "lm": -0.005566,
+          "articles": 78
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": -0.170877,
+          "finbert": -0.237417,
+          "lm": -0.015616,
+          "articles": 77
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": -0.110265,
+          "finbert": -0.157037,
+          "lm": -0.00113,
+          "articles": 202
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": -0.058739,
+          "finbert": -0.081492,
+          "lm": -0.005648,
+          "articles": 102
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.110945,
+          "finbert": -0.151713,
+          "lm": -0.015818,
+          "articles": 117
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": -0.055005,
+          "finbert": -0.075982,
+          "lm": -0.006059,
+          "articles": 93
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": -0.074179,
+          "finbert": -0.105199,
+          "lm": -0.001799,
+          "articles": 106
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": -0.158317,
+          "finbert": -0.225165,
+          "lm": -0.002337,
+          "articles": 101
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": -0.13263,
+          "finbert": -0.189024,
+          "lm": -0.001045,
+          "articles": 87
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": -0.088066,
+          "finbert": -0.122156,
+          "lm": -0.008521,
+          "articles": 55
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": -0.159733,
+          "finbert": -0.227297,
+          "lm": -0.002083,
+          "articles": 40
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": -0.228885,
+          "finbert": -0.324079,
+          "lm": -0.006764,
+          "articles": 42
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": -0.156091,
+          "finbert": -0.218403,
+          "lm": -0.010697,
+          "articles": 65
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": -0.179855,
+          "finbert": -0.251053,
+          "lm": -0.013725,
+          "articles": 32
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": -0.088525,
+          "finbert": -0.11662,
+          "lm": -0.022969,
+          "articles": 45
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.222299,
+          "finbert": -0.31399,
+          "lm": -0.008353,
+          "articles": 50
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": -0.199933,
+          "finbert": -0.280785,
+          "lm": -0.011279,
+          "articles": 36
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.236649,
+          "finbert": -0.336209,
+          "lm": -0.004342,
+          "articles": 79
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.303116,
+          "finbert": -0.428691,
+          "lm": -0.01011,
+          "articles": 57
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": -0.103313,
+          "finbert": -0.143694,
+          "lm": -0.009091,
+          "articles": 54
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.241116,
+          "finbert": -0.341941,
+          "lm": -0.005857,
+          "articles": 62
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.240316,
+          "finbert": -0.335783,
+          "lm": -0.01756,
+          "articles": 64
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": -0.274638,
+          "finbert": -0.387678,
+          "lm": -0.010878,
+          "articles": 67
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.122693,
+          "finbert": -0.171486,
+          "lm": -0.008842,
+          "articles": 50
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.19466,
+          "finbert": -0.27922,
+          "lm": 0.002646,
+          "articles": 42
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.155946,
+          "finbert": -0.218131,
+          "lm": -0.010848,
+          "articles": 57
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.195089,
+          "finbert": -0.27251,
+          "lm": -0.01444,
+          "articles": 49
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.146173,
+          "finbert": -0.202142,
+          "lm": -0.015579,
+          "articles": 60
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.083414,
+          "finbert": -0.114068,
+          "lm": -0.011889,
+          "articles": 63
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": -0.130401,
+          "finbert": -0.177728,
+          "lm": -0.019973,
+          "articles": 64
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": -0.118456,
+          "finbert": -0.163302,
+          "lm": -0.013816,
+          "articles": 59
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": -0.147741,
+          "finbert": -0.209916,
+          "lm": -0.002666,
+          "articles": 36
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.229112,
+          "finbert": -0.323604,
+          "lm": -0.008631,
+          "articles": 62
+        },
+        {
+          "date": "2020-03-24",
+          "sentiment": -0.209983,
+          "finbert": -0.29442,
+          "lm": -0.012963,
+          "articles": 15
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": -0.190754,
+          "finbert": -0.268898,
+          "lm": -0.008418,
+          "articles": 24
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": -0.098108,
+          "finbert": -0.143385,
+          "lm": 0.00754,
+          "articles": 21
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": -0.102552,
+          "finbert": -0.143101,
+          "lm": -0.007937,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": -0.170617,
+          "finbert": -0.240678,
+          "lm": -0.007143,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-31",
+          "sentiment": -0.062029,
+          "finbert": -0.086107,
+          "lm": -0.005848,
+          "articles": 19
+        },
+        {
+          "date": "2020-04-01",
+          "sentiment": -0.64627,
+          "finbert": -0.923243,
+          "lm": 0.0,
+          "articles": 1
+        }
+      ]
+    },
+    "MSFT": {
+      "total_articles": 4885,
+      "avg_sentiment": -0.046589,
+      "avg_finbert": -0.063705,
+      "avg_lm": -0.006652,
+      "recent_series": [
+        {
+          "date": "2019-10-15",
+          "sentiment": -0.040592,
+          "finbert": -0.064599,
+          "lm": 0.015422,
+          "articles": 14
+        },
+        {
+          "date": "2019-10-16",
+          "sentiment": -0.204861,
+          "finbert": -0.292659,
+          "lm": 0.0,
+          "articles": 13
+        },
+        {
+          "date": "2019-10-17",
+          "sentiment": -0.000681,
+          "finbert": 0.003357,
+          "lm": -0.010101,
+          "articles": 9
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.241081,
+          "finbert": -0.333796,
+          "lm": -0.024747,
+          "articles": 22
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": 0.024648,
+          "finbert": 0.026932,
+          "lm": 0.019319,
+          "articles": 41
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": -0.070032,
+          "finbert": -0.095884,
+          "lm": -0.009713,
+          "articles": 20
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": 0.019395,
+          "finbert": 0.030153,
+          "lm": -0.005706,
+          "articles": 19
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": 0.107806,
+          "finbert": 0.15354,
+          "lm": 0.001093,
+          "articles": 44
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": -0.156068,
+          "finbert": -0.192996,
+          "lm": -0.069901,
+          "articles": 21
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.154571,
+          "finbert": 0.224452,
+          "lm": -0.008486,
+          "articles": 47
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.048496,
+          "finbert": -0.068113,
+          "lm": -0.002724,
+          "articles": 28
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": 0.013254,
+          "finbert": 0.026401,
+          "lm": -0.017424,
+          "articles": 10
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": -0.119248,
+          "finbert": -0.170355,
+          "lm": -0.0,
+          "articles": 13
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": -0.073041,
+          "finbert": -0.099582,
+          "lm": -0.011111,
+          "articles": 9
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": 0.043065,
+          "finbert": 0.059823,
+          "lm": 0.003964,
+          "articles": 28
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.020017,
+          "finbert": -0.022661,
+          "lm": -0.013846,
+          "articles": 20
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": 0.003365,
+          "finbert": -0.00051,
+          "lm": 0.012407,
+          "articles": 23
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": 0.070258,
+          "finbert": 0.096124,
+          "lm": 0.009902,
+          "articles": 19
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": -0.075243,
+          "finbert": -0.109925,
+          "lm": 0.005682,
+          "articles": 22
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": 0.006123,
+          "finbert": 0.007032,
+          "lm": 0.004003,
+          "articles": 34
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.034125,
+          "finbert": 0.03414,
+          "lm": 0.034091,
+          "articles": 16
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": -0.111874,
+          "finbert": -0.150248,
+          "lm": -0.022334,
+          "articles": 18
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": -0.059763,
+          "finbert": -0.085189,
+          "lm": -0.000435,
+          "articles": 29
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.010225,
+          "finbert": -0.008475,
+          "lm": -0.01431,
+          "articles": 21
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": -0.070799,
+          "finbert": -0.102629,
+          "lm": 0.003472,
+          "articles": 24
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": 0.03953,
+          "finbert": 0.05571,
+          "lm": 0.001777,
+          "articles": 36
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": 0.011011,
+          "finbert": 0.008396,
+          "lm": 0.017112,
+          "articles": 17
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": 0.047088,
+          "finbert": 0.067268,
+          "lm": 0.0,
+          "articles": 22
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": -0.183129,
+          "finbert": -0.258095,
+          "lm": -0.008207,
+          "articles": 12
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": -0.056076,
+          "finbert": -0.078951,
+          "lm": -0.002699,
+          "articles": 29
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": 0.079644,
+          "finbert": 0.116754,
+          "lm": -0.006944,
+          "articles": 16
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": -0.10784,
+          "finbert": -0.154057,
+          "lm": 0.0,
+          "articles": 10
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": -0.154063,
+          "finbert": -0.220089,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.048407,
+          "finbert": -0.066306,
+          "lm": -0.006643,
+          "articles": 11
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": -0.00986,
+          "finbert": -0.011922,
+          "lm": -0.005051,
+          "articles": 18
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.006585,
+          "finbert": -0.009945,
+          "lm": 0.001255,
+          "articles": 25
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": 0.006661,
+          "finbert": 0.009516,
+          "lm": 0.0,
+          "articles": 17
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": -0.135607,
+          "finbert": -0.186058,
+          "lm": -0.017889,
+          "articles": 25
+        },
+        {
+          "date": "2019-12-06",
+          "sentiment": -0.247369,
+          "finbert": -0.344639,
+          "lm": -0.020408,
+          "articles": 7
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.225205,
+          "finbert": -0.307621,
+          "lm": -0.0329,
+          "articles": 21
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": -0.093585,
+          "finbert": -0.12885,
+          "lm": -0.011299,
+          "articles": 18
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": 0.023653,
+          "finbert": 0.043384,
+          "lm": -0.022386,
+          "articles": 17
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": -0.098619,
+          "finbert": -0.140826,
+          "lm": -0.000135,
+          "articles": 15
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": -0.023007,
+          "finbert": -0.032318,
+          "lm": -0.001282,
+          "articles": 13
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": -0.091972,
+          "finbert": -0.13316,
+          "lm": 0.004132,
+          "articles": 22
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": 0.045921,
+          "finbert": 0.065602,
+          "lm": 0.0,
+          "articles": 14
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": 0.0999,
+          "finbert": 0.139563,
+          "lm": 0.007353,
+          "articles": 17
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": -0.188636,
+          "finbert": -0.269479,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": 0.021333,
+          "finbert": 0.035671,
+          "lm": -0.012121,
+          "articles": 15
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": -0.00012,
+          "finbert": 0.0,
+          "lm": -0.000399,
+          "articles": 19
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-12-25",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": -0.051892,
+          "finbert": -0.077379,
+          "lm": 0.007576,
+          "articles": 11
+        },
+        {
+          "date": "2019-12-27",
+          "sentiment": 0.024904,
+          "finbert": 0.041762,
+          "lm": -0.01443,
+          "articles": 14
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.162255,
+          "finbert": -0.2276,
+          "lm": -0.009783,
+          "articles": 23
+        },
+        {
+          "date": "2019-12-31",
+          "sentiment": -0.019585,
+          "finbert": -0.028442,
+          "lm": 0.001082,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": -0.029969,
+          "finbert": -0.043205,
+          "lm": 0.000916,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.052395,
+          "finbert": -0.07512,
+          "lm": 0.000631,
+          "articles": 12
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": 0.017551,
+          "finbert": 0.025072,
+          "lm": 0.0,
+          "articles": 18
+        },
+        {
+          "date": "2020-01-08",
+          "sentiment": 0.118625,
+          "finbert": 0.162953,
+          "lm": 0.015195,
+          "articles": 10
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": 0.105306,
+          "finbert": 0.147036,
+          "lm": 0.007937,
+          "articles": 21
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": -0.03891,
+          "finbert": -0.058647,
+          "lm": 0.007143,
+          "articles": 14
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.148803,
+          "finbert": 0.211399,
+          "lm": 0.002746,
+          "articles": 24
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.057641,
+          "finbert": -0.07797,
+          "lm": -0.010207,
+          "articles": 34
+        },
+        {
+          "date": "2020-01-15",
+          "sentiment": -0.035419,
+          "finbert": -0.053978,
+          "lm": 0.007887,
+          "articles": 16
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.02336,
+          "finbert": 0.034763,
+          "lm": -0.003247,
+          "articles": 28
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": 0.06363,
+          "finbert": 0.093472,
+          "lm": -0.006001,
+          "articles": 17
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": -0.023187,
+          "finbert": -0.032392,
+          "lm": -0.001709,
+          "articles": 13
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": -0.00505,
+          "finbert": -0.010072,
+          "lm": 0.006667,
+          "articles": 10
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": -0.003657,
+          "finbert": -0.001683,
+          "lm": -0.008264,
+          "articles": 11
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": -0.002226,
+          "finbert": 0.006144,
+          "lm": -0.021756,
+          "articles": 26
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": 0.103951,
+          "finbert": 0.146209,
+          "lm": 0.005348,
+          "articles": 17
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": -0.204084,
+          "finbert": -0.29221,
+          "lm": 0.001546,
+          "articles": 30
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": -0.207869,
+          "finbert": -0.286242,
+          "lm": -0.025,
+          "articles": 10
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": 0.06124,
+          "finbert": 0.090857,
+          "lm": -0.007864,
+          "articles": 21
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.065113,
+          "finbert": -0.09659,
+          "lm": 0.008333,
+          "articles": 38
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": -0.002498,
+          "finbert": -0.00612,
+          "lm": 0.005952,
+          "articles": 21
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": 0.050713,
+          "finbert": 0.068239,
+          "lm": 0.009819,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": -0.010986,
+          "finbert": -0.017479,
+          "lm": 0.004167,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": -0.05449,
+          "finbert": -0.075197,
+          "lm": -0.006173,
+          "articles": 18
+        },
+        {
+          "date": "2020-02-06",
+          "sentiment": -0.079551,
+          "finbert": -0.109552,
+          "lm": -0.009549,
+          "articles": 16
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": 0.004167,
+          "finbert": 0.0,
+          "lm": 0.013889,
+          "articles": 8
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": 0.02663,
+          "finbert": 0.039002,
+          "lm": -0.002238,
+          "articles": 22
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": 0.025475,
+          "finbert": 0.047787,
+          "lm": -0.026587,
+          "articles": 27
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.166164,
+          "finbert": -0.223295,
+          "lm": -0.032857,
+          "articles": 22
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": -0.085336,
+          "finbert": -0.113235,
+          "lm": -0.02024,
+          "articles": 33
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": -0.127786,
+          "finbert": -0.17309,
+          "lm": -0.022078,
+          "articles": 11
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": 0.039377,
+          "finbert": 0.0503,
+          "lm": 0.013889,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": -0.04861,
+          "finbert": -0.071066,
+          "lm": 0.003788,
+          "articles": 22
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": -0.035461,
+          "finbert": -0.050659,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": -0.129938,
+          "finbert": -0.184402,
+          "lm": -0.002857,
+          "articles": 35
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": -0.433988,
+          "finbert": -0.615221,
+          "lm": -0.011111,
+          "articles": 20
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": -0.024583,
+          "finbert": -0.036519,
+          "lm": 0.003268,
+          "articles": 34
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": -0.130742,
+          "finbert": -0.186774,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": 0.039514,
+          "finbert": 0.056449,
+          "lm": 0.0,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.207944,
+          "finbert": -0.29611,
+          "lm": -0.002222,
+          "articles": 45
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": -0.14445,
+          "finbert": -0.20487,
+          "lm": -0.003472,
+          "articles": 24
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.1623,
+          "finbert": -0.232878,
+          "lm": 0.002381,
+          "articles": 30
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.224259,
+          "finbert": -0.314093,
+          "lm": -0.014646,
+          "articles": 20
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": -0.061223,
+          "finbert": -0.087462,
+          "lm": 0.0,
+          "articles": 15
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.194625,
+          "finbert": -0.278036,
+          "lm": 0.0,
+          "articles": 30
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.219521,
+          "finbert": -0.312424,
+          "lm": -0.002747,
+          "articles": 26
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": -0.143261,
+          "finbert": -0.199671,
+          "lm": -0.011639,
+          "articles": 36
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.101331,
+          "finbert": -0.142454,
+          "lm": -0.005379,
+          "articles": 20
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.132753,
+          "finbert": -0.187505,
+          "lm": -0.005,
+          "articles": 20
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.147535,
+          "finbert": -0.203236,
+          "lm": -0.017565,
+          "articles": 34
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.159781,
+          "finbert": -0.220512,
+          "lm": -0.018074,
+          "articles": 38
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.241588,
+          "finbert": -0.340396,
+          "lm": -0.011036,
+          "articles": 43
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.016055,
+          "finbert": -0.023382,
+          "lm": 0.001042,
+          "articles": 16
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": -0.195787,
+          "finbert": -0.275231,
+          "lm": -0.010417,
+          "articles": 16
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": 0.063699,
+          "finbert": 0.090999,
+          "lm": 0.0,
+          "articles": 24
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": 0.111798,
+          "finbert": 0.15719,
+          "lm": 0.005882,
+          "articles": 17
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.125519,
+          "finbert": -0.182488,
+          "lm": 0.007407,
+          "articles": 15
+        },
+        {
+          "date": "2020-03-24",
+          "sentiment": -0.142338,
+          "finbert": -0.196537,
+          "lm": -0.015873,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": -0.042321,
+          "finbert": -0.060459,
+          "lm": 0.0,
+          "articles": 13
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": -0.003409,
+          "finbert": 0.0,
+          "lm": -0.011364,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": 0.085308,
+          "finbert": 0.117972,
+          "lm": 0.009091,
+          "articles": 11
+        },
+        {
+          "date": "2020-03-31",
+          "sentiment": 0.08553,
+          "finbert": 0.130122,
+          "lm": -0.018519,
+          "articles": 6
+        }
+      ]
+    },
+    "NFLX": {
+      "total_articles": 4288,
+      "avg_sentiment": -0.025017,
+      "avg_finbert": -0.033778,
+      "avg_lm": -0.004574,
+      "recent_series": [
+        {
+          "date": "2019-10-16",
+          "sentiment": -0.209819,
+          "finbert": -0.292041,
+          "lm": -0.017968,
+          "articles": 26
+        },
+        {
+          "date": "2019-10-17",
+          "sentiment": 0.009898,
+          "finbert": 0.022104,
+          "lm": -0.01858,
+          "articles": 35
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.345117,
+          "finbert": -0.482282,
+          "lm": -0.025066,
+          "articles": 19
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": -0.068665,
+          "finbert": -0.096523,
+          "lm": -0.003663,
+          "articles": 21
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": -0.028615,
+          "finbert": -0.038022,
+          "lm": -0.006667,
+          "articles": 15
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": -0.005227,
+          "finbert": 0.0,
+          "lm": -0.017424,
+          "articles": 10
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": -0.00303,
+          "finbert": 0.0,
+          "lm": -0.010101,
+          "articles": 9
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": 0.205003,
+          "finbert": 0.295059,
+          "lm": -0.005128,
+          "articles": 15
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.084369,
+          "finbert": 0.120528,
+          "lm": 0.0,
+          "articles": 24
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.032161,
+          "finbert": -0.045945,
+          "lm": 0.0,
+          "articles": 21
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": 0.051866,
+          "finbert": 0.071659,
+          "lm": 0.005682,
+          "articles": 22
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": -0.276643,
+          "finbert": -0.389082,
+          "lm": -0.014286,
+          "articles": 7
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": 0.042633,
+          "finbert": 0.065191,
+          "lm": -0.01,
+          "articles": 10
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": -0.043859,
+          "finbert": -0.063518,
+          "lm": 0.002011,
+          "articles": 17
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.268633,
+          "finbert": -0.381082,
+          "lm": -0.00625,
+          "articles": 16
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": -0.067881,
+          "finbert": -0.075071,
+          "lm": -0.051106,
+          "articles": 9
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": 0.036844,
+          "finbert": 0.057099,
+          "lm": -0.010417,
+          "articles": 12
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": 0.009325,
+          "finbert": 0.019315,
+          "lm": -0.013986,
+          "articles": 11
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.03274,
+          "finbert": -0.042936,
+          "lm": -0.008951,
+          "articles": 36
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.017314,
+          "finbert": 0.022736,
+          "lm": 0.004662,
+          "articles": 39
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": 0.009807,
+          "finbert": 0.015069,
+          "lm": -0.002469,
+          "articles": 27
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": 0.042074,
+          "finbert": 0.065238,
+          "lm": -0.011977,
+          "articles": 21
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.019498,
+          "finbert": -0.025808,
+          "lm": -0.004775,
+          "articles": 33
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": -0.013371,
+          "finbert": -0.018931,
+          "lm": -0.000399,
+          "articles": 19
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": -0.073058,
+          "finbert": -0.104538,
+          "lm": 0.000395,
+          "articles": 23
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": -0.105283,
+          "finbert": -0.150404,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": -0.134205,
+          "finbert": -0.188288,
+          "lm": -0.008013,
+          "articles": 14
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": 0.082543,
+          "finbert": 0.115368,
+          "lm": 0.005952,
+          "articles": 14
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": 0.115724,
+          "finbert": 0.161424,
+          "lm": 0.009091,
+          "articles": 22
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": -0.012905,
+          "finbert": -0.018436,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": -0.081087,
+          "finbert": -0.116395,
+          "lm": 0.001299,
+          "articles": 7
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": -0.122706,
+          "finbert": -0.175295,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.267625,
+          "finbert": -0.374385,
+          "lm": -0.018519,
+          "articles": 9
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": -0.076415,
+          "finbert": -0.106643,
+          "lm": -0.005882,
+          "articles": 17
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": 0.104299,
+          "finbert": 0.152966,
+          "lm": -0.009259,
+          "articles": 9
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": -0.025845,
+          "finbert": -0.037874,
+          "lm": 0.002222,
+          "articles": 15
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": 0.076376,
+          "finbert": 0.109341,
+          "lm": -0.000541,
+          "articles": 14
+        },
+        {
+          "date": "2019-12-06",
+          "sentiment": -0.008802,
+          "finbert": -0.010038,
+          "lm": -0.005917,
+          "articles": 13
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.019628,
+          "finbert": -0.025857,
+          "lm": -0.005093,
+          "articles": 36
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": -0.185869,
+          "finbert": -0.258418,
+          "lm": -0.016589,
+          "articles": 22
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": 0.111295,
+          "finbert": 0.159367,
+          "lm": -0.000874,
+          "articles": 16
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": 0.011218,
+          "finbert": 0.020355,
+          "lm": -0.010101,
+          "articles": 9
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": -0.027561,
+          "finbert": -0.037389,
+          "lm": -0.00463,
+          "articles": 18
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": -0.068097,
+          "finbert": -0.095116,
+          "lm": -0.005051,
+          "articles": 33
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": 0.054172,
+          "finbert": 0.082646,
+          "lm": -0.012269,
+          "articles": 24
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": -0.10721,
+          "finbert": -0.159481,
+          "lm": 0.014757,
+          "articles": 16
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": 0.078467,
+          "finbert": 0.121024,
+          "lm": -0.020833,
+          "articles": 6
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": -0.042466,
+          "finbert": -0.060665,
+          "lm": 0.0,
+          "articles": 15
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": -0.029018,
+          "finbert": -0.040718,
+          "lm": -0.001719,
+          "articles": 33
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": -0.071661,
+          "finbert": -0.102372,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-12-25",
+          "sentiment": -0.34862,
+          "finbert": -0.498028,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": -0.077869,
+          "finbert": -0.111241,
+          "lm": 0.0,
+          "articles": 13
+        },
+        {
+          "date": "2019-12-27",
+          "sentiment": 0.030479,
+          "finbert": 0.049663,
+          "lm": -0.014286,
+          "articles": 17
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": 0.021061,
+          "finbert": 0.02553,
+          "lm": 0.010633,
+          "articles": 19
+        },
+        {
+          "date": "2019-12-31",
+          "sentiment": -0.004545,
+          "finbert": 0.0,
+          "lm": -0.015152,
+          "articles": 6
+        },
+        {
+          "date": "2020-01-01",
+          "sentiment": 0.203849,
+          "finbert": 0.291212,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": 0.217666,
+          "finbert": 0.310951,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": -0.066816,
+          "finbert": -0.086403,
+          "lm": -0.021111,
+          "articles": 10
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": -0.005938,
+          "finbert": 0.000631,
+          "lm": -0.021265,
+          "articles": 19
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": 0.119038,
+          "finbert": 0.166994,
+          "lm": 0.007143,
+          "articles": 14
+        },
+        {
+          "date": "2020-01-08",
+          "sentiment": -0.084324,
+          "finbert": -0.11387,
+          "lm": -0.015385,
+          "articles": 13
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": -0.079367,
+          "finbert": -0.113381,
+          "lm": 0.0,
+          "articles": 18
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": 0.007782,
+          "finbert": 0.01466,
+          "lm": -0.008264,
+          "articles": 22
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.160053,
+          "finbert": 0.230632,
+          "lm": -0.00463,
+          "articles": 36
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.083945,
+          "finbert": -0.107166,
+          "lm": -0.029762,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-15",
+          "sentiment": 0.015859,
+          "finbert": 0.030953,
+          "lm": -0.01936,
+          "articles": 18
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": -0.050114,
+          "finbert": -0.067562,
+          "lm": -0.009402,
+          "articles": 20
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": 0.0015,
+          "finbert": 0.0,
+          "lm": 0.005,
+          "articles": 20
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": 0.054263,
+          "finbert": 0.083545,
+          "lm": -0.014063,
+          "articles": 32
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": -0.093762,
+          "finbert": -0.129231,
+          "lm": -0.011003,
+          "articles": 33
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": 0.129481,
+          "finbert": 0.190151,
+          "lm": -0.012081,
+          "articles": 25
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": 0.05904,
+          "finbert": 0.085686,
+          "lm": -0.003135,
+          "articles": 29
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": 0.018069,
+          "finbert": 0.025812,
+          "lm": 0.0,
+          "articles": 23
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": -0.029583,
+          "finbert": -0.037749,
+          "lm": -0.010526,
+          "articles": 19
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": -0.003571,
+          "finbert": 0.0,
+          "lm": -0.011905,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": -0.09986,
+          "finbert": -0.1324,
+          "lm": -0.023932,
+          "articles": 18
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.107386,
+          "finbert": -0.140143,
+          "lm": -0.030952,
+          "articles": 14
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": -0.071595,
+          "finbert": -0.101931,
+          "lm": -0.000812,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": 0.084315,
+          "finbert": 0.116411,
+          "lm": 0.009425,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": 0.076873,
+          "finbert": 0.109819,
+          "lm": 0.0,
+          "articles": 13
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": -0.040374,
+          "finbert": -0.057678,
+          "lm": 0.0,
+          "articles": 19
+        },
+        {
+          "date": "2020-02-06",
+          "sentiment": -0.008668,
+          "finbert": -0.012383,
+          "lm": 0.0,
+          "articles": 17
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": -0.074206,
+          "finbert": -0.103411,
+          "lm": -0.006061,
+          "articles": 15
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": 0.046493,
+          "finbert": 0.062188,
+          "lm": 0.009869,
+          "articles": 37
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": 0.058089,
+          "finbert": 0.086386,
+          "lm": -0.007937,
+          "articles": 21
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.06963,
+          "finbert": -0.097216,
+          "lm": -0.005263,
+          "articles": 19
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.101845,
+          "finbert": 0.146748,
+          "lm": -0.002929,
+          "articles": 21
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": 0.091596,
+          "finbert": 0.130852,
+          "lm": 0.0,
+          "articles": 14
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": -0.147403,
+          "finbert": -0.201052,
+          "lm": -0.022222,
+          "articles": 15
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": 0.009259,
+          "finbert": 0.024217,
+          "lm": -0.025641,
+          "articles": 13
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": -0.293588,
+          "finbert": -0.431339,
+          "lm": 0.027829,
+          "articles": 7
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 9
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": 0.115388,
+          "finbert": 0.164839,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": 0.0845,
+          "finbert": 0.121068,
+          "lm": -0.000826,
+          "articles": 11
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": 0.007938,
+          "finbert": 0.018482,
+          "lm": -0.016667,
+          "articles": 6
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.146684,
+          "finbert": -0.215501,
+          "lm": 0.013889,
+          "articles": 9
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": -0.204478,
+          "finbert": -0.292111,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.076242,
+          "finbert": -0.117664,
+          "lm": 0.020408,
+          "articles": 7
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.014286,
+          "finbert": 0.0,
+          "lm": -0.047619,
+          "articles": 3
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": -0.148273,
+          "finbert": -0.206461,
+          "lm": -0.0125,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.463135,
+          "finbert": -0.656265,
+          "lm": -0.0125,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.256,
+          "finbert": -0.362662,
+          "lm": -0.007124,
+          "articles": 16
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.107181,
+          "finbert": -0.148924,
+          "lm": -0.00978,
+          "articles": 11
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.178096,
+          "finbert": -0.254422,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.084524,
+          "finbert": -0.120748,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.258487,
+          "finbert": -0.380814,
+          "lm": 0.026944,
+          "articles": 10
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.049204,
+          "finbert": -0.070291,
+          "lm": 0.0,
+          "articles": 16
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.018013,
+          "finbert": -0.020631,
+          "lm": -0.011905,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": -0.243983,
+          "finbert": -0.332064,
+          "lm": -0.038462,
+          "articles": 13
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": -0.124416,
+          "finbert": -0.166321,
+          "lm": -0.026637,
+          "articles": 16
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": -0.082044,
+          "finbert": -0.117205,
+          "lm": 0.0,
+          "articles": 21
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.457402,
+          "finbert": -0.639025,
+          "lm": -0.033613,
+          "articles": 17
+        },
+        {
+          "date": "2020-03-24",
+          "sentiment": -0.110074,
+          "finbert": -0.157249,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": -0.068568,
+          "finbert": -0.097955,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": -0.116149,
+          "finbert": -0.159434,
+          "lm": -0.015152,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": -0.128252,
+          "finbert": -0.183218,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": 0.071328,
+          "finbert": 0.098234,
+          "lm": 0.008547,
+          "articles": 9
+        },
+        {
+          "date": "2020-03-31",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 7
+        }
+      ]
+    },
+    "NVDA": {
+      "total_articles": 625,
+      "avg_sentiment": -0.049987,
+      "avg_finbert": -0.06993,
+      "avg_lm": -0.003453,
+      "recent_series": [
+        {
+          "date": "2019-06-21",
+          "sentiment": -0.573876,
+          "finbert": -0.819823,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-06-26",
+          "sentiment": 0.433288,
+          "finbert": 0.618983,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-06-27",
+          "sentiment": 0.60523,
+          "finbert": 0.864614,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-06-28",
+          "sentiment": 0.481278,
+          "finbert": 0.687539,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-07-01",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-09",
+          "sentiment": -0.700883,
+          "finbert": -0.960968,
+          "lm": -0.094017,
+          "articles": 2
+        },
+        {
+          "date": "2019-07-10",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-07-16",
+          "sentiment": 0.195667,
+          "finbert": 0.279524,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-07-17",
+          "sentiment": -0.31724,
+          "finbert": -0.431772,
+          "lm": -0.05,
+          "articles": 2
+        },
+        {
+          "date": "2019-07-18",
+          "sentiment": -0.268841,
+          "finbert": -0.384058,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-07-22",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-23",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-25",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-07-29",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-08-05",
+          "sentiment": -0.676012,
+          "finbert": -0.965732,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-08-06",
+          "sentiment": 0.136745,
+          "finbert": 0.19535,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-08-07",
+          "sentiment": 0.222639,
+          "finbert": 0.318055,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-08-09",
+          "sentiment": -0.676634,
+          "finbert": -0.966621,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-08-15",
+          "sentiment": 0.318011,
+          "finbert": 0.444561,
+          "lm": 0.022727,
+          "articles": 4
+        },
+        {
+          "date": "2019-08-16",
+          "sentiment": 0.626816,
+          "finbert": 0.895452,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-08-19",
+          "sentiment": 0.451309,
+          "finbert": 0.636935,
+          "lm": 0.018182,
+          "articles": 5
+        },
+        {
+          "date": "2019-08-20",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-08-23",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-08-26",
+          "sentiment": 0.036425,
+          "finbert": 0.052036,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-08-27",
+          "sentiment": -0.456471,
+          "finbert": -0.609244,
+          "lm": -0.1,
+          "articles": 3
+        },
+        {
+          "date": "2019-08-29",
+          "sentiment": 0.387988,
+          "finbert": 0.554269,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-09-05",
+          "sentiment": 0.32119,
+          "finbert": 0.458843,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-09-10",
+          "sentiment": -0.526395,
+          "finbert": -0.728184,
+          "lm": -0.055556,
+          "articles": 4
+        },
+        {
+          "date": "2019-09-12",
+          "sentiment": 0.553611,
+          "finbert": 0.790872,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-09-17",
+          "sentiment": 0.535633,
+          "finbert": 0.76519,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-18",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-20",
+          "sentiment": 0.609054,
+          "finbert": 0.870077,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-09-24",
+          "sentiment": 0.434037,
+          "finbert": 0.60418,
+          "lm": 0.037037,
+          "articles": 3
+        },
+        {
+          "date": "2019-09-25",
+          "sentiment": -0.66757,
+          "finbert": -0.953671,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-09-26",
+          "sentiment": -0.310096,
+          "finbert": -0.46978,
+          "lm": 0.0625,
+          "articles": 4
+        },
+        {
+          "date": "2019-09-27",
+          "sentiment": 0.352129,
+          "finbert": 0.488755,
+          "lm": 0.033333,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-01",
+          "sentiment": -0.323205,
+          "finbert": -0.461722,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-04",
+          "sentiment": -0.659858,
+          "finbert": -0.942654,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-07",
+          "sentiment": -0.148471,
+          "finbert": -0.204958,
+          "lm": -0.016667,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-08",
+          "sentiment": -0.256883,
+          "finbert": -0.360429,
+          "lm": -0.015278,
+          "articles": 12
+        },
+        {
+          "date": "2019-10-09",
+          "sentiment": 0.043482,
+          "finbert": 0.062117,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-10",
+          "sentiment": -0.082557,
+          "finbert": -0.117938,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-11",
+          "sentiment": 0.577997,
+          "finbert": 0.838697,
+          "lm": -0.030303,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-14",
+          "sentiment": -0.482779,
+          "finbert": -0.689684,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-16",
+          "sentiment": -0.416978,
+          "finbert": -0.569708,
+          "lm": -0.060606,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": -0.66652,
+          "finbert": -0.952171,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": 0.650926,
+          "finbert": 0.929895,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": -0.447785,
+          "finbert": -0.639693,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": -0.677898,
+          "finbert": -0.940395,
+          "lm": -0.065404,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": 0.589344,
+          "finbert": 0.815134,
+          "lm": 0.0625,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": -0.042628,
+          "finbert": -0.060897,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": 0.59296,
+          "finbert": 0.847086,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": 0.103046,
+          "finbert": 0.155001,
+          "lm": -0.018182,
+          "articles": 5
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.147158,
+          "finbert": -0.224511,
+          "lm": 0.033333,
+          "articles": 3
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.596345,
+          "finbert": -0.84335,
+          "lm": -0.02,
+          "articles": 5
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.093503,
+          "finbert": 0.133576,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": -0.075093,
+          "finbert": -0.107276,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": 0.002092,
+          "finbert": 0.002988,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": 0.568024,
+          "finbert": 0.811463,
+          "lm": 0.0,
+          "articles": 9
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": 0.569204,
+          "finbert": 0.813148,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": 0.240664,
+          "finbert": 0.321696,
+          "lm": 0.051587,
+          "articles": 7
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.676105,
+          "finbert": -0.965864,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.691886,
+          "finbert": -0.961622,
+          "lm": -0.0625,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": 0.037757,
+          "finbert": 0.053938,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": 0.649195,
+          "finbert": 0.927421,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.561642,
+          "finbert": -0.802345,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": 0.442706,
+          "finbert": 0.632437,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": -0.472998,
+          "finbert": -0.675712,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": 0.110368,
+          "finbert": 0.151545,
+          "lm": 0.014286,
+          "articles": 5
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": 0.675815,
+          "finbert": 0.922593,
+          "lm": 0.1,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": -0.523455,
+          "finbert": -0.747793,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": 0.62917,
+          "finbert": 0.898815,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.680405,
+          "finbert": -0.972008,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": 0.15302,
+          "finbert": 0.2186,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": 0.434562,
+          "finbert": 0.620803,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": 0.504253,
+          "finbert": 0.720362,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": 0.010312,
+          "finbert": 0.034212,
+          "lm": -0.045455,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.538464,
+          "finbert": 0.769234,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.001355,
+          "finbert": -0.001936,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.152059,
+          "finbert": 0.217227,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": 0.502171,
+          "finbert": 0.743361,
+          "lm": -0.060606,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": -0.194819,
+          "finbert": -0.278313,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.538038,
+          "finbert": -0.768626,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": -0.349203,
+          "finbert": -0.498861,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": -0.401759,
+          "finbert": -0.573941,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.112396,
+          "finbert": -0.160566,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.425088,
+          "finbert": 0.607268,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": 0.173781,
+          "finbert": 0.242465,
+          "lm": 0.013518,
+          "articles": 17
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": 0.617189,
+          "finbert": 0.920659,
+          "lm": -0.090909,
+          "articles": 1
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": 0.577489,
+          "finbert": 0.824985,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": -0.424126,
+          "finbert": -0.634465,
+          "lm": 0.066667,
+          "articles": 3
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": -0.442292,
+          "finbert": -0.631846,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": -0.331997,
+          "finbert": -0.474281,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.408409,
+          "finbert": -0.583441,
+          "lm": 0.0,
+          "articles": 4
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.319625,
+          "finbert": -0.456607,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": -0.03,
+          "finbert": 0.0,
+          "lm": -0.1,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": -0.060005,
+          "finbert": -0.066241,
+          "lm": -0.045455,
+          "articles": 2
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": -0.240177,
+          "finbert": -0.34311,
+          "lm": 0.0,
+          "articles": 2
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.572505,
+          "finbert": -0.817864,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 1
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        }
+      ]
+    },
+    "TSLA": {
+      "total_articles": 3908,
+      "avg_sentiment": -0.043082,
+      "avg_finbert": -0.058451,
+      "avg_lm": -0.007221,
+      "recent_series": [
+        {
+          "date": "2019-10-14",
+          "sentiment": -0.164818,
+          "finbert": -0.235455,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-10-15",
+          "sentiment": 0.004677,
+          "finbert": 0.006681,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2019-10-16",
+          "sentiment": -0.329195,
+          "finbert": -0.446171,
+          "lm": -0.05625,
+          "articles": 4
+        },
+        {
+          "date": "2019-10-17",
+          "sentiment": 0.055472,
+          "finbert": 0.079245,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-10-18",
+          "sentiment": 0.105335,
+          "finbert": 0.150479,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-10-21",
+          "sentiment": -0.13498,
+          "finbert": -0.192829,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-10-22",
+          "sentiment": 0.029789,
+          "finbert": 0.049252,
+          "lm": -0.015625,
+          "articles": 8
+        },
+        {
+          "date": "2019-10-23",
+          "sentiment": 0.002736,
+          "finbert": -0.014119,
+          "lm": 0.042065,
+          "articles": 19
+        },
+        {
+          "date": "2019-10-24",
+          "sentiment": 0.144981,
+          "finbert": 0.202498,
+          "lm": 0.010772,
+          "articles": 41
+        },
+        {
+          "date": "2019-10-25",
+          "sentiment": -0.069881,
+          "finbert": -0.088142,
+          "lm": -0.027273,
+          "articles": 11
+        },
+        {
+          "date": "2019-10-28",
+          "sentiment": 0.068225,
+          "finbert": 0.10136,
+          "lm": -0.009091,
+          "articles": 19
+        },
+        {
+          "date": "2019-10-29",
+          "sentiment": -0.254538,
+          "finbert": -0.367197,
+          "lm": 0.008333,
+          "articles": 24
+        },
+        {
+          "date": "2019-10-30",
+          "sentiment": -0.207743,
+          "finbert": -0.296776,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2019-10-31",
+          "sentiment": -0.241632,
+          "finbert": -0.348082,
+          "lm": 0.006749,
+          "articles": 11
+        },
+        {
+          "date": "2019-11-01",
+          "sentiment": 0.135693,
+          "finbert": 0.193848,
+          "lm": 0.0,
+          "articles": 9
+        },
+        {
+          "date": "2019-11-04",
+          "sentiment": 0.032214,
+          "finbert": 0.055219,
+          "lm": -0.021465,
+          "articles": 12
+        },
+        {
+          "date": "2019-11-05",
+          "sentiment": -0.152017,
+          "finbert": -0.217166,
+          "lm": 0.0,
+          "articles": 13
+        },
+        {
+          "date": "2019-11-06",
+          "sentiment": 0.035991,
+          "finbert": 0.051416,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2019-11-07",
+          "sentiment": -0.097578,
+          "finbert": -0.131743,
+          "lm": -0.017857,
+          "articles": 7
+        },
+        {
+          "date": "2019-11-08",
+          "sentiment": -0.135177,
+          "finbert": -0.190326,
+          "lm": -0.006494,
+          "articles": 14
+        },
+        {
+          "date": "2019-11-11",
+          "sentiment": -0.11781,
+          "finbert": -0.1683,
+          "lm": 0.0,
+          "articles": 9
+        },
+        {
+          "date": "2019-11-12",
+          "sentiment": 0.122604,
+          "finbert": 0.175149,
+          "lm": 0.0,
+          "articles": 13
+        },
+        {
+          "date": "2019-11-13",
+          "sentiment": 0.032706,
+          "finbert": 0.052671,
+          "lm": -0.01388,
+          "articles": 27
+        },
+        {
+          "date": "2019-11-14",
+          "sentiment": 0.150888,
+          "finbert": 0.208751,
+          "lm": 0.015873,
+          "articles": 14
+        },
+        {
+          "date": "2019-11-15",
+          "sentiment": -0.066454,
+          "finbert": -0.087143,
+          "lm": -0.018182,
+          "articles": 10
+        },
+        {
+          "date": "2019-11-18",
+          "sentiment": 0.038495,
+          "finbert": 0.054993,
+          "lm": 0.0,
+          "articles": 16
+        },
+        {
+          "date": "2019-11-19",
+          "sentiment": -0.010488,
+          "finbert": -0.004026,
+          "lm": -0.025568,
+          "articles": 12
+        },
+        {
+          "date": "2019-11-20",
+          "sentiment": 0.034137,
+          "finbert": 0.055909,
+          "lm": -0.016667,
+          "articles": 10
+        },
+        {
+          "date": "2019-11-21",
+          "sentiment": -0.093357,
+          "finbert": -0.133367,
+          "lm": 0.0,
+          "articles": 11
+        },
+        {
+          "date": "2019-11-22",
+          "sentiment": 0.069806,
+          "finbert": 0.105489,
+          "lm": -0.013453,
+          "articles": 40
+        },
+        {
+          "date": "2019-11-25",
+          "sentiment": 0.193495,
+          "finbert": 0.276113,
+          "lm": 0.000722,
+          "articles": 33
+        },
+        {
+          "date": "2019-11-26",
+          "sentiment": -0.171141,
+          "finbert": -0.247084,
+          "lm": 0.006061,
+          "articles": 15
+        },
+        {
+          "date": "2019-11-27",
+          "sentiment": 0.036152,
+          "finbert": 0.051645,
+          "lm": 0.0,
+          "articles": 13
+        },
+        {
+          "date": "2019-11-28",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-11-29",
+          "sentiment": -0.113189,
+          "finbert": -0.157477,
+          "lm": -0.009848,
+          "articles": 12
+        },
+        {
+          "date": "2019-12-02",
+          "sentiment": 0.004633,
+          "finbert": 0.001222,
+          "lm": 0.012593,
+          "articles": 15
+        },
+        {
+          "date": "2019-12-03",
+          "sentiment": -0.080314,
+          "finbert": -0.114734,
+          "lm": 0.0,
+          "articles": 14
+        },
+        {
+          "date": "2019-12-04",
+          "sentiment": 0.044521,
+          "finbert": 0.065545,
+          "lm": -0.004535,
+          "articles": 21
+        },
+        {
+          "date": "2019-12-05",
+          "sentiment": -0.037062,
+          "finbert": -0.052946,
+          "lm": 0.0,
+          "articles": 11
+        },
+        {
+          "date": "2019-12-06",
+          "sentiment": 0.044992,
+          "finbert": 0.066724,
+          "lm": -0.005714,
+          "articles": 25
+        },
+        {
+          "date": "2019-12-09",
+          "sentiment": -0.008605,
+          "finbert": -0.020602,
+          "lm": 0.019388,
+          "articles": 14
+        },
+        {
+          "date": "2019-12-10",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-12-11",
+          "sentiment": 0.068849,
+          "finbert": 0.098355,
+          "lm": 0.0,
+          "articles": 14
+        },
+        {
+          "date": "2019-12-12",
+          "sentiment": 0.015416,
+          "finbert": 0.022023,
+          "lm": 0.0,
+          "articles": 10
+        },
+        {
+          "date": "2019-12-13",
+          "sentiment": -0.176892,
+          "finbert": -0.252703,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-12-16",
+          "sentiment": -0.008695,
+          "finbert": -0.00927,
+          "lm": -0.007353,
+          "articles": 17
+        },
+        {
+          "date": "2019-12-17",
+          "sentiment": 0.07587,
+          "finbert": 0.108385,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2019-12-18",
+          "sentiment": -0.202115,
+          "finbert": -0.283974,
+          "lm": -0.011111,
+          "articles": 6
+        },
+        {
+          "date": "2019-12-19",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2019-12-20",
+          "sentiment": 0.300011,
+          "finbert": 0.428587,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2019-12-23",
+          "sentiment": 0.165408,
+          "finbert": 0.236297,
+          "lm": 0.0,
+          "articles": 20
+        },
+        {
+          "date": "2019-12-24",
+          "sentiment": -0.143321,
+          "finbert": -0.204744,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2019-12-26",
+          "sentiment": 0.279065,
+          "finbert": 0.394519,
+          "lm": 0.009673,
+          "articles": 16
+        },
+        {
+          "date": "2019-12-27",
+          "sentiment": 0.03467,
+          "finbert": 0.046353,
+          "lm": 0.007407,
+          "articles": 15
+        },
+        {
+          "date": "2019-12-30",
+          "sentiment": -0.009188,
+          "finbert": -0.009429,
+          "lm": -0.008625,
+          "articles": 30
+        },
+        {
+          "date": "2019-12-31",
+          "sentiment": -0.192234,
+          "finbert": -0.27462,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-01-01",
+          "sentiment": -0.503275,
+          "finbert": -0.681085,
+          "lm": -0.088384,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-02",
+          "sentiment": 0.11282,
+          "finbert": 0.161171,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-03",
+          "sentiment": -0.058232,
+          "finbert": -0.081151,
+          "lm": -0.004755,
+          "articles": 25
+        },
+        {
+          "date": "2020-01-06",
+          "sentiment": 0.01,
+          "finbert": 0.0,
+          "lm": 0.033333,
+          "articles": 3
+        },
+        {
+          "date": "2020-01-07",
+          "sentiment": 0.009828,
+          "finbert": 0.017866,
+          "lm": -0.008929,
+          "articles": 14
+        },
+        {
+          "date": "2020-01-08",
+          "sentiment": -0.144559,
+          "finbert": -0.200519,
+          "lm": -0.013986,
+          "articles": 13
+        },
+        {
+          "date": "2020-01-09",
+          "sentiment": -0.06764,
+          "finbert": -0.088975,
+          "lm": -0.017857,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-10",
+          "sentiment": -0.005,
+          "finbert": 0.0,
+          "lm": -0.016667,
+          "articles": 6
+        },
+        {
+          "date": "2020-01-13",
+          "sentiment": 0.179867,
+          "finbert": 0.264677,
+          "lm": -0.018023,
+          "articles": 26
+        },
+        {
+          "date": "2020-01-14",
+          "sentiment": -0.115465,
+          "finbert": -0.154886,
+          "lm": -0.023485,
+          "articles": 12
+        },
+        {
+          "date": "2020-01-15",
+          "sentiment": -0.06676,
+          "finbert": -0.095372,
+          "lm": 0.0,
+          "articles": 7
+        },
+        {
+          "date": "2020-01-16",
+          "sentiment": 0.057907,
+          "finbert": 0.086126,
+          "lm": -0.007937,
+          "articles": 14
+        },
+        {
+          "date": "2020-01-17",
+          "sentiment": -0.110196,
+          "finbert": -0.154675,
+          "lm": -0.00641,
+          "articles": 13
+        },
+        {
+          "date": "2020-01-20",
+          "sentiment": 0.03864,
+          "finbert": 0.06155,
+          "lm": -0.014815,
+          "articles": 15
+        },
+        {
+          "date": "2020-01-21",
+          "sentiment": -0.284166,
+          "finbert": -0.405952,
+          "lm": 0.0,
+          "articles": 14
+        },
+        {
+          "date": "2020-01-22",
+          "sentiment": 0.000494,
+          "finbert": -0.002468,
+          "lm": 0.007407,
+          "articles": 15
+        },
+        {
+          "date": "2020-01-23",
+          "sentiment": -0.017529,
+          "finbert": -0.019424,
+          "lm": -0.013105,
+          "articles": 15
+        },
+        {
+          "date": "2020-01-24",
+          "sentiment": -0.327878,
+          "finbert": -0.458362,
+          "lm": -0.023416,
+          "articles": 11
+        },
+        {
+          "date": "2020-01-27",
+          "sentiment": -0.039409,
+          "finbert": -0.05987,
+          "lm": 0.008333,
+          "articles": 15
+        },
+        {
+          "date": "2020-01-28",
+          "sentiment": 0.118234,
+          "finbert": 0.156207,
+          "lm": 0.02963,
+          "articles": 6
+        },
+        {
+          "date": "2020-01-29",
+          "sentiment": 0.050373,
+          "finbert": 0.071559,
+          "lm": 0.000937,
+          "articles": 23
+        },
+        {
+          "date": "2020-01-30",
+          "sentiment": -0.192572,
+          "finbert": -0.275167,
+          "lm": 0.00015,
+          "articles": 37
+        },
+        {
+          "date": "2020-01-31",
+          "sentiment": -0.294935,
+          "finbert": -0.421336,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-03",
+          "sentiment": 0.311916,
+          "finbert": 0.433431,
+          "lm": 0.028381,
+          "articles": 23
+        },
+        {
+          "date": "2020-02-04",
+          "sentiment": 0.079796,
+          "finbert": 0.115348,
+          "lm": -0.003157,
+          "articles": 24
+        },
+        {
+          "date": "2020-02-05",
+          "sentiment": -0.07773,
+          "finbert": -0.11721,
+          "lm": 0.014391,
+          "articles": 37
+        },
+        {
+          "date": "2020-02-06",
+          "sentiment": -0.135784,
+          "finbert": -0.194598,
+          "lm": 0.001449,
+          "articles": 23
+        },
+        {
+          "date": "2020-02-07",
+          "sentiment": -0.064957,
+          "finbert": -0.092796,
+          "lm": 0.0,
+          "articles": 18
+        },
+        {
+          "date": "2020-02-10",
+          "sentiment": -0.029021,
+          "finbert": -0.044743,
+          "lm": 0.007664,
+          "articles": 48
+        },
+        {
+          "date": "2020-02-11",
+          "sentiment": 0.142386,
+          "finbert": 0.206114,
+          "lm": -0.006313,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-12",
+          "sentiment": -0.214272,
+          "finbert": -0.306102,
+          "lm": 0.0,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-13",
+          "sentiment": 0.011162,
+          "finbert": 0.015945,
+          "lm": 0.0,
+          "articles": 22
+        },
+        {
+          "date": "2020-02-14",
+          "sentiment": -0.123793,
+          "finbert": -0.173786,
+          "lm": -0.007143,
+          "articles": 14
+        },
+        {
+          "date": "2020-02-17",
+          "sentiment": -0.24296,
+          "finbert": -0.345321,
+          "lm": -0.004118,
+          "articles": 15
+        },
+        {
+          "date": "2020-02-18",
+          "sentiment": -0.082031,
+          "finbert": -0.106897,
+          "lm": -0.024008,
+          "articles": 14
+        },
+        {
+          "date": "2020-02-19",
+          "sentiment": -0.036525,
+          "finbert": -0.048607,
+          "lm": -0.008333,
+          "articles": 12
+        },
+        {
+          "date": "2020-02-20",
+          "sentiment": 0.370051,
+          "finbert": 0.530293,
+          "lm": -0.003846,
+          "articles": 6
+        },
+        {
+          "date": "2020-02-21",
+          "sentiment": -0.070993,
+          "finbert": -0.1038,
+          "lm": 0.005556,
+          "articles": 20
+        },
+        {
+          "date": "2020-02-24",
+          "sentiment": -0.17959,
+          "finbert": -0.248904,
+          "lm": -0.017857,
+          "articles": 8
+        },
+        {
+          "date": "2020-02-25",
+          "sentiment": -0.192443,
+          "finbert": -0.270633,
+          "lm": -0.01,
+          "articles": 10
+        },
+        {
+          "date": "2020-02-26",
+          "sentiment": 0.021491,
+          "finbert": 0.032606,
+          "lm": -0.004444,
+          "articles": 25
+        },
+        {
+          "date": "2020-02-27",
+          "sentiment": -0.034405,
+          "finbert": -0.04915,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-02-28",
+          "sentiment": 0.186269,
+          "finbert": 0.266099,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2020-03-02",
+          "sentiment": -0.128717,
+          "finbert": -0.184258,
+          "lm": 0.000877,
+          "articles": 19
+        },
+        {
+          "date": "2020-03-03",
+          "sentiment": -0.088211,
+          "finbert": -0.123495,
+          "lm": -0.005882,
+          "articles": 17
+        },
+        {
+          "date": "2020-03-04",
+          "sentiment": 0.05883,
+          "finbert": 0.084042,
+          "lm": 0.0,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-05",
+          "sentiment": -0.027352,
+          "finbert": -0.039074,
+          "lm": 0.0,
+          "articles": 9
+        },
+        {
+          "date": "2020-03-06",
+          "sentiment": -0.057859,
+          "finbert": -0.068758,
+          "lm": -0.032426,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-09",
+          "sentiment": 0.011075,
+          "finbert": 0.020743,
+          "lm": -0.011482,
+          "articles": 13
+        },
+        {
+          "date": "2020-03-10",
+          "sentiment": 0.0149,
+          "finbert": 0.02623,
+          "lm": -0.011538,
+          "articles": 13
+        },
+        {
+          "date": "2020-03-11",
+          "sentiment": -0.047507,
+          "finbert": -0.063747,
+          "lm": -0.009615,
+          "articles": 13
+        },
+        {
+          "date": "2020-03-12",
+          "sentiment": -0.332068,
+          "finbert": -0.469026,
+          "lm": -0.0125,
+          "articles": 10
+        },
+        {
+          "date": "2020-03-13",
+          "sentiment": -0.441101,
+          "finbert": -0.625435,
+          "lm": -0.010989,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-16",
+          "sentiment": 0.030193,
+          "finbert": 0.030087,
+          "lm": 0.030443,
+          "articles": 8
+        },
+        {
+          "date": "2020-03-17",
+          "sentiment": -0.0802,
+          "finbert": -0.110745,
+          "lm": -0.008929,
+          "articles": 14
+        },
+        {
+          "date": "2020-03-18",
+          "sentiment": -0.528059,
+          "finbert": -0.741689,
+          "lm": -0.029589,
+          "articles": 21
+        },
+        {
+          "date": "2020-03-19",
+          "sentiment": -0.174791,
+          "finbert": -0.245816,
+          "lm": -0.009067,
+          "articles": 33
+        },
+        {
+          "date": "2020-03-20",
+          "sentiment": -0.127704,
+          "finbert": -0.17721,
+          "lm": -0.01219,
+          "articles": 11
+        },
+        {
+          "date": "2020-03-23",
+          "sentiment": -0.082301,
+          "finbert": -0.113747,
+          "lm": -0.008929,
+          "articles": 16
+        },
+        {
+          "date": "2020-03-24",
+          "sentiment": 0.214297,
+          "finbert": 0.306139,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-25",
+          "sentiment": 0.040455,
+          "finbert": 0.057793,
+          "lm": 0.0,
+          "articles": 6
+        },
+        {
+          "date": "2020-03-26",
+          "sentiment": -0.340034,
+          "finbert": -0.485763,
+          "lm": 0.0,
+          "articles": 5
+        },
+        {
+          "date": "2020-03-27",
+          "sentiment": 0.0,
+          "finbert": 0.0,
+          "lm": 0.0,
+          "articles": 3
+        },
+        {
+          "date": "2020-03-30",
+          "sentiment": -0.178272,
+          "finbert": -0.254674,
+          "lm": 0.0,
+          "articles": 3
+        }
+      ]
+    }
+  },
+  "news_samples": {
+    "AAPL": [
+      {
+        "date": "2020-03-31",
+        "headline": "Apple may delay iPhone 12 in sign of US economy, consumer finance worries",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "10 things in tech you need to know today, March 31",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Zoom privacy issues come under scrutiny as usage skyrockets",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "As China factories reopen, supply chains still mired in uncertainty",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Apple iPhone 12 delay could mean 2020 is first year with no new iPhone",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Apple employees now using new, unreleased Apple products at home: report",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "AI-powered SmartNews has a spike in readers on the coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Best Hotels in Berlin (Updated March 2020)",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Apple beloved weather app Dark Sky, will shut down Android version",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "10 things in tech you need to know today, March 30",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Samsung Galaxy S20 discount: Save $200 at B&H Photo",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Google bans Infowars app for disputing coronavirus advice",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "The best computer monitors of 2020: BenQ, Asus, and more",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Apple MacBook Air 2020 review: Keyboard is a big improvement",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Stock picks to buy, 12 ESG investing ideas in coronavirus selloff: RBC",
+        "source": "Business Insider"
+      }
+    ],
+    "AMD": [
+      {
+        "date": "2020-03-30",
+        "headline": "Intel, chipmakers may skip big layoffs because demand will snap back",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-27",
+        "headline": "Intel's size is its strength in the coronavirus slump, analyst says",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-26",
+        "headline": "Coronavirus investing strategy: Laszlo Birinyi advice and stock picks",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-18",
+        "headline": "New Xbox Series X website briefly shows November 26 release date",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-16",
+        "headline": "Tech investors should be ready for a 'potentially severe demand shock'",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-10",
+        "headline": "Intel says flawed EU antitrust decision underpins $1.2 bln fine",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-10",
+        "headline": "Intel says flawed EU antitrust decision underpins $1.2 billion fine",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-10",
+        "headline": "Intel says flawed EU antitrust decision underpins $1.2 billion fine",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-10",
+        "headline": "Tech analysts say the downturn is a good opportunity to invest",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-06",
+        "headline": "Renee James' Ampere should be making Intel very nervous",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-04",
+        "headline": "HPE, AMD win deal for U.S. supercomputer to model nuclear weapons",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-04",
+        "headline": "HPE, AMD win deal for U.S. supercomputer to model nuclear weapons",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-04",
+        "headline": "HPE, AMD win deal for U.S. supercomputer to model nuclear weapons",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-04",
+        "headline": "BRIEF-Pixium Vision: Successful Activation Of Prima System In First U.S. Patient",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-03",
+        "headline": "US STOCKS-Wall Street set for lower open as G7 statement underwhelms",
+        "source": "Reuters"
+      }
+    ],
+    "AMZN": [
+      {
+        "date": "2020-04-01",
+        "headline": "Robert Reich on unemployment during this public health crisis",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Walmart is hiring 5,000 people daily to meet surging demand",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Google may see its first ever advertising revenue drop",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Ian Bremmer breaks down Trumps response to the coronavirus crisis",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "New York AG calls Amazon warehouse worker firing 'disgraceful'",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Amazon fires warehouse worker who led strike over COVID-19 response",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "How self-made millionaire early retirees prepared for a recession",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "The best shelf and drawer liners of 2020",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "5 practical tips for businesses and founders managing through a crisis",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Best diaper bag in 2020: Skip Hop, HaloVa, Bag Nation, Freshly Picked",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Contractor says AWS should do more to protect workers from coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Why Amazon delivery workers feel exposed and vulnerable to coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "NYC opens human rights probe into Amazon warehouse worker firing",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Should I open a travel credit card during the coronavirus outbreak?",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Yeast and flour makers ramp up supply as Americans turn to baking",
+        "source": "Business Insider"
+      }
+    ],
+    "GOOGL": [
+      {
+        "date": "2020-03-31",
+        "headline": "Video conferencing apps were downloaded 62 million times last week",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "AI-powered SmartNews has a spike in readers on the coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Google may see its first ever advertising revenue drop",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Van-lifers help each other and find hosts amid the COVID-19 pandemic",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Vint Cerf diagnosed with COVID-19",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Snopes overwhelmed by fact-checking coronavirus misinformation",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Why Slack is running a national PSA around the coronavirus pandemic",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Hobby Lobby reopened stores in states with coronavirus lockdowns",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Contractor says AWS should do more to protect workers from coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Senators urge Verily to drop Google sign-in for COVID-19 tests",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Zoom privacy issues come under scrutiny as usage skyrockets",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Palantir providing CDC with coronavirus tracking software: report",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "How to use Sun Basket \u2014 the healthy meal kit service",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Samsung Galaxy S20 discount: Save $200 at B&H Photo",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "College students and grads left in limo after canceled internships",
+        "source": "Business Insider"
+      }
+    ],
+    "INTC": [
+      {
+        "date": "2020-03-31",
+        "headline": "Carlyle offering portfolio companies HireVue to help recruitment",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Apple MacBook Air 2020 review: Keyboard is a big improvement",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Intel, chipmakers may skip big layoffs because demand will snap back",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Oracle says COVID-19 could affect its 'largest revenue quarter'",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-27",
+        "headline": "Intel's size is its strength in the coronavirus slump, analyst says",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-26",
+        "headline": "Stock picks to buy, 14 cheap companies shielded from coronavirus: GS",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-25",
+        "headline": "The 14 cool AI startups investors say you should know",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-23",
+        "headline": "Leaked Weber Shandwick memo reveals coronavirus pitching guidelines",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-23",
+        "headline": "GamerLegion pare roster, will 'rethink' CS:GO future",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-23",
+        "headline": "Intel warns that COVID-19 could cause a global recession",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-20",
+        "headline": "Apple MacBook Air 2020: Magic Keyboard could make it the best laptop",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-20",
+        "headline": "CORRECTED-US STOCKS-Wall Street set for gains at end of blistering week",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-20",
+        "headline": "AOC calls on Burr to resign after he reportedly sold $1.7 million of stock",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-19",
+        "headline": "Israeli quantum computing startup Quantum Machines raises $17.5 million",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-19",
+        "headline": "Israeli quantum computing startup Quantum Machines raises $17.5 million",
+        "source": "Reuters"
+      }
+    ],
+    "META": [
+      {
+        "date": "2020-04-01",
+        "headline": "Facebook diversity consultant sues company for $100 million",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Pregnant people want last-minute home births despite safety concerns",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Google may see its first ever advertising revenue drop",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Snopes overwhelmed by fact-checking coronavirus misinformation",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Workout at home: Best free virtual workouts",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "5 stimulus check scams to look out for during the coronavirus crisis",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "AI-powered SmartNews has a spike in readers on the coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Engagement spikes on Instagram, YouTube, TikTok: influencer survey",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Russian doctor who shook Putin's hand tests positive for coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "5 practical tips for businesses and founders managing through a crisis",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Zoom is being sued for sharing data with Facebook",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Twitter and Facebook blocked videos of Jair Bolsonaro for coronavirus misinformation",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Were you part of the #DeleteFacebook movement? Take BI's survey",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Zoom privacy issues come under scrutiny as usage skyrockets",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Palantir providing CDC with coronavirus tracking software: report",
+        "source": "Business Insider"
+      }
+    ],
+    "MSFT": [
+      {
+        "date": "2020-03-31",
+        "headline": "The coronavirus made Amazon's Bezos richer, but not other billionaires",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Video conferencing apps were downloaded 62 million times last week",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Palantir providing CDC with coronavirus tracking software: report",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Contractor says AWS should do more to protect workers from coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Why Slack is running a national PSA around the coronavirus pandemic",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Google may see its first ever advertising revenue drop",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "10 things in tech you need to know today, March 30",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Slack's CEO explains how it's thinking about hiring to handle its growing business",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "10 enterprise rock stars quietly changing the industry in 2020",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "How brands can hire a gaming influencer for successful sponsorship",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Internal memo confirms pause on new hires at LinkedIn",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Analysis: Video games are the next hotspot for advertisements",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "SUCCESS INSIDER: Finding a job during a recession, management books",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Google, Microsoft, and Palantir build COVID-19 dashboard for NHS",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Stock picks to buy, 12 ESG investing ideas in coronavirus selloff: RBC",
+        "source": "Business Insider"
+      }
+    ],
+    "NFLX": [
+      {
+        "date": "2020-03-31",
+        "headline": "Roku exec on biggest advertiser questions, actions in response",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "10 things in tech you need to know today, March 31",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Streaming-TV services Pluto TV, Xumo: viewership bump, strategy shift",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "The coronavirus pandemic will dramatically change advertising",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Contractor says AWS should do more to protect workers from coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "Houseparty offers $1 million bounty to uncover hack 'smear campaign'",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-31",
+        "headline": "'Tiger King' is one of Netflix's biggest true-crime hits of all time",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Analysis: Video games are the next hotspot for advertisements",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Netflix's 'Tiger King' is its top TV series in US, gets great reviews",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Houseparty says there's no evidence it's been hacked, despite claims",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Industry insiders reveal how the coronavirus will change advertising",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "What you need to know about coronavirus right now",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "The best computer monitors of 2020: BenQ, Asus, and more",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Consumers expect brands to continue advertising amid the pandemic",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Disney exec Bob Iger, CEO Bob Chapek take salary cuts amid coronavirus",
+        "source": "Business Insider"
+      }
+    ],
+    "NVDA": [
+      {
+        "date": "2020-03-23",
+        "headline": "Deepgram used this pitch deck to raise $12 million",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-23",
+        "headline": "Stock picks to buy as recession hits, 15 cheap cash-rich companies: GS",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-23",
+        "headline": "How GM's Cruise is using simulation to run 30,000 test drives daily",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-18",
+        "headline": "20 stocks to buy for big dividend payments amid coronavirus crash: BofA",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-17",
+        "headline": "Nvidia shareholder lawsuit over crypto sales lacking, judge rules",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-16",
+        "headline": "Tech investors should be ready for a 'potentially severe demand shock'",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-16",
+        "headline": "Here are the cloud companies Google could buy: analysts",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-12",
+        "headline": "Hottest Israeli startups of 2020, according to insiders",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-10",
+        "headline": "Snap's partner summit moves online due to coronavirus fears",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-10",
+        "headline": "Tech analysts say the downturn is a good opportunity to invest",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-09",
+        "headline": "Wall Street analyst counsels caution to investors on coronavirus slide",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-03",
+        "headline": "Google Assistant vs Amazon Alexa vs HomeKit: which smart home is best?",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-03",
+        "headline": "SXSW latest conference facing dilemma amid coronavirus fears",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-02",
+        "headline": "Nvidia shifts conference to online-only amid health, safety concerns",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-02",
+        "headline": "4 top stock-market strategies for coronavirus recovery: Morgan Stanley",
+        "source": "Business Insider"
+      }
+    ],
+    "TSLA": [
+      {
+        "date": "2020-03-30",
+        "headline": "Tesla Gigafactory worker tests positive for COVID-19",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Elon Musk unfollows Grimes on Twitter again",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-30",
+        "headline": "Top business news amid coronavirus: Layoffs, stimulus bill, restructuring",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-27",
+        "headline": "COLUMN-Collapsing auto sector a body blow for industrial metals: Andy Home",
+        "source": "Reuters"
+      },
+      {
+        "date": "2020-03-27",
+        "headline": "10 things in tech you need to know today, March 27",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-27",
+        "headline": "Companies are helping meet shortages of ventilators, gowns, and more",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-26",
+        "headline": "Best hotels in Maui (Updated March 2020)",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-26",
+        "headline": "Leaked email reveals two Tesla employees tested positive for COVID-19",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-26",
+        "headline": "10 things in tech you need to know today, March 26",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-26",
+        "headline": "Tesla workers scared, frustrated by company's response to coronavirus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-26",
+        "headline": "Leaked email says Tesla temporarily laying off some Norway workers",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-25",
+        "headline": "Report: SpaceX quarantines 12 employees after 2 workers test positive for COVID-19",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-25",
+        "headline": "Here's why companies like Facebook had N95 masks to donate",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-25",
+        "headline": "Coronavirus: Tech startups in Portugal join forces to fight off virus",
+        "source": "Business Insider"
+      },
+      {
+        "date": "2020-03-25",
+        "headline": "Elon Musk: Ventilator production to start as soon as possible in NY",
+        "source": "Business Insider"
+      }
+    ]
+  },
+  "price_series": {
+    "AAPL": [
+      {
+        "date": "2020-07-13",
+        "close": 92.529167,
+        "log_return": -0.004624,
+        "volume": 191649200
+      },
+      {
+        "date": "2020-07-14",
+        "close": 94.060356,
+        "log_return": 0.016413,
+        "volume": 170989200
+      },
+      {
+        "date": "2020-07-15",
+        "close": 94.707245,
+        "log_return": 0.006854,
+        "volume": 153198000
+      },
+      {
+        "date": "2020-07-16",
+        "close": 93.541878,
+        "log_return": -0.012381,
+        "volume": 110577600
+      },
+      {
+        "date": "2020-07-17",
+        "close": 93.352905,
+        "log_return": -0.002022,
+        "volume": 92186800
+      },
+      {
+        "date": "2020-07-20",
+        "close": 95.320213,
+        "log_return": 0.020855,
+        "volume": 90318000
+      },
+      {
+        "date": "2020-07-21",
+        "close": 94.004639,
+        "log_return": -0.013898,
+        "volume": 103433200
+      },
+      {
+        "date": "2020-07-22",
+        "close": 94.26873,
+        "log_return": 0.002805,
+        "volume": 89001600
+      },
+      {
+        "date": "2020-07-23",
+        "close": 89.977943,
+        "log_return": -0.046585,
+        "volume": 197004400
+      },
+      {
+        "date": "2020-07-24",
+        "close": 89.755035,
+        "log_return": -0.00248,
+        "volume": 185438800
+      },
+      {
+        "date": "2020-07-27",
+        "close": 91.882248,
+        "log_return": 0.023424,
+        "volume": 121214000
+      },
+      {
+        "date": "2020-07-28",
+        "close": 90.372856,
+        "log_return": -0.016564,
+        "volume": 103625600
+      },
+      {
+        "date": "2020-07-29",
+        "close": 92.105164,
+        "log_return": 0.018987,
+        "volume": 90329200
+      },
+      {
+        "date": "2020-07-30",
+        "close": 93.21965,
+        "log_return": 0.012028,
+        "volume": 158130000
+      },
+      {
+        "date": "2020-07-31",
+        "close": 102.978691,
+        "log_return": 0.099564,
+        "volume": 374336800
+      },
+      {
+        "date": "2020-08-03",
+        "close": 105.573502,
+        "log_return": 0.024885,
+        "volume": 308151200
+      },
+      {
+        "date": "2020-08-04",
+        "close": 106.278549,
+        "log_return": 0.006656,
+        "volume": 173071600
+      },
+      {
+        "date": "2020-08-05",
+        "close": 106.663765,
+        "log_return": 0.003618,
+        "volume": 121776800
+      },
+      {
+        "date": "2020-08-06",
+        "close": 110.385178,
+        "log_return": 0.034294,
+        "volume": 202428800
+      },
+      {
+        "date": "2020-08-07",
+        "close": 107.875496,
+        "log_return": -0.022998,
+        "volume": 198045600
+      },
+      {
+        "date": "2020-08-10",
+        "close": 109.44342,
+        "log_return": 0.01443,
+        "volume": 212403600
+      },
+      {
+        "date": "2020-08-11",
+        "close": 106.188614,
+        "log_return": -0.030191,
+        "volume": 187902400
+      },
+      {
+        "date": "2020-08-12",
+        "close": 109.717728,
+        "log_return": 0.032694,
+        "volume": 165598000
+      },
+      {
+        "date": "2020-08-13",
+        "close": 111.659439,
+        "log_return": 0.017543,
+        "volume": 210082000
+      },
+      {
+        "date": "2020-08-14",
+        "close": 111.559937,
+        "log_return": -0.000892,
+        "volume": 165565200
+      },
+      {
+        "date": "2020-08-17",
+        "close": 111.268661,
+        "log_return": -0.002614,
+        "volume": 119561600
+      },
+      {
+        "date": "2020-08-18",
+        "close": 112.195869,
+        "log_return": 0.008299,
+        "volume": 105633600
+      },
+      {
+        "date": "2020-08-19",
+        "close": 112.336624,
+        "log_return": 0.001254,
+        "volume": 145538000
+      },
+      {
+        "date": "2020-08-20",
+        "close": 114.829338,
+        "log_return": 0.021947,
+        "volume": 126907200
+      },
+      {
+        "date": "2020-08-21",
+        "close": 120.746773,
+        "log_return": 0.050249,
+        "volume": 338054800
+      },
+      {
+        "date": "2020-08-24",
+        "close": 122.190918,
+        "log_return": 0.011889,
+        "volume": 345937600
+      },
+      {
+        "date": "2020-08-25",
+        "close": 121.188522,
+        "log_return": -0.008237,
+        "volume": 211495600
+      },
+      {
+        "date": "2020-08-26",
+        "close": 122.836563,
+        "log_return": 0.013507,
+        "volume": 163022400
+      },
+      {
+        "date": "2020-08-27",
+        "close": 121.368111,
+        "log_return": -0.012027,
+        "volume": 155552400
+      },
+      {
+        "date": "2020-08-28",
+        "close": 121.171509,
+        "log_return": -0.001621,
+        "volume": 187630000
+      },
+      {
+        "date": "2020-08-31",
+        "close": 125.280708,
+        "log_return": 0.03335,
+        "volume": 225702700
+      },
+      {
+        "date": "2020-09-01",
+        "close": 130.270981,
+        "log_return": 0.03906,
+        "volume": 151948100
+      },
+      {
+        "date": "2020-09-02",
+        "close": 127.571976,
+        "log_return": -0.020936,
+        "volume": 200119000
+      },
+      {
+        "date": "2020-09-03",
+        "close": 117.358429,
+        "log_return": -0.083448,
+        "volume": 257599600
+      },
+      {
+        "date": "2020-09-04",
+        "close": 117.436111,
+        "log_return": 0.000662,
+        "volume": 332607200
+      },
+      {
+        "date": "2020-09-08",
+        "close": 109.533241,
+        "log_return": -0.069666,
+        "volume": 231366600
+      },
+      {
+        "date": "2020-09-09",
+        "close": 113.902161,
+        "log_return": 0.039112,
+        "volume": 176940500
+      },
+      {
+        "date": "2020-09-10",
+        "close": 110.183716,
+        "log_return": -0.033191,
+        "volume": 182274400
+      },
+      {
+        "date": "2020-09-11",
+        "close": 108.737137,
+        "log_return": -0.013216,
+        "volume": 180860300
+      },
+      {
+        "date": "2020-09-14",
+        "close": 111.99926,
+        "log_return": 0.029559,
+        "volume": 140150100
+      },
+      {
+        "date": "2020-09-15",
+        "close": 112.174004,
+        "log_return": 0.001559,
+        "volume": 184642000
+      },
+      {
+        "date": "2020-09-16",
+        "close": 108.863358,
+        "log_return": -0.029958,
+        "volume": 154679000
+      },
+      {
+        "date": "2020-09-17",
+        "close": 107.125488,
+        "log_return": -0.016093,
+        "volume": 178011000
+      },
+      {
+        "date": "2020-09-18",
+        "close": 103.727463,
+        "log_return": -0.032234,
+        "volume": 287104900
+      },
+      {
+        "date": "2020-09-21",
+        "close": 106.873077,
+        "log_return": 0.029875,
+        "volume": 195713800
+      },
+      {
+        "date": "2020-09-22",
+        "close": 108.552673,
+        "log_return": 0.015594,
+        "volume": 183055400
+      },
+      {
+        "date": "2020-09-23",
+        "close": 103.999298,
+        "log_return": -0.042851,
+        "volume": 150718700
+      },
+      {
+        "date": "2020-09-24",
+        "close": 105.067268,
+        "log_return": 0.010217,
+        "volume": 167743300
+      },
+      {
+        "date": "2020-09-25",
+        "close": 109.008965,
+        "log_return": 0.036829,
+        "volume": 149981400
+      },
+      {
+        "date": "2020-09-28",
+        "close": 111.610909,
+        "log_return": 0.023589,
+        "volume": 137672400
+      },
+      {
+        "date": "2020-09-29",
+        "close": 110.76622,
+        "log_return": -0.007597,
+        "volume": 99382200
+      },
+      {
+        "date": "2020-09-30",
+        "close": 112.43615,
+        "log_return": 0.014964,
+        "volume": 142675200
+      },
+      {
+        "date": "2020-10-01",
+        "close": 113.387589,
+        "log_return": 0.008426,
+        "volume": 116120400
+      },
+      {
+        "date": "2020-10-02",
+        "close": 109.727417,
+        "log_return": -0.032813,
+        "volume": 144712000
+      },
+      {
+        "date": "2020-10-05",
+        "close": 113.106033,
+        "log_return": 0.030326,
+        "volume": 106243800
+      },
+      {
+        "date": "2020-10-06",
+        "close": 109.863327,
+        "log_return": -0.029089,
+        "volume": 161498200
+      },
+      {
+        "date": "2020-10-07",
+        "close": 111.727417,
+        "log_return": 0.016825,
+        "volume": 96849000
+      },
+      {
+        "date": "2020-10-08",
+        "close": 111.620613,
+        "log_return": -0.000956,
+        "volume": 83477200
+      },
+      {
+        "date": "2020-10-09",
+        "close": 113.562363,
+        "log_return": 0.017246,
+        "volume": 100506900
+      },
+      {
+        "date": "2020-10-12",
+        "close": 120.775894,
+        "log_return": 0.061585,
+        "volume": 240226800
+      },
+      {
+        "date": "2020-10-13",
+        "close": 117.572021,
+        "log_return": -0.026886,
+        "volume": 262330500
+      },
+      {
+        "date": "2020-10-14",
+        "close": 117.659409,
+        "log_return": 0.000743,
+        "volume": 150712000
+      },
+      {
+        "date": "2020-10-15",
+        "close": 117.193382,
+        "log_return": -0.003969,
+        "volume": 112559200
+      },
+      {
+        "date": "2020-10-16",
+        "close": 115.55262,
+        "log_return": -0.014099,
+        "volume": 115393800
+      },
+      {
+        "date": "2020-10-19",
+        "close": 112.601181,
+        "log_return": -0.025874,
+        "volume": 120639300
+      },
+      {
+        "date": "2020-10-20",
+        "close": 114.086617,
+        "log_return": 0.013106,
+        "volume": 124423700
+      },
+      {
+        "date": "2020-10-21",
+        "close": 113.465263,
+        "log_return": -0.005461,
+        "volume": 89946000
+      },
+      {
+        "date": "2020-10-22",
+        "close": 112.377884,
+        "log_return": -0.00963,
+        "volume": 101988000
+      },
+      {
+        "date": "2020-10-23",
+        "close": 111.688583,
+        "log_return": -0.006153,
+        "volume": 82572600
+      },
+      {
+        "date": "2020-10-26",
+        "close": 111.698273,
+        "log_return": 8.7e-05,
+        "volume": 111850700
+      },
+      {
+        "date": "2020-10-27",
+        "close": 113.203117,
+        "log_return": 0.013382,
+        "volume": 92276800
+      },
+      {
+        "date": "2020-10-28",
+        "close": 107.960449,
+        "log_return": -0.047419,
+        "volume": 143937800
+      },
+      {
+        "date": "2020-10-29",
+        "close": 111.960426,
+        "log_return": 0.036381,
+        "volume": 146129200
+      },
+      {
+        "date": "2020-10-30",
+        "close": 105.688606,
+        "log_return": -0.057648,
+        "volume": 190272600
+      },
+      {
+        "date": "2020-11-02",
+        "close": 105.601234,
+        "log_return": -0.000827,
+        "volume": 122866900
+      },
+      {
+        "date": "2020-11-03",
+        "close": 107.222603,
+        "log_return": 0.015237,
+        "volume": 107624400
+      },
+      {
+        "date": "2020-11-04",
+        "close": 111.601196,
+        "log_return": 0.040025,
+        "volume": 138235500
+      },
+      {
+        "date": "2020-11-05",
+        "close": 115.562347,
+        "log_return": 0.034878,
+        "volume": 126387100
+      },
+      {
+        "date": "2020-11-06",
+        "close": 115.43103,
+        "log_return": -0.001137,
+        "volume": 114457900
+      },
+      {
+        "date": "2020-11-09",
+        "close": 113.126129,
+        "log_return": -0.02017,
+        "volume": 154515300
+      },
+      {
+        "date": "2020-11-10",
+        "close": 112.785744,
+        "log_return": -0.003013,
+        "volume": 138023400
+      },
+      {
+        "date": "2020-11-11",
+        "close": 116.209053,
+        "log_return": 0.029901,
+        "volume": 112295000
+      },
+      {
+        "date": "2020-11-12",
+        "close": 115.936768,
+        "log_return": -0.002346,
+        "volume": 103162300
+      },
+      {
+        "date": "2020-11-13",
+        "close": 115.985405,
+        "log_return": 0.000419,
+        "volume": 81581900
+      },
+      {
+        "date": "2020-11-16",
+        "close": 116.996834,
+        "log_return": 0.008683,
+        "volume": 91183000
+      },
+      {
+        "date": "2020-11-17",
+        "close": 116.111847,
+        "log_return": -0.007593,
+        "volume": 74271000
+      },
+      {
+        "date": "2020-11-18",
+        "close": 114.789177,
+        "log_return": -0.011457,
+        "volume": 76322100
+      },
+      {
+        "date": "2020-11-19",
+        "close": 115.382408,
+        "log_return": 0.005155,
+        "volume": 74113000
+      },
+      {
+        "date": "2020-11-20",
+        "close": 114.118111,
+        "log_return": -0.011018,
+        "volume": 73604300
+      },
+      {
+        "date": "2020-11-23",
+        "close": 110.723923,
+        "log_return": -0.030194,
+        "volume": 127959300
+      },
+      {
+        "date": "2020-11-24",
+        "close": 112.007698,
+        "log_return": 0.011528,
+        "volume": 113874200
+      },
+      {
+        "date": "2020-11-25",
+        "close": 112.84407,
+        "log_return": 0.007439,
+        "volume": 76499200
+      },
+      {
+        "date": "2020-11-27",
+        "close": 113.388702,
+        "log_return": 0.004815,
+        "volume": 46691300
+      },
+      {
+        "date": "2020-11-30",
+        "close": 115.781166,
+        "log_return": 0.02088,
+        "volume": 169410200
+      },
+      {
+        "date": "2020-12-01",
+        "close": 119.35041,
+        "log_return": 0.030362,
+        "volume": 127728200
+      },
+      {
+        "date": "2020-12-02",
+        "close": 119.7005,
+        "log_return": 0.002929,
+        "volume": 89004200
+      },
+      {
+        "date": "2020-12-03",
+        "close": 119.564346,
+        "log_return": -0.001138,
+        "volume": 78967600
+      },
+      {
+        "date": "2020-12-04",
+        "close": 118.893311,
+        "log_return": -0.005628,
+        "volume": 78260400
+      },
+      {
+        "date": "2020-12-07",
+        "close": 120.352119,
+        "log_return": 0.012195,
+        "volume": 86712000
+      },
+      {
+        "date": "2020-12-08",
+        "close": 120.964813,
+        "log_return": 0.005078,
+        "volume": 82225500
+      },
+      {
+        "date": "2020-12-09",
+        "close": 118.436211,
+        "log_return": -0.021125,
+        "volume": 115089200
+      },
+      {
+        "date": "2020-12-10",
+        "close": 119.85611,
+        "log_return": 0.011917,
+        "volume": 81312200
+      },
+      {
+        "date": "2020-12-11",
+        "close": 119.048904,
+        "log_return": -0.006758,
+        "volume": 86939800
+      },
+      {
+        "date": "2020-12-14",
+        "close": 118.436211,
+        "log_return": -0.00516,
+        "volume": 79184500
+      },
+      {
+        "date": "2020-12-15",
+        "close": 124.368713,
+        "log_return": 0.048876,
+        "volume": 157243700
+      },
+      {
+        "date": "2020-12-16",
+        "close": 124.300621,
+        "log_return": -0.000548,
+        "volume": 98208600
+      },
+      {
+        "date": "2020-12-17",
+        "close": 125.166191,
+        "log_return": 0.006939,
+        "volume": 94359800
+      },
+      {
+        "date": "2020-12-18",
+        "close": 123.182205,
+        "log_return": -0.015978,
+        "volume": 192541500
+      },
+      {
+        "date": "2020-12-21",
+        "close": 124.709091,
+        "log_return": 0.012319,
+        "volume": 121251600
+      },
+      {
+        "date": "2020-12-22",
+        "close": 128.258835,
+        "log_return": 0.028067,
+        "volume": 168904800
+      },
+      {
+        "date": "2020-12-23",
+        "close": 127.364143,
+        "log_return": -0.007,
+        "volume": 88223700
+      },
+      {
+        "date": "2020-12-24",
+        "close": 128.346405,
+        "log_return": 0.007683,
+        "volume": 54930100
+      },
+      {
+        "date": "2020-12-28",
+        "close": 132.936783,
+        "log_return": 0.035141,
+        "volume": 124486200
+      },
+      {
+        "date": "2020-12-29",
+        "close": 131.166779,
+        "log_return": -0.013404,
+        "volume": 121047300
+      },
+      {
+        "date": "2020-12-30",
+        "close": 130.048386,
+        "log_return": -0.008563,
+        "volume": 96452100
+      }
+    ],
+    "AMD": [
+      {
+        "date": "2020-07-13",
+        "close": 53.59,
+        "log_return": -0.041844,
+        "volume": 57741800
+      },
+      {
+        "date": "2020-07-14",
+        "close": 54.720001,
+        "log_return": 0.020867,
+        "volume": 54890100
+      },
+      {
+        "date": "2020-07-15",
+        "close": 55.34,
+        "log_return": 0.011267,
+        "volume": 42360300
+      },
+      {
+        "date": "2020-07-16",
+        "close": 54.919998,
+        "log_return": -0.007618,
+        "volume": 36887100
+      },
+      {
+        "date": "2020-07-17",
+        "close": 55.040001,
+        "log_return": 0.002183,
+        "volume": 34710400
+      },
+      {
+        "date": "2020-07-20",
+        "close": 57.459999,
+        "log_return": 0.043029,
+        "volume": 45034300
+      },
+      {
+        "date": "2020-07-21",
+        "close": 57.0,
+        "log_return": -0.008038,
+        "volume": 44741000
+      },
+      {
+        "date": "2020-07-22",
+        "close": 61.790001,
+        "log_return": 0.08069,
+        "volume": 135159400
+      },
+      {
+        "date": "2020-07-23",
+        "close": 59.57,
+        "log_return": -0.036589,
+        "volume": 106829100
+      },
+      {
+        "date": "2020-07-24",
+        "close": 69.400002,
+        "log_return": 0.152735,
+        "volume": 205314500
+      },
+      {
+        "date": "2020-07-27",
+        "close": 68.970001,
+        "log_return": -0.006215,
+        "volume": 107918100
+      },
+      {
+        "date": "2020-07-28",
+        "close": 67.610001,
+        "log_return": -0.019916,
+        "volume": 94181400
+      },
+      {
+        "date": "2020-07-29",
+        "close": 76.089996,
+        "log_return": 0.118161,
+        "volume": 132969700
+      },
+      {
+        "date": "2020-07-30",
+        "close": 78.199997,
+        "log_return": 0.027353,
+        "volume": 80286900
+      },
+      {
+        "date": "2020-07-31",
+        "close": 77.43,
+        "log_return": -0.009895,
+        "volume": 71621600
+      },
+      {
+        "date": "2020-08-03",
+        "close": 77.669998,
+        "log_return": 0.003095,
+        "volume": 42628800
+      },
+      {
+        "date": "2020-08-04",
+        "close": 85.040001,
+        "log_return": 0.090653,
+        "volume": 155676100
+      },
+      {
+        "date": "2020-08-05",
+        "close": 85.309998,
+        "log_return": 0.00317,
+        "volume": 65642600
+      },
+      {
+        "date": "2020-08-06",
+        "close": 86.709999,
+        "log_return": 0.016278,
+        "volume": 53961700
+      },
+      {
+        "date": "2020-08-07",
+        "close": 84.849998,
+        "log_return": -0.021684,
+        "volume": 66543200
+      },
+      {
+        "date": "2020-08-10",
+        "close": 82.239998,
+        "log_return": -0.031243,
+        "volume": 70536100
+      },
+      {
+        "date": "2020-08-11",
+        "close": 76.879997,
+        "log_return": -0.067396,
+        "volume": 77877700
+      },
+      {
+        "date": "2020-08-12",
+        "close": 82.610001,
+        "log_return": 0.071885,
+        "volume": 88513700
+      },
+      {
+        "date": "2020-08-13",
+        "close": 81.839996,
+        "log_return": -0.009365,
+        "volume": 57407400
+      },
+      {
+        "date": "2020-08-14",
+        "close": 81.300003,
+        "log_return": -0.00662,
+        "volume": 42389500
+      },
+      {
+        "date": "2020-08-17",
+        "close": 82.419998,
+        "log_return": 0.013682,
+        "volume": 31450200
+      },
+      {
+        "date": "2020-08-18",
+        "close": 81.660004,
+        "log_return": -0.009264,
+        "volume": 30970500
+      },
+      {
+        "date": "2020-08-19",
+        "close": 81.089996,
+        "log_return": -0.007005,
+        "volume": 37507400
+      },
+      {
+        "date": "2020-08-20",
+        "close": 82.769997,
+        "log_return": 0.020506,
+        "volume": 42948900
+      },
+      {
+        "date": "2020-08-21",
+        "close": 83.809998,
+        "log_return": 0.012487,
+        "volume": 48280300
+      },
+      {
+        "date": "2020-08-24",
+        "close": 83.080002,
+        "log_return": -0.008748,
+        "volume": 38036100
+      },
+      {
+        "date": "2020-08-25",
+        "close": 86.349998,
+        "log_return": 0.038605,
+        "volume": 49234400
+      },
+      {
+        "date": "2020-08-26",
+        "close": 86.019997,
+        "log_return": -0.003829,
+        "volume": 47157300
+      },
+      {
+        "date": "2020-08-27",
+        "close": 83.800003,
+        "log_return": -0.026147,
+        "volume": 42194200
+      },
+      {
+        "date": "2020-08-28",
+        "close": 85.550003,
+        "log_return": 0.020668,
+        "volume": 40723300
+      },
+      {
+        "date": "2020-08-31",
+        "close": 90.82,
+        "log_return": 0.059778,
+        "volume": 90655900
+      },
+      {
+        "date": "2020-09-01",
+        "close": 92.18,
+        "log_return": 0.014864,
+        "volume": 55825600
+      },
+      {
+        "date": "2020-09-02",
+        "close": 90.220001,
+        "log_return": -0.021492,
+        "volume": 50366900
+      },
+      {
+        "date": "2020-09-03",
+        "close": 82.540001,
+        "log_return": -0.088968,
+        "volume": 87462700
+      },
+      {
+        "date": "2020-09-04",
+        "close": 82.010002,
+        "log_return": -0.006442,
+        "volume": 82267800
+      },
+      {
+        "date": "2020-09-08",
+        "close": 78.690002,
+        "log_return": -0.041325,
+        "volume": 54955700
+      },
+      {
+        "date": "2020-09-09",
+        "close": 81.910004,
+        "log_return": 0.040105,
+        "volume": 54163900
+      },
+      {
+        "date": "2020-09-10",
+        "close": 78.980003,
+        "log_return": -0.036426,
+        "volume": 51499400
+      },
+      {
+        "date": "2020-09-11",
+        "close": 76.339996,
+        "log_return": -0.033998,
+        "volume": 54763000
+      },
+      {
+        "date": "2020-09-14",
+        "close": 77.900002,
+        "log_return": 0.020229,
+        "volume": 47448700
+      },
+      {
+        "date": "2020-09-15",
+        "close": 78.93,
+        "log_return": 0.013135,
+        "volume": 57874400
+      },
+      {
+        "date": "2020-09-16",
+        "close": 76.660004,
+        "log_return": -0.029181,
+        "volume": 38393500
+      },
+      {
+        "date": "2020-09-17",
+        "close": 76.550003,
+        "log_return": -0.001436,
+        "volume": 55619100
+      },
+      {
+        "date": "2020-09-18",
+        "close": 74.93,
+        "log_return": -0.02139,
+        "volume": 51082900
+      },
+      {
+        "date": "2020-09-21",
+        "close": 77.940002,
+        "log_return": 0.039385,
+        "volume": 61312000
+      },
+      {
+        "date": "2020-09-22",
+        "close": 77.699997,
+        "log_return": -0.003084,
+        "volume": 56044700
+      },
+      {
+        "date": "2020-09-23",
+        "close": 74.730003,
+        "log_return": -0.038974,
+        "volume": 42327500
+      },
+      {
+        "date": "2020-09-24",
+        "close": 75.82,
+        "log_return": 0.01448,
+        "volume": 57540900
+      },
+      {
+        "date": "2020-09-25",
+        "close": 78.059998,
+        "log_return": 0.029116,
+        "volume": 48206200
+      },
+      {
+        "date": "2020-09-28",
+        "close": 79.480003,
+        "log_return": 0.018028,
+        "volume": 48005500
+      },
+      {
+        "date": "2020-09-29",
+        "close": 81.769997,
+        "log_return": 0.028405,
+        "volume": 61568900
+      },
+      {
+        "date": "2020-09-30",
+        "close": 81.989998,
+        "log_return": 0.002687,
+        "volume": 51533700
+      },
+      {
+        "date": "2020-10-01",
+        "close": 84.860001,
+        "log_return": 0.034406,
+        "volume": 52177100
+      },
+      {
+        "date": "2020-10-02",
+        "close": 81.800003,
+        "log_return": -0.036726,
+        "volume": 52855100
+      },
+      {
+        "date": "2020-10-05",
+        "close": 86.150002,
+        "log_return": 0.051813,
+        "volume": 47056500
+      },
+      {
+        "date": "2020-10-06",
+        "close": 84.480003,
+        "log_return": -0.019575,
+        "volume": 52725400
+      },
+      {
+        "date": "2020-10-07",
+        "close": 86.690002,
+        "log_return": 0.025824,
+        "volume": 43045700
+      },
+      {
+        "date": "2020-10-08",
+        "close": 86.510002,
+        "log_return": -0.002079,
+        "volume": 54240700
+      },
+      {
+        "date": "2020-10-09",
+        "close": 83.099998,
+        "log_return": -0.040215,
+        "volume": 80354400
+      },
+      {
+        "date": "2020-10-12",
+        "close": 84.290001,
+        "log_return": 0.014219,
+        "volume": 47669700
+      },
+      {
+        "date": "2020-10-13",
+        "close": 85.279999,
+        "log_return": 0.011677,
+        "volume": 42764100
+      },
+      {
+        "date": "2020-10-14",
+        "close": 84.209999,
+        "log_return": -0.012626,
+        "volume": 40403000
+      },
+      {
+        "date": "2020-10-15",
+        "close": 83.129997,
+        "log_return": -0.012908,
+        "volume": 33696400
+      },
+      {
+        "date": "2020-10-16",
+        "close": 83.169998,
+        "log_return": 0.000481,
+        "volume": 31474300
+      },
+      {
+        "date": "2020-10-19",
+        "close": 82.0,
+        "log_return": -0.014167,
+        "volume": 36689100
+      },
+      {
+        "date": "2020-10-20",
+        "close": 81.559998,
+        "log_return": -0.00538,
+        "volume": 38219400
+      },
+      {
+        "date": "2020-10-21",
+        "close": 79.199997,
+        "log_return": -0.029363,
+        "volume": 36426400
+      },
+      {
+        "date": "2020-10-22",
+        "close": 79.419998,
+        "log_return": 0.002774,
+        "volume": 38006800
+      },
+      {
+        "date": "2020-10-23",
+        "close": 81.959999,
+        "log_return": 0.031481,
+        "volume": 46557700
+      },
+      {
+        "date": "2020-10-26",
+        "close": 82.230003,
+        "log_return": 0.003289,
+        "volume": 69423700
+      },
+      {
+        "date": "2020-10-27",
+        "close": 78.879997,
+        "log_return": -0.041593,
+        "volume": 156669500
+      },
+      {
+        "date": "2020-10-28",
+        "close": 76.400002,
+        "log_return": -0.031945,
+        "volume": 76529900
+      },
+      {
+        "date": "2020-10-29",
+        "close": 78.019997,
+        "log_return": 0.020982,
+        "volume": 52784100
+      },
+      {
+        "date": "2020-10-30",
+        "close": 75.290001,
+        "log_return": -0.035618,
+        "volume": 51349000
+      },
+      {
+        "date": "2020-11-02",
+        "close": 74.699997,
+        "log_return": -0.007867,
+        "volume": 45760700
+      },
+      {
+        "date": "2020-11-03",
+        "close": 76.580002,
+        "log_return": 0.024856,
+        "volume": 41231800
+      },
+      {
+        "date": "2020-11-04",
+        "close": 81.349998,
+        "log_return": 0.060425,
+        "volume": 66579700
+      },
+      {
+        "date": "2020-11-05",
+        "close": 83.0,
+        "log_return": 0.02008,
+        "volume": 46542300
+      },
+      {
+        "date": "2020-11-06",
+        "close": 85.879997,
+        "log_return": 0.03411,
+        "volume": 53829900
+      },
+      {
+        "date": "2020-11-09",
+        "close": 83.120003,
+        "log_return": -0.032666,
+        "volume": 58580700
+      },
+      {
+        "date": "2020-11-10",
+        "close": 77.989998,
+        "log_return": -0.063705,
+        "volume": 67137200
+      },
+      {
+        "date": "2020-11-11",
+        "close": 81.279999,
+        "log_return": 0.041319,
+        "volume": 44611300
+      },
+      {
+        "date": "2020-11-12",
+        "close": 81.839996,
+        "log_return": 0.006866,
+        "volume": 37242600
+      },
+      {
+        "date": "2020-11-13",
+        "close": 81.43,
+        "log_return": -0.005022,
+        "volume": 30423200
+      },
+      {
+        "date": "2020-11-16",
+        "close": 83.730003,
+        "log_return": 0.027854,
+        "volume": 38640800
+      },
+      {
+        "date": "2020-11-17",
+        "close": 83.360001,
+        "log_return": -0.004429,
+        "volume": 29473500
+      },
+      {
+        "date": "2020-11-18",
+        "close": 82.540001,
+        "log_return": -0.009886,
+        "volume": 29968000
+      },
+      {
+        "date": "2020-11-19",
+        "close": 85.540001,
+        "log_return": 0.035701,
+        "volume": 50116800
+      },
+      {
+        "date": "2020-11-20",
+        "close": 84.639999,
+        "log_return": -0.010577,
+        "volume": 35008400
+      },
+      {
+        "date": "2020-11-23",
+        "close": 85.309998,
+        "log_return": 0.007885,
+        "volume": 46505000
+      },
+      {
+        "date": "2020-11-24",
+        "close": 85.07,
+        "log_return": -0.002817,
+        "volume": 36839200
+      },
+      {
+        "date": "2020-11-25",
+        "close": 86.709999,
+        "log_return": 0.019095,
+        "volume": 41349700
+      },
+      {
+        "date": "2020-11-27",
+        "close": 87.190002,
+        "log_return": 0.00552,
+        "volume": 22717600
+      },
+      {
+        "date": "2020-11-30",
+        "close": 92.660004,
+        "log_return": 0.060847,
+        "volume": 84483000
+      },
+      {
+        "date": "2020-12-01",
+        "close": 92.629997,
+        "log_return": -0.000324,
+        "volume": 58583600
+      },
+      {
+        "date": "2020-12-02",
+        "close": 93.739998,
+        "log_return": 0.011912,
+        "volume": 57988800
+      },
+      {
+        "date": "2020-12-03",
+        "close": 92.309998,
+        "log_return": -0.015373,
+        "volume": 35859700
+      },
+      {
+        "date": "2020-12-04",
+        "close": 94.040001,
+        "log_return": 0.018568,
+        "volume": 45570300
+      },
+      {
+        "date": "2020-12-07",
+        "close": 94.07,
+        "log_return": 0.000319,
+        "volume": 39815700
+      },
+      {
+        "date": "2020-12-08",
+        "close": 92.919998,
+        "log_return": -0.0123,
+        "volume": 33907500
+      },
+      {
+        "date": "2020-12-09",
+        "close": 89.830002,
+        "log_return": -0.03382,
+        "volume": 52170400
+      },
+      {
+        "date": "2020-12-10",
+        "close": 91.660004,
+        "log_return": 0.020167,
+        "volume": 33804400
+      },
+      {
+        "date": "2020-12-11",
+        "close": 91.650002,
+        "log_return": -0.000109,
+        "volume": 28368100
+      },
+      {
+        "date": "2020-12-14",
+        "close": 94.779999,
+        "log_return": 0.033581,
+        "volume": 48026400
+      },
+      {
+        "date": "2020-12-15",
+        "close": 97.120003,
+        "log_return": 0.024389,
+        "volume": 57232700
+      },
+      {
+        "date": "2020-12-16",
+        "close": 96.849998,
+        "log_return": -0.002784,
+        "volume": 34909000
+      },
+      {
+        "date": "2020-12-17",
+        "close": 96.839996,
+        "log_return": -0.000103,
+        "volume": 32023700
+      },
+      {
+        "date": "2020-12-18",
+        "close": 95.919998,
+        "log_return": -0.009546,
+        "volume": 51823100
+      },
+      {
+        "date": "2020-12-21",
+        "close": 93.230003,
+        "log_return": -0.028445,
+        "volume": 47093900
+      },
+      {
+        "date": "2020-12-22",
+        "close": 93.160004,
+        "log_return": -0.000751,
+        "volume": 35673700
+      },
+      {
+        "date": "2020-12-23",
+        "close": 91.550003,
+        "log_return": -0.017433,
+        "volume": 25993300
+      },
+      {
+        "date": "2020-12-24",
+        "close": 91.809998,
+        "log_return": 0.002836,
+        "volume": 16705900
+      },
+      {
+        "date": "2020-12-28",
+        "close": 91.599998,
+        "log_return": -0.00229,
+        "volume": 30627300
+      },
+      {
+        "date": "2020-12-29",
+        "close": 90.620003,
+        "log_return": -0.010756,
+        "volume": 31748200
+      },
+      {
+        "date": "2020-12-30",
+        "close": 92.290001,
+        "log_return": 0.018261,
+        "volume": 25845000
+      }
+    ],
+    "AMZN": [
+      {
+        "date": "2020-07-13",
+        "close": 155.199997,
+        "log_return": -0.030459,
+        "volume": 154408000
+      },
+      {
+        "date": "2020-07-14",
+        "close": 154.199997,
+        "log_return": -0.006464,
+        "volume": 144638000
+      },
+      {
+        "date": "2020-07-15",
+        "close": 150.443497,
+        "log_return": -0.024663,
+        "volume": 115778000
+      },
+      {
+        "date": "2020-07-16",
+        "close": 149.994995,
+        "log_return": -0.002986,
+        "volume": 127884000
+      },
+      {
+        "date": "2020-07-17",
+        "close": 148.098495,
+        "log_return": -0.012724,
+        "volume": 95226000
+      },
+      {
+        "date": "2020-07-20",
+        "close": 159.841995,
+        "log_return": 0.076308,
+        "volume": 151964000
+      },
+      {
+        "date": "2020-07-21",
+        "close": 156.914505,
+        "log_return": -0.018485,
+        "volume": 122426000
+      },
+      {
+        "date": "2020-07-22",
+        "close": 154.995499,
+        "log_return": -0.012305,
+        "volume": 82084000
+      },
+      {
+        "date": "2020-07-23",
+        "close": 149.327499,
+        "log_return": -0.037254,
+        "volume": 113138000
+      },
+      {
+        "date": "2020-07-24",
+        "close": 150.445496,
+        "log_return": 0.007459,
+        "volume": 112648000
+      },
+      {
+        "date": "2020-07-27",
+        "close": 152.760498,
+        "log_return": 0.01527,
+        "volume": 83410000
+      },
+      {
+        "date": "2020-07-28",
+        "close": 150.016495,
+        "log_return": -0.018126,
+        "volume": 62534000
+      },
+      {
+        "date": "2020-07-29",
+        "close": 151.676498,
+        "log_return": 0.011005,
+        "volume": 59482000
+      },
+      {
+        "date": "2020-07-30",
+        "close": 152.593994,
+        "log_return": 0.006031,
+        "volume": 122566000
+      },
+      {
+        "date": "2020-07-31",
+        "close": 158.233994,
+        "log_return": 0.036294,
+        "volume": 161710000
+      },
+      {
+        "date": "2020-08-03",
+        "close": 155.594498,
+        "log_return": -0.016822,
+        "volume": 101494000
+      },
+      {
+        "date": "2020-08-04",
+        "close": 156.941498,
+        "log_return": 0.00862,
+        "volume": 93886000
+      },
+      {
+        "date": "2020-08-05",
+        "close": 160.251495,
+        "log_return": 0.020871,
+        "volume": 78330000
+      },
+      {
+        "date": "2020-08-06",
+        "close": 161.25,
+        "log_return": 0.006212,
+        "volume": 78812000
+      },
+      {
+        "date": "2020-08-07",
+        "close": 158.373001,
+        "log_return": -0.018003,
+        "volume": 78722000
+      },
+      {
+        "date": "2020-08-10",
+        "close": 157.408005,
+        "log_return": -0.006112,
+        "volume": 63346000
+      },
+      {
+        "date": "2020-08-11",
+        "close": 154.033493,
+        "log_return": -0.021671,
+        "volume": 74362000
+      },
+      {
+        "date": "2020-08-12",
+        "close": 158.112,
+        "log_return": 0.026134,
+        "volume": 70442000
+      },
+      {
+        "date": "2020-08-13",
+        "close": 158.050995,
+        "log_return": -0.000386,
+        "volume": 62980000
+      },
+      {
+        "date": "2020-08-14",
+        "close": 157.401001,
+        "log_return": -0.004121,
+        "volume": 55034000
+      },
+      {
+        "date": "2020-08-17",
+        "close": 159.120499,
+        "log_return": 0.010865,
+        "volume": 53824000
+      },
+      {
+        "date": "2020-08-18",
+        "close": 165.624496,
+        "log_return": 0.040061,
+        "volume": 106920000
+      },
+      {
+        "date": "2020-08-19",
+        "close": 163.024002,
+        "log_return": -0.015826,
+        "volume": 83702000
+      },
+      {
+        "date": "2020-08-20",
+        "close": 164.8685,
+        "log_return": 0.011251,
+        "volume": 66650000
+      },
+      {
+        "date": "2020-08-21",
+        "close": 164.235992,
+        "log_return": -0.003844,
+        "volume": 71518000
+      },
+      {
+        "date": "2020-08-24",
+        "close": 165.373001,
+        "log_return": 0.006899,
+        "volume": 93326000
+      },
+      {
+        "date": "2020-08-25",
+        "close": 167.324493,
+        "log_return": 0.011731,
+        "volume": 79856000
+      },
+      {
+        "date": "2020-08-26",
+        "close": 172.092499,
+        "log_return": 0.028097,
+        "volume": 130174000
+      },
+      {
+        "date": "2020-08-27",
+        "close": 170.0,
+        "log_return": -0.012234,
+        "volume": 85296000
+      },
+      {
+        "date": "2020-08-28",
+        "close": 170.089996,
+        "log_return": 0.000529,
+        "volume": 57940000
+      },
+      {
+        "date": "2020-08-31",
+        "close": 172.548004,
+        "log_return": 0.014348,
+        "volume": 83718000
+      },
+      {
+        "date": "2020-09-01",
+        "close": 174.955994,
+        "log_return": 0.013859,
+        "volume": 68644000
+      },
+      {
+        "date": "2020-09-02",
+        "close": 176.572495,
+        "log_return": 0.009197,
+        "volume": 78630000
+      },
+      {
+        "date": "2020-09-03",
+        "close": 168.399994,
+        "log_return": -0.047389,
+        "volume": 163222000
+      },
+      {
+        "date": "2020-09-04",
+        "close": 164.731003,
+        "log_return": -0.022028,
+        "volume": 175636000
+      },
+      {
+        "date": "2020-09-08",
+        "close": 157.492004,
+        "log_return": -0.044939,
+        "volume": 121884000
+      },
+      {
+        "date": "2020-09-09",
+        "close": 163.430496,
+        "log_return": 0.037013,
+        "volume": 103774000
+      },
+      {
+        "date": "2020-09-10",
+        "close": 158.755493,
+        "log_return": -0.029023,
+        "volume": 106614000
+      },
+      {
+        "date": "2020-09-11",
+        "close": 155.811005,
+        "log_return": -0.018721,
+        "volume": 101880000
+      },
+      {
+        "date": "2020-09-14",
+        "close": 155.148499,
+        "log_return": -0.004261,
+        "volume": 90592000
+      },
+      {
+        "date": "2020-09-15",
+        "close": 157.806503,
+        "log_return": 0.016987,
+        "volume": 80430000
+      },
+      {
+        "date": "2020-09-16",
+        "close": 153.904999,
+        "log_return": -0.025034,
+        "volume": 90244000
+      },
+      {
+        "date": "2020-09-17",
+        "close": 150.436493,
+        "log_return": -0.022794,
+        "volume": 128982000
+      },
+      {
+        "date": "2020-09-18",
+        "close": 147.745499,
+        "log_return": -0.01805,
+        "volume": 177852000
+      },
+      {
+        "date": "2020-09-21",
+        "close": 148.023499,
+        "log_return": 0.00188,
+        "volume": 122358000
+      },
+      {
+        "date": "2020-09-22",
+        "close": 156.449493,
+        "log_return": 0.055362,
+        "volume": 138976000
+      },
+      {
+        "date": "2020-09-23",
+        "close": 149.992996,
+        "log_return": -0.042145,
+        "volume": 113054000
+      },
+      {
+        "date": "2020-09-24",
+        "close": 150.989502,
+        "log_return": 0.006622,
+        "volume": 110588000
+      },
+      {
+        "date": "2020-09-25",
+        "close": 154.7565,
+        "log_return": 0.024643,
+        "volume": 92304000
+      },
+      {
+        "date": "2020-09-28",
+        "close": 158.702499,
+        "log_return": 0.025178,
+        "volume": 84484000
+      },
+      {
+        "date": "2020-09-29",
+        "close": 157.244003,
+        "log_return": -0.009233,
+        "volume": 69916000
+      },
+      {
+        "date": "2020-09-30",
+        "close": 157.436493,
+        "log_return": 0.001223,
+        "volume": 97922000
+      },
+      {
+        "date": "2020-10-01",
+        "close": 161.063004,
+        "log_return": 0.022773,
+        "volume": 99438000
+      },
+      {
+        "date": "2020-10-02",
+        "close": 156.25,
+        "log_return": -0.030338,
+        "volume": 112262000
+      },
+      {
+        "date": "2020-10-05",
+        "close": 159.960007,
+        "log_return": 0.023467,
+        "volume": 75506000
+      },
+      {
+        "date": "2020-10-06",
+        "close": 154.998001,
+        "log_return": -0.031512,
+        "volume": 101738000
+      },
+      {
+        "date": "2020-10-07",
+        "close": 159.7845,
+        "log_return": 0.030414,
+        "volume": 86188000
+      },
+      {
+        "date": "2020-10-08",
+        "close": 159.527496,
+        "log_return": -0.00161,
+        "volume": 63482000
+      },
+      {
+        "date": "2020-10-09",
+        "close": 164.332504,
+        "log_return": 0.029676,
+        "volume": 98158000
+      },
+      {
+        "date": "2020-10-12",
+        "close": 172.1465,
+        "log_return": 0.046454,
+        "volume": 167284000
+      },
+      {
+        "date": "2020-10-13",
+        "close": 172.181503,
+        "log_return": 0.000203,
+        "volume": 114894000
+      },
+      {
+        "date": "2020-10-14",
+        "close": 168.185501,
+        "log_return": -0.023482,
+        "volume": 116254000
+      },
+      {
+        "date": "2020-10-15",
+        "close": 166.932495,
+        "log_return": -0.007478,
+        "volume": 104468000
+      },
+      {
+        "date": "2020-10-16",
+        "close": 163.635498,
+        "log_return": -0.019948,
+        "volume": 129488000
+      },
+      {
+        "date": "2020-10-19",
+        "close": 160.360504,
+        "log_return": -0.020217,
+        "volume": 104472000
+      },
+      {
+        "date": "2020-10-20",
+        "close": 160.850494,
+        "log_return": 0.003051,
+        "volume": 90194000
+      },
+      {
+        "date": "2020-10-21",
+        "close": 159.246994,
+        "log_return": -0.010019,
+        "volume": 91854000
+      },
+      {
+        "date": "2020-10-22",
+        "close": 158.820007,
+        "log_return": -0.002685,
+        "volume": 84240000
+      },
+      {
+        "date": "2020-10-23",
+        "close": 160.220001,
+        "log_return": 0.008776,
+        "volume": 69334000
+      },
+      {
+        "date": "2020-10-26",
+        "close": 160.352005,
+        "log_return": 0.000824,
+        "volume": 118024000
+      },
+      {
+        "date": "2020-10-27",
+        "close": 164.316498,
+        "log_return": 0.024423,
+        "volume": 85820000
+      },
+      {
+        "date": "2020-10-28",
+        "close": 158.139008,
+        "log_return": -0.03832,
+        "volume": 111766000
+      },
+      {
+        "date": "2020-10-29",
+        "close": 160.550507,
+        "log_return": 0.015134,
+        "volume": 131930000
+      },
+      {
+        "date": "2020-10-30",
+        "close": 151.807495,
+        "log_return": -0.055995,
+        "volume": 167728000
+      },
+      {
+        "date": "2020-11-02",
+        "close": 150.223999,
+        "log_return": -0.010486,
+        "volume": 145148000
+      },
+      {
+        "date": "2020-11-03",
+        "close": 152.420502,
+        "log_return": 0.014516,
+        "volume": 97958000
+      },
+      {
+        "date": "2020-11-04",
+        "close": 162.057999,
+        "log_return": 0.061311,
+        "volume": 136780000
+      },
+      {
+        "date": "2020-11-05",
+        "close": 166.100006,
+        "log_return": 0.024636,
+        "volume": 115786000
+      },
+      {
+        "date": "2020-11-06",
+        "close": 165.568497,
+        "log_return": -0.003205,
+        "volume": 92946000
+      },
+      {
+        "date": "2020-11-09",
+        "close": 157.186996,
+        "log_return": -0.051949,
+        "volume": 143808000
+      },
+      {
+        "date": "2020-11-10",
+        "close": 151.751007,
+        "log_return": -0.035195,
+        "volume": 131820000
+      },
+      {
+        "date": "2020-11-11",
+        "close": 156.869507,
+        "log_return": 0.033173,
+        "volume": 87338000
+      },
+      {
+        "date": "2020-11-12",
+        "close": 155.514008,
+        "log_return": -0.008678,
+        "volume": 87240000
+      },
+      {
+        "date": "2020-11-13",
+        "close": 156.440506,
+        "log_return": 0.00594,
+        "volume": 75124000
+      },
+      {
+        "date": "2020-11-16",
+        "close": 156.552994,
+        "log_return": 0.000719,
+        "volume": 76174000
+      },
+      {
+        "date": "2020-11-17",
+        "close": 156.783005,
+        "log_return": 0.001468,
+        "volume": 68894000
+      },
+      {
+        "date": "2020-11-18",
+        "close": 155.272995,
+        "log_return": -0.009678,
+        "volume": 58336000
+      },
+      {
+        "date": "2020-11-19",
+        "close": 155.850998,
+        "log_return": 0.003716,
+        "volume": 60206000
+      },
+      {
+        "date": "2020-11-20",
+        "close": 154.970001,
+        "log_return": -0.005669,
+        "volume": 67488000
+      },
+      {
+        "date": "2020-11-23",
+        "close": 154.919495,
+        "log_return": -0.000326,
+        "volume": 94178000
+      },
+      {
+        "date": "2020-11-24",
+        "close": 155.903,
+        "log_return": 0.006328,
+        "volume": 72042000
+      },
+      {
+        "date": "2020-11-25",
+        "close": 159.253494,
+        "log_return": 0.021263,
+        "volume": 75808000
+      },
+      {
+        "date": "2020-11-27",
+        "close": 159.766998,
+        "log_return": 0.003219,
+        "volume": 47858000
+      },
+      {
+        "date": "2020-11-30",
+        "close": 158.401993,
+        "log_return": -0.00858,
+        "volume": 81278000
+      },
+      {
+        "date": "2020-12-01",
+        "close": 161.003998,
+        "log_return": 0.016293,
+        "volume": 90740000
+      },
+      {
+        "date": "2020-12-02",
+        "close": 160.176498,
+        "log_return": -0.005153,
+        "volume": 62586000
+      },
+      {
+        "date": "2020-12-03",
+        "close": 159.336502,
+        "log_return": -0.005258,
+        "volume": 57840000
+      },
+      {
+        "date": "2020-12-04",
+        "close": 158.128998,
+        "log_return": -0.007607,
+        "volume": 58272000
+      },
+      {
+        "date": "2020-12-07",
+        "close": 157.899994,
+        "log_return": -0.001449,
+        "volume": 55026000
+      },
+      {
+        "date": "2020-12-08",
+        "close": 158.864502,
+        "log_return": 0.00609,
+        "volume": 65726000
+      },
+      {
+        "date": "2020-12-09",
+        "close": 155.210007,
+        "log_return": -0.023273,
+        "volume": 82016000
+      },
+      {
+        "date": "2020-12-10",
+        "close": 155.074493,
+        "log_return": -0.000873,
+        "volume": 60604000
+      },
+      {
+        "date": "2020-12-11",
+        "close": 155.820999,
+        "log_return": 0.004802,
+        "volume": 61294000
+      },
+      {
+        "date": "2020-12-14",
+        "close": 157.848495,
+        "log_return": 0.012928,
+        "volume": 83116000
+      },
+      {
+        "date": "2020-12-15",
+        "close": 158.255997,
+        "log_return": 0.002578,
+        "volume": 66390000
+      },
+      {
+        "date": "2020-12-16",
+        "close": 162.048004,
+        "log_return": 0.023679,
+        "volume": 88552000
+      },
+      {
+        "date": "2020-12-17",
+        "close": 161.804001,
+        "log_return": -0.001507,
+        "volume": 69486000
+      },
+      {
+        "date": "2020-12-18",
+        "close": 160.082504,
+        "log_return": -0.010696,
+        "volume": 119914000
+      },
+      {
+        "date": "2020-12-21",
+        "close": 160.309006,
+        "log_return": 0.001414,
+        "volume": 76736000
+      },
+      {
+        "date": "2020-12-22",
+        "close": 160.326004,
+        "log_return": 0.000106,
+        "volume": 47388000
+      },
+      {
+        "date": "2020-12-23",
+        "close": 159.263504,
+        "log_return": -0.006649,
+        "volume": 41876000
+      },
+      {
+        "date": "2020-12-24",
+        "close": 158.634506,
+        "log_return": -0.003957,
+        "volume": 29038000
+      },
+      {
+        "date": "2020-12-28",
+        "close": 164.197998,
+        "log_return": 0.03447,
+        "volume": 113736000
+      },
+      {
+        "date": "2020-12-29",
+        "close": 166.100006,
+        "log_return": 0.011517,
+        "volume": 97458000
+      },
+      {
+        "date": "2020-12-30",
+        "close": 164.292496,
+        "log_return": -0.010942,
+        "volume": 64186000
+      }
+    ],
+    "GOOGL": [
+      {
+        "date": "2020-07-13",
+        "close": 74.991699,
+        "log_return": -0.017554,
+        "volume": 42954000
+      },
+      {
+        "date": "2020-07-14",
+        "close": 75.419662,
+        "log_return": 0.005691,
+        "volume": 38108000
+      },
+      {
+        "date": "2020-07-15",
+        "close": 75.22229,
+        "log_return": -0.00262,
+        "volume": 31026000
+      },
+      {
+        "date": "2020-07-16",
+        "close": 75.125092,
+        "log_return": -0.001293,
+        "volume": 26484000
+      },
+      {
+        "date": "2020-07-17",
+        "close": 75.220802,
+        "log_return": 0.001273,
+        "volume": 34264000
+      },
+      {
+        "date": "2020-07-20",
+        "close": 77.551041,
+        "log_return": 0.030508,
+        "volume": 30166000
+      },
+      {
+        "date": "2020-07-21",
+        "close": 77.158279,
+        "log_return": -0.005077,
+        "volume": 27486000
+      },
+      {
+        "date": "2020-07-22",
+        "close": 77.601128,
+        "log_return": 0.005723,
+        "volume": 24482000
+      },
+      {
+        "date": "2020-07-23",
+        "close": 75.215851,
+        "log_return": -0.03122,
+        "volume": 33910000
+      },
+      {
+        "date": "2020-07-24",
+        "close": 74.792336,
+        "log_return": -0.005647,
+        "volume": 29902000
+      },
+      {
+        "date": "2020-07-27",
+        "close": 75.84465,
+        "log_return": 0.013972,
+        "volume": 27124000
+      },
+      {
+        "date": "2020-07-28",
+        "close": 74.566223,
+        "log_return": -0.017,
+        "volume": 30910000
+      },
+      {
+        "date": "2020-07-29",
+        "close": 75.551064,
+        "log_return": 0.013121,
+        "volume": 22676000
+      },
+      {
+        "date": "2020-07-30",
+        "close": 76.287994,
+        "log_return": 0.009707,
+        "volume": 36042000
+      },
+      {
+        "date": "2020-07-31",
+        "close": 73.787651,
+        "log_return": -0.033324,
+        "volume": 91468000
+      },
+      {
+        "date": "2020-08-03",
+        "close": 73.530273,
+        "log_return": -0.003494,
+        "volume": 45482000
+      },
+      {
+        "date": "2020-08-04",
+        "close": 73.061157,
+        "log_return": -0.0064,
+        "volume": 37212000
+      },
+      {
+        "date": "2020-08-05",
+        "close": 73.348267,
+        "log_return": 0.003922,
+        "volume": 29134000
+      },
+      {
+        "date": "2020-08-06",
+        "close": 74.630676,
+        "log_return": 0.017333,
+        "volume": 33306000
+      },
+      {
+        "date": "2020-08-07",
+        "close": 74.304367,
+        "log_return": -0.004382,
+        "volume": 27718000
+      },
+      {
+        "date": "2020-08-10",
+        "close": 74.227509,
+        "log_return": -0.001035,
+        "volume": 20546000
+      },
+      {
+        "date": "2020-08-11",
+        "close": 73.420181,
+        "log_return": -0.010936,
+        "volume": 31098000
+      },
+      {
+        "date": "2020-08-12",
+        "close": 74.744247,
+        "log_return": 0.017873,
+        "volume": 22512000
+      },
+      {
+        "date": "2020-08-13",
+        "close": 75.210869,
+        "log_return": 0.006224,
+        "volume": 22388000
+      },
+      {
+        "date": "2020-08-14",
+        "close": 74.614807,
+        "log_return": -0.007957,
+        "volume": 21942000
+      },
+      {
+        "date": "2020-08-17",
+        "close": 75.190552,
+        "log_return": 0.007687,
+        "volume": 19990000
+      },
+      {
+        "date": "2020-08-18",
+        "close": 77.151352,
+        "log_return": 0.025744,
+        "volume": 28378000
+      },
+      {
+        "date": "2020-08-19",
+        "close": 76.59742,
+        "log_return": -0.007206,
+        "volume": 30472000
+      },
+      {
+        "date": "2020-08-20",
+        "close": 78.166458,
+        "log_return": 0.020277,
+        "volume": 26382000
+      },
+      {
+        "date": "2020-08-21",
+        "close": 78.132744,
+        "log_return": -0.000431,
+        "volume": 34838000
+      },
+      {
+        "date": "2020-08-24",
+        "close": 78.607819,
+        "log_return": 0.006062,
+        "volume": 25638000
+      },
+      {
+        "date": "2020-08-25",
+        "close": 79.634323,
+        "log_return": 0.012974,
+        "volume": 25150000
+      },
+      {
+        "date": "2020-08-26",
+        "close": 81.532623,
+        "log_return": 0.023558,
+        "volume": 52188000
+      },
+      {
+        "date": "2020-08-27",
+        "close": 80.75853,
+        "log_return": -0.00954,
+        "volume": 31350000
+      },
+      {
+        "date": "2020-08-28",
+        "close": 81.299553,
+        "log_return": 0.006677,
+        "volume": 22418000
+      },
+      {
+        "date": "2020-08-31",
+        "close": 80.808624,
+        "log_return": -0.006057,
+        "volume": 26422000
+      },
+      {
+        "date": "2020-09-01",
+        "close": 82.075645,
+        "log_return": 0.015558,
+        "volume": 22652000
+      },
+      {
+        "date": "2020-09-02",
+        "close": 85.165619,
+        "log_return": 0.036956,
+        "volume": 49522000
+      },
+      {
+        "date": "2020-09-03",
+        "close": 80.807632,
+        "log_return": -0.052526,
+        "volume": 63726000
+      },
+      {
+        "date": "2020-09-04",
+        "close": 78.412422,
+        "log_return": -0.030089,
+        "volume": 55850000
+      },
+      {
+        "date": "2020-09-08",
+        "close": 75.555527,
+        "log_return": -0.037115,
+        "volume": 54032000
+      },
+      {
+        "date": "2020-09-09",
+        "close": 76.727348,
+        "log_return": 0.01539,
+        "volume": 39242000
+      },
+      {
+        "date": "2020-09-10",
+        "close": 75.677017,
+        "log_return": -0.013784,
+        "volume": 33024000
+      },
+      {
+        "date": "2020-09-11",
+        "close": 75.16674,
+        "log_return": -0.006766,
+        "volume": 30706000
+      },
+      {
+        "date": "2020-09-14",
+        "close": 74.82309,
+        "log_return": -0.004582,
+        "volume": 42660000
+      },
+      {
+        "date": "2020-09-15",
+        "close": 76.126816,
+        "log_return": 0.017274,
+        "volume": 23042000
+      },
+      {
+        "date": "2020-09-16",
+        "close": 74.984764,
+        "log_return": -0.015116,
+        "volume": 22128000
+      },
+      {
+        "date": "2020-09-17",
+        "close": 73.742516,
+        "log_return": -0.016705,
+        "volume": 40008000
+      },
+      {
+        "date": "2020-09-18",
+        "close": 71.95974,
+        "log_return": -0.024473,
+        "volume": 63056000
+      },
+      {
+        "date": "2020-09-21",
+        "close": 70.920837,
+        "log_return": -0.014543,
+        "volume": 56908000
+      },
+      {
+        "date": "2020-09-22",
+        "close": 72.392662,
+        "log_return": 0.020541,
+        "volume": 33950000
+      },
+      {
+        "date": "2020-09-23",
+        "close": 69.891838,
+        "log_return": -0.035156,
+        "volume": 37726000
+      },
+      {
+        "date": "2020-09-24",
+        "close": 70.559822,
+        "log_return": 0.009512,
+        "volume": 34552000
+      },
+      {
+        "date": "2020-09-25",
+        "close": 71.36319,
+        "log_return": 0.011321,
+        "volume": 30326000
+      },
+      {
+        "date": "2020-09-28",
+        "close": 72.335152,
+        "log_return": 0.013528,
+        "volume": 30784000
+      },
+      {
+        "date": "2020-09-29",
+        "close": 72.700134,
+        "log_return": 0.005033,
+        "volume": 31816000
+      },
+      {
+        "date": "2020-09-30",
+        "close": 72.679321,
+        "log_return": -0.000286,
+        "volume": 40924000
+      },
+      {
+        "date": "2020-10-01",
+        "close": 73.785164,
+        "log_return": 0.015101,
+        "volume": 32884000
+      },
+      {
+        "date": "2020-10-02",
+        "close": 72.183411,
+        "log_return": -0.021947,
+        "volume": 31222000
+      },
+      {
+        "date": "2020-10-05",
+        "close": 73.533745,
+        "log_return": 0.018534,
+        "volume": 21602000
+      },
+      {
+        "date": "2020-10-06",
+        "close": 71.956291,
+        "log_return": -0.021686,
+        "volume": 26096000
+      },
+      {
+        "date": "2020-10-07",
+        "close": 72.358955,
+        "log_return": 0.00558,
+        "volume": 36108000
+      },
+      {
+        "date": "2020-10-08",
+        "close": 73.563499,
+        "log_return": 0.01651,
+        "volume": 26076000
+      },
+      {
+        "date": "2020-10-09",
+        "close": 74.903427,
+        "log_return": 0.018051,
+        "volume": 32966000
+      },
+      {
+        "date": "2020-10-12",
+        "close": 77.588234,
+        "log_return": 0.035216,
+        "volume": 55344000
+      },
+      {
+        "date": "2020-10-13",
+        "close": 77.71122,
+        "log_return": 0.001584,
+        "volume": 39072000
+      },
+      {
+        "date": "2020-10-14",
+        "close": 77.531204,
+        "log_return": -0.002319,
+        "volume": 33174000
+      },
+      {
+        "date": "2020-10-15",
+        "close": 77.135963,
+        "log_return": -0.005111,
+        "volume": 31210000
+      },
+      {
+        "date": "2020-10-16",
+        "close": 77.742455,
+        "log_return": 0.007832,
+        "volume": 34194000
+      },
+      {
+        "date": "2020-10-19",
+        "close": 75.87043,
+        "log_return": -0.024374,
+        "volume": 29734000
+      },
+      {
+        "date": "2020-10-20",
+        "close": 76.918282,
+        "log_return": 0.013717,
+        "volume": 41670000
+      },
+      {
+        "date": "2020-10-21",
+        "close": 78.64946,
+        "log_return": 0.022257,
+        "volume": 60322000
+      },
+      {
+        "date": "2020-10-22",
+        "close": 79.674492,
+        "log_return": 0.012949,
+        "volume": 30512000
+      },
+      {
+        "date": "2020-10-23",
+        "close": 80.979713,
+        "log_return": 0.016249,
+        "volume": 30548000
+      },
+      {
+        "date": "2020-10-26",
+        "close": 78.565155,
+        "log_return": -0.03027,
+        "volume": 35826000
+      },
+      {
+        "date": "2020-10-27",
+        "close": 79.288689,
+        "log_return": 0.009167,
+        "volume": 25902000
+      },
+      {
+        "date": "2020-10-28",
+        "close": 74.920776,
+        "log_return": -0.056664,
+        "volume": 45174000
+      },
+      {
+        "date": "2020-10-29",
+        "close": 77.205894,
+        "log_return": 0.030045,
+        "volume": 55406000
+      },
+      {
+        "date": "2020-10-30",
+        "close": 80.14312,
+        "log_return": 0.037338,
+        "volume": 99878000
+      },
+      {
+        "date": "2020-11-02",
+        "close": 80.550255,
+        "log_return": 0.005067,
+        "volume": 44228000
+      },
+      {
+        "date": "2020-11-03",
+        "close": 81.608498,
+        "log_return": 0.013052,
+        "volume": 31432000
+      },
+      {
+        "date": "2020-11-04",
+        "close": 86.57695,
+        "log_return": 0.0591,
+        "volume": 71342000
+      },
+      {
+        "date": "2020-11-05",
+        "close": 87.402618,
+        "log_return": 0.009492,
+        "volume": 39758000
+      },
+      {
+        "date": "2020-11-06",
+        "close": 87.265251,
+        "log_return": -0.001573,
+        "volume": 28622000
+      },
+      {
+        "date": "2020-11-09",
+        "close": 87.349052,
+        "log_return": 0.00096,
+        "volume": 53440000
+      },
+      {
+        "date": "2020-11-10",
+        "close": 86.173775,
+        "log_return": -0.013546,
+        "volume": 43022000
+      },
+      {
+        "date": "2020-11-11",
+        "close": 86.645386,
+        "log_return": 0.005458,
+        "volume": 31838000
+      },
+      {
+        "date": "2020-11-12",
+        "close": 86.426674,
+        "log_return": -0.002527,
+        "volume": 26474000
+      },
+      {
+        "date": "2020-11-13",
+        "close": 87.88662,
+        "log_return": 0.016751,
+        "volume": 29744000
+      },
+      {
+        "date": "2020-11-16",
+        "close": 87.974396,
+        "log_return": 0.000998,
+        "volume": 25468000
+      },
+      {
+        "date": "2020-11-17",
+        "close": 87.360954,
+        "log_return": -0.006997,
+        "volume": 21314000
+      },
+      {
+        "date": "2020-11-18",
+        "close": 86.318581,
+        "log_return": -0.012004,
+        "volume": 20108000
+      },
+      {
+        "date": "2020-11-19",
+        "close": 87.207726,
+        "log_return": 0.010248,
+        "volume": 20106000
+      },
+      {
+        "date": "2020-11-20",
+        "close": 86.107323,
+        "log_return": -0.012698,
+        "volume": 27694000
+      },
+      {
+        "date": "2020-11-23",
+        "close": 85.669922,
+        "log_return": -0.005093,
+        "volume": 22530000
+      },
+      {
+        "date": "2020-11-24",
+        "close": 87.472046,
+        "log_return": 0.020817,
+        "volume": 27984000
+      },
+      {
+        "date": "2020-11-25",
+        "close": 87.483452,
+        "log_return": 0.00013,
+        "volume": 19600000
+      },
+      {
+        "date": "2020-11-27",
+        "close": 88.618553,
+        "log_return": 0.012892,
+        "volume": 14790000
+      },
+      {
+        "date": "2020-11-30",
+        "close": 87.000946,
+        "log_return": -0.018422,
+        "volume": 32418000
+      },
+      {
+        "date": "2020-12-01",
+        "close": 89.032158,
+        "log_return": 0.023079,
+        "volume": 37350000
+      },
+      {
+        "date": "2020-12-02",
+        "close": 90.500504,
+        "log_return": 0.016358,
+        "volume": 29424000
+      },
+      {
+        "date": "2020-12-03",
+        "close": 90.345306,
+        "log_return": -0.001716,
+        "volume": 24728000
+      },
+      {
+        "date": "2020-12-04",
+        "close": 90.440529,
+        "log_return": 0.001053,
+        "volume": 20544000
+      },
+      {
+        "date": "2020-12-07",
+        "close": 90.106781,
+        "log_return": -0.003697,
+        "volume": 22288000
+      },
+      {
+        "date": "2020-12-08",
+        "close": 89.824104,
+        "log_return": -0.003142,
+        "volume": 19936000
+      },
+      {
+        "date": "2020-12-09",
+        "close": 88.164322,
+        "log_return": -0.018651,
+        "volume": 31728000
+      },
+      {
+        "date": "2020-12-10",
+        "close": 87.658012,
+        "log_return": -0.005759,
+        "volume": 28688000
+      },
+      {
+        "date": "2020-12-11",
+        "close": 88.012573,
+        "log_return": 0.004037,
+        "volume": 18628000
+      },
+      {
+        "date": "2020-12-14",
+        "close": 86.894821,
+        "log_return": -0.012781,
+        "volume": 33050000
+      },
+      {
+        "date": "2020-12-15",
+        "close": 87.332207,
+        "log_return": 0.005021,
+        "volume": 21352000
+      },
+      {
+        "date": "2020-12-16",
+        "close": 87.139305,
+        "log_return": -0.002211,
+        "volume": 24676000
+      },
+      {
+        "date": "2020-12-17",
+        "close": 86.312134,
+        "log_return": -0.009538,
+        "volume": 34880000
+      },
+      {
+        "date": "2020-12-18",
+        "close": 85.603485,
+        "log_return": -0.008244,
+        "volume": 85256000
+      },
+      {
+        "date": "2020-12-21",
+        "close": 86.017067,
+        "log_return": 0.00482,
+        "volume": 33974000
+      },
+      {
+        "date": "2020-12-22",
+        "close": 85.305954,
+        "log_return": -0.008301,
+        "volume": 20370000
+      },
+      {
+        "date": "2020-12-23",
+        "close": 85.703148,
+        "log_return": 0.004645,
+        "volume": 22974000
+      },
+      {
+        "date": "2020-12-24",
+        "close": 85.997238,
+        "log_return": 0.003426,
+        "volume": 9312000
+      },
+      {
+        "date": "2020-12-28",
+        "close": 87.970917,
+        "log_return": 0.022691,
+        "volume": 27650000
+      },
+      {
+        "date": "2020-12-29",
+        "close": 87.167557,
+        "log_return": -0.009174,
+        "volume": 19726000
+      },
+      {
+        "date": "2020-12-30",
+        "close": 86.100868,
+        "log_return": -0.012313,
+        "volume": 21026000
+      }
+    ],
+    "INTC": [
+      {
+        "date": "2020-07-13",
+        "close": 52.220741,
+        "log_return": -0.016087,
+        "volume": 19082900
+      },
+      {
+        "date": "2020-07-14",
+        "close": 52.577312,
+        "log_return": 0.006805,
+        "volume": 24190900
+      },
+      {
+        "date": "2020-07-15",
+        "close": 52.621899,
+        "log_return": 0.000848,
+        "volume": 19986300
+      },
+      {
+        "date": "2020-07-16",
+        "close": 52.719944,
+        "log_return": 0.001861,
+        "volume": 12425900
+      },
+      {
+        "date": "2020-07-17",
+        "close": 53.486584,
+        "log_return": 0.014437,
+        "volume": 16322800
+      },
+      {
+        "date": "2020-07-20",
+        "close": 54.511738,
+        "log_return": 0.018985,
+        "volume": 16868700
+      },
+      {
+        "date": "2020-07-21",
+        "close": 54.110596,
+        "log_return": -0.007386,
+        "volume": 19803700
+      },
+      {
+        "date": "2020-07-22",
+        "close": 54.422596,
+        "log_return": 0.005749,
+        "volume": 18959900
+      },
+      {
+        "date": "2020-07-23",
+        "close": 53.843163,
+        "log_return": -0.010704,
+        "volume": 43518600
+      },
+      {
+        "date": "2020-07-24",
+        "close": 45.098106,
+        "log_return": -0.177235,
+        "volume": 182269900
+      },
+      {
+        "date": "2020-07-27",
+        "close": 44.188828,
+        "log_return": -0.020368,
+        "volume": 107526500
+      },
+      {
+        "date": "2020-07-28",
+        "close": 43.894665,
+        "log_return": -0.006679,
+        "volume": 62362600
+      },
+      {
+        "date": "2020-07-29",
+        "close": 42.851673,
+        "log_return": -0.024048,
+        "volume": 60500800
+      },
+      {
+        "date": "2020-07-30",
+        "close": 42.780354,
+        "log_return": -0.001666,
+        "volume": 39735200
+      },
+      {
+        "date": "2020-07-31",
+        "close": 42.548576,
+        "log_return": -0.005433,
+        "volume": 46536000
+      },
+      {
+        "date": "2020-08-03",
+        "close": 43.056702,
+        "log_return": 0.011871,
+        "volume": 31767100
+      },
+      {
+        "date": "2020-08-04",
+        "close": 43.796597,
+        "log_return": 0.017038,
+        "volume": 29045800
+      },
+      {
+        "date": "2020-08-05",
+        "close": 43.609394,
+        "log_return": -0.004284,
+        "volume": 29438600
+      },
+      {
+        "date": "2020-08-06",
+        "close": 43.59145,
+        "log_return": -0.000412,
+        "volume": 23795500
+      },
+      {
+        "date": "2020-08-07",
+        "close": 43.106792,
+        "log_return": -0.01118,
+        "volume": 36765200
+      },
+      {
+        "date": "2020-08-10",
+        "close": 44.174816,
+        "log_return": 0.024474,
+        "volume": 37442600
+      },
+      {
+        "date": "2020-08-11",
+        "close": 43.250401,
+        "log_return": -0.021148,
+        "volume": 35348100
+      },
+      {
+        "date": "2020-08-12",
+        "close": 44.147888,
+        "log_return": 0.020539,
+        "volume": 30659800
+      },
+      {
+        "date": "2020-08-13",
+        "close": 43.58247,
+        "log_return": -0.01289,
+        "volume": 24774500
+      },
+      {
+        "date": "2020-08-14",
+        "close": 43.878643,
+        "log_return": 0.006773,
+        "volume": 22321200
+      },
+      {
+        "date": "2020-08-17",
+        "close": 43.914539,
+        "log_return": 0.000818,
+        "volume": 20018300
+      },
+      {
+        "date": "2020-08-18",
+        "close": 43.663242,
+        "log_return": -0.005739,
+        "volume": 19251400
+      },
+      {
+        "date": "2020-08-19",
+        "close": 43.376053,
+        "log_return": -0.006599,
+        "volume": 27775000
+      },
+      {
+        "date": "2020-08-20",
+        "close": 44.129944,
+        "log_return": 0.017231,
+        "volume": 55081300
+      },
+      {
+        "date": "2020-08-21",
+        "close": 44.228661,
+        "log_return": 0.002234,
+        "volume": 34621500
+      },
+      {
+        "date": "2020-08-24",
+        "close": 44.103024,
+        "log_return": -0.002845,
+        "volume": 36295300
+      },
+      {
+        "date": "2020-08-25",
+        "close": 44.363293,
+        "log_return": 0.005884,
+        "volume": 38384300
+      },
+      {
+        "date": "2020-08-26",
+        "close": 44.470997,
+        "log_return": 0.002425,
+        "volume": 28616600
+      },
+      {
+        "date": "2020-08-27",
+        "close": 44.336376,
+        "log_return": -0.003032,
+        "volume": 24420600
+      },
+      {
+        "date": "2020-08-28",
+        "close": 45.260796,
+        "log_return": 0.020636,
+        "volume": 35384700
+      },
+      {
+        "date": "2020-08-31",
+        "close": 45.727493,
+        "log_return": 0.010259,
+        "volume": 46114100
+      },
+      {
+        "date": "2020-09-01",
+        "close": 45.583893,
+        "log_return": -0.003145,
+        "volume": 30472800
+      },
+      {
+        "date": "2020-09-02",
+        "close": 46.894234,
+        "log_return": 0.02834,
+        "volume": 53000700
+      },
+      {
+        "date": "2020-09-03",
+        "close": 45.224888,
+        "log_return": -0.036247,
+        "volume": 47394300
+      },
+      {
+        "date": "2020-09-04",
+        "close": 44.946667,
+        "log_return": -0.006171,
+        "volume": 43318400
+      },
+      {
+        "date": "2020-09-08",
+        "close": 43.896587,
+        "log_return": -0.02364,
+        "volume": 39752700
+      },
+      {
+        "date": "2020-09-09",
+        "close": 44.533821,
+        "log_return": 0.014412,
+        "volume": 33437300
+      },
+      {
+        "date": "2020-09-10",
+        "close": 43.941471,
+        "log_return": -0.01339,
+        "volume": 32649100
+      },
+      {
+        "date": "2020-09-11",
+        "close": 44.228661,
+        "log_return": 0.006514,
+        "volume": 29333600
+      },
+      {
+        "date": "2020-09-14",
+        "close": 44.345345,
+        "log_return": 0.002635,
+        "volume": 27212500
+      },
+      {
+        "date": "2020-09-15",
+        "close": 44.874866,
+        "log_return": 0.01187,
+        "volume": 27598300
+      },
+      {
+        "date": "2020-09-16",
+        "close": 45.206936,
+        "log_return": 0.007373,
+        "volume": 26531400
+      },
+      {
+        "date": "2020-09-17",
+        "close": 45.162071,
+        "log_return": -0.000993,
+        "volume": 26959900
+      },
+      {
+        "date": "2020-09-18",
+        "close": 44.77615,
+        "log_return": -0.008582,
+        "volume": 50123500
+      },
+      {
+        "date": "2020-09-21",
+        "close": 44.623566,
+        "log_return": -0.003414,
+        "volume": 27377100
+      },
+      {
+        "date": "2020-09-22",
+        "close": 44.829994,
+        "log_return": 0.004615,
+        "volume": 22290900
+      },
+      {
+        "date": "2020-09-23",
+        "close": 43.815815,
+        "log_return": -0.022883,
+        "volume": 30078800
+      },
+      {
+        "date": "2020-09-24",
+        "close": 44.120968,
+        "log_return": 0.00694,
+        "volume": 29343400
+      },
+      {
+        "date": "2020-09-25",
+        "close": 44.821011,
+        "log_return": 0.015742,
+        "volume": 26633400
+      },
+      {
+        "date": "2020-09-28",
+        "close": 46.158291,
+        "log_return": 0.0294,
+        "volume": 29652200
+      },
+      {
+        "date": "2020-09-29",
+        "close": 45.942883,
+        "log_return": -0.004678,
+        "volume": 19558200
+      },
+      {
+        "date": "2020-09-30",
+        "close": 46.472408,
+        "log_return": 0.01146,
+        "volume": 27711300
+      },
+      {
+        "date": "2020-10-01",
+        "close": 46.885265,
+        "log_return": 0.008845,
+        "volume": 22127600
+      },
+      {
+        "date": "2020-10-02",
+        "close": 45.781338,
+        "log_return": -0.023827,
+        "volume": 25811800
+      },
+      {
+        "date": "2020-10-05",
+        "close": 46.391632,
+        "log_return": 0.013243,
+        "volume": 20883200
+      },
+      {
+        "date": "2020-10-06",
+        "close": 46.104435,
+        "log_return": -0.00621,
+        "volume": 25642800
+      },
+      {
+        "date": "2020-10-07",
+        "close": 47.271179,
+        "log_return": 0.024992,
+        "volume": 21978700
+      },
+      {
+        "date": "2020-10-08",
+        "close": 47.899441,
+        "log_return": 0.013203,
+        "volume": 22369500
+      },
+      {
+        "date": "2020-10-09",
+        "close": 47.405804,
+        "log_return": -0.010359,
+        "volume": 24343900
+      },
+      {
+        "date": "2020-10-12",
+        "close": 48.357162,
+        "log_return": 0.01987,
+        "volume": 27303500
+      },
+      {
+        "date": "2020-10-13",
+        "close": 48.312286,
+        "log_return": -0.000928,
+        "volume": 20005800
+      },
+      {
+        "date": "2020-10-14",
+        "close": 48.060986,
+        "log_return": -0.005215,
+        "volume": 21874200
+      },
+      {
+        "date": "2020-10-15",
+        "close": 48.330235,
+        "log_return": 0.005587,
+        "volume": 18272900
+      },
+      {
+        "date": "2020-10-16",
+        "close": 48.608459,
+        "log_return": 0.00574,
+        "volume": 23414400
+      },
+      {
+        "date": "2020-10-19",
+        "close": 48.985405,
+        "log_return": 0.007725,
+        "volume": 43537200
+      },
+      {
+        "date": "2020-10-20",
+        "close": 47.953285,
+        "log_return": -0.021295,
+        "volume": 27224900
+      },
+      {
+        "date": "2020-10-21",
+        "close": 48.016109,
+        "log_return": 0.001309,
+        "volume": 21866000
+      },
+      {
+        "date": "2020-10-22",
+        "close": 48.375114,
+        "log_return": 0.007449,
+        "volume": 41522700
+      },
+      {
+        "date": "2020-10-23",
+        "close": 43.259373,
+        "log_return": -0.111772,
+        "volume": 97322500
+      },
+      {
+        "date": "2020-10-26",
+        "close": 41.93108,
+        "log_return": -0.031187,
+        "volume": 54161300
+      },
+      {
+        "date": "2020-10-27",
+        "close": 40.961788,
+        "log_return": -0.023388,
+        "volume": 50130500
+      },
+      {
+        "date": "2020-10-28",
+        "close": 39.71426,
+        "log_return": -0.030929,
+        "volume": 45066000
+      },
+      {
+        "date": "2020-10-29",
+        "close": 39.588608,
+        "log_return": -0.003169,
+        "volume": 36796800
+      },
+      {
+        "date": "2020-10-30",
+        "close": 39.741177,
+        "log_return": 0.003846,
+        "volume": 46781300
+      },
+      {
+        "date": "2020-11-02",
+        "close": 39.902729,
+        "log_return": 0.004057,
+        "volume": 33856700
+      },
+      {
+        "date": "2020-11-03",
+        "close": 40.252758,
+        "log_return": 0.008734,
+        "volume": 34349500
+      },
+      {
+        "date": "2020-11-04",
+        "close": 41.015625,
+        "log_return": 0.018775,
+        "volume": 34748200
+      },
+      {
+        "date": "2020-11-05",
+        "close": 41.295879,
+        "log_return": 0.00681,
+        "volume": 31103200
+      },
+      {
+        "date": "2020-11-06",
+        "close": 41.03371,
+        "log_return": -0.006369,
+        "volume": 36233700
+      },
+      {
+        "date": "2020-11-09",
+        "close": 41.223553,
+        "log_return": 0.004616,
+        "volume": 48481700
+      },
+      {
+        "date": "2020-11-10",
+        "close": 41.078911,
+        "log_return": -0.003515,
+        "volume": 39224500
+      },
+      {
+        "date": "2020-11-11",
+        "close": 41.901569,
+        "log_return": 0.019828,
+        "volume": 31496900
+      },
+      {
+        "date": "2020-11-12",
+        "close": 40.635941,
+        "log_return": -0.03067,
+        "volume": 42881300
+      },
+      {
+        "date": "2020-11-13",
+        "close": 41.096989,
+        "log_return": 0.011282,
+        "volume": 30884700
+      },
+      {
+        "date": "2020-11-16",
+        "close": 41.756927,
+        "log_return": 0.015931,
+        "volume": 36306300
+      },
+      {
+        "date": "2020-11-17",
+        "close": 41.160286,
+        "log_return": -0.014392,
+        "volume": 31118000
+      },
+      {
+        "date": "2020-11-18",
+        "close": 40.73539,
+        "log_return": -0.010377,
+        "volume": 32817900
+      },
+      {
+        "date": "2020-11-19",
+        "close": 41.241631,
+        "log_return": 0.012351,
+        "volume": 29469100
+      },
+      {
+        "date": "2020-11-20",
+        "close": 41.03371,
+        "log_return": -0.005054,
+        "volume": 24199300
+      },
+      {
+        "date": "2020-11-23",
+        "close": 41.639408,
+        "log_return": 0.014653,
+        "volume": 35489600
+      },
+      {
+        "date": "2020-11-24",
+        "close": 42.498226,
+        "log_return": 0.020415,
+        "volume": 33901200
+      },
+      {
+        "date": "2020-11-25",
+        "close": 42.534382,
+        "log_return": 0.00085,
+        "volume": 28126900
+      },
+      {
+        "date": "2020-11-27",
+        "close": 42.896,
+        "log_return": 0.008466,
+        "volume": 15921400
+      },
+      {
+        "date": "2020-11-30",
+        "close": 43.709618,
+        "log_return": 0.01879,
+        "volume": 46332700
+      },
+      {
+        "date": "2020-12-01",
+        "close": 44.803493,
+        "log_return": 0.024718,
+        "volume": 57768000
+      },
+      {
+        "date": "2020-12-02",
+        "close": 45.110859,
+        "log_return": 0.006837,
+        "volume": 33753500
+      },
+      {
+        "date": "2020-12-03",
+        "close": 46.096249,
+        "log_return": 0.021609,
+        "volume": 50261200
+      },
+      {
+        "date": "2020-12-04",
+        "close": 47.000282,
+        "log_return": 0.019422,
+        "volume": 39767700
+      },
+      {
+        "date": "2020-12-07",
+        "close": 45.382072,
+        "log_return": -0.035036,
+        "volume": 51040300
+      },
+      {
+        "date": "2020-12-08",
+        "close": 45.825043,
+        "log_return": 0.009714,
+        "volume": 28956500
+      },
+      {
+        "date": "2020-12-09",
+        "close": 45.264545,
+        "log_return": -0.012307,
+        "volume": 34068400
+      },
+      {
+        "date": "2020-12-10",
+        "close": 45.43631,
+        "log_return": 0.003787,
+        "volume": 33706000
+      },
+      {
+        "date": "2020-12-11",
+        "close": 44.957184,
+        "log_return": -0.010601,
+        "volume": 29398800
+      },
+      {
+        "date": "2020-12-14",
+        "close": 45.626156,
+        "log_return": 0.014771,
+        "volume": 33436400
+      },
+      {
+        "date": "2020-12-15",
+        "close": 45.806961,
+        "log_return": 0.003955,
+        "volume": 25465600
+      },
+      {
+        "date": "2020-12-16",
+        "close": 46.213776,
+        "log_return": 0.008842,
+        "volume": 28351000
+      },
+      {
+        "date": "2020-12-17",
+        "close": 45.788876,
+        "log_return": -0.009237,
+        "volume": 26399000
+      },
+      {
+        "date": "2020-12-18",
+        "close": 42.905037,
+        "log_return": -0.065052,
+        "volume": 119298400
+      },
+      {
+        "date": "2020-12-21",
+        "close": 41.910614,
+        "log_return": -0.02345,
+        "volume": 53775700
+      },
+      {
+        "date": "2020-12-22",
+        "close": 41.738842,
+        "log_return": -0.004107,
+        "volume": 32171200
+      },
+      {
+        "date": "2020-12-23",
+        "close": 42.10046,
+        "log_return": 0.008627,
+        "volume": 22564200
+      },
+      {
+        "date": "2020-12-24",
+        "close": 42.552471,
+        "log_return": 0.010679,
+        "volume": 11865600
+      },
+      {
+        "date": "2020-12-28",
+        "close": 42.552471,
+        "log_return": 0.0,
+        "volume": 21269200
+      },
+      {
+        "date": "2020-12-29",
+        "close": 44.649811,
+        "log_return": 0.048112,
+        "volume": 84531400
+      },
+      {
+        "date": "2020-12-30",
+        "close": 44.071236,
+        "log_return": -0.013043,
+        "volume": 37385400
+      }
+    ],
+    "META": [
+      {
+        "date": "2020-07-13",
+        "close": 237.139038,
+        "log_return": -0.02508,
+        "volume": 24674900
+      },
+      {
+        "date": "2020-07-14",
+        "close": 237.863373,
+        "log_return": 0.00305,
+        "volume": 23378100
+      },
+      {
+        "date": "2020-07-15",
+        "close": 238.409103,
+        "log_return": 0.002292,
+        "volume": 19133600
+      },
+      {
+        "date": "2020-07-16",
+        "close": 239.054047,
+        "log_return": 0.002702,
+        "volume": 18880700
+      },
+      {
+        "date": "2020-07-17",
+        "close": 240.145477,
+        "log_return": 0.004555,
+        "volume": 18152400
+      },
+      {
+        "date": "2020-07-20",
+        "close": 243.509079,
+        "log_return": 0.013909,
+        "volume": 20872200
+      },
+      {
+        "date": "2020-07-21",
+        "close": 239.867645,
+        "log_return": -0.015067,
+        "volume": 19364200
+      },
+      {
+        "date": "2020-07-22",
+        "close": 238.002289,
+        "log_return": -0.007807,
+        "volume": 15427900
+      },
+      {
+        "date": "2020-07-23",
+        "close": 230.788864,
+        "log_return": -0.030777,
+        "volume": 21771800
+      },
+      {
+        "date": "2020-07-24",
+        "close": 228.91362,
+        "log_return": -0.008159,
+        "volume": 18325800
+      },
+      {
+        "date": "2020-07-27",
+        "close": 231.6819,
+        "log_return": 0.012021,
+        "volume": 13163100
+      },
+      {
+        "date": "2020-07-28",
+        "close": 228.328171,
+        "log_return": -0.014581,
+        "volume": 14170100
+      },
+      {
+        "date": "2020-07-29",
+        "close": 231.473495,
+        "log_return": 0.013681,
+        "volume": 13588300
+      },
+      {
+        "date": "2020-07-30",
+        "close": 232.674103,
+        "log_return": 0.005173,
+        "volume": 20615300
+      },
+      {
+        "date": "2020-07-31",
+        "close": 251.694824,
+        "log_return": 0.078579,
+        "volume": 53005100
+      },
+      {
+        "date": "2020-08-03",
+        "close": 249.998154,
+        "log_return": -0.006764,
+        "volume": 23124900
+      },
+      {
+        "date": "2020-08-04",
+        "close": 247.884735,
+        "log_return": -0.00849,
+        "volume": 17183500
+      },
+      {
+        "date": "2020-08-05",
+        "close": 247.180252,
+        "log_return": -0.002846,
+        "volume": 13050100
+      },
+      {
+        "date": "2020-08-06",
+        "close": 263.214417,
+        "log_return": 0.062851,
+        "volume": 45241600
+      },
+      {
+        "date": "2020-08-07",
+        "close": 266.349823,
+        "log_return": 0.011842,
+        "volume": 72766400
+      },
+      {
+        "date": "2020-08-10",
+        "close": 260.952148,
+        "log_return": -0.020474,
+        "volume": 30248800
+      },
+      {
+        "date": "2020-08-11",
+        "close": 254.135666,
+        "log_return": -0.026469,
+        "volume": 28238300
+      },
+      {
+        "date": "2020-08-12",
+        "close": 257.866455,
+        "log_return": 0.014574,
+        "volume": 21415700
+      },
+      {
+        "date": "2020-08-13",
+        "close": 259.265411,
+        "log_return": 0.00541,
+        "volume": 17374000
+      },
+      {
+        "date": "2020-08-14",
+        "close": 259.205841,
+        "log_return": -0.00023,
+        "volume": 14792700
+      },
+      {
+        "date": "2020-08-17",
+        "close": 259.126495,
+        "log_return": -0.000306,
+        "volume": 13351100
+      },
+      {
+        "date": "2020-08-18",
+        "close": 260.297333,
+        "log_return": 0.004508,
+        "volume": 18690400
+      },
+      {
+        "date": "2020-08-19",
+        "close": 260.54538,
+        "log_return": 0.000952,
+        "volume": 23291500
+      },
+      {
+        "date": "2020-08-20",
+        "close": 266.915375,
+        "log_return": 0.024155,
+        "volume": 20299700
+      },
+      {
+        "date": "2020-08-21",
+        "close": 264.931,
+        "log_return": -0.007462,
+        "volume": 15538600
+      },
+      {
+        "date": "2020-08-24",
+        "close": 269.276825,
+        "log_return": 0.016271,
+        "volume": 23685600
+      },
+      {
+        "date": "2020-08-25",
+        "close": 278.633423,
+        "log_return": 0.034157,
+        "volume": 42127200
+      },
+      {
+        "date": "2020-08-26",
+        "close": 301.54361,
+        "log_return": 0.079018,
+        "volume": 69015200
+      },
+      {
+        "date": "2020-08-27",
+        "close": 290.93689,
+        "log_return": -0.035808,
+        "volume": 30301300
+      },
+      {
+        "date": "2020-08-28",
+        "close": 291.373474,
+        "log_return": 0.001499,
+        "volume": 17157400
+      },
+      {
+        "date": "2020-08-31",
+        "close": 290.917023,
+        "log_return": -0.001568,
+        "volume": 17345100
+      },
+      {
+        "date": "2020-09-01",
+        "close": 293.139618,
+        "log_return": 0.007611,
+        "volume": 17295900
+      },
+      {
+        "date": "2020-09-02",
+        "close": 300.144592,
+        "log_return": 0.023615,
+        "volume": 24341400
+      },
+      {
+        "date": "2020-09-03",
+        "close": 288.85321,
+        "log_return": -0.038346,
+        "volume": 32294100
+      },
+      {
+        "date": "2020-09-04",
+        "close": 280.528564,
+        "log_return": -0.029243,
+        "volume": 30333700
+      },
+      {
+        "date": "2020-09-08",
+        "close": 269.048645,
+        "log_return": -0.041783,
+        "volume": 24864000
+      },
+      {
+        "date": "2020-09-09",
+        "close": 271.588715,
+        "log_return": 0.009397,
+        "volume": 22918800
+      },
+      {
+        "date": "2020-09-10",
+        "close": 266.002563,
+        "log_return": -0.020783,
+        "volume": 24814700
+      },
+      {
+        "date": "2020-09-11",
+        "close": 264.534088,
+        "log_return": -0.005536,
+        "volume": 18913900
+      },
+      {
+        "date": "2020-09-14",
+        "close": 264.077667,
+        "log_return": -0.001727,
+        "volume": 24093800
+      },
+      {
+        "date": "2020-09-15",
+        "close": 270.298828,
+        "log_return": 0.023285,
+        "volume": 18478500
+      },
+      {
+        "date": "2020-09-16",
+        "close": 261.468079,
+        "log_return": -0.033216,
+        "volume": 29183400
+      },
+      {
+        "date": "2020-09-17",
+        "close": 252.835876,
+        "log_return": -0.033572,
+        "volume": 31281400
+      },
+      {
+        "date": "2020-09-18",
+        "close": 250.56369,
+        "log_return": -0.009027,
+        "volume": 28130800
+      },
+      {
+        "date": "2020-09-21",
+        "close": 246.217789,
+        "log_return": -0.017497,
+        "volume": 24709400
+      },
+      {
+        "date": "2020-09-22",
+        "close": 252.766418,
+        "log_return": 0.026249,
+        "volume": 30293100
+      },
+      {
+        "date": "2020-09-23",
+        "close": 247.08107,
+        "log_return": -0.022749,
+        "volume": 19641300
+      },
+      {
+        "date": "2020-09-24",
+        "close": 247.587067,
+        "log_return": 0.002046,
+        "volume": 20006800
+      },
+      {
+        "date": "2020-09-25",
+        "close": 252.835876,
+        "log_return": 0.020978,
+        "volume": 18351300
+      },
+      {
+        "date": "2020-09-28",
+        "close": 254.820328,
+        "log_return": 0.007818,
+        "volume": 18826300
+      },
+      {
+        "date": "2020-09-29",
+        "close": 259.751617,
+        "log_return": 0.019167,
+        "volume": 20200200
+      },
+      {
+        "date": "2020-09-30",
+        "close": 259.860779,
+        "log_return": 0.00042,
+        "volume": 20142500
+      },
+      {
+        "date": "2020-10-01",
+        "close": 264.553894,
+        "log_return": 0.017899,
+        "volume": 20009800
+      },
+      {
+        "date": "2020-10-02",
+        "close": 257.916046,
+        "log_return": -0.025411,
+        "volume": 16367600
+      },
+      {
+        "date": "2020-10-05",
+        "close": 262.589325,
+        "log_return": 0.017957,
+        "volume": 12822300
+      },
+      {
+        "date": "2020-10-06",
+        "close": 256.645935,
+        "log_return": -0.022894,
+        "volume": 18696900
+      },
+      {
+        "date": "2020-10-07",
+        "close": 256.110168,
+        "log_return": -0.00209,
+        "volume": 23133400
+      },
+      {
+        "date": "2020-10-08",
+        "close": 261.706268,
+        "log_return": 0.021615,
+        "volume": 16312800
+      },
+      {
+        "date": "2020-10-09",
+        "close": 262.3909,
+        "log_return": 0.002613,
+        "volume": 14107800
+      },
+      {
+        "date": "2020-10-12",
+        "close": 273.602875,
+        "log_return": 0.041842,
+        "volume": 31019300
+      },
+      {
+        "date": "2020-10-13",
+        "close": 273.989929,
+        "log_return": 0.001414,
+        "volume": 18063300
+      },
+      {
+        "date": "2020-10-14",
+        "close": 269.703491,
+        "log_return": -0.015768,
+        "volume": 15577800
+      },
+      {
+        "date": "2020-10-15",
+        "close": 264.643219,
+        "log_return": -0.018941,
+        "volume": 15416100
+      },
+      {
+        "date": "2020-10-16",
+        "close": 263.859375,
+        "log_return": -0.002966,
+        "volume": 16622700
+      },
+      {
+        "date": "2020-10-19",
+        "close": 259.364655,
+        "log_return": -0.017181,
+        "volume": 13587000
+      },
+      {
+        "date": "2020-10-20",
+        "close": 265.476654,
+        "log_return": 0.023292,
+        "volume": 18763200
+      },
+      {
+        "date": "2020-10-21",
+        "close": 276.559723,
+        "log_return": 0.0409,
+        "volume": 28998600
+      },
+      {
+        "date": "2020-10-22",
+        "close": 275.954437,
+        "log_return": -0.002191,
+        "volume": 16720000
+      },
+      {
+        "date": "2020-10-23",
+        "close": 282.57254,
+        "log_return": 0.0237,
+        "volume": 17535200
+      },
+      {
+        "date": "2020-10-26",
+        "close": 274.952301,
+        "log_return": -0.027338,
+        "volume": 21322900
+      },
+      {
+        "date": "2020-10-27",
+        "close": 281.084198,
+        "log_return": 0.022057,
+        "volume": 16287200
+      },
+      {
+        "date": "2020-10-28",
+        "close": 265.585785,
+        "log_return": -0.056716,
+        "volume": 23121800
+      },
+      {
+        "date": "2020-10-29",
+        "close": 278.643341,
+        "log_return": 0.047995,
+        "volume": 32368100
+      },
+      {
+        "date": "2020-10-30",
+        "close": 261.06134,
+        "log_return": -0.065177,
+        "volume": 47247800
+      },
+      {
+        "date": "2020-11-02",
+        "close": 259.324951,
+        "log_return": -0.006673,
+        "volume": 27165700
+      },
+      {
+        "date": "2020-11-03",
+        "close": 263.234283,
+        "log_return": 0.014963,
+        "volume": 17961900
+      },
+      {
+        "date": "2020-11-04",
+        "close": 285.142334,
+        "log_return": 0.079944,
+        "volume": 35364400
+      },
+      {
+        "date": "2020-11-05",
+        "close": 292.385529,
+        "log_return": 0.025085,
+        "volume": 23823600
+      },
+      {
+        "date": "2020-11-06",
+        "close": 291.125397,
+        "log_return": -0.004319,
+        "volume": 13891000
+      },
+      {
+        "date": "2020-11-09",
+        "close": 276.599396,
+        "log_return": -0.051184,
+        "volume": 25117700
+      },
+      {
+        "date": "2020-11-10",
+        "close": 270.308716,
+        "log_return": -0.023006,
+        "volume": 29067700
+      },
+      {
+        "date": "2020-11-11",
+        "close": 274.32724,
+        "log_return": 0.014757,
+        "volume": 14957000
+      },
+      {
+        "date": "2020-11-12",
+        "close": 272.93808,
+        "log_return": -0.005077,
+        "volume": 12899500
+      },
+      {
+        "date": "2020-11-13",
+        "close": 274.793579,
+        "log_return": 0.006775,
+        "volume": 10391200
+      },
+      {
+        "date": "2020-11-16",
+        "close": 276.787933,
+        "log_return": 0.007231,
+        "volume": 12970400
+      },
+      {
+        "date": "2020-11-17",
+        "close": 272.858765,
+        "log_return": -0.014297,
+        "volume": 15040300
+      },
+      {
+        "date": "2020-11-18",
+        "close": 269.852325,
+        "log_return": -0.011079,
+        "volume": 12152900
+      },
+      {
+        "date": "2020-11-19",
+        "close": 270.814758,
+        "log_return": 0.00356,
+        "volume": 12963700
+      },
+      {
+        "date": "2020-11-20",
+        "close": 267.600006,
+        "log_return": -0.011942,
+        "volume": 18114700
+      },
+      {
+        "date": "2020-11-23",
+        "close": 266.339905,
+        "log_return": -0.00472,
+        "volume": 20990800
+      },
+      {
+        "date": "2020-11-24",
+        "close": 274.763824,
+        "log_return": 0.031139,
+        "volume": 16930400
+      },
+      {
+        "date": "2020-11-25",
+        "close": 273.444183,
+        "log_return": -0.004814,
+        "volume": 12467000
+      },
+      {
+        "date": "2020-11-27",
+        "close": 275.646881,
+        "log_return": 0.008023,
+        "volume": 7808400
+      },
+      {
+        "date": "2020-11-30",
+        "close": 274.813477,
+        "log_return": -0.003028,
+        "volume": 16693300
+      },
+      {
+        "date": "2020-12-01",
+        "close": 284.318817,
+        "log_return": 0.034004,
+        "volume": 20738900
+      },
+      {
+        "date": "2020-12-02",
+        "close": 285.28125,
+        "log_return": 0.003379,
+        "volume": 17361600
+      },
+      {
+        "date": "2020-12-03",
+        "close": 279.655396,
+        "log_return": -0.019917,
+        "volume": 12921700
+      },
+      {
+        "date": "2020-12-04",
+        "close": 277.522125,
+        "log_return": -0.007657,
+        "volume": 10880300
+      },
+      {
+        "date": "2020-12-07",
+        "close": 283.356323,
+        "log_return": 0.020805,
+        "volume": 13007700
+      },
+      {
+        "date": "2020-12-08",
+        "close": 281.193298,
+        "log_return": -0.007663,
+        "volume": 10747700
+      },
+      {
+        "date": "2020-12-09",
+        "close": 275.756012,
+        "log_return": -0.019526,
+        "volume": 25189700
+      },
+      {
+        "date": "2020-12-10",
+        "close": 274.962219,
+        "log_return": -0.002883,
+        "volume": 20065100
+      },
+      {
+        "date": "2020-12-11",
+        "close": 271.420013,
+        "log_return": -0.012966,
+        "volume": 14391400
+      },
+      {
+        "date": "2020-12-14",
+        "close": 272.054993,
+        "log_return": 0.002337,
+        "volume": 16376900
+      },
+      {
+        "date": "2020-12-15",
+        "close": 273.404449,
+        "log_return": 0.004948,
+        "volume": 23979500
+      },
+      {
+        "date": "2020-12-16",
+        "close": 273.523499,
+        "log_return": 0.000435,
+        "volume": 15885000
+      },
+      {
+        "date": "2020-12-17",
+        "close": 272.342834,
+        "log_return": -0.004326,
+        "volume": 16377800
+      },
+      {
+        "date": "2020-12-18",
+        "close": 274.247833,
+        "log_return": 0.006971,
+        "volume": 26693200
+      },
+      {
+        "date": "2020-12-21",
+        "close": 270.665924,
+        "log_return": -0.013147,
+        "volume": 16553700
+      },
+      {
+        "date": "2020-12-22",
+        "close": 265.010376,
+        "log_return": -0.021116,
+        "volume": 17312900
+      },
+      {
+        "date": "2020-12-23",
+        "close": 266.022339,
+        "log_return": 0.003811,
+        "volume": 14329000
+      },
+      {
+        "date": "2020-12-24",
+        "close": 265.317932,
+        "log_return": -0.002651,
+        "volume": 6702000
+      },
+      {
+        "date": "2020-12-28",
+        "close": 274.843201,
+        "log_return": 0.035272,
+        "volume": 23299700
+      },
+      {
+        "date": "2020-12-29",
+        "close": 274.624908,
+        "log_return": -0.000795,
+        "volume": 16383000
+      },
+      {
+        "date": "2020-12-30",
+        "close": 269.753113,
+        "log_return": -0.017899,
+        "volume": 11803800
+      }
+    ],
+    "MSFT": [
+      {
+        "date": "2020-07-13",
+        "close": 197.24498,
+        "log_return": -0.031376,
+        "volume": 38135600
+      },
+      {
+        "date": "2020-07-14",
+        "close": 198.464294,
+        "log_return": 0.006163,
+        "volume": 37591800
+      },
+      {
+        "date": "2020-07-15",
+        "close": 198.168961,
+        "log_return": -0.001489,
+        "volume": 32179400
+      },
+      {
+        "date": "2020-07-16",
+        "close": 194.244431,
+        "log_return": -0.020003,
+        "volume": 29940700
+      },
+      {
+        "date": "2020-07-17",
+        "close": 193.253815,
+        "log_return": -0.005113,
+        "volume": 31635300
+      },
+      {
+        "date": "2020-07-20",
+        "close": 201.560028,
+        "log_return": 0.042083,
+        "volume": 36884800
+      },
+      {
+        "date": "2020-07-21",
+        "close": 198.845276,
+        "log_return": -0.01356,
+        "volume": 37990400
+      },
+      {
+        "date": "2020-07-22",
+        "close": 201.702911,
+        "log_return": 0.014269,
+        "volume": 49605700
+      },
+      {
+        "date": "2020-07-23",
+        "close": 192.929932,
+        "log_return": -0.044469,
+        "volume": 67457000
+      },
+      {
+        "date": "2020-07-24",
+        "close": 191.748764,
+        "log_return": -0.006141,
+        "volume": 39827000
+      },
+      {
+        "date": "2020-07-27",
+        "close": 194.177765,
+        "log_return": 0.012588,
+        "volume": 30160900
+      },
+      {
+        "date": "2020-07-28",
+        "close": 192.434616,
+        "log_return": -0.009018,
+        "volume": 23251400
+      },
+      {
+        "date": "2020-07-29",
+        "close": 194.377792,
+        "log_return": 0.010047,
+        "volume": 19632600
+      },
+      {
+        "date": "2020-07-30",
+        "close": 194.225388,
+        "log_return": -0.000784,
+        "volume": 25079600
+      },
+      {
+        "date": "2020-07-31",
+        "close": 195.282761,
+        "log_return": 0.005429,
+        "volume": 51044000
+      },
+      {
+        "date": "2020-08-03",
+        "close": 206.265671,
+        "log_return": 0.054716,
+        "volume": 78983000
+      },
+      {
+        "date": "2020-08-04",
+        "close": 203.169846,
+        "log_return": -0.015123,
+        "volume": 49280100
+      },
+      {
+        "date": "2020-08-05",
+        "close": 202.836456,
+        "log_return": -0.001642,
+        "volume": 28806400
+      },
+      {
+        "date": "2020-08-06",
+        "close": 206.084656,
+        "log_return": 0.015887,
+        "volume": 32656800
+      },
+      {
+        "date": "2020-08-07",
+        "close": 202.398254,
+        "log_return": -0.01805,
+        "volume": 27820400
+      },
+      {
+        "date": "2020-08-10",
+        "close": 198.368958,
+        "log_return": -0.020109,
+        "volume": 36716500
+      },
+      {
+        "date": "2020-08-11",
+        "close": 193.730057,
+        "log_return": -0.023663,
+        "volume": 36446500
+      },
+      {
+        "date": "2020-08-12",
+        "close": 199.264359,
+        "log_return": 0.028167,
+        "volume": 28013100
+      },
+      {
+        "date": "2020-08-13",
+        "close": 198.797607,
+        "log_return": -0.002345,
+        "volume": 22588900
+      },
+      {
+        "date": "2020-08-14",
+        "close": 198.988113,
+        "log_return": 0.000958,
+        "volume": 17958900
+      },
+      {
+        "date": "2020-08-17",
+        "close": 200.302628,
+        "log_return": 0.006584,
+        "volume": 20184800
+      },
+      {
+        "date": "2020-08-18",
+        "close": 201.455322,
+        "log_return": 0.005738,
+        "volume": 21336200
+      },
+      {
+        "date": "2020-08-19",
+        "close": 200.233032,
+        "log_return": -0.006086,
+        "volume": 27627600
+      },
+      {
+        "date": "2020-08-20",
+        "close": 204.892776,
+        "log_return": 0.023005,
+        "volume": 26981500
+      },
+      {
+        "date": "2020-08-21",
+        "close": 203.403183,
+        "log_return": -0.007297,
+        "volume": 36249300
+      },
+      {
+        "date": "2020-08-24",
+        "close": 204.042923,
+        "log_return": 0.00314,
+        "volume": 25460100
+      },
+      {
+        "date": "2020-08-25",
+        "close": 206.697433,
+        "log_return": 0.012926,
+        "volume": 23043700
+      },
+      {
+        "date": "2020-08-26",
+        "close": 211.166122,
+        "log_return": 0.021389,
+        "volume": 39600800
+      },
+      {
+        "date": "2020-08-27",
+        "close": 216.350983,
+        "log_return": 0.024257,
+        "volume": 57602200
+      },
+      {
+        "date": "2020-08-28",
+        "close": 218.575806,
+        "log_return": 0.010231,
+        "volume": 26292900
+      },
+      {
+        "date": "2020-08-31",
+        "close": 215.348419,
+        "log_return": -0.014876,
+        "volume": 28774200
+      },
+      {
+        "date": "2020-09-01",
+        "close": 217.009842,
+        "log_return": 0.007685,
+        "volume": 25725500
+      },
+      {
+        "date": "2020-09-02",
+        "close": 221.192108,
+        "log_return": 0.019089,
+        "volume": 34080800
+      },
+      {
+        "date": "2020-09-03",
+        "close": 207.489944,
+        "log_return": -0.063949,
+        "volume": 58400300
+      },
+      {
+        "date": "2020-09-04",
+        "close": 204.577652,
+        "log_return": -0.014135,
+        "volume": 59664100
+      },
+      {
+        "date": "2020-09-08",
+        "close": 193.510864,
+        "log_return": -0.055614,
+        "volume": 52924300
+      },
+      {
+        "date": "2020-09-09",
+        "close": 201.751236,
+        "log_return": 0.041702,
+        "volume": 45679000
+      },
+      {
+        "date": "2020-09-10",
+        "close": 196.098541,
+        "log_return": -0.028418,
+        "volume": 35461500
+      },
+      {
+        "date": "2020-09-11",
+        "close": 194.819031,
+        "log_return": -0.006546,
+        "volume": 33620100
+      },
+      {
+        "date": "2020-09-14",
+        "close": 196.136749,
+        "log_return": 0.006741,
+        "volume": 30375800
+      },
+      {
+        "date": "2020-09-15",
+        "close": 199.354538,
+        "log_return": 0.016273,
+        "volume": 21823900
+      },
+      {
+        "date": "2020-09-16",
+        "close": 195.792953,
+        "log_return": -0.018027,
+        "volume": 26328100
+      },
+      {
+        "date": "2020-09-17",
+        "close": 193.749603,
+        "log_return": -0.010491,
+        "volume": 34011300
+      },
+      {
+        "date": "2020-09-18",
+        "close": 191.343338,
+        "log_return": -0.012497,
+        "volume": 55225300
+      },
+      {
+        "date": "2020-09-21",
+        "close": 193.396301,
+        "log_return": 0.010672,
+        "volume": 39839700
+      },
+      {
+        "date": "2020-09-22",
+        "close": 198.055969,
+        "log_return": 0.023808,
+        "volume": 33517100
+      },
+      {
+        "date": "2020-09-23",
+        "close": 191.534302,
+        "log_return": -0.033483,
+        "volume": 30803800
+      },
+      {
+        "date": "2020-09-24",
+        "close": 194.016968,
+        "log_return": 0.012879,
+        "volume": 31202500
+      },
+      {
+        "date": "2020-09-25",
+        "close": 198.437943,
+        "log_return": 0.022531,
+        "volume": 29437300
+      },
+      {
+        "date": "2020-09-28",
+        "close": 199.984787,
+        "log_return": 0.007765,
+        "volume": 32004900
+      },
+      {
+        "date": "2020-09-29",
+        "close": 197.903198,
+        "log_return": -0.010463,
+        "volume": 24221900
+      },
+      {
+        "date": "2020-09-30",
+        "close": 200.834595,
+        "log_return": 0.014704,
+        "volume": 33829100
+      },
+      {
+        "date": "2020-10-01",
+        "close": 202.868439,
+        "log_return": 0.010076,
+        "volume": 27158400
+      },
+      {
+        "date": "2020-10-02",
+        "close": 196.881516,
+        "log_return": -0.029956,
+        "volume": 33154800
+      },
+      {
+        "date": "2020-10-05",
+        "close": 200.882324,
+        "log_return": 0.020117,
+        "volume": 21331600
+      },
+      {
+        "date": "2020-10-06",
+        "close": 196.614197,
+        "log_return": -0.021476,
+        "volume": 28554300
+      },
+      {
+        "date": "2020-10-07",
+        "close": 200.357162,
+        "log_return": 0.018858,
+        "volume": 25681100
+      },
+      {
+        "date": "2020-10-08",
+        "close": 201.073303,
+        "log_return": 0.003568,
+        "volume": 19925800
+      },
+      {
+        "date": "2020-10-09",
+        "close": 206.067215,
+        "log_return": 0.024533,
+        "volume": 26458000
+      },
+      {
+        "date": "2020-10-12",
+        "close": 211.404846,
+        "log_return": 0.025573,
+        "volume": 40461400
+      },
+      {
+        "date": "2020-10-13",
+        "close": 212.79892,
+        "log_return": 0.006573,
+        "volume": 28950800
+      },
+      {
+        "date": "2020-10-14",
+        "close": 210.889221,
+        "log_return": -0.009015,
+        "volume": 23421700
+      },
+      {
+        "date": "2020-10-15",
+        "close": 209.743439,
+        "log_return": -0.005448,
+        "volume": 22733100
+      },
+      {
+        "date": "2020-10-16",
+        "close": 209.743439,
+        "log_return": 0.0,
+        "volume": 26057900
+      },
+      {
+        "date": "2020-10-19",
+        "close": 204.548996,
+        "log_return": -0.025078,
+        "volume": 27625800
+      },
+      {
+        "date": "2020-10-20",
+        "close": 204.959564,
+        "log_return": 0.002005,
+        "volume": 22753500
+      },
+      {
+        "date": "2020-10-21",
+        "close": 205.102814,
+        "log_return": 0.000699,
+        "volume": 22724900
+      },
+      {
+        "date": "2020-10-22",
+        "close": 205.188721,
+        "log_return": 0.000419,
+        "volume": 22351500
+      },
+      {
+        "date": "2020-10-23",
+        "close": 206.468246,
+        "log_return": 0.006216,
+        "volume": 18879600
+      },
+      {
+        "date": "2020-10-26",
+        "close": 200.595871,
+        "log_return": -0.028854,
+        "volume": 37111600
+      },
+      {
+        "date": "2020-10-27",
+        "close": 203.622803,
+        "log_return": 0.014977,
+        "volume": 36700300
+      },
+      {
+        "date": "2020-10-28",
+        "close": 193.529984,
+        "log_return": -0.050837,
+        "volume": 51195600
+      },
+      {
+        "date": "2020-10-29",
+        "close": 195.477875,
+        "log_return": 0.010015,
+        "volume": 31432600
+      },
+      {
+        "date": "2020-10-30",
+        "close": 193.329422,
+        "log_return": -0.011052,
+        "volume": 36953700
+      },
+      {
+        "date": "2020-11-02",
+        "close": 193.19577,
+        "log_return": -0.000692,
+        "volume": 30842200
+      },
+      {
+        "date": "2020-11-03",
+        "close": 197.110687,
+        "log_return": 0.020061,
+        "volume": 27512000
+      },
+      {
+        "date": "2020-11-04",
+        "close": 206.621017,
+        "log_return": 0.047121,
+        "volume": 42311800
+      },
+      {
+        "date": "2020-11-05",
+        "close": 213.209534,
+        "log_return": 0.031389,
+        "volume": 36080100
+      },
+      {
+        "date": "2020-11-06",
+        "close": 213.620102,
+        "log_return": 0.001924,
+        "volume": 25231900
+      },
+      {
+        "date": "2020-11-09",
+        "close": 208.530731,
+        "log_return": -0.024113,
+        "volume": 44395000
+      },
+      {
+        "date": "2020-11-10",
+        "close": 201.483887,
+        "log_return": -0.034377,
+        "volume": 44045100
+      },
+      {
+        "date": "2020-11-11",
+        "close": 206.773758,
+        "log_return": 0.025916,
+        "volume": 29440800
+      },
+      {
+        "date": "2020-11-12",
+        "close": 205.713913,
+        "log_return": -0.005139,
+        "volume": 21593900
+      },
+      {
+        "date": "2020-11-13",
+        "close": 206.735596,
+        "log_return": 0.004954,
+        "volume": 18621100
+      },
+      {
+        "date": "2020-11-16",
+        "close": 207.423126,
+        "log_return": 0.00332,
+        "volume": 24953300
+      },
+      {
+        "date": "2020-11-17",
+        "close": 204.778137,
+        "log_return": -0.012834,
+        "volume": 24154100
+      },
+      {
+        "date": "2020-11-18",
+        "close": 202.078445,
+        "log_return": -0.013271,
+        "volume": 28372800
+      },
+      {
+        "date": "2020-11-19",
+        "close": 203.361237,
+        "log_return": 0.006328,
+        "volume": 24792700
+      },
+      {
+        "date": "2020-11-20",
+        "close": 201.417847,
+        "log_return": -0.009602,
+        "volume": 22843100
+      },
+      {
+        "date": "2020-11-23",
+        "close": 201.149765,
+        "log_return": -0.001332,
+        "volume": 25683500
+      },
+      {
+        "date": "2020-11-24",
+        "close": 204.739883,
+        "log_return": 0.017691,
+        "volume": 33979700
+      },
+      {
+        "date": "2020-11-25",
+        "close": 204.749466,
+        "log_return": 4.7e-05,
+        "volume": 21012900
+      },
+      {
+        "date": "2020-11-27",
+        "close": 206.051437,
+        "log_return": 0.006339,
+        "volume": 14512200
+      },
+      {
+        "date": "2020-11-30",
+        "close": 204.940918,
+        "log_return": -0.005404,
+        "volume": 33064800
+      },
+      {
+        "date": "2020-12-01",
+        "close": 206.989655,
+        "log_return": 0.009947,
+        "volume": 30904500
+      },
+      {
+        "date": "2020-12-02",
+        "close": 206.185486,
+        "log_return": -0.003893,
+        "volume": 23724500
+      },
+      {
+        "date": "2020-12-03",
+        "close": 205.103668,
+        "log_return": -0.005261,
+        "volume": 25120900
+      },
+      {
+        "date": "2020-12-04",
+        "close": 205.218552,
+        "log_return": 0.00056,
+        "volume": 24666000
+      },
+      {
+        "date": "2020-12-07",
+        "close": 205.151535,
+        "log_return": -0.000327,
+        "volume": 24620000
+      },
+      {
+        "date": "2020-12-08",
+        "close": 206.798172,
+        "log_return": 0.007994,
+        "volume": 23284100
+      },
+      {
+        "date": "2020-12-09",
+        "close": 202.767731,
+        "log_return": -0.019682,
+        "volume": 32440600
+      },
+      {
+        "date": "2020-12-10",
+        "close": 201.542328,
+        "log_return": -0.006062,
+        "volume": 26733300
+      },
+      {
+        "date": "2020-12-11",
+        "close": 204.165436,
+        "log_return": 0.012931,
+        "volume": 30979400
+      },
+      {
+        "date": "2020-12-14",
+        "close": 205.065369,
+        "log_return": 0.004398,
+        "volume": 28798400
+      },
+      {
+        "date": "2020-12-15",
+        "close": 204.998383,
+        "log_return": -0.000327,
+        "volume": 27000600
+      },
+      {
+        "date": "2020-12-16",
+        "close": 209.928726,
+        "log_return": 0.023766,
+        "volume": 35023300
+      },
+      {
+        "date": "2020-12-17",
+        "close": 210.062744,
+        "log_return": 0.000638,
+        "volume": 32515800
+      },
+      {
+        "date": "2020-12-18",
+        "close": 209.268158,
+        "log_return": -0.00379,
+        "volume": 63354900
+      },
+      {
+        "date": "2020-12-21",
+        "close": 213.097549,
+        "log_return": 0.018134,
+        "volume": 37181900
+      },
+      {
+        "date": "2020-12-22",
+        "close": 214.389999,
+        "log_return": 0.006047,
+        "volume": 22612200
+      },
+      {
+        "date": "2020-12-23",
+        "close": 211.594543,
+        "log_return": -0.013125,
+        "volume": 18699600
+      },
+      {
+        "date": "2020-12-24",
+        "close": 213.250778,
+        "log_return": 0.007797,
+        "volume": 10550600
+      },
+      {
+        "date": "2020-12-28",
+        "close": 215.366516,
+        "log_return": 0.009872,
+        "volume": 17933500
+      },
+      {
+        "date": "2020-12-29",
+        "close": 214.591064,
+        "log_return": -0.003607,
+        "volume": 17403200
+      },
+      {
+        "date": "2020-12-30",
+        "close": 212.226395,
+        "log_return": -0.011081,
+        "volume": 20272300
+      }
+    ],
+    "NFLX": [
+      {
+        "date": "2020-07-13",
+        "close": 52.549999,
+        "log_return": -0.043256,
+        "volume": 183990000
+      },
+      {
+        "date": "2020-07-14",
+        "close": 52.487999,
+        "log_return": -0.001181,
+        "volume": 150833000
+      },
+      {
+        "date": "2020-07-15",
+        "close": 52.326,
+        "log_return": -0.003091,
+        "volume": 100667000
+      },
+      {
+        "date": "2020-07-16",
+        "close": 52.738998,
+        "log_return": 0.007862,
+        "volume": 244990000
+      },
+      {
+        "date": "2020-07-17",
+        "close": 49.299,
+        "log_return": -0.067451,
+        "volume": 249914000
+      },
+      {
+        "date": "2020-07-20",
+        "close": 50.241001,
+        "log_return": 0.018928,
+        "volume": 119403000
+      },
+      {
+        "date": "2020-07-21",
+        "close": 49.009998,
+        "log_return": -0.024807,
+        "volume": 91137000
+      },
+      {
+        "date": "2020-07-22",
+        "close": 48.981998,
+        "log_return": -0.000571,
+        "volume": 69541000
+      },
+      {
+        "date": "2020-07-23",
+        "close": 47.757999,
+        "log_return": -0.025306,
+        "volume": 77220000
+      },
+      {
+        "date": "2020-07-24",
+        "close": 48.044998,
+        "log_return": 0.005991,
+        "volume": 77462000
+      },
+      {
+        "date": "2020-07-27",
+        "close": 49.564999,
+        "log_return": 0.031147,
+        "volume": 78631000
+      },
+      {
+        "date": "2020-07-28",
+        "close": 48.851002,
+        "log_return": -0.01451,
+        "volume": 59867000
+      },
+      {
+        "date": "2020-07-29",
+        "close": 48.448002,
+        "log_return": -0.008284,
+        "volume": 66118000
+      },
+      {
+        "date": "2020-07-30",
+        "close": 48.580002,
+        "log_return": 0.002721,
+        "volume": 66086000
+      },
+      {
+        "date": "2020-07-31",
+        "close": 48.888,
+        "log_return": 0.00632,
+        "volume": 59163000
+      },
+      {
+        "date": "2020-08-03",
+        "close": 49.862,
+        "log_return": 0.019727,
+        "volume": 58731000
+      },
+      {
+        "date": "2020-08-04",
+        "close": 50.964001,
+        "log_return": 0.02186,
+        "volume": 56080000
+      },
+      {
+        "date": "2020-08-05",
+        "close": 50.210999,
+        "log_return": -0.014885,
+        "volume": 43082000
+      },
+      {
+        "date": "2020-08-06",
+        "close": 50.908001,
+        "log_return": 0.013786,
+        "volume": 37259000
+      },
+      {
+        "date": "2020-08-07",
+        "close": 49.473,
+        "log_return": -0.028593,
+        "volume": 59103000
+      },
+      {
+        "date": "2020-08-10",
+        "close": 48.338001,
+        "log_return": -0.023209,
+        "volume": 46912000
+      },
+      {
+        "date": "2020-08-11",
+        "close": 46.693001,
+        "log_return": -0.034624,
+        "volume": 73292000
+      },
+      {
+        "date": "2020-08-12",
+        "close": 47.547001,
+        "log_return": 0.018124,
+        "volume": 54392000
+      },
+      {
+        "date": "2020-08-13",
+        "close": 48.132999,
+        "log_return": 0.012249,
+        "volume": 30089000
+      },
+      {
+        "date": "2020-08-14",
+        "close": 48.268002,
+        "log_return": 0.002801,
+        "volume": 29435000
+      },
+      {
+        "date": "2020-08-17",
+        "close": 48.235001,
+        "log_return": -0.000684,
+        "volume": 24235000
+      },
+      {
+        "date": "2020-08-18",
+        "close": 49.187,
+        "log_return": 0.019544,
+        "volume": 35055000
+      },
+      {
+        "date": "2020-08-19",
+        "close": 48.452999,
+        "log_return": -0.015035,
+        "volume": 31562000
+      },
+      {
+        "date": "2020-08-20",
+        "close": 49.790001,
+        "log_return": 0.02722,
+        "volume": 51325000
+      },
+      {
+        "date": "2020-08-21",
+        "close": 49.230999,
+        "log_return": -0.011291,
+        "volume": 39213000
+      },
+      {
+        "date": "2020-08-24",
+        "close": 48.881001,
+        "log_return": -0.007135,
+        "volume": 47622000
+      },
+      {
+        "date": "2020-08-25",
+        "close": 49.057999,
+        "log_return": 0.003614,
+        "volume": 57277000
+      },
+      {
+        "date": "2020-08-26",
+        "close": 54.752998,
+        "log_return": 0.109829,
+        "volume": 203737000
+      },
+      {
+        "date": "2020-08-27",
+        "close": 52.626999,
+        "log_return": -0.039603,
+        "volume": 90629000
+      },
+      {
+        "date": "2020-08-28",
+        "close": 52.389,
+        "log_return": -0.004533,
+        "volume": 44175000
+      },
+      {
+        "date": "2020-08-31",
+        "close": 52.956001,
+        "log_return": 0.010765,
+        "volume": 49414000
+      },
+      {
+        "date": "2020-09-01",
+        "close": 55.654999,
+        "log_return": 0.04971,
+        "volume": 95727000
+      },
+      {
+        "date": "2020-09-02",
+        "close": 55.284,
+        "log_return": -0.006688,
+        "volume": 58869000
+      },
+      {
+        "date": "2020-09-03",
+        "close": 52.575001,
+        "log_return": -0.050243,
+        "volume": 90711000
+      },
+      {
+        "date": "2020-09-04",
+        "close": 51.605,
+        "log_return": -0.018622,
+        "volume": 82701000
+      },
+      {
+        "date": "2020-09-08",
+        "close": 50.702,
+        "log_return": -0.017653,
+        "volume": 55727000
+      },
+      {
+        "date": "2020-09-09",
+        "close": 50.019001,
+        "log_return": -0.013562,
+        "volume": 68481000
+      },
+      {
+        "date": "2020-09-10",
+        "close": 48.067001,
+        "log_return": -0.039807,
+        "volume": 62402000
+      },
+      {
+        "date": "2020-09-11",
+        "close": 48.202999,
+        "log_return": 0.002825,
+        "volume": 50352000
+      },
+      {
+        "date": "2020-09-14",
+        "close": 47.625999,
+        "log_return": -0.012042,
+        "volume": 73591000
+      },
+      {
+        "date": "2020-09-15",
+        "close": 49.598999,
+        "log_return": 0.040592,
+        "volume": 53370000
+      },
+      {
+        "date": "2020-09-16",
+        "close": 48.386002,
+        "log_return": -0.02476,
+        "volume": 43949000
+      },
+      {
+        "date": "2020-09-17",
+        "close": 47.02,
+        "log_return": -0.028637,
+        "volume": 53793000
+      },
+      {
+        "date": "2020-09-18",
+        "close": 46.995998,
+        "log_return": -0.000511,
+        "volume": 67177000
+      },
+      {
+        "date": "2020-09-21",
+        "close": 48.735001,
+        "log_return": 0.036335,
+        "volume": 54575000
+      },
+      {
+        "date": "2020-09-22",
+        "close": 49.117001,
+        "log_return": 0.007808,
+        "volume": 34823000
+      },
+      {
+        "date": "2020-09-23",
+        "close": 47.061001,
+        "log_return": -0.042761,
+        "volume": 37264000
+      },
+      {
+        "date": "2020-09-24",
+        "close": 47.307999,
+        "log_return": 0.005235,
+        "volume": 37272000
+      },
+      {
+        "date": "2020-09-25",
+        "close": 48.287998,
+        "log_return": 0.020504,
+        "volume": 37694000
+      },
+      {
+        "date": "2020-09-28",
+        "close": 49.064999,
+        "log_return": 0.015963,
+        "volume": 47735000
+      },
+      {
+        "date": "2020-09-29",
+        "close": 49.348,
+        "log_return": 0.005751,
+        "volume": 35415000
+      },
+      {
+        "date": "2020-09-30",
+        "close": 50.002998,
+        "log_return": 0.013186,
+        "volume": 46341000
+      },
+      {
+        "date": "2020-10-01",
+        "close": 52.750999,
+        "log_return": 0.0535,
+        "volume": 81537000
+      },
+      {
+        "date": "2020-10-02",
+        "close": 50.306,
+        "log_return": -0.047458,
+        "volume": 60712000
+      },
+      {
+        "date": "2020-10-05",
+        "close": 52.064999,
+        "log_return": 0.034369,
+        "volume": 40881000
+      },
+      {
+        "date": "2020-10-06",
+        "close": 50.587002,
+        "log_return": -0.028798,
+        "volume": 41990000
+      },
+      {
+        "date": "2020-10-07",
+        "close": 53.466,
+        "log_return": 0.055351,
+        "volume": 79887000
+      },
+      {
+        "date": "2020-10-08",
+        "close": 53.179001,
+        "log_return": -0.005382,
+        "volume": 53865000
+      },
+      {
+        "date": "2020-10-09",
+        "close": 53.944,
+        "log_return": 0.014283,
+        "volume": 47813000
+      },
+      {
+        "date": "2020-10-12",
+        "close": 53.980999,
+        "log_return": 0.000686,
+        "volume": 53911000
+      },
+      {
+        "date": "2020-10-13",
+        "close": 55.409,
+        "log_return": 0.02611,
+        "volume": 56025000
+      },
+      {
+        "date": "2020-10-14",
+        "close": 54.145,
+        "log_return": -0.023076,
+        "volume": 94990000
+      },
+      {
+        "date": "2020-10-15",
+        "close": 54.194,
+        "log_return": 0.000905,
+        "volume": 51131000
+      },
+      {
+        "date": "2020-10-16",
+        "close": 53.078999,
+        "log_return": -0.020789,
+        "volume": 63474000
+      },
+      {
+        "date": "2020-10-19",
+        "close": 53.071999,
+        "log_return": -0.000132,
+        "volume": 75675000
+      },
+      {
+        "date": "2020-10-20",
+        "close": 52.542,
+        "log_return": -0.010037,
+        "volume": 100472000
+      },
+      {
+        "date": "2020-10-21",
+        "close": 48.904999,
+        "log_return": -0.071733,
+        "volume": 174057000
+      },
+      {
+        "date": "2020-10-22",
+        "close": 48.522999,
+        "log_return": -0.007842,
+        "volume": 69979000
+      },
+      {
+        "date": "2020-10-23",
+        "close": 48.827999,
+        "log_return": 0.006266,
+        "volume": 49279000
+      },
+      {
+        "date": "2020-10-26",
+        "close": 48.824001,
+        "log_return": -8.2e-05,
+        "volume": 61861000
+      },
+      {
+        "date": "2020-10-27",
+        "close": 48.893002,
+        "log_return": 0.001412,
+        "volume": 36272000
+      },
+      {
+        "date": "2020-10-28",
+        "close": 48.624001,
+        "log_return": -0.005517,
+        "volume": 59927000
+      },
+      {
+        "date": "2020-10-29",
+        "close": 50.421001,
+        "log_return": 0.036291,
+        "volume": 111207000
+      },
+      {
+        "date": "2020-10-30",
+        "close": 47.574001,
+        "log_return": -0.058121,
+        "volume": 78079000
+      },
+      {
+        "date": "2020-11-02",
+        "close": 48.411999,
+        "log_return": 0.017461,
+        "volume": 44082000
+      },
+      {
+        "date": "2020-11-03",
+        "close": 48.722,
+        "log_return": 0.006383,
+        "volume": 36902000
+      },
+      {
+        "date": "2020-11-04",
+        "close": 49.695,
+        "log_return": 0.019774,
+        "volume": 51373000
+      },
+      {
+        "date": "2020-11-05",
+        "close": 51.375999,
+        "log_return": 0.033267,
+        "volume": 53728000
+      },
+      {
+        "date": "2020-11-06",
+        "close": 51.473,
+        "log_return": 0.001886,
+        "volume": 42363000
+      },
+      {
+        "date": "2020-11-09",
+        "close": 47.049999,
+        "log_return": -0.089847,
+        "volume": 104197000
+      },
+      {
+        "date": "2020-11-10",
+        "close": 48.023998,
+        "log_return": 0.02049,
+        "volume": 83061000
+      },
+      {
+        "date": "2020-11-11",
+        "close": 49.076,
+        "log_return": 0.021669,
+        "volume": 54605000
+      },
+      {
+        "date": "2020-11-12",
+        "close": 48.676998,
+        "log_return": -0.008164,
+        "volume": 50637000
+      },
+      {
+        "date": "2020-11-13",
+        "close": 48.284,
+        "log_return": -0.008106,
+        "volume": 30027000
+      },
+      {
+        "date": "2020-11-16",
+        "close": 47.91,
+        "log_return": -0.007776,
+        "volume": 39536000
+      },
+      {
+        "date": "2020-11-17",
+        "close": 48.063,
+        "log_return": 0.003188,
+        "volume": 36981000
+      },
+      {
+        "date": "2020-11-18",
+        "close": 48.179001,
+        "log_return": 0.002411,
+        "volume": 36292000
+      },
+      {
+        "date": "2020-11-19",
+        "close": 48.466999,
+        "log_return": 0.00596,
+        "volume": 22547000
+      },
+      {
+        "date": "2020-11-20",
+        "close": 48.824001,
+        "log_return": 0.007339,
+        "volume": 42534000
+      },
+      {
+        "date": "2020-11-23",
+        "close": 47.661999,
+        "log_return": -0.024088,
+        "volume": 54166000
+      },
+      {
+        "date": "2020-11-24",
+        "close": 48.287998,
+        "log_return": 0.013049,
+        "volume": 35505000
+      },
+      {
+        "date": "2020-11-25",
+        "close": 48.5,
+        "log_return": 0.004381,
+        "volume": 35986000
+      },
+      {
+        "date": "2020-11-27",
+        "close": 49.136002,
+        "log_return": 0.013028,
+        "volume": 28058000
+      },
+      {
+        "date": "2020-11-30",
+        "close": 49.07,
+        "log_return": -0.001344,
+        "volume": 35309000
+      },
+      {
+        "date": "2020-12-01",
+        "close": 50.458,
+        "log_return": 0.027893,
+        "volume": 50527000
+      },
+      {
+        "date": "2020-12-02",
+        "close": 50.338001,
+        "log_return": -0.002381,
+        "volume": 30284000
+      },
+      {
+        "date": "2020-12-03",
+        "close": 49.751999,
+        "log_return": -0.01171,
+        "volume": 28261000
+      },
+      {
+        "date": "2020-12-04",
+        "close": 49.831001,
+        "log_return": 0.001587,
+        "volume": 36662000
+      },
+      {
+        "date": "2020-12-07",
+        "close": 51.577999,
+        "log_return": 0.034458,
+        "volume": 42893000
+      },
+      {
+        "date": "2020-12-08",
+        "close": 51.265999,
+        "log_return": -0.006067,
+        "volume": 42290000
+      },
+      {
+        "date": "2020-12-09",
+        "close": 49.360001,
+        "log_return": -0.037887,
+        "volume": 41788000
+      },
+      {
+        "date": "2020-12-10",
+        "close": 50.109001,
+        "log_return": 0.01506,
+        "volume": 30182000
+      },
+      {
+        "date": "2020-12-11",
+        "close": 50.321999,
+        "log_return": 0.004242,
+        "volume": 32109000
+      },
+      {
+        "date": "2020-12-14",
+        "close": 52.242001,
+        "log_return": 0.037444,
+        "volume": 57704000
+      },
+      {
+        "date": "2020-12-15",
+        "close": 51.978001,
+        "log_return": -0.005066,
+        "volume": 33949000
+      },
+      {
+        "date": "2020-12-16",
+        "close": 52.483002,
+        "log_return": 0.009669,
+        "volume": 36824000
+      },
+      {
+        "date": "2020-12-17",
+        "close": 53.290001,
+        "log_return": 0.015259,
+        "volume": 31934000
+      },
+      {
+        "date": "2020-12-18",
+        "close": 53.445,
+        "log_return": 0.002904,
+        "volume": 45027000
+      },
+      {
+        "date": "2020-12-21",
+        "close": 52.890999,
+        "log_return": -0.01042,
+        "volume": 38940000
+      },
+      {
+        "date": "2020-12-22",
+        "close": 52.733002,
+        "log_return": -0.002992,
+        "volume": 19066000
+      },
+      {
+        "date": "2020-12-23",
+        "close": 51.448002,
+        "log_return": -0.02467,
+        "volume": 23932000
+      },
+      {
+        "date": "2020-12-24",
+        "close": 51.396999,
+        "log_return": -0.000992,
+        "volume": 11440000
+      },
+      {
+        "date": "2020-12-28",
+        "close": 51.911999,
+        "log_return": 0.00997,
+        "volume": 28919000
+      },
+      {
+        "date": "2020-12-29",
+        "close": 53.087002,
+        "log_return": 0.022382,
+        "volume": 40224000
+      },
+      {
+        "date": "2020-12-30",
+        "close": 52.459,
+        "log_return": -0.0119,
+        "volume": 18763000
+      }
+    ],
+    "NVDA": [
+      {
+        "date": "2020-07-13",
+        "close": 10.017563,
+        "log_return": -0.0416,
+        "volume": 457076000
+      },
+      {
+        "date": "2020-07-14",
+        "close": 10.341191,
+        "log_return": 0.031795,
+        "volume": 542676000
+      },
+      {
+        "date": "2020-07-15",
+        "close": 10.191955,
+        "log_return": -0.014536,
+        "volume": 403984000
+      },
+      {
+        "date": "2020-07-16",
+        "close": 10.099774,
+        "log_return": -0.009086,
+        "volume": 344964000
+      },
+      {
+        "date": "2020-07-17",
+        "close": 10.166297,
+        "log_return": 0.006565,
+        "volume": 266284000
+      },
+      {
+        "date": "2020-07-20",
+        "close": 10.474477,
+        "log_return": 0.029863,
+        "volume": 284852000
+      },
+      {
+        "date": "2020-07-21",
+        "close": 10.292856,
+        "log_return": -0.017491,
+        "volume": 277036000
+      },
+      {
+        "date": "2020-07-22",
+        "close": 10.402724,
+        "log_return": 0.010618,
+        "volume": 367292000
+      },
+      {
+        "date": "2020-07-23",
+        "close": 10.094795,
+        "log_return": -0.030048,
+        "volume": 411660000
+      },
+      {
+        "date": "2020-07-24",
+        "close": 10.159318,
+        "log_return": 0.006371,
+        "volume": 473292000
+      },
+      {
+        "date": "2020-07-27",
+        "close": 10.385537,
+        "log_return": 0.022023,
+        "volume": 292132000
+      },
+      {
+        "date": "2020-07-28",
+        "close": 10.180247,
+        "log_return": -0.019965,
+        "volume": 271636000
+      },
+      {
+        "date": "2020-07-29",
+        "close": 10.429386,
+        "log_return": 0.024178,
+        "volume": 284508000
+      },
+      {
+        "date": "2020-07-30",
+        "close": 10.577372,
+        "log_return": 0.01409,
+        "volume": 308880000
+      },
+      {
+        "date": "2020-07-31",
+        "close": 10.578119,
+        "log_return": 7.1e-05,
+        "volume": 386080000
+      },
+      {
+        "date": "2020-08-03",
+        "close": 10.972255,
+        "log_return": 0.036582,
+        "volume": 412720000
+      },
+      {
+        "date": "2020-08-04",
+        "close": 11.189005,
+        "log_return": 0.019562,
+        "volume": 310336000
+      },
+      {
+        "date": "2020-08-05",
+        "close": 11.247798,
+        "log_return": 0.005241,
+        "volume": 249924000
+      },
+      {
+        "date": "2020-08-06",
+        "close": 11.296382,
+        "log_return": 0.00431,
+        "volume": 244316000
+      },
+      {
+        "date": "2020-08-07",
+        "close": 11.160851,
+        "log_return": -0.01207,
+        "volume": 342516000
+      },
+      {
+        "date": "2020-08-10",
+        "close": 11.126471,
+        "log_return": -0.003085,
+        "volume": 427796000
+      },
+      {
+        "date": "2020-08-11",
+        "close": 10.812557,
+        "log_return": -0.028619,
+        "volume": 354512000
+      },
+      {
+        "date": "2020-08-12",
+        "close": 11.400771,
+        "log_return": 0.052973,
+        "volume": 464412000
+      },
+      {
+        "date": "2020-08-13",
+        "close": 11.403511,
+        "log_return": 0.00024,
+        "volume": 374460000
+      },
+      {
+        "date": "2020-08-14",
+        "close": 11.524095,
+        "log_return": 0.010519,
+        "volume": 366436000
+      },
+      {
+        "date": "2020-08-17",
+        "close": 12.294427,
+        "log_return": 0.064706,
+        "volume": 621300000
+      },
+      {
+        "date": "2020-08-18",
+        "close": 12.218438,
+        "log_return": -0.0062,
+        "volume": 503448000
+      },
+      {
+        "date": "2020-08-19",
+        "close": 12.096612,
+        "log_return": -0.010021,
+        "volume": 622624000
+      },
+      {
+        "date": "2020-08-20",
+        "close": 12.099105,
+        "log_return": 0.000206,
+        "volume": 921388000
+      },
+      {
+        "date": "2020-08-21",
+        "close": 12.639733,
+        "log_return": 0.043714,
+        "volume": 999868000
+      },
+      {
+        "date": "2020-08-24",
+        "close": 12.676353,
+        "log_return": 0.002893,
+        "volume": 490564000
+      },
+      {
+        "date": "2020-08-25",
+        "close": 12.706001,
+        "log_return": 0.002336,
+        "volume": 289076000
+      },
+      {
+        "date": "2020-08-26",
+        "close": 12.728921,
+        "log_return": 0.001802,
+        "volume": 321244000
+      },
+      {
+        "date": "2020-08-27",
+        "close": 12.584674,
+        "log_return": -0.011397,
+        "volume": 317604000
+      },
+      {
+        "date": "2020-08-28",
+        "close": 13.102377,
+        "log_return": 0.040314,
+        "volume": 537160000
+      },
+      {
+        "date": "2020-08-31",
+        "close": 13.328346,
+        "log_return": 0.017099,
+        "volume": 500840000
+      },
+      {
+        "date": "2020-09-01",
+        "close": 13.777427,
+        "log_return": 0.033138,
+        "volume": 511316000
+      },
+      {
+        "date": "2020-09-02",
+        "close": 14.301268,
+        "log_return": 0.037317,
+        "volume": 874012000
+      },
+      {
+        "date": "2020-09-03",
+        "close": 12.974464,
+        "log_return": -0.097365,
+        "volume": 945128000
+      },
+      {
+        "date": "2020-09-04",
+        "close": 12.582705,
+        "log_return": -0.03066,
+        "volume": 1463684000
+      },
+      {
+        "date": "2020-09-08",
+        "close": 11.875443,
+        "log_return": -0.057851,
+        "volume": 795728000
+      },
+      {
+        "date": "2020-09-09",
+        "close": 12.674912,
+        "log_return": 0.065152,
+        "volume": 736200000
+      },
+      {
+        "date": "2020-09-10",
+        "close": 12.272933,
+        "log_return": -0.032228,
+        "volume": 698684000
+      },
+      {
+        "date": "2020-09-11",
+        "close": 12.126145,
+        "log_return": -0.012032,
+        "volume": 636928000
+      },
+      {
+        "date": "2020-09-14",
+        "close": 12.831666,
+        "log_return": 0.056552,
+        "volume": 1201744000
+      },
+      {
+        "date": "2020-09-15",
+        "close": 12.950042,
+        "log_return": 0.009183,
+        "volume": 727556000
+      },
+      {
+        "date": "2020-09-16",
+        "close": 12.475044,
+        "log_return": -0.037369,
+        "volume": 556384000
+      },
+      {
+        "date": "2020-09-17",
+        "close": 12.424205,
+        "log_return": -0.004084,
+        "volume": 792512000
+      },
+      {
+        "date": "2020-09-18",
+        "close": 12.150821,
+        "log_return": -0.02225,
+        "volume": 698460000
+      },
+      {
+        "date": "2020-09-21",
+        "close": 12.477785,
+        "log_return": 0.026553,
+        "volume": 721044000
+      },
+      {
+        "date": "2020-09-22",
+        "close": 12.597907,
+        "log_return": 0.009581,
+        "volume": 646452000
+      },
+      {
+        "date": "2020-09-23",
+        "close": 12.085527,
+        "log_return": -0.041522,
+        "volume": 647012000
+      },
+      {
+        "date": "2020-09-24",
+        "close": 12.30907,
+        "log_return": 0.018328,
+        "volume": 731240000
+      },
+      {
+        "date": "2020-09-25",
+        "close": 12.833159,
+        "log_return": 0.041696,
+        "volume": 588016000
+      },
+      {
+        "date": "2020-09-28",
+        "close": 12.993902,
+        "log_return": 0.012448,
+        "volume": 573808000
+      },
+      {
+        "date": "2020-09-29",
+        "close": 13.184052,
+        "log_return": 0.014528,
+        "volume": 621460000
+      },
+      {
+        "date": "2020-09-30",
+        "close": 13.487842,
+        "log_return": 0.022781,
+        "volume": 689184000
+      },
+      {
+        "date": "2020-10-01",
+        "close": 13.571577,
+        "log_return": 0.006189,
+        "volume": 525004000
+      },
+      {
+        "date": "2020-10-02",
+        "close": 13.021069,
+        "log_return": -0.041409,
+        "volume": 552496000
+      },
+      {
+        "date": "2020-10-05",
+        "close": 13.599488,
+        "log_return": 0.043463,
+        "volume": 479820000
+      },
+      {
+        "date": "2020-10-06",
+        "close": 13.693192,
+        "log_return": 0.006867,
+        "volume": 784420000
+      },
+      {
+        "date": "2020-10-07",
+        "close": 13.919973,
+        "log_return": 0.016426,
+        "volume": 418084000
+      },
+      {
+        "date": "2020-10-08",
+        "close": 13.795116,
+        "log_return": -0.00901,
+        "volume": 378900000
+      },
+      {
+        "date": "2020-10-09",
+        "close": 13.719358,
+        "log_return": -0.005507,
+        "volume": 346892000
+      },
+      {
+        "date": "2020-10-12",
+        "close": 14.181149,
+        "log_return": 0.033106,
+        "volume": 434744000
+      },
+      {
+        "date": "2020-10-13",
+        "close": 14.203328,
+        "log_return": 0.001563,
+        "volume": 344604000
+      },
+      {
+        "date": "2020-10-14",
+        "close": 14.050812,
+        "log_return": -0.010796,
+        "volume": 276100000
+      },
+      {
+        "date": "2020-10-15",
+        "close": 13.925957,
+        "log_return": -0.008926,
+        "volume": 267224000
+      },
+      {
+        "date": "2020-10-16",
+        "close": 13.767956,
+        "log_return": -0.011411,
+        "volume": 242392000
+      },
+      {
+        "date": "2020-10-19",
+        "close": 13.455196,
+        "log_return": -0.022978,
+        "volume": 298068000
+      },
+      {
+        "date": "2020-10-20",
+        "close": 13.602481,
+        "log_return": 0.010887,
+        "volume": 229212000
+      },
+      {
+        "date": "2020-10-21",
+        "close": 13.482109,
+        "log_return": -0.008889,
+        "volume": 219596000
+      },
+      {
+        "date": "2020-10-22",
+        "close": 13.318876,
+        "log_return": -0.012181,
+        "volume": 290480000
+      },
+      {
+        "date": "2020-10-23",
+        "close": 13.547403,
+        "log_return": 0.017013,
+        "volume": 233484000
+      },
+      {
+        "date": "2020-10-26",
+        "close": 13.099817,
+        "log_return": -0.033597,
+        "volume": 336896000
+      },
+      {
+        "date": "2020-10-27",
+        "close": 13.354515,
+        "log_return": 0.019256,
+        "volume": 250520000
+      },
+      {
+        "date": "2020-10-28",
+        "close": 12.587189,
+        "log_return": -0.059175,
+        "volume": 376520000
+      },
+      {
+        "date": "2020-10-29",
+        "close": 12.982938,
+        "log_return": 0.030956,
+        "volume": 320080000
+      },
+      {
+        "date": "2020-10-30",
+        "close": 12.494483,
+        "log_return": -0.038349,
+        "volume": 416820000
+      },
+      {
+        "date": "2020-11-02",
+        "close": 12.541085,
+        "log_return": 0.003723,
+        "volume": 299652000
+      },
+      {
+        "date": "2020-11-03",
+        "close": 12.978454,
+        "log_return": 0.03428,
+        "volume": 272900000
+      },
+      {
+        "date": "2020-11-04",
+        "close": 13.750759,
+        "log_return": 0.057803,
+        "volume": 410228000
+      },
+      {
+        "date": "2020-11-05",
+        "close": 14.115355,
+        "log_return": 0.026169,
+        "volume": 319028000
+      },
+      {
+        "date": "2020-11-06",
+        "close": 14.516091,
+        "log_return": 0.027995,
+        "volume": 383348000
+      },
+      {
+        "date": "2020-11-09",
+        "close": 13.587774,
+        "log_return": -0.066087,
+        "volume": 582976000
+      },
+      {
+        "date": "2020-11-10",
+        "close": 12.729739,
+        "log_return": -0.06523,
+        "volume": 644068000
+      },
+      {
+        "date": "2020-11-11",
+        "close": 13.375693,
+        "log_return": 0.049498,
+        "volume": 404744000
+      },
+      {
+        "date": "2020-11-12",
+        "close": 13.414324,
+        "log_return": 0.002884,
+        "volume": 365812000
+      },
+      {
+        "date": "2020-11-13",
+        "close": 13.255076,
+        "log_return": -0.011942,
+        "volume": 346312000
+      },
+      {
+        "date": "2020-11-16",
+        "close": 13.47264,
+        "log_return": 0.01628,
+        "volume": 413776000
+      },
+      {
+        "date": "2020-11-17",
+        "close": 13.379932,
+        "log_return": -0.006905,
+        "volume": 312028000
+      },
+      {
+        "date": "2020-11-18",
+        "close": 13.386413,
+        "log_return": 0.000484,
+        "volume": 510924000
+      },
+      {
+        "date": "2020-11-19",
+        "close": 13.397876,
+        "log_return": 0.000856,
+        "volume": 565936000
+      },
+      {
+        "date": "2020-11-20",
+        "close": 13.046491,
+        "log_return": -0.026577,
+        "volume": 341088000
+      },
+      {
+        "date": "2020-11-23",
+        "close": 13.098575,
+        "log_return": 0.003984,
+        "volume": 361356000
+      },
+      {
+        "date": "2020-11-24",
+        "close": 12.916894,
+        "log_return": -0.013967,
+        "volume": 346500000
+      },
+      {
+        "date": "2020-11-25",
+        "close": 13.193023,
+        "log_return": 0.021152,
+        "volume": 259916000
+      },
+      {
+        "date": "2020-11-27",
+        "close": 13.21944,
+        "log_return": 0.002,
+        "volume": 167276000
+      },
+      {
+        "date": "2020-11-30",
+        "close": 13.359247,
+        "log_return": 0.01052,
+        "volume": 286952000
+      },
+      {
+        "date": "2020-12-01",
+        "close": 13.347785,
+        "log_return": -0.000858,
+        "volume": 296948000
+      },
+      {
+        "date": "2020-12-02",
+        "close": 13.501801,
+        "log_return": 0.011473,
+        "volume": 283360000
+      },
+      {
+        "date": "2020-12-03",
+        "close": 13.357712,
+        "log_return": -0.010729,
+        "volume": 199520000
+      },
+      {
+        "date": "2020-12-04",
+        "close": 13.519495,
+        "log_return": 0.012039,
+        "volume": 202244000
+      },
+      {
+        "date": "2020-12-07",
+        "close": 13.567859,
+        "log_return": 0.003571,
+        "volume": 223244000
+      },
+      {
+        "date": "2020-12-08",
+        "close": 13.311841,
+        "log_return": -0.01905,
+        "volume": 271920000
+      },
+      {
+        "date": "2020-12-09",
+        "close": 12.893791,
+        "log_return": -0.031908,
+        "volume": 401300000
+      },
+      {
+        "date": "2020-12-10",
+        "close": 12.935172,
+        "log_return": 0.003204,
+        "volume": 207764000
+      },
+      {
+        "date": "2020-12-11",
+        "close": 12.976055,
+        "log_return": 0.003156,
+        "volume": 209264000
+      },
+      {
+        "date": "2020-12-14",
+        "close": 13.270709,
+        "log_return": 0.022454,
+        "volume": 270156000
+      },
+      {
+        "date": "2020-12-15",
+        "close": 13.322312,
+        "log_return": 0.003881,
+        "volume": 193016000
+      },
+      {
+        "date": "2020-12-16",
+        "close": 13.204649,
+        "log_return": -0.008871,
+        "volume": 223116000
+      },
+      {
+        "date": "2020-12-17",
+        "close": 13.303118,
+        "log_return": 0.007429,
+        "volume": 231384000
+      },
+      {
+        "date": "2020-12-18",
+        "close": 13.234063,
+        "log_return": -0.005204,
+        "volume": 342064000
+      },
+      {
+        "date": "2020-12-21",
+        "close": 13.294142,
+        "log_return": 0.004529,
+        "volume": 302332000
+      },
+      {
+        "date": "2020-12-22",
+        "close": 13.240298,
+        "log_return": -0.004058,
+        "volume": 185580000
+      },
+      {
+        "date": "2020-12-23",
+        "close": 12.972065,
+        "log_return": -0.020467,
+        "volume": 179144000
+      },
+      {
+        "date": "2020-12-24",
+        "close": 12.956613,
+        "log_return": -0.001192,
+        "volume": 97884000
+      },
+      {
+        "date": "2020-12-28",
+        "close": 12.86313,
+        "log_return": -0.007241,
+        "volume": 212564000
+      },
+      {
+        "date": "2020-12-29",
+        "close": 12.906253,
+        "log_return": 0.003347,
+        "volume": 170372000
+      },
+      {
+        "date": "2020-12-30",
+        "close": 13.108175,
+        "log_return": 0.015524,
+        "volume": 225396000
+      }
+    ],
+    "TSLA": [
+      {
+        "date": "2020-07-13",
+        "close": 99.804001,
+        "log_return": -0.031294,
+        "volume": 584781000
+      },
+      {
+        "date": "2020-07-14",
+        "close": 101.120003,
+        "log_return": 0.0131,
+        "volume": 351271500
+      },
+      {
+        "date": "2020-07-15",
+        "close": 103.067329,
+        "log_return": 0.019075,
+        "volume": 245517000
+      },
+      {
+        "date": "2020-07-16",
+        "close": 100.042664,
+        "log_return": -0.029786,
+        "volume": 214512000
+      },
+      {
+        "date": "2020-07-17",
+        "close": 100.056,
+        "log_return": 0.000133,
+        "volume": 139950000
+      },
+      {
+        "date": "2020-07-20",
+        "close": 109.533333,
+        "log_return": 0.090499,
+        "volume": 256821000
+      },
+      {
+        "date": "2020-07-21",
+        "close": 104.557335,
+        "log_return": -0.046493,
+        "volume": 241608000
+      },
+      {
+        "date": "2020-07-22",
+        "close": 106.155334,
+        "log_return": 0.015168,
+        "volume": 212416500
+      },
+      {
+        "date": "2020-07-23",
+        "close": 100.87133,
+        "log_return": -0.051058,
+        "volume": 364927500
+      },
+      {
+        "date": "2020-07-24",
+        "close": 94.466667,
+        "log_return": -0.065599,
+        "volume": 290949000
+      },
+      {
+        "date": "2020-07-27",
+        "close": 102.639999,
+        "log_return": 0.082981,
+        "volume": 240730500
+      },
+      {
+        "date": "2020-07-28",
+        "close": 98.432671,
+        "log_return": -0.041855,
+        "volume": 237130500
+      },
+      {
+        "date": "2020-07-29",
+        "close": 99.940666,
+        "log_return": 0.015204,
+        "volume": 141403500
+      },
+      {
+        "date": "2020-07-30",
+        "close": 99.166,
+        "log_return": -0.007781,
+        "volume": 114315000
+      },
+      {
+        "date": "2020-07-31",
+        "close": 95.384003,
+        "log_return": -0.038884,
+        "volume": 183123000
+      },
+      {
+        "date": "2020-08-03",
+        "close": 99.0,
+        "log_return": 0.037209,
+        "volume": 132139500
+      },
+      {
+        "date": "2020-08-04",
+        "close": 99.133331,
+        "log_return": 0.001346,
+        "volume": 126225000
+      },
+      {
+        "date": "2020-08-05",
+        "close": 99.001335,
+        "log_return": -0.001332,
+        "volume": 74217000
+      },
+      {
+        "date": "2020-08-06",
+        "close": 99.305336,
+        "log_return": 0.003066,
+        "volume": 89884500
+      },
+      {
+        "date": "2020-08-07",
+        "close": 96.847336,
+        "log_return": -0.025063,
+        "volume": 133446000
+      },
+      {
+        "date": "2020-08-10",
+        "close": 94.571335,
+        "log_return": -0.023781,
+        "volume": 112834500
+      },
+      {
+        "date": "2020-08-11",
+        "close": 91.625999,
+        "log_return": -0.031639,
+        "volume": 129387000
+      },
+      {
+        "date": "2020-08-12",
+        "close": 103.650665,
+        "log_return": 0.123311,
+        "volume": 327441000
+      },
+      {
+        "date": "2020-08-13",
+        "close": 108.066666,
+        "log_return": 0.041722,
+        "volume": 306379500
+      },
+      {
+        "date": "2020-08-14",
+        "close": 110.047333,
+        "log_return": 0.018162,
+        "volume": 188664000
+      },
+      {
+        "date": "2020-08-17",
+        "close": 122.375999,
+        "log_return": 0.106188,
+        "volume": 303634500
+      },
+      {
+        "date": "2020-08-18",
+        "close": 125.806,
+        "log_return": 0.027643,
+        "volume": 247117500
+      },
+      {
+        "date": "2020-08-19",
+        "close": 125.235336,
+        "log_return": -0.004546,
+        "volume": 183079500
+      },
+      {
+        "date": "2020-08-20",
+        "close": 133.455338,
+        "log_return": 0.063572,
+        "volume": 309177000
+      },
+      {
+        "date": "2020-08-21",
+        "close": 136.665329,
+        "log_return": 0.023768,
+        "volume": 322344000
+      },
+      {
+        "date": "2020-08-24",
+        "close": 134.279999,
+        "log_return": -0.017608,
+        "volume": 300954000
+      },
+      {
+        "date": "2020-08-25",
+        "close": 134.889328,
+        "log_return": 0.004527,
+        "volume": 159883500
+      },
+      {
+        "date": "2020-08-26",
+        "close": 143.544662,
+        "log_return": 0.062192,
+        "volume": 213591000
+      },
+      {
+        "date": "2020-08-27",
+        "close": 149.25,
+        "log_return": 0.038977,
+        "volume": 355395000
+      },
+      {
+        "date": "2020-08-28",
+        "close": 147.559998,
+        "log_return": -0.011388,
+        "volume": 301218000
+      },
+      {
+        "date": "2020-08-31",
+        "close": 166.106674,
+        "log_return": 0.118395,
+        "volume": 355123200
+      },
+      {
+        "date": "2020-09-01",
+        "close": 158.350006,
+        "log_return": -0.047822,
+        "volume": 269523300
+      },
+      {
+        "date": "2020-09-02",
+        "close": 149.123337,
+        "log_return": -0.060034,
+        "volume": 288528300
+      },
+      {
+        "date": "2020-09-03",
+        "close": 135.666672,
+        "log_return": -0.094573,
+        "volume": 262788300
+      },
+      {
+        "date": "2020-09-04",
+        "close": 139.440002,
+        "log_return": 0.027433,
+        "volume": 330965700
+      },
+      {
+        "date": "2020-09-08",
+        "close": 110.07,
+        "log_return": -0.236518,
+        "volume": 346397100
+      },
+      {
+        "date": "2020-09-09",
+        "close": 122.09333,
+        "log_return": 0.103669,
+        "volume": 238397400
+      },
+      {
+        "date": "2020-09-10",
+        "close": 123.779999,
+        "log_return": 0.01372,
+        "volume": 254791800
+      },
+      {
+        "date": "2020-09-11",
+        "close": 124.239998,
+        "log_return": 0.003709,
+        "volume": 182152500
+      },
+      {
+        "date": "2020-09-14",
+        "close": 139.873337,
+        "log_return": 0.118522,
+        "volume": 249061800
+      },
+      {
+        "date": "2020-09-15",
+        "close": 149.919998,
+        "log_return": 0.069365,
+        "volume": 291894600
+      },
+      {
+        "date": "2020-09-16",
+        "close": 147.253326,
+        "log_return": -0.017947,
+        "volume": 216837900
+      },
+      {
+        "date": "2020-09-17",
+        "close": 141.143326,
+        "log_return": -0.042379,
+        "volume": 230337600
+      },
+      {
+        "date": "2020-09-18",
+        "close": 147.383331,
+        "log_return": 0.043261,
+        "volume": 259220400
+      },
+      {
+        "date": "2020-09-21",
+        "close": 149.796661,
+        "log_return": 0.016242,
+        "volume": 328430400
+      },
+      {
+        "date": "2020-09-22",
+        "close": 141.410004,
+        "log_return": -0.057615,
+        "volume": 238742400
+      },
+      {
+        "date": "2020-09-23",
+        "close": 126.786667,
+        "log_return": -0.109158,
+        "volume": 285222600
+      },
+      {
+        "date": "2020-09-24",
+        "close": 129.263336,
+        "log_return": 0.019346,
+        "volume": 289683300
+      },
+      {
+        "date": "2020-09-25",
+        "close": 135.779999,
+        "log_return": 0.049184,
+        "volume": 201625500
+      },
+      {
+        "date": "2020-09-28",
+        "close": 140.399994,
+        "log_return": 0.03346,
+        "volume": 149158800
+      },
+      {
+        "date": "2020-09-29",
+        "close": 139.690002,
+        "log_return": -0.00507,
+        "volume": 150657900
+      },
+      {
+        "date": "2020-09-30",
+        "close": 143.003326,
+        "log_return": 0.023442,
+        "volume": 144436800
+      },
+      {
+        "date": "2020-10-01",
+        "close": 149.386673,
+        "log_return": 0.04367,
+        "volume": 152224500
+      },
+      {
+        "date": "2020-10-02",
+        "close": 138.363327,
+        "log_return": -0.076655,
+        "volume": 214290000
+      },
+      {
+        "date": "2020-10-05",
+        "close": 141.893326,
+        "log_return": 0.025193,
+        "volume": 134168400
+      },
+      {
+        "date": "2020-10-06",
+        "close": 137.993332,
+        "log_return": -0.02787,
+        "volume": 147438900
+      },
+      {
+        "date": "2020-10-07",
+        "close": 141.766663,
+        "log_return": 0.026977,
+        "volume": 129383100
+      },
+      {
+        "date": "2020-10-08",
+        "close": 141.973328,
+        "log_return": 0.001457,
+        "volume": 121263300
+      },
+      {
+        "date": "2020-10-09",
+        "close": 144.666672,
+        "log_return": 0.018793,
+        "volume": 86777100
+      },
+      {
+        "date": "2020-10-12",
+        "close": 147.433334,
+        "log_return": 0.018944,
+        "volume": 116373300
+      },
+      {
+        "date": "2020-10-13",
+        "close": 148.883331,
+        "log_return": 0.009787,
+        "volume": 103391100
+      },
+      {
+        "date": "2020-10-14",
+        "close": 153.766663,
+        "log_return": 0.032273,
+        "volume": 143639100
+      },
+      {
+        "date": "2020-10-15",
+        "close": 149.626663,
+        "log_return": -0.027293,
+        "volume": 107017200
+      },
+      {
+        "date": "2020-10-16",
+        "close": 146.556671,
+        "log_return": -0.020731,
+        "volume": 98327700
+      },
+      {
+        "date": "2020-10-19",
+        "close": 143.610001,
+        "log_return": -0.020311,
+        "volume": 108863400
+      },
+      {
+        "date": "2020-10-20",
+        "close": 140.646667,
+        "log_return": -0.02085,
+        "volume": 94968900
+      },
+      {
+        "date": "2020-10-21",
+        "close": 140.880005,
+        "log_return": 0.001658,
+        "volume": 97111500
+      },
+      {
+        "date": "2020-10-22",
+        "close": 141.929993,
+        "log_return": 0.007425,
+        "volume": 119979600
+      },
+      {
+        "date": "2020-10-23",
+        "close": 140.210007,
+        "log_return": -0.012193,
+        "volume": 101151000
+      },
+      {
+        "date": "2020-10-26",
+        "close": 140.093338,
+        "log_return": -0.000832,
+        "volume": 84717600
+      },
+      {
+        "date": "2020-10-27",
+        "close": 141.559998,
+        "log_return": 0.010415,
+        "volume": 68059500
+      },
+      {
+        "date": "2020-10-28",
+        "close": 135.339996,
+        "log_return": -0.044934,
+        "volume": 76354200
+      },
+      {
+        "date": "2020-10-29",
+        "close": 136.943329,
+        "log_return": 0.011777,
+        "volume": 67965900
+      },
+      {
+        "date": "2020-10-30",
+        "close": 129.346664,
+        "log_return": -0.057071,
+        "volume": 127533900
+      },
+      {
+        "date": "2020-11-02",
+        "close": 133.503326,
+        "log_return": 0.03163,
+        "volume": 87063300
+      },
+      {
+        "date": "2020-11-03",
+        "close": 141.300003,
+        "log_return": 0.056759,
+        "volume": 103055100
+      },
+      {
+        "date": "2020-11-04",
+        "close": 140.32666,
+        "log_return": -0.006912,
+        "volume": 96429300
+      },
+      {
+        "date": "2020-11-05",
+        "close": 146.029999,
+        "log_return": 0.039839,
+        "volume": 85243500
+      },
+      {
+        "date": "2020-11-06",
+        "close": 143.316666,
+        "log_return": -0.018755,
+        "volume": 65118000
+      },
+      {
+        "date": "2020-11-09",
+        "close": 140.419998,
+        "log_return": -0.020419,
+        "volume": 104499000
+      },
+      {
+        "date": "2020-11-10",
+        "close": 136.786667,
+        "log_return": -0.026215,
+        "volume": 90852600
+      },
+      {
+        "date": "2020-11-11",
+        "close": 139.043335,
+        "log_return": 0.016363,
+        "volume": 52073100
+      },
+      {
+        "date": "2020-11-12",
+        "close": 137.253326,
+        "log_return": -0.012957,
+        "volume": 59565300
+      },
+      {
+        "date": "2020-11-13",
+        "close": 136.166672,
+        "log_return": -0.007949,
+        "volume": 59313300
+      },
+      {
+        "date": "2020-11-16",
+        "close": 136.029999,
+        "log_return": -0.001004,
+        "volume": 80515800
+      },
+      {
+        "date": "2020-11-17",
+        "close": 147.203339,
+        "log_return": 0.078939,
+        "volume": 183564900
+      },
+      {
+        "date": "2020-11-18",
+        "close": 162.213333,
+        "log_return": 0.097097,
+        "volume": 234132000
+      },
+      {
+        "date": "2020-11-19",
+        "close": 166.42334,
+        "log_return": 0.025622,
+        "volume": 187425900
+      },
+      {
+        "date": "2020-11-20",
+        "close": 163.203339,
+        "log_return": -0.019538,
+        "volume": 98735700
+      },
+      {
+        "date": "2020-11-23",
+        "close": 173.949997,
+        "log_return": 0.063771,
+        "volume": 150780900
+      },
+      {
+        "date": "2020-11-24",
+        "close": 185.126663,
+        "log_return": 0.062272,
+        "volume": 160945500
+      },
+      {
+        "date": "2020-11-25",
+        "close": 191.333328,
+        "log_return": 0.032977,
+        "volume": 146790600
+      },
+      {
+        "date": "2020-11-27",
+        "close": 195.253326,
+        "log_return": 0.020281,
+        "volume": 112683300
+      },
+      {
+        "date": "2020-11-30",
+        "close": 189.199997,
+        "log_return": -0.031493,
+        "volume": 189009300
+      },
+      {
+        "date": "2020-12-01",
+        "close": 194.919998,
+        "log_return": 0.029785,
+        "volume": 120310500
+      },
+      {
+        "date": "2020-12-02",
+        "close": 189.606674,
+        "log_return": -0.027637,
+        "volume": 143327100
+      },
+      {
+        "date": "2020-12-03",
+        "close": 197.793335,
+        "log_return": 0.042271,
+        "volume": 127656000
+      },
+      {
+        "date": "2020-12-04",
+        "close": 199.679993,
+        "log_return": 0.009493,
+        "volume": 88203900
+      },
+      {
+        "date": "2020-12-07",
+        "close": 213.919998,
+        "log_return": 0.068886,
+        "volume": 168929100
+      },
+      {
+        "date": "2020-12-08",
+        "close": 216.626663,
+        "log_return": 0.012573,
+        "volume": 192795000
+      },
+      {
+        "date": "2020-12-09",
+        "close": 201.493332,
+        "log_return": -0.072419,
+        "volume": 213873600
+      },
+      {
+        "date": "2020-12-10",
+        "close": 209.023331,
+        "log_return": 0.03669,
+        "volume": 201249600
+      },
+      {
+        "date": "2020-12-11",
+        "close": 203.330002,
+        "log_return": -0.027616,
+        "volume": 139425000
+      },
+      {
+        "date": "2020-12-14",
+        "close": 213.276672,
+        "log_return": 0.04776,
+        "volume": 156121800
+      },
+      {
+        "date": "2020-12-15",
+        "close": 211.083328,
+        "log_return": -0.010337,
+        "volume": 135214500
+      },
+      {
+        "date": "2020-12-16",
+        "close": 207.589996,
+        "log_return": -0.016688,
+        "volume": 126287400
+      },
+      {
+        "date": "2020-12-17",
+        "close": 218.633331,
+        "log_return": 0.051831,
+        "volume": 168810300
+      },
+      {
+        "date": "2020-12-18",
+        "close": 231.666672,
+        "log_return": 0.057904,
+        "volume": 666378600
+      },
+      {
+        "date": "2020-12-21",
+        "close": 216.619995,
+        "log_return": -0.067155,
+        "volume": 174135900
+      },
+      {
+        "date": "2020-12-22",
+        "close": 213.446671,
+        "log_return": -0.014758,
+        "volume": 155148000
+      },
+      {
+        "date": "2020-12-23",
+        "close": 215.32666,
+        "log_return": 0.008769,
+        "volume": 99519000
+      },
+      {
+        "date": "2020-12-24",
+        "close": 220.589996,
+        "log_return": 0.02415,
+        "volume": 68596800
+      },
+      {
+        "date": "2020-12-28",
+        "close": 221.229996,
+        "log_return": 0.002897,
+        "volume": 96835800
+      },
+      {
+        "date": "2020-12-29",
+        "close": 221.996674,
+        "log_return": 0.00346,
+        "volume": 68732400
+      },
+      {
+        "date": "2020-12-30",
+        "close": 231.593338,
+        "log_return": 0.042321,
+        "volume": 128538000
+      }
+    ]
+  },
+  "ccf_curves": {
+    "NFLX_META": {
+      "leader": "NFLX",
+      "follower": "META",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0015,
+        0.0022,
+        0.0033,
+        0.0049,
+        0.0073,
+        0.0109,
+        0.0162,
+        0.0242,
+        0.0361,
+        0.0539,
+        0.0804,
+        0.3218,
+        0.2506,
+        0.1952,
+        0.152,
+        0.1184,
+        0.0922,
+        0.0718,
+        0.0559,
+        0.0435,
+        0.0339
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.321787
+    },
+    "NFLX_MSFT": {
+      "leader": "NFLX",
+      "follower": "MSFT",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0009,
+        -0.0013,
+        -0.0019,
+        -0.0029,
+        -0.0043,
+        -0.0064,
+        -0.0095,
+        -0.0142,
+        -0.0212,
+        -0.0316,
+        -0.0471,
+        -0.1885,
+        -0.1468,
+        -0.1143,
+        -0.089,
+        -0.0693,
+        -0.054,
+        -0.0421,
+        -0.0327,
+        -0.0255,
+        -0.0199
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.188462
+    },
+    "NFLX_GOOGL": {
+      "leader": "NFLX",
+      "follower": "GOOGL",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0014,
+        0.0021,
+        0.0032,
+        0.0048,
+        0.0071,
+        0.0106,
+        0.0158,
+        0.0236,
+        0.0351,
+        0.0524,
+        0.0782,
+        0.3129,
+        0.2437,
+        0.1898,
+        0.1478,
+        0.1151,
+        0.0896,
+        0.0698,
+        0.0544,
+        0.0423,
+        0.033
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.312903
+    },
+    "NFLX_AMD": {
+      "leader": "NFLX",
+      "follower": "AMD",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0002,
+        0.0002,
+        0.0004,
+        0.0005,
+        0.0008,
+        0.0012,
+        0.0018,
+        0.0027,
+        0.004,
+        0.006,
+        0.009,
+        0.036,
+        0.0281,
+        0.0219,
+        0.017,
+        0.0133,
+        0.0103,
+        0.008,
+        0.0063,
+        0.0049,
+        0.0038
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.036048
+    },
+    "NFLX_INTC": {
+      "leader": "NFLX",
+      "follower": "INTC",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0012,
+        0.0018,
+        0.0027,
+        0.004,
+        0.0059,
+        0.0089,
+        0.0132,
+        0.0197,
+        0.0294,
+        0.0439,
+        0.0655,
+        0.262,
+        0.204,
+        0.1589,
+        0.1237,
+        0.0964,
+        0.0751,
+        0.0585,
+        0.0455,
+        0.0355,
+        0.0276
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.261965
+    },
+    "AMZN_META": {
+      "leader": "AMZN",
+      "follower": "META",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0038,
+        0.0057,
+        0.0085,
+        0.0127,
+        0.0189,
+        0.0282,
+        0.0421,
+        0.0628,
+        0.0937,
+        0.1397,
+        0.2084,
+        0.6493,
+        0.8338,
+        0.6493,
+        0.5057,
+        0.3938,
+        0.3067,
+        0.2389,
+        0.186,
+        0.1449,
+        0.1128
+      ],
+      "peak_lag": 2,
+      "peak_score": 0.833757
+    },
+    "AMZN_MSFT": {
+      "leader": "AMZN",
+      "follower": "MSFT",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0003,
+        -0.0005,
+        -0.0007,
+        -0.001,
+        -0.0015,
+        -0.0023,
+        -0.0034,
+        -0.0051,
+        -0.0076,
+        -0.0113,
+        -0.0169,
+        -0.0527,
+        -0.0677,
+        -0.0527,
+        -0.041,
+        -0.032,
+        -0.0249,
+        -0.0194,
+        -0.0151,
+        -0.0118,
+        -0.0092
+      ],
+      "peak_lag": 2,
+      "peak_score": -0.067661
+    },
+    "AMZN_GOOGL": {
+      "leader": "AMZN",
+      "follower": "GOOGL",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.001,
+        -0.0015,
+        -0.0022,
+        -0.0033,
+        -0.0049,
+        -0.0073,
+        -0.0109,
+        -0.0162,
+        -0.0242,
+        -0.036,
+        -0.0538,
+        -0.1675,
+        -0.2151,
+        -0.1675,
+        -0.1305,
+        -0.1016,
+        -0.0791,
+        -0.0616,
+        -0.048,
+        -0.0374,
+        -0.0291
+      ],
+      "peak_lag": 2,
+      "peak_score": -0.21509
+    },
+    "AMZN_AMD": {
+      "leader": "AMZN",
+      "follower": "AMD",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.001,
+        -0.0015,
+        -0.0022,
+        -0.0033,
+        -0.005,
+        -0.0074,
+        -0.011,
+        -0.0165,
+        -0.0246,
+        -0.0367,
+        -0.0547,
+        -0.1704,
+        -0.2188,
+        -0.1704,
+        -0.1327,
+        -0.1033,
+        -0.0805,
+        -0.0627,
+        -0.0488,
+        -0.038,
+        -0.0296
+      ],
+      "peak_lag": 2,
+      "peak_score": -0.218753
+    },
+    "AMZN_INTC": {
+      "leader": "AMZN",
+      "follower": "INTC",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0001,
+        0.0002,
+        0.0002,
+        0.0004,
+        0.0005,
+        0.0008,
+        0.0012,
+        0.0018,
+        0.0027,
+        0.004,
+        0.006,
+        0.0186,
+        0.0238,
+        0.0186,
+        0.0145,
+        0.0113,
+        0.0088,
+        0.0068,
+        0.0053,
+        0.0041,
+        0.0032
+      ],
+      "peak_lag": 2,
+      "peak_score": 0.023832
+    },
+    "NVDA_META": {
+      "leader": "NVDA",
+      "follower": "META",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0007,
+        0.0011,
+        0.0017,
+        0.0025,
+        0.0037,
+        0.0055,
+        0.0082,
+        0.0123,
+        0.0183,
+        0.0273,
+        0.0407,
+        0.1628,
+        0.1268,
+        0.0987,
+        0.0769,
+        0.0599,
+        0.0466,
+        0.0363,
+        0.0283,
+        0.022,
+        0.0172
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.162801
+    },
+    "NVDA_MSFT": {
+      "leader": "NVDA",
+      "follower": "MSFT",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0009,
+        -0.0014,
+        -0.002,
+        -0.003,
+        -0.0045,
+        -0.0068,
+        -0.0101,
+        -0.0151,
+        -0.0225,
+        -0.0335,
+        -0.05,
+        -0.2,
+        -0.1558,
+        -0.1213,
+        -0.0945,
+        -0.0736,
+        -0.0573,
+        -0.0446,
+        -0.0348,
+        -0.0271,
+        -0.0211
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.200021
+    },
+    "NVDA_GOOGL": {
+      "leader": "NVDA",
+      "follower": "GOOGL",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0002,
+        -0.0003,
+        -0.0004,
+        -0.0007,
+        -0.001,
+        -0.0015,
+        -0.0022,
+        -0.0033,
+        -0.0049,
+        -0.0073,
+        -0.0109,
+        -0.0434,
+        -0.0338,
+        -0.0263,
+        -0.0205,
+        -0.016,
+        -0.0124,
+        -0.0097,
+        -0.0075,
+        -0.0059,
+        -0.0046
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.043405
+    },
+    "NVDA_AMD": {
+      "leader": "NVDA",
+      "follower": "AMD",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0012,
+        0.0017,
+        0.0026,
+        0.0039,
+        0.0058,
+        0.0086,
+        0.0129,
+        0.0192,
+        0.0286,
+        0.0427,
+        0.0637,
+        0.2548,
+        0.1984,
+        0.1545,
+        0.1203,
+        0.0937,
+        0.073,
+        0.0568,
+        0.0443,
+        0.0345,
+        0.0269
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.254781
+    },
+    "NVDA_INTC": {
+      "leader": "NVDA",
+      "follower": "INTC",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0009,
+        0.0013,
+        0.002,
+        0.003,
+        0.0045,
+        0.0067,
+        0.01,
+        0.0149,
+        0.0222,
+        0.0331,
+        0.0494,
+        0.1974,
+        0.1538,
+        0.1197,
+        0.0933,
+        0.0726,
+        0.0566,
+        0.0441,
+        0.0343,
+        0.0267,
+        0.0208
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.197423
+    },
+    "AAPL_META": {
+      "leader": "AAPL",
+      "follower": "META",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0013,
+        0.002,
+        0.003,
+        0.0045,
+        0.0067,
+        0.01,
+        0.0149,
+        0.0222,
+        0.0331,
+        0.0493,
+        0.0736,
+        0.2943,
+        0.2292,
+        0.1785,
+        0.139,
+        0.1083,
+        0.0843,
+        0.0657,
+        0.0511,
+        0.0398,
+        0.031
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.294267
+    },
+    "AAPL_MSFT": {
+      "leader": "AAPL",
+      "follower": "MSFT",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0011,
+        -0.0017,
+        -0.0025,
+        -0.0037,
+        -0.0055,
+        -0.0082,
+        -0.0123,
+        -0.0183,
+        -0.0273,
+        -0.0407,
+        -0.0608,
+        -0.2431,
+        -0.1893,
+        -0.1474,
+        -0.1148,
+        -0.0894,
+        -0.0696,
+        -0.0542,
+        -0.0422,
+        -0.0329,
+        -0.0256
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.243061
+    },
+    "AAPL_GOOGL": {
+      "leader": "AAPL",
+      "follower": "GOOGL",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0018,
+        0.0027,
+        0.004,
+        0.006,
+        0.009,
+        0.0134,
+        0.0199,
+        0.0298,
+        0.0444,
+        0.0662,
+        0.0988,
+        0.3952,
+        0.3078,
+        0.2397,
+        0.1867,
+        0.1454,
+        0.1132,
+        0.0882,
+        0.0687,
+        0.0535,
+        0.0417
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.395246
+    },
+    "AAPL_AMD": {
+      "leader": "AAPL",
+      "follower": "AMD",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0001,
+        0.0002,
+        0.0003,
+        0.0004,
+        0.0006,
+        0.0009,
+        0.0014,
+        0.002,
+        0.003,
+        0.0045,
+        0.0067,
+        0.0268,
+        0.0208,
+        0.0162,
+        0.0126,
+        0.0098,
+        0.0077,
+        0.006,
+        0.0046,
+        0.0036,
+        0.0028
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.026757
+    },
+    "AAPL_INTC": {
+      "leader": "AAPL",
+      "follower": "INTC",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0002,
+        0.0003,
+        0.0005,
+        0.0007,
+        0.0011,
+        0.0016,
+        0.0024,
+        0.0036,
+        0.0145,
+        0.0113,
+        0.0088,
+        0.0068,
+        0.0053,
+        0.0041,
+        0.0032,
+        0.0025,
+        0.002,
+        0.0015
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.014473
+    },
+    "TSLA_META": {
+      "leader": "TSLA",
+      "follower": "META",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0006,
+        -0.0009,
+        -0.0014,
+        -0.0021,
+        -0.0031,
+        -0.0046,
+        -0.0068,
+        -0.0102,
+        -0.0152,
+        -0.0226,
+        -0.0338,
+        -0.1351,
+        -0.1052,
+        -0.0819,
+        -0.0638,
+        -0.0497,
+        -0.0387,
+        -0.0301,
+        -0.0235,
+        -0.0183,
+        -0.0142
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.135089
+    },
+    "TSLA_MSFT": {
+      "leader": "TSLA",
+      "follower": "MSFT",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0013,
+        -0.0019,
+        -0.0029,
+        -0.0043,
+        -0.0064,
+        -0.0096,
+        -0.0143,
+        -0.0213,
+        -0.0318,
+        -0.0474,
+        -0.0707,
+        -0.2827,
+        -0.2202,
+        -0.1715,
+        -0.1335,
+        -0.104,
+        -0.081,
+        -0.0631,
+        -0.0491,
+        -0.0383,
+        -0.0298
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.282682
+    },
+    "TSLA_GOOGL": {
+      "leader": "TSLA",
+      "follower": "GOOGL",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        0.0019,
+        0.0029,
+        0.0043,
+        0.0064,
+        0.0096,
+        0.0143,
+        0.0213,
+        0.0318,
+        0.0474,
+        0.0708,
+        0.1056,
+        0.4223,
+        0.3289,
+        0.2561,
+        0.1995,
+        0.1553,
+        0.121,
+        0.0942,
+        0.0734,
+        0.0571,
+        0.0445
+      ],
+      "peak_lag": 1,
+      "peak_score": 0.422282
+    },
+    "TSLA_AMD": {
+      "leader": "TSLA",
+      "follower": "AMD",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0013,
+        -0.0019,
+        -0.0029,
+        -0.0043,
+        -0.0064,
+        -0.0095,
+        -0.0142,
+        -0.0212,
+        -0.0316,
+        -0.0471,
+        -0.0703,
+        -0.2812,
+        -0.219,
+        -0.1706,
+        -0.1328,
+        -0.1035,
+        -0.0806,
+        -0.0628,
+        -0.0489,
+        -0.0381,
+        -0.0296
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.281239
+    },
+    "TSLA_INTC": {
+      "leader": "TSLA",
+      "follower": "INTC",
+      "lags": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "values": [
+        -0.0008,
+        -0.0011,
+        -0.0017,
+        -0.0025,
+        -0.0037,
+        -0.0056,
+        -0.0083,
+        -0.0124,
+        -0.0184,
+        -0.0275,
+        -0.041,
+        -0.1641,
+        -0.1278,
+        -0.0995,
+        -0.0775,
+        -0.0604,
+        -0.047,
+        -0.0366,
+        -0.0285,
+        -0.0222,
+        -0.0173
+      ],
+      "peak_lag": 1,
+      "peak_score": -0.164084
+    }
+  }
+};
