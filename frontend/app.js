@@ -699,9 +699,10 @@
 
   function startGraphSimulation(canvas, ctx) {
     function tick() {
+      animFrameId = requestAnimationFrame(tick);
+      
       const container = document.getElementById('canvas-container');
-      if (!container || !canvas) {
-        animFrameId = requestAnimationFrame(tick);
+      if (!container || !canvas || activeTab !== 'tab-network') {
         return;
       }
 
@@ -714,65 +715,73 @@
         canvas.height = Math.round(height * dpr);
       }
 
+      const centerX = width / 2;
+      const centerY = height / 2;
+
       // Physics update
       if (!isPhysicsFrozen) {
-        const centerX = width / 2;
-        const centerY = height / 2;
-
-        // Auto-reposition if off-screen or uninitialized
-        if (graphNodes.length > 0 && (graphNodes[0].x <= 20 || isNaN(graphNodes[0].x) || graphNodes[0].x > width + 500)) {
-          graphNodes.forEach((n, idx) => {
-            const angle = (idx / graphNodes.length) * Math.PI * 2;
-            n.x = centerX + Math.cos(angle) * 180;
-            n.y = centerY + Math.sin(angle) * 180;
-            n.vx = 0;
-            n.vy = 0;
-          });
-        }
-
-        // Node repulsion
+        // Node-to-node repulsion (bounded)
         for (let i = 0; i < graphNodes.length; i++) {
           for (let j = i + 1; j < graphNodes.length; j++) {
             const n1 = graphNodes[i];
             const n2 = graphNodes[j];
             let dx = n2.x - n1.x;
             let dy = n2.y - n1.y;
-            let dist = Math.sqrt(dx * dx + dy * dy) || 1;
-            if (dist < 260) {
-              const force = (260 - dist) / dist * 0.8;
-              n1.vx -= dx * force * 0.05;
-              n1.vy -= dy * force * 0.05;
-              n2.vx += dx * force * 0.05;
-              n2.vy += dy * force * 0.05;
+            let dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 1) dist = 1;
+            const minDist = 180;
+            if (dist < minDist) {
+              const force = (minDist - dist) / dist * 0.15;
+              const fx = (dx / dist) * force * 15;
+              const fy = (dy / dist) * force * 15;
+              n1.vx -= fx;
+              n1.vy -= fy;
+              n2.vx += fx;
+              n2.vy += fy;
             }
           }
         }
 
-        // Edge attraction
+        // Edge springs (bounded)
         graphEdges.forEach(edge => {
           if (edge.weight < edgeThreshold) return;
           const n1 = edge.source;
           const n2 = edge.target;
           let dx = n2.x - n1.x;
           let dy = n2.y - n1.y;
-          let dist = Math.sqrt(dx * dx + dy * dy) || 1;
-          const targetDist = 180 - edge.weight * 60;
-          const force = (dist - targetDist) * 0.004 * edge.weight;
-          n1.vx += dx * force;
-          n1.vy += dy * force;
-          n2.vx -= dx * force;
-          n2.vy -= dy * force;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 1) dist = 1;
+          const targetDist = 160;
+          const force = (dist - targetDist) * 0.003 * Math.min(1, edge.weight * 2);
+          const fx = (dx / dist) * force * 10;
+          const fy = (dy / dist) * force * 10;
+          n1.vx += fx;
+          n1.vy += fy;
+          n2.vx -= fx;
+          n2.vy -= fy;
         });
 
-        // Center pull & damping
+        // Center pull, damping, and hard position clamping
         graphNodes.forEach(node => {
           if (node === draggedNode) return;
-          node.vx += (centerX - node.x) * 0.003;
-          node.vy += (centerY - node.y) * 0.003;
-          node.vx *= 0.88;
-          node.vy *= 0.88;
+          node.vx += (centerX - node.x) * 0.005;
+          node.vy += (centerY - node.y) * 0.005;
+
+          // Clamp velocity
+          const speed = Math.sqrt(node.vx * node.vx + node.vy * node.vy);
+          if (speed > 4.0) {
+            node.vx = (node.vx / speed) * 4.0;
+            node.vy = (node.vy / speed) * 4.0;
+          }
+
+          node.vx *= 0.85;
+          node.vy *= 0.85;
           node.x += node.vx;
           node.y += node.vy;
+
+          // Hard bounding box inside canvas
+          node.x = Math.max(node.radius + 30, Math.min(width - node.radius - 30, node.x));
+          node.y = Math.max(node.radius + 30, Math.min(height - node.radius - 30, node.y));
         });
       }
 
